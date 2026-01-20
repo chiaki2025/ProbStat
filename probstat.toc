@@ -1,0 +1,6 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\numberline {1}Introduction to Probability and Statistics}{7}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Tossing a coin}{7}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Weather forecasting}{8}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Relationship between Probability and Statistics}{8}{section.1.3}%
+\contentsline {chapter}{\numberline {2}H-test and T-test}{9}{chapter.2}%

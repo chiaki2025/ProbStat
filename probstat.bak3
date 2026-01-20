@@ -1,0 +1,166 @@
+\documentclass[12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\title{Thinking like a Frequentist
+}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+\usepackage{blindtext}
+\usepackage{mathrsfs}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{epigraph} 
+\usepackage{hyperref}
+\usepackage{indentfirst}
+\usepackage[english]{babel}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}{Definition}[section]
+\author{Student}
+\date{January 2026}
+\begin{document}
+\maketitle
+\newpage
+\begin{center}
+	\textit{This page is intentionally left blank.}
+\end{center}
+\chapter*{Preface}
+\epigraph{\textit{"Are you watching closely?"}}{Alfred Borden, The Prestige (2006)}
+When I was learning Probability and Statistics (ProbStat for short), I didn't really understand why things were distributed \textit{normally}. Were they \textit{normal} because they were, or were \textit{we just assuming "Everything is normal for simplicity"}? Sometimes, I felt we were overusing this term and in many situations, we were separating our theory from the actual data due to the intital assumption of \textit{normal} distribution.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=8cm]{1.jpg}
+	\caption{Distribution of Math scores in the 2021 National Entrance Exam}
+	\label{fig:galaxy}
+\end{figure}
+\\ As you can see here, this graph \textbf{doesn't really resemble a bell-shaped curve}; and clearly, this data is not distributed normally. In fact, not much real-world statistical data fits a bell-shaped curve. But why are we still using it?
+\\ In my opinion (as a junior CE student), I think the main reason is due to \textbf{Central Limit Theorem} (CLT for short), every sample in the same population (regradless of how the data is distributed) has a \textbf{mean} that converges to a \textit{normal distribution}, or \textbf{bell-shaped curve}. This topic will be explained in detail in \textbf{Chapter 8: Fundamental of Statistics}.\\ \\  \\
+\indent This book approaches the fundamental of probability and statistics in a very mathematically rigourous way to ensure maximum accuracy. I encourage readers to prove all of theorems, corollaries; and you should create your own examples for each theorem to gain a deeper understading of their origins.
+\begin{flushright}
+	---Student---
+\end{flushright}
+\chapter*{Acknowledgement}
+First of all, I want to thank you for reading this book. Although I am not a native English speaker, but I truly enjoy writing in English. I have tried my best to express my ideas in English, but minor grammatical or spelling errors are unavoidable. If you find any of them, I would be very happy to receive your feedback via my email address:
+\url{tinvu1309@gmail.com}
+\\ \\ \\
+\indent Secondly, I am extremly grateful and would like to express my thanks to the authors of the textbook "Probability and Statistics for Engineers and Scientists", $9$th edition. This book truly saved my student life.
+\\ \\ \\
+\indent Finally, the idea of writing this book was inspired by Prof. Steve Brunton lectures on YouTube. You should check out his videos too!
+\begin{flushright}
+	---Student---
+\end{flushright}
+\tableofcontents
+\listoffigures
+\newpage
+\chapter*{List of notations}
+Since much of my work is handwritten, so I've modified some commonly used notations for probability distribution funcions using curved script for convenience. You should notice that my conventions are not the international standards.
+\begin{enumerate}
+	\item $\mathscr{I}$: Bernoulli distribution
+	\item $\mathscr{B}$: Binomial distribution
+	\item $\mathscr{B}^*$: Negative binomial distribution
+	\item $\mathscr{H}$: Hypergeometric distribution
+	\item $\mathscr{G}^*$: Geometric distribution
+	\item $\mathscr{P}$: Poisson distribution
+	\item $\mathscr{N}$: Normal distribution
+	\item $\mathscr{G}$: Gamma distribution
+	\item $\mathscr{E}$: Exponential distribution
+	\item $\mathscr{C}$: Chi-squared distributon
+	\item $\mathscr{T}$: t-distribution (or Student distribution)
+\end{enumerate}
+\chapter{Introduction to Probability and Statistics}
+\section{Tossing a coin}
+Imagine you have a coin, like this one. It's an ordinary coin that can be found everywhere.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=8cm]{2.jpg}
+	\caption{Tossing a coin}
+	\label{Figure 2}
+\end{figure}
+\\Everyone knows that the chance of head (H) appearing after each toss is $50\%$, no one even doubts that. So, the \textbf{probability} of an \textbf{event} that head appearing is $50\%$. But because you're a very curious person, you don't easily accept the truth like others, so you will find a way to test it. The fact "The probability of head appearing is $50\%$" will be tested, and it can be called a \textbf{hypothesis}.
+\\ \\ \\
+\indent The simplest way to test your hypothesis is tossing a coin many times. You might toss a coin $N=100$ times and see heads appear $n=40$ times, so your actual probability is: $$p=\frac{n}{N}=0.4$$
+But your previous assumtion (or hypothesis) states that the ideal probability is: $$\hat p=0.5$$
+Is there anything wrong here? Dissatisfied, you continue your experiment. This time, you toss a coin $N=500$ times and see heads appear $n=270$ times, so the new actual probability is:
+$$p=\frac{n}{N}=0.54$$
+This time the result is closer with intial hypothesis $\hat p$, but your hand now must be very tired after tossing a coin $600$ times. So do you think you have \textbf{enough} evidence to conclude that if $N\to+\infty$, then $p\to\hat p$? If so, your assumption is correct because \textit{can't be refuted}; and if not, our common sense might be wrong because the evidence \textit{strongly refutes it}.
+\\ \\ \\
+\indent Another strategy to toss a coin is fixing and dividing $N$. Instead of tossing $N=600$ times and only getting the final $p$ value, you can divide large number of coin tosses $N=600$ to smaller tosses $N_{1}=N_{2}=\cdots=N_{6}=100$ (but don't too small, at least each $N_{i}>30$), and get
+6 values of $p_{i}$. Suppose that you would get:
+\begin{center}
+	\begin{tabular}{ |c|c|c|c|c|c| }
+		\hline
+		$p_{1}$ & $p_{2}$ & $p_{3}$ & $p_{4}$ & $p_{5}$ & $p_{6}$ \\
+		\hline
+		0.43    & 0.46    & 0.56    & 0.53    & 0.49    & 0.51    \\
+		\hline
+	\end{tabular}
+\end{center}
+You might see that the value $\hat p=0.5$ too idealistic to occur in our experiment, and $p$ constantly changes. Therefore instead of determining the \textbf{exact value} of $p$, we \textbf{predict} that the $p$ value lies inside a \textbf{closed interval} with a \textbf{certainty} of $(1-\alpha)100\%$. For example, we can confidently conclude that the value of $p$ lies within the range (0.48,0.51) with $95\%$ accuracy.
+\section{Weather forecasting}
+You don't need to know anything about geography to predict what the weather will be tomorrow. Everything you need is just knowledge about Poisson, exponential distribution and the \textbf{average number} of rainy days per month where you are living.
+\\ For example, in December there are \textbf{average} 5 rainy days. If today is the $10$th and you haven't seen any rain since the beginning of the month, what are the probabilities of:
+\begin{enumerate}
+	\item There will be 3 rainy days this month.
+	\item Tomorrow will be a rainy day.
+\end{enumerate}
+This problem will be covered in detail in \textbf{Chapter 5: Discrete Random Variables} and \textbf{Chapter 6: Continuous Random Variables}, but if you do have experience with random variables, you can try to solve it!
+\\ The answer for the first question is:
+\begin{equation*}
+	P(X=3)=\frac{e^{-5}5^3}{3!}\approx 14.03\%
+\end{equation*}
+\\ The answer for the second question is:
+\begin{equation*}
+	P(X<11|X>10)=1-P(X>11|X>10)=1-e^{\frac{-5}{31}}\approx 14.89\%
+\end{equation*}
+Since $14.89\%$ is quite low, so tomorrow you don't have to bring an umbrella.
+\section{Relationship between Probability and Statistics}
+
+\chapter{H-test and T-test}
+Thanks to my Prof Ha, Do Thi Thu for saving my life.
+We can efine contour integral:
+aas
+\begin{theorem}
+	Let \(f\) be a function whose derivative exists in every point, then \(f\)
+	is a continuous function.
+\end{theorem}
+
+\begin{theorem}[Pythagorean theorem]
+	\label{pythagorean}
+	This is a theorem about right triangles and can be summarised in the next
+	equation
+	\[ x^2 + y^2 = z^2 \]
+\end{theorem}
+
+And a consequence of theorem \ref{pythagorean} is the statement in the next
+corollary.
+
+\begin{corollary}
+	There's no right rectangle whose sides measure 3cm, 4cm, and 6cm.
+\end{corollary}
+
+You can reference theorems such as \ref{pythagorean} when a label is assigned.
+
+\begin{lemma}
+	Given two line segments whose lengths are \(a\) and \(b\) respectively there is a
+	real number \(r\) such that \(b=ra\).
+\end{lemma}
+\begin{definition}[Fibration]
+	A fibration is a mapping between two topological spaces that has the homotopy lifting property for every space \(X\).
+\end{definition}
+\begin{proof}
+	Let $z$ be some element of $xH \cap yH$.  Then $z = xa$
+	for some $a \in H$, and $z = yb$ for some $b \in H$.
+	If $h$ is any element of $H$ then $ah \in H$ and
+	$a^{-1}h \in H$, since $H$ is a subgroup of $G$.
+	But $zh = x(ah)$ and $xh = z(a^{-1}h)$ for all $h \in H$.
+	Therefore $zH \subset xH$ and $xH \subset zH$, and thus
+	$xH = zH$.  Similarly $yH = zH$, and thus $xH = yH$,
+	as required.
+\end{proof}
+\end{document}
+
