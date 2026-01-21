@@ -39,8 +39,8 @@ When I was learning Probability and Statistics (ProbStat for short), I didn't re
 	\label{fig:galaxy}
 \end{figure}
 \\ As you can see here, this graph \textbf{doesn't really resemble a bell-shaped curve}; and clearly, this data is not distributed normally. In fact, not much real-world statistical data fits a bell-shaped curve. But why are we still using it?
-\\ In my opinion (as a junior CE student), I think the main reason is due to \textbf{Central Limit Theorem} (CLT for short), every sample in the same population (regradless of how the data is distributed) has a \textbf{mean} that converges to a \textit{normal distribution}, or \textbf{bell-shaped curve}. This topic will be explained in detail in \textbf{Chapter 8: Fundamental of Statistics}.\\ \\  \\
-\indent This book approaches the fundamental of probability and statistics in a very mathematically rigourous way to ensure maximum accuracy. I encourage readers to prove all of theorems, corollaries; and you should create your own examples for each theorem to gain a deeper understading of their origins.
+\\ In my opinion (as a junior CE student), I think the main reason is due to \textbf{Central Limit Theorem} (CLT for short), every sample in the same population (regradless of how the data is distributed) has a \textbf{mean} that converges to a \textit{normal distribution}, or \textbf{bell-shaped curve}. This topic will be explained in detail in \textbf{Chapter 8: Fundamentals of Statistics}.\\ \\  \\
+\indent This book approaches the fundamentals of probability and statistics in a very mathematically rigourous way to ensure maximum accuracy. I encourage readers to prove all of theorems, corollaries; and you should create your own examples for each theorem to gain a deeper understading of their origins.
 \begin{flushright}
 	---Student---
 \end{flushright}
@@ -81,11 +81,11 @@ Imagine you have a coin, like this one. It's an ordinary coin that can be found 
 	\caption{Tossing a coin}
 	\label{Figure 2}
 \end{figure}
-\\Everyone knows that the chance of head (H) appearing after each toss is $50\%$, no one even doubts that. So, the \textbf{probability} of an \textbf{event} that head appearing is $50\%$. But because you're a very curious person, you don't easily accept the truth like others, so you will find a way to test it. The fact "The probability of head appearing is $50\%$" will be tested, and it can be called a \textbf{hypothesis}.
+\\Everyone knows that the chance of heads (H) appearing after each toss is $50\%$, no one even doubts that. So, the \textbf{probability} of an \textbf{event} that heads appearing is $50\%$. But because you're a very curious person, you don't easily accept the truth like others, so you will find a way to test it. The fact "The probability of heads appearing is $50\%$" will be tested, and it can be called a \textbf{hypothesis}.
 \\ \\ \\
-\indent The simplest way to test your hypothesis is tossing a coin many times. You might toss a coin $N=100$ times and see heads appear $n=40$ times, so your actual probability is: $$p=\frac{n}{N}=0.4$$
+\indent The simplest way to test your hypothesis is tossing a coin many times. You might toss a coin $N=100$ times and see headss appear $n=40$ times, so your actual probability is: $$p=\frac{n}{N}=0.4$$
 But your previous assumtion (or hypothesis) states that the ideal probability is: $$\hat p=0.5$$
-Is there anything wrong here? Dissatisfied, you continue your experiment. This time, you toss a coin $N=500$ times and see heads appear $n=270$ times, so the new actual probability is:
+Is there anything wrong here? Dissatisfied, you continue your experiment. This time, you toss a coin $N=500$ times and see headss appear $n=270$ times, so the new actual probability is:
 $$p=\frac{n}{N}=0.54$$
 This time the result is closer with intial hypothesis $\hat p$, but your hand now must be very tired after tossing a coin $600$ times. So do you think you have \textbf{enough} evidence to conclude that if $N\to+\infty$, then $p\to\hat p$? If so, your assumption is correct because \textit{can't be refuted}; and if not, our common sense might be wrong because the evidence \textit{strongly refutes it}.
 \\ \\ \\
@@ -111,7 +111,7 @@ You don't need to know anything about geography to predict what the weather will
 This problem will be covered in detail in \textbf{Chapter 5: Discrete Random Variables} and \textbf{Chapter 6: Continuous Random Variables}, but if you do have experience with random variables, you can try to solve it!
 \\ The answer for the first question is:
 \begin{equation*}
-	P(X=3)=\frac{e^{-5}5^3}{3!}\approx 14.03\%
+	P(X=3)=\frac{e^{-\frac{5.21}{31}}(\frac{5.21}{31})^3}{3!}\approx 21.89\%
 \end{equation*}
 \\ The answer for the second question is:
 \begin{equation*}
@@ -119,48 +119,143 @@ This problem will be covered in detail in \textbf{Chapter 5: Discrete Random Var
 \end{equation*}
 Since $14.89\%$ is quite low, so tomorrow you don't have to bring an umbrella.
 \section{Relationship between Probability and Statistics}
-
-\chapter{H-test and T-test}
-Thanks to my Prof Ha, Do Thi Thu for saving my life.
-We can efine contour integral:
-aas
-\begin{theorem}
-	Let \(f\) be a function whose derivative exists in every point, then \(f\)
-	is a continuous function.
-\end{theorem}
-
-\begin{theorem}[Pythagorean theorem]
-	\label{pythagorean}
-	This is a theorem about right triangles and can be summarised in the next
-	equation
-	\[ x^2 + y^2 = z^2 \]
-\end{theorem}
-
-And a consequence of theorem \ref{pythagorean} is the statement in the next
-corollary.
-
-\begin{corollary}
-	There's no right rectangle whose sides measure 3cm, 4cm, and 6cm.
-\end{corollary}
-
-You can reference theorems such as \ref{pythagorean} when a label is assigned.
-
-\begin{lemma}
-	Given two line segments whose lengths are \(a\) and \(b\) respectively there is a
-	real number \(r\) such that \(b=ra\).
-\end{lemma}
-\begin{definition}[Fibration]
-	A fibration is a mapping between two topological spaces that has the homotopy lifting property for every space \(X\).
+The formal definitions of \textbf{probability} and \textbf{statistics} will be discussed later in \textbf{Chapter 2: Fundamentals of Probability} and \textbf{Chapter 8: Fundamentals of Statistics}, but now let's focus on the general model below:
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{3.jpg}
+	\caption{General model of simple ProbStat problems}
+	\label{Figure 3}
+\end{figure}
+You want to know some attributes of a very large \textbf{population} such as the probabilites, means,$\cdots$ of the quantities. But there's no way you can observe the entire population (in many cases, $N\to +\infty$)
+, so you have to take some \textbf{samples} ($n$ elements) and use \textbf{probability rules} to process them. After that, you can try applying \textbf{statistical inference rules} to draw conclusions about the original population. That's how it works!
+\\ \\ \\
+\indent Referring to the previous example, you want to check if the probability of heads appearing is $\hat p=50\%$, so you toss a coin multiple times. But since you can only toss a coin for $600$ times consecutively, so you conclude based on your final result $p=0.54$ (or closed interval with a certainty) that might be if $N\to +\infty$ then $p\to \hat p=0.5$. You took the \textbf{samples} ($N=600$ or $N_{i}=100$), used \textbf{probability rule} to calculate the actual $p$ value, and then applied \textbf{statistical inference rules} (hypothesis or closed interval) to draw conclusions respectively.
+\chapter{Fundamentals of Probability}
+\section{Sample space and Events}
+\subsection{Sample space}
+If you toss a coin, you will see that there are $2$ possible outcomes: heads and tails, denoted by capital letters H and T; or if you roll a die, you will see that there are $6$ possible outcomes, from $1$ to $6$. Tossing a coin, or rolling a die are typical examples of \textbf{experiments}.
+\begin{definition}
+	An \textbf{experiment} is the process that generates a set of outcomes (or data).
 \end{definition}
-\begin{proof}
-	Let $z$ be some element of $xH \cap yH$.  Then $z = xa$
-	for some $a \in H$, and $z = yb$ for some $b \in H$.
-	If $h$ is any element of $H$ then $ah \in H$ and
-	$a^{-1}h \in H$, since $H$ is a subgroup of $G$.
-	But $zh = x(ah)$ and $xh = z(a^{-1}h)$ for all $h \in H$.
-	Therefore $zH \subset xH$ and $xH \subset zH$, and thus
-	$xH = zH$.  Similarly $yH = zH$, and thus $xH = yH$,
-	as required.
-\end{proof}
+All of possible outcomes are collected into a single set.
+$$S_{1}=\{H,T\}$$
+$$S_{2}=\{1,2,3,4,5,6\}$$
+\begin{definition}
+	The \textbf{sample space} is the set of all possible outcomes of an \textbf{experiment}.
+\end{definition}
+The sample space is usually represented by the symbol $S$ or $\Omega$. You can easily see that $S$ is not always a countable or finite set. For instance, $S_{3}$ is the set of all random numbers you can choose within the range $(0,1)$:
+$$S_{3}=\{x\;|\;0<x<1\}$$
+$S_{4}$ is the set of all number of coin tosses until first heads appears:
+$$S_{4}=\{1,2,3,\cdots\}$$
+It's possible that you toss a coin forever, and heads never appears.
+\begin{definition}
+	A \textbf{sample point} is a single outcome of the sample space $S$.
+\end{definition}
+$S_{1},S_{2}$ have $2$ and $6$ sample points respectively, while $S_{3},S_{4}$ have infinite sample points.
+\subsection{Events}
+For any given experiment, we are often interested in the occurence of certain \textbf{events} rather than a specific element (or \textbf{sample point}) in the sample space. For example, in the die roll experiment, you may want to know when the outcome is an even number. This will happen if the result is an element of the subset $E_{2}$ of the sample space $S_{2}$:
+$$E_{2}=\{2,4,6\}$$
+\begin{definition}
+	An \textbf{event} is the subset of a sample space.
+\end{definition}
+Events are always denoted by capital letters like $A,B,C,\cdots$. Similarly, an event is not always a countable or finite subset.
+\\ The \textbf{complement} of an event $E_{2}$ with respect to $S_{2}$ is the set of all \textit{odd outcomes}, and can be represented as follows: $$\overline{E}_{2}=\{1,3,5\}$$
+There are many ways to denote the \textbf{complement} of an event: $\overline{E},E',E^c$, but in this book I choose overline notation for convenience and make it easy to relate with Boolean algebra.
+\begin{definition}
+	The \textbf{complement} of an event $E$ with respect to $S$ is the subset of all elements of $S$ that are not in $E$, and can be denoted by the symbol $\overline{E}$.
+\end{definition}
+Apply set theory, we can perform many set operations like joint, disjoint, union,$\cdots$
+\begin{definition}
+	The \textbf{intersection} of two events $A$ and $B$, denoted by the symbol $A\cap B$ is the event containing all elements that are common to $A$ and $B$.
+\end{definition}
+For example, if $A$ and $B$ are the subset of $S_{3}$ and defined as:
+\begin{equation*}
+	\begin{split}
+		A&=\{x\;|\;0<x<0.7\}\\
+		B&=\{x\;|\;0.2<x<0.9\}\\
+		\Rightarrow A\cap B&=\{x\;|\;0.2<x<0.7\}
+	\end{split}
+\end{equation*}
+\begin{definition}
+	Two events $A$ and $B$ are \textbf{mutually exclusive}, or \textbf{disjoint}, if $A\cap B=\varnothing$, that is $A$ and $B$ have nothing in common.
+\end{definition}
+For example, $E_{2}$ and $\overline{E}_{2}$ are mutually exclusive.
+\begin{definition}
+	The \textbf{union} of the two events $A$ and $B$, denoted by the symbol $A\cup B$ is the event containing all of the elements that belong to $A$ or $B$ or both.
+\end{definition}
+For example, $A\cup B=\{x\;|\;0<x<0.9\}$, and $(A\cup B)\subset S_{3}$. Note that $E_{2}\cup\overline{E}_{2}=S_{2}$ is an useful result and can be generalized to corollary below:
+\begin{corollary}
+	If $A$ is an event with respect to sample space $S$, then $A\cup\overline{A}=S$
+\end{corollary}
+De Morgan's law can also be applied to set theory.
+\begin{corollary}
+	If $A$ and $B$ are events with respect to sample space $S$, then $$\overline{A\cap B}=\overline{A}\cup\overline{B}$$ $$\overline{A\cup B}=\overline{A}\cap\overline{B}$$
+\end{corollary}
+These results above are really useful in many cases, but you don't have prove them since they are pretty simple. Proving them rigourously is not the focus of Probability and Statistics book.
+\section{Counting sample points}
+In this section, we develop some \textit{counting techniques} to count the number of points in the sample space $S$ and its event subset $E$ without actually listing each elements. These techniques play an important role in solving some simple probability problems. Notice that these techniques can only be applied when your sample space is finite and countable.
+\\ Obviously, you can't count the number of elements of $S_{3}$ and $S_{4}$, since they are infinite and uncountable sets.
+\subsection{Rule of Product}
+You toss a pair of coins. How many sample points are there in the sample space? First you can try to list all of the possible outcomes: $$S=\{HH,HT,TH,TT\}$$
+There are total $4$ sample points in $S$. But listing all of the elements might be not so clever idea, so you use \textbf{rule of product} instead.
+\\ The first coin can land heads or tails, so can the second coin. We multiply the number of possible outcomes of the two coins:
+$$n_{1}n_{2}=2.2=4\text{ (possible outcomes)}$$
+\begin{definition}
+	If an operation can be performed in $n_{1}$ ways, and if for each of these a second operation can be performed in $n_{2}$ ways, and for each of the first two a third operation can be performed in $n_{3}$ ways, and so fourth, the the sequence of $k$ operations can be performed in:
+	$$\prod_{i=1}^k n_{i}\text{ (ways)}$$
+\end{definition}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=13cm]{4.jpg}
+	\caption{Tree diagram for rule of product}
+	\label{Figure 4}
+\end{figure}
+\subsection{Permutations}
+\begin{definition}
+	A \textbf{permutation} is an arrangement of \textbf{all} or \textbf{part} of a set of objects.
+\end{definition}
+For instance, the number of permutations of $n$ distinct objects can be counted by using rule of product:
+$$n(n-1)(n-2)\cdots3.2.1$$
+We introduce a new notation for such a number.
+\begin{definition}
+	For any non-negative integer $n$, $n!$, called "$n$ factorial", is defined as:
+	$$n!=n(n-1)(n-2)\cdots 3.2.1$$
+	with special case $0!=1$
+\end{definition}
+\begin{theorem}
+	The number of \textbf{permutations} of $n$ distinct objects is $n!$
+\end{theorem}
+In general, the number of permutations of $n$ distinct objects taken $r$ at a time can also be counted by using rule of product:
+$$n(n-1)(n-2)\cdots(n-r+2)(n-r+1)$$
+This product can be represented by the new symbol $nPr$.
+\begin{theorem}
+	The number of \textbf{permutations} of $n$ distinct objects taken $r$ at a time is:
+	$$nPr=\frac{n!}{(n-r)!}$$
+\end{theorem}
+But how about our $n$ objects are not distinct? Assume that $n_{1}$ are of one kind, $n_{2}$ are of a second kind,$\cdots$ and $n_{k}$ of a $k$th kind.
+\begin{theorem}
+	The number of \textbf{permutations} of $n$ things of which $n_{1}$ are of one kind, $n_{2}$ of a second kind, and so forth is:
+	$$\frac{n!}{n_{1}!n_{2}!\cdots n_{k}!}$$
+	with $\sum_{i=1}^{k}n_{i}=n$.
+\end{theorem}
+For example, from the digits $1$ to $9$, we can form $9!$ numbers made up of $9$ distinct digits, or we can form $9P5$ five-digit numbers such that all the digits are different. If we allow repetation, five-digits numbers are now formed by $2$ digits 1, $2$ digits 2 and $1$ digit 3, then the number of permutation that satisfy is:
+$$\frac{5!}{2!2!1!}=30$$
+\subsection{Combinations}
+Consider another problem, now you have a set of $n$ elements. How many ways you can partition it into $k$ cells with $n_{1}$ elements in the first cell, $n_{2}$ elements in the second cell, and so forth? Coincidentally, the equation in \textbf{Theorem 2.2.3} appears again.
+\begin{theorem}
+	The number of ways of partitioning a set of $n$ objects into $k$ cells with $n_{1}$ elements in the first cell, $n_{2}$ elements in the second, and so forth, is:
+	$$\binom{n}{n_{1},n_{2},\cdots,n_{k}}=\frac{n!}{n_{1}!n_{2}!\cdots n_{k}!}$$
+	with $\sum_{i=1}^{k}n_{i}=n$.
+\end{theorem}
+In many problems, we are interested in the number of ways of selecting $k$ objects from $n$ without regrad to order. These selections are called \textbf{combinations}. It's not too hard to realize that a \textbf{combination} is just a partition with $2$ cells, one cell containing the $k$ objects and the other containing the $(n-k)$ objects.
+\begin{definition}
+	A \textbf{combination} is a selection of items from a set that has distinct elements, such that \textbf{the order of selection does not matter}.
+\end{definition}
+\begin{theorem}
+	The number of combinations of $n$ distinct objects taken $k$ at a time is:
+	$$\binom{n}{k}=\frac{n!}{k!(n-k)!}$$
+\end{theorem}
+For example, the number of $3$ elements subsets from an original set with $10$ elements is $$\binom{10}{3}=120$$
 \end{document}
 
