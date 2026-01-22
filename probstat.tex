@@ -103,15 +103,15 @@ This time the result is closer with intial hypothesis $\hat p$, but your hand no
 You might see that the value $\hat p=0.5$ too idealistic to occur in our experiment, and $p$ constantly changes. Therefore instead of determining the \textbf{exact value} of $p$, we \textbf{predict} that the $p$ value lies inside a \textbf{closed interval} with a \textbf{certainty} of $(1-\alpha)100\%$. For example, we can confidently conclude that the value of $p$ lies within the range (0.48,0.51) with $95\%$ accuracy.
 \section{Weather forecasting}
 You don't need to know anything about geography to predict what the weather will be tomorrow. Everything you need is just knowledge about Poisson, exponential distribution and the \textbf{average number} of rainy days per month where you are living.
-\\ For example, in December there are \textbf{average} 5 rainy days. If today is the $10$th and you haven't seen any rain since the beginning of the month, what are the probabilities of:
+\\ For example, in December there are \textbf{average} 5 rainy days. What are the probabilities of:
 \begin{enumerate}
 	\item There will be 3 rainy days this month.
-	\item Tomorrow will be a rainy day.
+	\item Tomorrow will be a rainy day, if today is the $10$th and you haven't seen any rain since the beginning of the month.
 \end{enumerate}
-This problem will be covered in detail in \textbf{Chapter 5: Discrete Random Variables} and \textbf{Chapter 6: Continuous Random Variables}, but if you do have experience with random variables, you can try to solve it!
+This problem will be covered in detail in \textbf{Chapter 5: Discrete Random Variables} and \textbf{Chapter 6: Continuous Random Variables}, but if you do have experience with random variables, you can try solving it!
 \\ The answer for the first question is:
 \begin{equation*}
-	P(X=3)=\frac{e^{-\frac{5.21}{31}}(\frac{5.21}{31})^3}{3!}\approx 21.89\%
+	P(X=3)=\frac{e^{-5}5^3}{3!}\approx 14.03\%
 \end{equation*}
 \\ The answer for the second question is:
 \begin{equation*}
@@ -132,8 +132,8 @@ You want to know some attributes of a very large \textbf{population} such as the
 \\ \\ \\
 \indent Referring to the previous example, you want to check if the probability of heads appearing is $\hat p=50\%$, so you toss a coin multiple times. But since you can only toss a coin for $600$ times consecutively, so you conclude based on your final result $p=0.54$ (or closed interval with a certainty) that might be if $N\to +\infty$ then $p\to \hat p=0.5$. You took the \textbf{samples} ($N=600$ or $N_{i}=100$), used \textbf{probability rule} to calculate the actual $p$ value, and then applied \textbf{statistical inference rules} (hypothesis or closed interval) to draw conclusions respectively.
 \chapter{Fundamentals of Probability}
-\section{Sample space and Events}
-\subsection{Sample space}
+\section{Sample Space and Events}
+\subsection{Sample Space}
 If you toss a coin, you will see that there are $2$ possible outcomes: heads and tails, denoted by capital letters H and T; or if you roll a die, you will see that there are $6$ possible outcomes, from $1$ to $6$. Tossing a coin, or rolling a die are typical examples of \textbf{experiments}.
 \begin{definition}
 	An \textbf{experiment} is the process that generates a set of outcomes (or data).
@@ -165,7 +165,7 @@ There are many ways to denote the \textbf{complement} of an event: $\overline{E}
 \begin{definition}
 	The \textbf{complement} of an event $E$ with respect to $S$ is the subset of all elements of $S$ that are not in $E$, and can be denoted by the symbol $\overline{E}$.
 \end{definition}
-Apply set theory, we can perform many set operations like joint, disjoint, union,$\cdots$
+Applying set theory, we can perform many set operations like joint, disjoint, union,$\cdots$
 \begin{definition}
 	The \textbf{intersection} of two events $A$ and $B$, denoted by the symbol $A\cap B$ is the event containing all elements that are common to $A$ and $B$.
 \end{definition}
@@ -188,12 +188,12 @@ For example, $A\cup B=\{x\;|\;0<x<0.9\}$, and $(A\cup B)\subset S_{3}$. Note tha
 \begin{corollary}
 	If $A$ is an event with respect to sample space $S$, then $A\cup\overline{A}=S$
 \end{corollary}
-De Morgan's law can also be applied to set theory.
+De Morgan's laws can also be applied to set theory.
 \begin{corollary}
 	If $A$ and $B$ are events with respect to sample space $S$, then $$\overline{A\cap B}=\overline{A}\cup\overline{B}$$ $$\overline{A\cup B}=\overline{A}\cap\overline{B}$$
 \end{corollary}
 These results above are really useful in many cases, but you don't have prove them since they are pretty simple. Proving them rigourously is not the focus of Probability and Statistics book.
-\section{Counting sample points}
+\section{Counting Sample Points}
 In this section, we develop some \textit{counting techniques} to count the number of points in the sample space $S$ and its event subset $E$ without actually listing each elements. These techniques play an important role in solving some simple probability problems. Notice that these techniques can only be applied when your sample space is finite and countable.
 \\ Obviously, you can't count the number of elements of $S_{3}$ and $S_{4}$, since they are infinite and uncountable sets.
 \subsection{Rule of Product}
@@ -260,7 +260,7 @@ In many problems, we are interested in the number of ways of selecting $k$ objec
 	$$\binom{n}{k}=\frac{n!}{k!(n-k)!}$$
 \end{theorem}
 For example, the number of subsets of $3$ elements that can be obtained from an original set of $10$ elements is: $$\binom{10}{3}=120$$
-For the rest of this book, we mainly focus on \textbf{combinations}, and derive many probability density functions based on them. Like set theory, we don't go deeply into \textbf{counting techniques} since they are not the main concern of ProbStat.
+For the rest of this book, we mainly focus on \textbf{combinations}, and derive many probability distribution functions based on them. Like set theory, we don't go deeply into \textbf{counting techniques} since they are not the main concern of ProbStat.
 \section{Probability of an Event}
 Everyone knows the basic idea of probability. If I toss a \textbf{fair} coin once, and I want to know the probability of getting heads; how can I determine it? Strictly, I have to define $S$ is the sample space of this experiment and $A$ is the event "Getting heads after one toss".
 $$S=\{H,T\}$$
@@ -295,7 +295,7 @@ This definition can also be called Kolmogorov's axioms. An intuitive way to unde
 	\caption{Visualize definition of probability}
 	\label{Figure 5}
 \end{figure}
-\\Literally, probability is just a number that describes how likely an event can occur. I often relate it with "weight" quantity. As you can see in the sample space, I can assign arbitrarily the "weights" (or probabilites) of sample points as follow:
+\\Literally, probability is just a number that describes how likely an event can occur. I often relate it with "weight" quantity. As you can see in the sample space, I can assign arbitrarily the "weights" (or probabilites) of sample points as follows:
 \begin{itemize}
 	\item Each blue point is $0.1$
 	\item Each orange point is $0.2$
@@ -312,5 +312,124 @@ You should verify that our "special definition" of probabilty above satisfies th
 	If an experiment can result in any one of $N$ different \textbf{equally} likely outcomes, and if exactly $n$ of these outcomes correspond to event $A$, then the probability of event $A$ is:
 	$$P(A)=\frac{n}{N}$$
 \end{theorem}
+Logically, you can view probability as a mapping from a set to a closed interval $[0,1]$, then you can freely define the mapping $P$ by yourself as long as it satisfies Kolmogorov's axioms.
+\begin{equation*}
+	\begin{split}
+		P:\text{Set}&\to[0,1]\\
+		A&\xrightarrow{P} P(A)
+	\end{split}
+\end{equation*}
+By applying set theory, we can derive several extremely useful theorems and corollaries:
+\begin{theorem}
+	If $A$ and $B$ are two events, then:
+	$$P(A\cup B)=P(A)+P(B)-P(A\cap B)$$
+\end{theorem}
+\begin{theorem}
+	If $A$ is an event of sample space $S$, then:
+	$$P(S)=P(A\cup\overline{A})=P(A)+P(\overline{A})=1$$
+\end{theorem}
+\begin{corollary}
+	If A is an event of sample space $S$, then:
+	$$P(\overline{A})=1-P(A)$$
+\end{corollary}
+Again, De Morgan's laws can also be applied:
+\begin{corollary}
+	If $A$ and $B$ are events of sample space $S$, then:
+	\begin{equation*}
+		\begin{split}
+			P(\overline{A\cup B})&=P(\overline{A}\cap\overline{B})\\
+			P(\overline{A\cap B})&=P(\overline{A}\cup\overline{B})\\
+		\end{split}
+	\end{equation*}
+\end{corollary}
+\section{Conditional Probability}
+\subsection{Conditional Probability}
+Imagine you now have a perfectly fair coin. Obviously if you define events $A$ and $B$ are heads and tails appearing after one toss, respectively, you will conclude: $$P(A)=P(B)=0.5$$
+But I might ask you "If event $A$ \textbf{did} occur, might event $B$ would have any chance to occur?"
+. Since there's no way heads and tails can simultaneously appear, so your answer must be "No!". Now we can form an equation to represent the probability of a "special event" (or formally, conditional event) that "If $A$ occured, then $B$ would occur.":
+$$P(B|A)=0$$
+Now we shift our attention to a more complex problem. I give you a die, and you roll it. Events $E_{1}$ and $E_{2}$ can be defined as: "Landing a number that greater than 3" and "Landing a number that divisible by 2":
+$$P(E_{1})=P(E_{2})=\frac{1}{3}$$
+Sample points of $2$ events can be listed: $$E_{1}=\{4,5,6\}$$ $$E_{2}=\{2,4,6\}$$
+If a number greater than 3 landed, what's the probability that it could be divisible by 2? You can count the number of sample points inside $E_{1}$ and draw a result:
+$$P(E_{2}|E_{1})=\frac{2}{3}$$
+Conversely, if a number divisible by 2 landed, what's the probability that it could be greater than $3$?
+$$P(E_{1}|E_{2})=\frac{2}{3}$$
+As you can see here, if one event occurs before another event, probability will be completely \textbf{changed}. So we call the pairs of events $A$ and $B$, $E_{1}$ and $E_{2}$ \textbf{dependent events} because they depend on each other. The "special" probabilities $P(B|A), P(E_{2}|E_{1}),P(E_{1}|E_{2})$ are called \textbf{conditional probability}.
+\begin{definition}
+	The \textbf{conditional probability} of $B$, given $A$, denoted by $P(B|A)$, is defined:
+	$$P(B|A)=\frac{P(A\cap B)}{P(A)}$$
+\end{definition}
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=13cm]{6.jpg}
+	\caption{Visualize how conditional probability is calculated}
+	\label{Figure 6}
+\end{figure}
+Now back to our previous problems, these conditional probabilities can easily be determined using \textbf{Definition 2.4.1} above:
+$$P(E_{1}|E_{2})=\frac{P(E_{1}\cap E_{2})}{P(E_{2})}=\frac{2/6}{1/2}=\frac{2}{3}$$
+$$P(E_{2}|E_{1})=\frac{P(E_{1}\cap E_{2})}{P(E_{1})}=\frac{2/6}{1/2}=\frac{2}{3}$$
+\subsection{Independent Events}
+Intuitively, we can see that if events $A$ and $B$ don't influence each other, then:
+$$P(B|A)=P(B)$$
+$$P(B|A)=P(B)\Leftrightarrow \frac{P(B\cap A)}{P(A)}=P(B)\Leftrightarrow P(A\cap B)=P(B)(A)\;(\text{if }P(A)>0 )$$
+\begin{definition}
+	Two events $A$ and $B$ are independent if and only if: $$P(B|A)=P(B)$$
+	assuming $P(A)>0$
+\end{definition}
+\begin{theorem}
+	Two events $A$ and $B$ are independent if and only if $$P(A\cap B)=P(A)P(B)$$
+\end{theorem}
+There are many examples of independent events, like if we define 2 events $E_{1}$: "Getting heads on the first toss." and $E_{2}$: "Getting heads on the second toss.". Intuitively you can see that $E_{1}$ and $E_{2}$ are unrelated, so they are \textbf{independent events}. You can also verify this fact:
+$$P(E_{1}\cap E_{2})=\frac{1}{2}.\frac{1}{2}=\frac{1}{4}=P(E_{1})P(E_{2})$$
+It's very important to note that determining the independence of events if completely \textbf{unrelated} to their mutual exclusion. Events are considered independent if and only if they satisfy \textbf{Theorem 2.4.1}.
+\newpage
+\section{Total Probability and Bayes's rule}
+\subsection{Total Probability}
+In many situations, we don't know directly the information of $P(A)$ in \textbf{Definition 2.4.1}(or denomirator part); so in this section, we will develop a simple formula to handle this problem.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=8cm]{7.jpg}
+	\caption{Total probability}
+	\label{Figure 7}
+\end{figure}
+\begin{equation*}
+	\begin{split}
+		A=A\cap S=A\cap(B\cup \overline{B})=(A\cap B)\cup (A\cap \overline{B})
+	\end{split}
+\end{equation*}
+Because $A\cap B$ and $A\cap \overline{B}$ are independent events, so:
+\begin{equation*}
+	P(A)=P(A\cap B)+P(A\cap \overline{B})=P(A|B)P(B)+P(A|\overline{B})P(\overline{B})
+\end{equation*}
+\begin{theorem}
+	If $A$ and $B$ are two events of sample space $S$, then:
+	\begin{equation*}
+		P(A)=P(A|B)P(B)+P(A|\overline{B})P(\overline{B})
+	\end{equation*}
+\end{theorem}
+Total probability is an useful formula, especially when you're conducting surveys in practice. For example, in my university, there are $2$ types of students: those who "studied the whole semester" and those who "studied only one night before the exam". After the final exam, I asked everyone in my class about their scores and totaled the results. Event $A$: "Got $A+$" and event $\overline{A}$: "Didn't get $A+$"; event $B$: "Studied the whole semester" and event $\overline{B}$: "Studied only one night".
+\begin{equation*}
+	P(A|B)=0.8,\;P(A|\overline{B})=0.3,\;P(B)=0.4
+\end{equation*}
+Using total probability formula, I obtained the probability of $A$:
+$$P(A)=P(A|B)P(B)+P(A|\overline{B})P(\overline{B})=0.8.0.4+0.3.(1-0.4)=0.5$$
+Wow, that was an impressive ratio. Half of a class received perfect score. Was this course too easy?
+\subsection{Bayes's rule}
+If I studied hard, I would get $A+$. But how about me, who wasn't keen on studying boring courses like Computer Architecture but \textit{still survived after final test and even got "A+"}? I could questioned myself "Was I too lucky?". To answer myself, I had to calculate $P(\overline{B}|A)$, if the result is not so high, perhaps I was lucky. Bayes's rule was what I needed.
+\begin{theorem}
+	If $A$ and $B$ are two events of sample space $S$, then:
+	\begin{equation*}
+		P(B|A)=\frac{P(B\cap A)}{P(A)}=\frac{P(A|B)P(B)}{P(A|B)P(B)+P(A|\overline{B})P(\overline{B})}
+	\end{equation*}
+\end{theorem}
+Bayes's rule seems very simple. Indeed an average high school student has no difficulty finding it, but its idea is brilliant. Before Bayes, we typically only reasoned about problems in terms of cause first, then effect. But Bayes's rule opens up a completely new way of thinking for us: knowing the effect beforehand, then understanding how cause influences it.
+\\ \\ \\
+\indent Back to my previous problem, I applied Bayes's rule:
+\begin{equation*}
+	P(B|A)=\frac{P(A|B)P(B)}{P(A|B)P(B)+P(A|\overline{B})P(\overline{B})}=\frac{0.8.0.4}{0.5}=0.64\Rightarrow P(\overline{B}|A)=1-P(B|A)=0.36
+\end{equation*}
+Since $0.36$ was not a high number, indeed I was incredibly lucky and the course was not as easy as I thought.
 \end{document}
 
