@@ -146,9 +146,9 @@ $$S_{2}=\{1,2,3,4,5,6\}$$
 \end{definition}
 The sample space is usually represented by the symbol $S$ or $\Omega$. You can easily see that $S$ is not always a countable or finite set. For instance, $S_{3}$ is the set of all random numbers you can choose within the range $(0,1)$:
 $$S_{3}=\{x\;|\;0<x<1\}$$
-$S_{4}$ is the set of all number of coin tosses until first heads appears:
+$S_{4}$ is the set of all number of coin tosses until first heads appear:
 $$S_{4}=\{1,2,3,\cdots\}$$
-It's possible that you toss a coin forever, and heads never appears.
+It's possible that you toss a coin forever, and heads never appear.
 \begin{definition}
 	A \textbf{sample point} is a single outcome of the sample space $S$.
 \end{definition}
@@ -198,7 +198,7 @@ In this section, we develop some \textit{counting techniques} to count the numbe
 \\ Obviously, you can't count the number of elements of $S_{3}$ and $S_{4}$, since they are infinite and uncountable sets.
 \subsection{Rule of Product}
 You toss a pair of coins. How many sample points are there in the sample space? First you can try to list all of the possible outcomes: $$S=\{HH,HT,TH,TT\}$$
-There are total $4$ sample points in $S$. But listing all of the elements might be not so clever idea, so you use \textbf{rule of product} instead.
+There are total $4$ sample points in $S$. But listing all of the elements might be not so clever idea, so you use \textbf{rule of product}.
 \\ The first coin can land heads or tails, so can the second coin. We multiply the number of possible outcomes of the two coins:
 $$n_{1}n_{2}=2.2=4\text{ (possible outcomes)}$$
 \begin{definition}
@@ -249,6 +249,9 @@ Consider another problem, now you have a set of $n$ elements. How many ways you 
 	with $\sum_{i=1}^{k}n_{i}=n$.
 \end{theorem}
 In many problems, we are interested in the number of ways of selecting $k$ objects from $n$ without regrad to order. These selections are called \textbf{combinations}. It's not too hard to realize that a \textbf{combination} is just a partition with $2$ cells, one cell containing the $k$ objects and the other containing the $(n-k)$ objects.
+\begin{equation*}
+	\binom{n}{k,n-k} \text{ is often shortened to } \binom{n}{k}
+\end{equation*}
 \begin{definition}
 	A \textbf{combination} is a selection of items from a set that has distinct elements, such that \textbf{the order of selection does not matter}.
 \end{definition}
@@ -256,6 +259,58 @@ In many problems, we are interested in the number of ways of selecting $k$ objec
 	The number of combinations of $n$ distinct objects taken $k$ at a time is:
 	$$\binom{n}{k}=\frac{n!}{k!(n-k)!}$$
 \end{theorem}
-For example, the number of $3$ elements subsets from an original set with $10$ elements is $$\binom{10}{3}=120$$
+For example, the number of subsets of $3$ elements that can be obtained from an original set of $10$ elements is: $$\binom{10}{3}=120$$
+For the rest of this book, we mainly focus on \textbf{combinations}, and derive many probability density functions based on them. Like set theory, we don't go deeply into \textbf{counting techniques} since they are not the main concern of ProbStat.
+\section{Probability of an Event}
+Everyone knows the basic idea of probability. If I toss a \textbf{fair} coin once, and I want to know the probability of getting heads; how can I determine it? Strictly, I have to define $S$ is the sample space of this experiment and $A$ is the event "Getting heads after one toss".
+$$S=\{H,T\}$$
+$$A=\{H\}$$
+So, the probability of event $A$ occuring is:
+$$P(A)=\frac{\text{number of sample points inside } A}{\text{number of sample points inside } S}=\frac{1}{2}$$
+Very easy and intuitive. But how about tossing 4 \textbf{fair} coins once, and determining the probability of getting $2$ heads? Now sample space $S$ and its event set can be represented as:
+$$S=\{HHHH,HHHT,HHTH,\cdots\}$$
+$$A=\{TTHH,THTH,\cdots\}$$
+Now we change our strategy using \textbf{counting techniques}:
+$$P(A)=\frac{\text{number of sample points inside } A}{\text{number of sample points inside } S}=\frac{\binom{4}{2}}{2^4}=\frac{3}{8}=0.375$$
+In fact, the chance of getting heads is slightly greater than tails (you know, because coins are asymmetrical). Assume that probability of heads appearing is $60\%$, and tails appearing is $40\%$. Since the role of \textbf{sample points} inside set $S$ and subset $A$ are not \textbf{equal} anymore, so we can't use \textbf{counting techniques} blindly.
+$$P(A)=\binom{4}{2}0.6^2 0.4^2=0.3456$$
+Coin tossing is a typical example of \textbf{Bernoulli trial}, and the experiment tossing unfair coins is \textbf{Bernoulli process}. The probability $P(A)$ can be calculated by using \textbf{Binomial distribution} formula. You don't have to worry about these terms, we will cover them in \textbf{Chapter 5: Discrete Random Variables} very carefully.
+\\ \\ \\
+\indent Consider another problem, what's the probability of getting $0.7$ when randomly choosing a number (assume that the role of every numbers are equal) inside the interval $(0,1)$?
+$$S_{3}=\{x\;|\;0<x<1\}$$
+$$A=\{0.7\}$$
+$$P(A)=\frac{\text{number of sample points inside } A}{\text{number of sample points inside } S}=\frac{1}{+\infty}=0\;(?????)$$
+Since $P(A)=0$, so may we conclude 0.7 will never be chosen? Absolutely incorrect, even in common thinking. From previous examples, now we see the \textbf{limitation} of our "common definition" of probability in real life. Mathematically, our definition is just a very special case of the formal one.
+\begin{definition}
+	The \textbf{probability} of an event $A$ is the sum of the weights (or probabilities) of all sample points in $A$. Therefore:
+	\begin{equation*}
+		0\leq P(A)\leq 1,\quad P(\varnothing)=0,\quad P(S)=1
+	\end{equation*}
+	If $A$ and $B$ are \textbf{mutually exclusive (or disjoint)}, then $P(A\cup B)=P(A)+P(B)$
+\end{definition}
+This definition can also be called Kolmogorov's axioms. An intuitive way to understand it is sketching a sample space with some events inside.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=14cm]{5.jpg}
+	\caption{Visualize definition of probability}
+	\label{Figure 5}
+\end{figure}
+\\Literally, probability is just a number that describes how likely an event can occur. I often relate it with "weight" quantity. As you can see in the sample space, I can assign arbitrarily the "weights" (or probabilites) of sample points as follow:
+\begin{itemize}
+	\item Each blue point is $0.1$
+	\item Each orange point is $0.2$
+	\item Each pink point is $0.066$
+\end{itemize}
+Using \textbf{Definition 2.3.1}, now we can obtain these resuls:
+$$P(A)=3.0.2=0.6$$
+$$P(B)=2.0.1=0.2$$
+$$P(A\cup B)=P(A)+P(B)=0.6+0.2=0.8$$
+$$P(\overline{A\cup B})=3.0.066\approx 0.2$$
+$$P(S)=2.0.1+3.0.2+3.0.066\approx 1$$
+You should verify that our "special definition" of probabilty above satisfies the axioms of probability, and can be formalized by a theorem.
+\begin{theorem}
+	If an experiment can result in any one of $N$ different \textbf{equally} likely outcomes, and if exactly $n$ of these outcomes correspond to event $A$, then the probability of event $A$ is:
+	$$P(A)=\frac{n}{N}$$
+\end{theorem}
 \end{document}
 

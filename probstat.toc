@@ -11,3 +11,4 @@
 \contentsline {subsection}{\numberline {2.2.1}Rule of Product}{12}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Permutations}{12}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}Combinations}{13}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}Probability of an Event}{14}{section.2.3}%
