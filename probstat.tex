@@ -277,7 +277,7 @@ $$P(A)=\binom{4}{2}0.6^2 0.4^2=0.3456$$
 Coin tossing is a typical example of \textbf{Bernoulli trial}, and the experiment tossing unfair coins is \textbf{Bernoulli process}. The probability $P(A)$ can be calculated by using \textbf{Binomial distribution} formula. You don't have to worry about these terms, we will cover them in \textbf{Chapter 5: Discrete Random Variables} very carefully.
 \\ \\ \\
 \indent Consider another problem, what's the probability of getting $0.7$ when randomly choosing a number (assume that the role of every numbers are equal) inside the interval $(0,1)$?
-$$S_{3}=\{x\;|\;0<x<1\}$$
+$$S=\{x\;|\;0<x<1\}$$
 $$A=\{0.7\}$$
 $$P(A)=\frac{\text{number of sample points inside } A}{\text{number of sample points inside } S}=\frac{1}{+\infty}=0\;(?????)$$
 Since $P(A)=0$, so may we conclude 0.7 will never be chosen? Absolutely incorrect, even in common thinking. From previous examples, now we see the \textbf{limitation} of our "common definition" of probability in real life. Mathematically, our definition is just a very special case of the formal one.
@@ -383,7 +383,7 @@ $$P(B|A)=P(B)\Leftrightarrow \frac{P(B\cap A)}{P(A)}=P(B)\Leftrightarrow P(A\cap
 \end{theorem}
 There are many examples of independent events, like if we define 2 events $E_{1}$: "Getting heads on the first toss." and $E_{2}$: "Getting heads on the second toss.". Intuitively you can see that $E_{1}$ and $E_{2}$ are unrelated, so they are \textbf{independent events}. You can also verify this fact:
 $$P(E_{1}\cap E_{2})=\frac{1}{2}.\frac{1}{2}=\frac{1}{4}=P(E_{1})P(E_{2})$$
-It's very important to note that determining the independence of events if completely \textbf{unrelated} to their mutual exclusion. Events are considered independent if and only if they satisfy \textbf{Theorem 2.4.1}.
+It's very important to note that determining the independence of events is completely \textbf{unrelated} to their mutual exclusion. Events are considered independent if and only if they satisfy \textbf{Theorem 2.4.1}.
 \newpage
 \section{Total Probability and Bayes's rule}
 \subsection{Total Probability}
@@ -431,5 +431,97 @@ Bayes's rule seems very simple. Indeed an average high school student has no dif
 	P(B|A)=\frac{P(A|B)P(B)}{P(A|B)P(B)+P(A|\overline{B})P(\overline{B})}=\frac{0.8.0.4}{0.5}=0.64\Rightarrow P(\overline{B}|A)=1-P(B|A)=0.36
 \end{equation*}
 Since $0.36$ was not a high number, indeed I was incredibly lucky and the course was not as easy as I thought.
+\chapter{Random Variables and Probability Distributions}
+\section{Definition of Random Variables}
+Back to our coin tossing game, now you toss a fair coin three times. This experiment has sample space $S$:
+$$S=\{HHH,HHT,HTH,HTT,THH,THT,TTH,TTT\}$$
+Since writing all of the sample points is quite lengthly and time-consuming, sometimes unnecessarily, so how about we assign each point with a \textbf{numerical value}? Because the assignment of values is entirely based on our own conventions, there are no constraints whatsover. But for this reason, we should choose the \textbf{smartest} and \textbf{most convenient} way to assign values to suit our concern. For example, if I define an event $A$: "Getting $2$ heads", then the cleverest way is assigning each sample point with its number of heads.
+\begin{equation*}
+	\begin{split}
+		HHH&\to3\\
+		HHT,HTH,THH&\to2\\
+		HTT,TTH,THT&\to1\\
+		TTT&\to0\\
+	\end{split}
+\end{equation*}
+Or event $B$: "Getting both tails and heads":
+\begin{equation*}
+	\begin{split}
+		HHT,HTH,HTT,THH,THT,TTH,TTT&\to1\quad\text{(Yes)}\\
+		HHH,TTT&\to0\quad\text{(No)}\\
+	\end{split}
+\end{equation*}
+These values may be viewed as values assumed by the \textbf{random variable} $X$, $X$ can be "number of heads appearing" or "getting both tails and heads state", but \textit{not both}.
+\begin{definition}
+	A \textbf{random variable} is a function that associates a real number with each element in the sample space.
+\end{definition}
+We shall use a capital letter $X$, to denote the random variable and its corresponding smaller letter $x$, for \textbf{one of its values}. A typical mistake is forgetting to define the meaning of random variable $X$, so \textit{please don't forget it in your exam}. Let's continue by looking at some examples of random variables and sample spaces.
+\\ Roll the die and observe the landing value. $X$ is the random variable defined as the value observed:
+$$S_{1}=\{1,2,3,4,5,6\}$$
+Roll the die repeatedly until the sixth appears $6$ times. $Y$ is the random varibale defined as the number of rolling:
+$$S_{2}=\{1,2,3,\cdots\}$$
+Use \textbf{exponential distribution} to predict if tomorrow will be a rainy day. $Z$ is the random variable defined as the probability of the event "Tomorrow will be a rainy day":
+$$S_{3}=\{z\;|\;0< z<1\}$$
+The random variable $X$ can take one of the values $x_{1}=1,x_{2}=2,\cdots,x_{6}=6$, and similarly with $Y$ and $Z$ can take one of their own values in their sample spaces $S_{2}$, $S_{3}$ respectively. Now we interested in classifying $2$ types of sample space and their random variables.
+\begin{definition}
+	If a sample space contains a finite number of possibilities or an unending sequence with as many elements as there are whole numbers, it's called a \textbf{discrete sample space}.
+\end{definition}
+\begin{definition}
+	If a sample space contains an infinite number of possibilities equal to the number of points on a line segment, it's called a \textbf{continuous sample space}.
+\end{definition}
+So $S_{1}$ and $S_{2}$ are \textbf{discrete sample spaces} and $X$, $Y$ are called \textbf{discrete random variables}; $S_{3}$ is \textbf{continuous sample space} and $Z$ is called \textbf{continuous random variable}.
+\section{Discrete Probability Distributions}
+Consider coin tossing experiment, now if we assign random variable $X$ as the number of heads appearing, I can obtain some useful results:
+\begin{equation*}
+	\begin{split}
+		P(X=3)&=P(\{HHH\})=\frac{1}{8}=0.125\\
+		P(X=2)&=P(\{HHT,HTH,THH\})=\frac{3}{8}=0.375\\
+		P(X=1)&=P(\{TTH,THT,HTT\})=\frac{3}{8}=0.375\\
+		P(X=0)&=P(\{TTT\})=\frac{1}{8}=0.125\\
+	\end{split}
+\end{equation*}
+Or in table form:
+\begin{center}
+	\begin{tabular}{ |c|c|c|c|c|c| }
+		\hline
+		$x$      & $0$     & $1$     & $2$     & $3$     \\
+		\hline
+		$P(X=x)$ & $0.125$ & $0.375$ & $0.375$ & $0.125$ \\
+		\hline
+	\end{tabular}
+\end{center}
+Frequently, it's much convenient to represent all of the probabilities of a random variable $X$ by a \textbf{formula}.
+\begin{definition}
+	The function $f(x)$ is a \textbf{probability density function} (pdf) of the discrete random variable $X$ if, for each possible outcome $X$:
+	\begin{equation*}
+		\begin{cases}
+			f(x)\geq0      \\
+			\sum_{x}f(x)=1 \\
+			P(X=x)=f(x)    \\
+		\end{cases}
+	\end{equation*}
+\end{definition}
+You can find out that the pdf of coin tossing experiment above is:
+$$f(x)=P(X=x)=\frac{\binom{3}{x}}{2^3}\quad(x=0,1,2,3)$$
+In many cases, we want to know the probability of $X\leq x$ (you will see it clearly in the next section). For instance, I want to know the probability of heads appearing a maximum of $2$ times.
+$$P(X\leq2)=P(X=0)+P(X=1)+P(X=2)=0.125+0.375+0.375=0.875$$
+In general, we define a new function $F(x)$ to handle these cases as follows:
+\begin{definition}
+	The \textbf{cumulative distribution function} $F(x)$ of a discrete random variable $X$ with probability distribution $f(x)$ is:
+	$$F(x)=P(X\leq x)=\sum_{t\leq x}f(t)\quad {(-\infty<x<+\infty)}$$
+\end{definition}
+For example, in the above experiment:
+\begin{equation*}
+	F(x)=
+	\begin{cases}
+		0\quad(x<0)           \\
+		0.125\quad(0\leq x<1) \\
+		0.5\quad(1\leq x<2)   \\
+		0.875\quad(2\leq x<3) \\
+		1\quad(x\geq 3)       \\
+	\end{cases}
+\end{equation*}
+\section{Continuous Probability Distributions}
+
 \end{document}
 
