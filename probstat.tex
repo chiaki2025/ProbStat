@@ -456,13 +456,13 @@ These values may be viewed as values assumed by the \textbf{random variable} $X$
 	A \textbf{random variable} is a function that associates a real number with each element in the sample space.
 \end{definition}
 We shall use a capital letter $X$, to denote the random variable and its corresponding smaller letter $x$, for \textbf{one of its values}. A typical mistake is forgetting to define the meaning of random variable $X$, so \textit{please don't forget it in your exam}. Let's continue by looking at some examples of random variables and sample spaces.
-\\ Roll the die and observe the landing value. $X$ is the random variable defined as the value observed:
+\\ Roll the die and observe the landing value. $X$ is the random variable defined as the value we observed:
 $$S_{1}=\{1,2,3,4,5,6\}$$
 Roll the die repeatedly until the sixth appears $6$ times. $Y$ is the random varibale defined as the number of rolling:
 $$S_{2}=\{1,2,3,\cdots\}$$
 Use \textbf{exponential distribution} to predict if tomorrow will be a rainy day. $Z$ is the random variable defined as the probability of the event "Tomorrow will be a rainy day":
 $$S_{3}=\{z\;|\;0< z<1\}$$
-The random variable $X$ can take one of the values $x_{1}=1,x_{2}=2,\cdots,x_{6}=6$, and similarly with $Y$ and $Z$ can take one of their own values in their sample spaces $S_{2}$, $S_{3}$ respectively. Now we interested in classifying $2$ types of sample space and their random variables.
+The random variable $X$ can take one of the values $x_{1}=1,x_{2}=2,\cdots,x_{6}=6$, and similarly with $Y$ and $Z$ can take one of their own values in their sample spaces $S_{2}$, $S_{3}$ respectively. Now we interested in classifying $2$ types of sample spaces and their random variables.
 \begin{definition}
 	If a sample space contains a finite number of possibilities or an unending sequence with as many elements as there are whole numbers, it's called a \textbf{discrete sample space}.
 \end{definition}
@@ -501,13 +501,13 @@ Frequently, it's much convenient to represent all of the probabilities of a rand
 		\end{cases}
 	\end{equation*}
 \end{definition}
-You can find out that the pdf of coin tossing experiment above is:
+You can derive that the pdf of coin tossing experiment above is:
 $$f(x)=P(X=x)=\frac{\binom{3}{x}}{2^3}\quad(x=0,1,2,3)$$
 In many cases, we want to know the probability of $X\leq x$ (you will see it clearly in the next section). For instance, I want to know the probability of heads appearing a maximum of $2$ times.
 $$P(X\leq2)=P(X=0)+P(X=1)+P(X=2)=0.125+0.375+0.375=0.875$$
 In general, we define a new function $F(x)$ to handle these cases as follows:
 \begin{definition}
-	The \textbf{cumulative distribution function} $F(x)$ of a discrete random variable $X$ with probability distribution $f(x)$ is:
+	The \textbf{cumulative distribution function} (cdf) $F(x)$ of a discrete random variable $X$ with probability distribution $f(x)$ is:
 	$$F(x)=P(X\leq x)=\sum_{t\leq x}f(t)\quad {(-\infty<x<+\infty)}$$
 \end{definition}
 For example, in the above experiment:
@@ -522,6 +522,53 @@ For example, in the above experiment:
 	\end{cases}
 \end{equation*}
 \section{Continuous Probability Distributions}
-
+Choosing randomly a number within the range $(0,1)$. $X$ is the random variable is defined as the chosen one. In the previous chapter, we've discussed that the probability of getting \textbf{a single number} in the range $(0,1)$ is $0$.
+$$P(X=0.7)=0$$
+So $0.7$ will never be chosen since $P(X=0.7)=0$? Now think carefully about the reasons why the probability of an event might be zero. Recall the \textbf{Theorem 2.3.1}:
+$$P(A)=\frac{n}{N}$$
+There are $2$ main reasons that could explain why $P(A)$ can be zero; the first one is \textbf{$n=0$ and $N$ is a finite number}, and the second one is $\textbf{$n$ is a finite number and $N$ is infinite}$. This might be the big misconception, since people always claim that the only reason for $P(A)=0$ is the first one, and forgot the second. But now you can clearly see that if $n>0$, event will always have a chance of happening. So now we conclude certainly: "$P(A)=0$ doesn't mean event $A$ will never happen."\\
+If sample space $S$ is \textit{continuous sample space}, which contains \textit{an infinite number of possibilities equal to the number of points on a line segment}, we don't care about the probability of \textbf{a single sample point} occuring (because it's always equal $0$). We  shift our attention to the probability of \textbf{the interval that our concern sample point may be fallen  inside} occuring.
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=10cm]{8.jpg}
+	\caption{What's the probability that a number will fall within this range?}
+	\label{Figure 8}
+\end{figure}
+Intuitively you can conclude that: $$P(0.6<X<0.78)=0.78-0.6=0.18$$
+Similarly with the discrete random variables, we can also define:
+\begin{definition}
+	The function $f(x)$ is a \textbf{probability distribution (or density) function} (pdf) for the continuous random variable $X$, defined over the set of real numbes, if:
+	\begin{equation*}
+		\begin{cases}
+			f(x)\geq0,\text{ for all }x\in R \\
+			\int_{-\infty}^{+\infty}f(x)dx=1 \\
+			P(a<X<b)=\int_{a}^{b}f(x)dx
+		\end{cases}
+	\end{equation*}
+\end{definition}
+Verifying yourself that the pdf function of number choosing experiment is:
+\begin{equation*}
+	f(x)=
+	\begin{cases}
+		1\quad(0<x<1)            \\
+		0\quad(\text{elsewhere}) \\
+	\end{cases}
+\end{equation*}
+This pdf function is the simplest case of \textbf{uniform distribution function}. As I mentioned before, in the continuous sample space case, concerning on the probability of $(X=x)$ doesn't not make any sense since it's equal $0$ and we can't use any information about it. Instead, we turn our focus to the probability of $X<x$ and define the \textbf{cumulative distribution function} $F(x)$ as follows:
+\begin{definition}
+	The \textbf{cumulative distribution function} (cdf) $F(x)$ of a continuous random variable $X$ with pdf $f(x)$ is:
+	\begin{equation*}
+		F(x)=P(X<x)=\int_{-\infty}^{x}f(t)dt\quad(-\infty<x<+\infty)
+	\end{equation*}
+\end{definition}
+The cdf function of number choosing experiment is:
+\begin{equation*}
+	F(x)=
+	\begin{cases}
+		0\quad(x<0)       \\
+		x\quad(0\leq x<1) \\
+		1\quad(x\geq 1)   \\
+	\end{cases}
+\end{equation*}
 \end{document}
-
