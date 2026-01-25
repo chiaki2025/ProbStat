@@ -22,3 +22,4 @@
 \contentsline {section}{\numberline {3.1}Definition of Random Variables}{21}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Discrete Probability Distributions}{22}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Continuous Probability Distributions}{23}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Joint Probability Distributions}{24}{section.3.4}%

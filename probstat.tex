@@ -83,9 +83,9 @@ Imagine you have a coin, like this one. It's an ordinary coin that can be found 
 \end{figure}
 \\Everyone knows that the chance of heads (H) appearing after each toss is $50\%$, no one even doubts that. So, the \textbf{probability} of an \textbf{event} that heads appearing is $50\%$. But because you're a very curious person, you don't easily accept the truth like others, so you will find a way to test it. The fact "The probability of heads appearing is $50\%$" will be tested, and it can be called a \textbf{hypothesis}.
 \\ \\ \\
-\indent The simplest way to test your hypothesis is tossing a coin many times. You might toss a coin $N=100$ times and see headss appear $n=40$ times, so your actual probability is: $$p=\frac{n}{N}=0.4$$
-But your previous assumtion (or hypothesis) states that the ideal probability is: $$\hat p=0.5$$
-Is there anything wrong here? Dissatisfied, you continue your experiment. This time, you toss a coin $N=500$ times and see headss appear $n=270$ times, so the new actual probability is:
+\indent The simplest way to test your hypothesis is tossing a coin many times. You might toss a coin $N=100$ times and see heads appear $n=40$ times, so your actual probability is: $$p=\frac{n}{N}=0.4$$
+But your previous assumption (or hypothesis) states that the ideal probability is: $$\hat p=0.5$$
+Is there anything wrong here? Dissatisfied, you continue your experiment. This time, you toss a coin $N=500$ times and see heads appear $n=270$ times, so the new actual probability is:
 $$p=\frac{n}{N}=0.54$$
 This time the result is closer with intial hypothesis $\hat p$, but your hand now must be very tired after tossing a coin $600$ times. So do you think you have \textbf{enough} evidence to conclude that if $N\to+\infty$, then $p\to\hat p$? If so, your assumption is correct because \textit{can't be refuted}; and if not, our common sense might be wrong because the evidence \textit{strongly refutes it}.
 \\ \\ \\
@@ -265,7 +265,7 @@ For the rest of this book, we mainly focus on \textbf{combinations}, and derive 
 Everyone knows the basic idea of probability. If I toss a \textbf{fair} coin once, and I want to know the probability of getting heads; how can I determine it? Strictly, I have to define $S$ is the sample space of this experiment and $A$ is the event "Getting heads after one toss".
 $$S=\{H,T\}$$
 $$A=\{H\}$$
-So, the probability of event $A$ occuring is:
+So, the probability of event $A$ occurring is:
 $$P(A)=\frac{\text{number of sample points inside } A}{\text{number of sample points inside } S}=\frac{1}{2}$$
 Very easy and intuitive. But how about tossing 4 \textbf{fair} coins once, and determining the probability of getting $2$ heads? Now sample space $S$ and its event set can be represented as:
 $$S=\{HHHH,HHHT,HHTH,\cdots\}$$
@@ -503,7 +503,7 @@ Frequently, it's much convenient to represent all of the probabilities of a rand
 \end{definition}
 You can derive that the pdf of coin tossing experiment above is:
 $$f(x)=P(X=x)=\frac{\binom{3}{x}}{2^3}\quad(x=0,1,2,3)$$
-In many cases, we want to know the probability of $X\leq x$ (you will see it clearly in the next section). For instance, I want to know the probability of heads appearing a maximum of $2$ times.
+In many cases, we want to know the probability of $(X\leq x)$ (you will see it clearly in the next section). For instance, I want to know the probability of heads appearing a maximum of $2$ times.
 $$P(X\leq2)=P(X=0)+P(X=1)+P(X=2)=0.125+0.375+0.375=0.875$$
 In general, we define a new function $F(x)$ to handle these cases as follows:
 \begin{definition}
@@ -526,8 +526,8 @@ Choosing randomly a number within the range $(0,1)$. $X$ is the random variable 
 $$P(X=0.7)=0$$
 So $0.7$ will never be chosen since $P(X=0.7)=0$? Now think carefully about the reasons why the probability of an event might be zero. Recall the \textbf{Theorem 2.3.1}:
 $$P(A)=\frac{n}{N}$$
-There are $2$ main reasons that could explain why $P(A)$ can be zero; the first one is \textbf{$n=0$ and $N$ is a finite number}, and the second one is $\textbf{$n$ is a finite number and $N$ is infinite}$. This might be the big misconception, since people always claim that the only reason for $P(A)=0$ is the first one, and forgot the second. But now you can clearly see that if $n>0$, event will always have a chance of happening. So now we conclude certainly: "$P(A)=0$ doesn't mean event $A$ will never happen."\\
-If sample space $S$ is \textit{continuous sample space}, which contains \textit{an infinite number of possibilities equal to the number of points on a line segment}, we don't care about the probability of \textbf{a single sample point} occuring (because it's always equal $0$). We  shift our attention to the probability of \textbf{the interval that our concern sample point may be fallen  inside} occuring.
+There are $2$ main reasons that could explain why $P(A)$ can be zero; the first one is \textbf{$n=0$ and $N$ is a finite number}, and the second one is $\textbf{$n$ is a finite number and $N$ is an infinite number}$. This might be the big misconception, since people always claim that the only reason for $P(A)=0$ is the first one, and forgot the second. But now you can clearly see that if $n>0$, event will always have a chance of happening. So now we conclude certainly: "$P(A)=0$ doesn't mean event $A$ will never happen."\\
+If sample space $S$ is \textit{continuous sample space}, which contains \textit{an infinite number of possibilities equal to the number of points on a line segment}, we don't care about the probability of \textbf{a single sample point} occurring (because it's always equal $0$). We  shift our attention to the probability of \textbf{the interval that our concern sample point may be fallen  inside} occurring.
 \newpage
 \begin{figure}[h]
 	\centering
@@ -555,7 +555,7 @@ Verifying yourself that the pdf function of number choosing experiment is:
 		0\quad(\text{elsewhere}) \\
 	\end{cases}
 \end{equation*}
-This pdf function is the simplest case of \textbf{uniform distribution function}. As I mentioned before, in the continuous sample space case, concerning on the probability of $(X=x)$ doesn't not make any sense since it's equal $0$ and we can't use any information about it. Instead, we turn our focus to the probability of $X<x$ and define the \textbf{cumulative distribution function} $F(x)$ as follows:
+This pdf function is the simplest case of \textbf{uniform distribution function}. As I mentioned before, in the continuous sample space case, concerning on the probability of $(X=x)$ doesn't not make any sense since it's equal $0$ and we can't use any information about it. Instead, we turn our focus to the probability of $(X<x)$ and define the \textbf{cumulative distribution function} $F(x)$ as follows:
 \begin{definition}
 	The \textbf{cumulative distribution function} (cdf) $F(x)$ of a continuous random variable $X$ with pdf $f(x)$ is:
 	\begin{equation*}
@@ -571,4 +571,97 @@ The cdf function of number choosing experiment is:
 		1\quad(x\geq 1)   \\
 	\end{cases}
 \end{equation*}
+\section{Joint Probability Distributions}
+In the previous sections, we've considered \textbf{single random variable} and its \textbf{probability distribution function} case, and restricted ourshelves to \textbf{one-dimension sample space}. But now we're interested in observing  the \textbf{simultaneous outcomes} of \textbf{several random variables}. For example, you toss $2$ fair coins simultaneously and observe their appearing faces. You define $2$ random variables, $X$ for the first coin face, and $Y$ for the second one. The heads is assigned value $1$, and the tails is assigned value $0$. These are some results obtained from this experiment:
+$$P(X=0,Y=0)=\frac{1}{2}.\frac{1}{2}=\frac{1}{4}=0.25$$
+$$P(X=0,Y=1)=\frac{1}{2}.\frac{1}{2}=\frac{1}{4}=0.25$$
+$$P(X=1,Y=0)=\frac{1}{2}.\frac{1}{2}=\frac{1}{4}=0.25$$
+$$P(X=1,Y=1)=\frac{1}{2}.\frac{1}{2}=\frac{1}{4}=0.25$$
+These results can be written in table form:
+\begin{center}
+	\begin{tabular}{ |c|c|c| }
+		\hline
+		$P(X=x,Y=y)$ & $Y=0$ & $Y=1$ \\
+		\hline
+		$X=0$        & 0.25  & 0.25  \\
+		\hline
+		$X=1$        & 0.25  & 0.25  \\
+		\hline
+	\end{tabular}
+\end{center}
+Another classic example of \textbf{discrete joint probability distribution} is the problem of picking balls from a basket. Now you have a basket with many colorful balls inside; there are $3$ red, $4$ green and $5$ blue balls. You choose randomly $3$ balls from the basket, and you define $2$ random variables $X$ and $Y$; $X$ is the number of red balls and $Y$ is the number of green balls. Using counting techniques and combinations, you can write the \textbf{joint probability distribution function}:
+$${f(x,y)}=P(X=x,Y=y)=\frac{\binom{3}{x}\binom{4}{y}\binom{5}{3-x-y}}{\binom{12}{3}}$$
+Or in table form:
+\begin{center}
+	\begin{tabular}{ |c|c|c|c|c| }
+		\hline
+		$P(X=x,Y=y)$ & $Y=0$           & $Y=1$          & $Y=2$           & $Y=3$          \\
+		\hline
+		$X=0$        & $\frac{1}{22}$  & $\frac{2}{11}$ & $\frac{3}{22}$  & $\frac{1}{55}$ \\
+		\hline
+		$X=1$        & $\frac{3}{22}$  & $\frac{3}{11}$ & $\frac{9}{110}$ & -              \\
+		\hline
+		$X=2$        & $\frac{3}{44}$  & $\frac{3}{55}$ & -               & -              \\
+		\hline
+		$X=3$        & $\frac{1}{220}$ & -              & -               & -              \\
+		\hline
+	\end{tabular}
+\end{center}
+\begin{definition}
+	The function $f(x,y)$ is a \textbf{joint probability distribution function} of the \textbf{discrete random variables} $X$ and $Y$ if:
+	\begin{equation*}
+		\begin{cases}
+			f(x,y)\geq 0             \\
+			\sum_{x}\sum_{y}f(x,y)=1 \\
+			P(X=x,Y=y)=f(x,y)        \\
+		\end{cases}
+	\end{equation*}
+\end{definition}
+\begin{corollary}
+	For any region $A$ in the $xy$ plane:
+	$$P[(X,Y)\in A]=\sum\sum_{A}f(x,y)$$
+\end{corollary}
+After considering the case where both variables $X$ and $Y$ are both varying, what if we \textbf{fix} one variable and vary the other? You can see this idea appearing very naturally in the process of finding the values of the above table using a calculator. We introduce the new functions called \textbf{marginal distributions} of $X$ and $Y$ alone.
+\begin{definition}
+	The \textbf{marginal distributions} of $X$ alone and of $Y$ alone for the \textbf{discrete case} are:
+	$$g(x)=\sum_{y}f(x,y);\quad h(y)=\sum_{x}f(x,y)$$
+\end{definition}
+Since the general form of $g(x)$ and $h(y)$ are not easy to be generalized, and the range of discrete random variables $X$ and $Y$ is very narrow, so we should reuse the table above to obtain values of these functions.
+\begin{center}
+	\begin{tabular}{ |c|c|c|c|c|c| }
+		\hline
+		$P(X=x,Y=y)$ & $Y=0$                & $Y=1$                & $Y=2$                & $Y=3$               & $g(x)$                \\
+		\hline
+		$X=0$        & $\frac{1}{22}$       & $\frac{2}{11}$       & $\frac{3}{22}$       & $\frac{1}{55}$      & $g(0)=\frac{21}{55}$  \\
+		\hline
+		$X=1$        & $\frac{3}{22}$       & $\frac{3}{11}$       & $\frac{9}{110}$      & -                   & $g(1)=\frac{27}{55}$  \\
+		\hline
+		$X=2$        & $\frac{3}{44}$       & $\frac{3}{55}$       & -                    & -                   & $g(2)=\frac{27}{220}$ \\
+		\hline
+		$X=3$        & $\frac{1}{220}$      & -                    & -                    & -                   & $g(3)=\frac{1}{220}$  \\
+		\hline
+		$h(y)$       & $h(0)=\frac{14}{55}$ & $h(1)=\frac{28}{55}$ & $h(2)=\frac{12}{55}$ & $h(3)=\frac{1}{55}$ & $1$                   \\
+		\hline
+	\end{tabular}
+\end{center}
+\begin{corollary}
+	If $g(x)$ and $h(y)$ are marginal distributions of $X$ alone and $Y$ alone for the \textbf{discrete case}, then:
+	$$\sum_{y}g(x)=\sum_{x}h(y)=1$$
+\end{corollary}
+\textbf{Corollary 3.4.0.2} is directly derived from the \textbf{Definition 3.4.2}, and you can verify them by using the probability distribution table.
+\\Similarly, the joint probability distribution function of \textbf{continuous random variable} can also be defined as follows:
+\begin{definition}
+	The function $f(x,y)$ is a \textbf{joint probability distribution function} of the \textbf{continuous random variables} $X$ and $Y$ if:
+	\begin{equation*}
+		\begin{cases}
+			f(x,y)\geq 0                                                 \\
+			\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}f(x,y)dxdy=1 \\
+			P(a<X<b,c<Y<d)=\int_{c}^{d}\int_{a}^{b}f(x,y)dxdy            \\
+		\end{cases}
+	\end{equation*}
+\end{definition}
+\begin{corollary}
+	For any region $A$ in the $xy$ plane:
+	$$P[(X,Y)\in A]=\iint_{A}f(x,y)dxdy$$
+\end{corollary}
 \end{document}
