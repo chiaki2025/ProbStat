@@ -572,6 +572,7 @@ The cdf function of number choosing experiment is:
 	\end{cases}
 \end{equation*}
 \section{Joint Probability Distributions}
+\subsection{Case of Discrete Random Variables}
 In the previous sections, we've considered \textbf{single random variable} and its \textbf{probability distribution function} case, and restricted ourshelves to \textbf{one-dimension sample space}. But now we're interested in observing  the \textbf{simultaneous outcomes} of \textbf{several random variables}. For example, you toss $2$ fair coins simultaneously and observe their appearing faces. You define $2$ random variables, $X$ for the first coin face, and $Y$ for the second one. The heads is assigned value $1$, and the tails is assigned value $0$. These are some results obtained from this experiment:
 $$P(X=0,Y=0)=\frac{1}{2}.\frac{1}{2}=\frac{1}{4}=0.25$$
 $$P(X=0,Y=1)=\frac{1}{2}.\frac{1}{2}=\frac{1}{4}=0.25$$
@@ -646,10 +647,42 @@ Since the general form of $g(x)$ and $h(y)$ are not easy to be generalized, and 
 \end{center}
 \begin{corollary}
 	If $g(x)$ and $h(y)$ are marginal distributions of $X$ alone and $Y$ alone for the \textbf{discrete case}, then:
-	$$\sum_{y}g(x)=\sum_{x}h(y)=1$$
+	$$\sum_{x}g(x)=\sum_{y}h(y)=1$$
 \end{corollary}
-\textbf{Corollary 3.4.0.2} is directly derived from the \textbf{Definition 3.4.2}, and you can verify them by using the probability distribution table.
-\\Similarly, the joint probability distribution function of \textbf{continuous random variable} can also be defined as follows:
+\textbf{Corollary 3.4.0.2} is directly derived from the \textbf{Definition 3.4.1}, and you can verify them by using the probability distribution table.
+\\ After defining the \textbf{marginal distribution}, now we can see clearly the connection between them and regular pdf function are:
+\begin{equation*}
+	P(X=x)=g(x);\quad P(Y=y)=h(y)
+\end{equation*}
+Now if I choose $3$ balls from the basket, and I know two of them are green, what's the probability that the remaining ball is red?
+\begin{equation*}
+	P(X=1|Y=2)=\frac{P(X=1,Y=2)}{P(Y=2)}=\frac{\frac{9}{110}}{\frac{12}{55}}=\frac{3}{8}=0.375
+\end{equation*}
+In general, it's not hard to deduce these formulas:
+\begin{equation*}
+	\begin{split}
+		f(x|y)&=P(X=x|Y=y)=\frac{P(X=x,Y=y)}{P(Y=y)}=\frac{f(x,y)}{h(y)}\\
+		f(y|x)&=P(Y=y|X=x)=\frac{P(Y=y,X=x)}{P(X=x)}=\frac{f(x,y)}{g(x)}\\
+	\end{split}
+\end{equation*}
+\begin{definition}
+	Let $X$ and $Y$ be two \textbf{discrete random variables}. The \textbf{conditional distribution} of the variable $Y$ given that $X=x$ is:
+	$$f(y|x)=\frac{f(x,y)}{g(x)}$$
+	Similarly for the reverse case:
+	$$f(x|y)=\frac{f(x,y)}{h(y)}$$
+\end{definition}
+From the previous section \textbf{Chapter 2.4: Conditional Probability}, you already knew how to identify two independent events, by checking this equation:  $$P(A\cap B)=P(A)P(B)$$
+Now we use it again, with random variables $X$ and $Y$:
+\begin{equation*}
+	P(X=x,Y=y)=P(X=x)P(Y=y)\Leftrightarrow f(x,y)=g(x)h(y)
+\end{equation*}
+\begin{definition}
+	Let $X$ and $Y$ be two \textbf{discrete random variables}, with join probability distribution function $f(x,y)$ and marginal distributions $g(x)$, $h(y)$, respectively. They are said to be \textbf{statistically independent} if and only if: $$f(x,y)=g(x)h(y)$$
+\end{definition}
+If we check the case $(X=1,Y=1)$: $$\left(f(1,1)=\frac{3}{11}\right)\neq \left(g(1)h(1)=\frac{27}{55}.\frac{28}{55}\right)$$
+So $X$ and $Y$ are \textbf{not} statistically independent, they are interdependent. But how interdependent are they? Are they highly or minimally interdependent? This question will be answered at the end of the next chapter.
+\subsection{Case of Continuous Random Variables}
+Similarly, the joint probability distribution function of \textbf{continuous random variable} can also be defined as follows:
 \begin{definition}
 	The function $f(x,y)$ is a \textbf{joint probability distribution function} of the \textbf{continuous random variables} $X$ and $Y$ if:
 	\begin{equation*}
@@ -663,5 +696,28 @@ Since the general form of $g(x)$ and $h(y)$ are not easy to be generalized, and 
 \begin{corollary}
 	For any region $A$ in the $xy$ plane:
 	$$P[(X,Y)\in A]=\iint_{A}f(x,y)dxdy$$
+\end{corollary}
+Almost all the formulas in the above section are redefined exactly the same, with a slight difference in the notation for the integral (you can read more about Riemann integrals to see the relationship between integrals and infinite discrete sums).
+\begin{definition}
+	The \textbf{marginal distributions} of $X$ alone and of $Y$ alone for the \textbf{continuous case} are:
+	$$g(x)=\int_{-\infty}^{+\infty}f(x,y)dy;\quad h(y)=\int_{-\infty}^{+\infty}f(x,y)dx$$
+\end{definition}
+\begin{corollary}
+	If $g(x)$ and $h(y)$ are marginal distributions of $X$ alone and $Y$ alone for the \textbf{continuous case}, then:
+	$$\int_{-\infty}^{+\infty}g(x)dx=\int_{-\infty}^{+\infty}h(y)dy=1$$
+\end{corollary}
+\begin{definition}
+	Let $X$ and $Y$ be two \textbf{continuous random variables}. The \textbf{conditional distribution} of the variable $Y$ given that $X=x$ is:
+	$$f(y|x)=\frac{f(x,y)}{g(x)}$$
+	Similarly for the reverse case:
+	$$f(x|y)=\frac{f(x,y)}{h(y)}$$
+\end{definition}
+\begin{definition}
+	Let $X$ and $Y$ be two \textbf{continuous random variables}, with join probability distribution function $f(x,y)$ and marginal distributions $g(x)$, $h(y)$, respectively. They are said to be \textbf{statistically independent} if and only if: $$f(x,y)=g(x)h(y)$$
+\end{definition}
+But notice that if $X$ and $Y$ are continuous random variables, then $P(X=x|Y=y)$ is always equal zero! The correct way to obtain conditional probability is shown below:
+\begin{corollary}
+	If $X$ and $Y$ be two \textbf{continuous random variables}, then:
+	$$P(a<X<b|Y=y)=\int_{a}^{b}f(x|y)dx$$
 \end{corollary}
 \end{document}
