@@ -712,7 +712,7 @@ Almost all the formulas in the above section are redefined exactly the same, wit
 	Similarly for the reverse case:
 	$$f(x|y)=\frac{f(x,y)}{h(y)}$$
 \end{definition}
-But notice that if $X$ and $Y$ are continuous random variables, then $P(X=x|Y=y)$ is always equal zero! The correct way to obtain conditional probability value is shown below:
+But notice that if $X$ and $Y$ are continuous random variables, then $P(X=x|Y=y)$ is always equal zero! The correct way to obtain conditional probability is shown below:
 \begin{corollary}
 	If $X$ and $Y$ be two \textbf{continuous random variables}, then:
 	$$P(a<X<b|Y=y)=\int_{a}^{b}f(x|y)dx$$
