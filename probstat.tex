@@ -44,7 +44,7 @@ When I was learning Probability and Statistics (ProbStat for short), I didn't re
 \begin{flushright}
 	---Student---
 \end{flushright}
-\chapter*{Acknowledgement}
+\chapter*{Acknowledgements}
 First of all, I want to thank you for reading this book. Although I am not a native English speaker, but I truly enjoy writing in English. I have tried my best to express my ideas in English, but minor grammatical or spelling errors are unavoidable. If you find any of them, I would be very happy to receive your feedback via my email address:
 \url{tinvu1309@gmail.com}
 \\ \\ \\
@@ -650,7 +650,7 @@ Since the general form of $g(x)$ and $h(y)$ are not easy to be generalized, and 
 	$$\sum_{x}g(x)=\sum_{y}h(y)=1$$
 \end{corollary}
 \textbf{Corollary 3.4.0.2} is directly derived from the \textbf{Definition 3.4.1}, and you can verify them by using the probability distribution table.
-\\ After defining the \textbf{marginal distribution}, now we can see clearly the connection between them and regular pdf function are:
+\\ After defining the \textbf{marginal distribution}, now we can see clearly the connection between them and regular pdf functions are:
 \begin{equation*}
 	P(X=x)=g(x);\quad P(Y=y)=h(y)
 \end{equation*}
@@ -666,18 +666,18 @@ In general, it's not hard to deduce these formulas:
 	\end{split}
 \end{equation*}
 \begin{definition}
-	Let $X$ and $Y$ be two \textbf{discrete random variables}. The \textbf{conditional distribution} of the variable $Y$ given that $X=x$ is:
+	Let $X$ and $Y$ be two \textbf{discrete random variables}. The \textbf{conditional distribution} of the variable $Y$ given that $(X=x)$ is:
 	$$f(y|x)=\frac{f(x,y)}{g(x)}$$
 	Similarly for the reverse case:
 	$$f(x|y)=\frac{f(x,y)}{h(y)}$$
 \end{definition}
-From the previous section \textbf{Chapter 2.4: Conditional Probability}, you already knew how to identify two independent events, by checking this equation:  $$P(A\cap B)=P(A)P(B)$$
+From the previous section \textbf{Chapter 2.4: Conditional Probability}, you already knew how to identify two independent events, by checking this condition:  $$P(A\cap B)=P(A)P(B)$$
 Now we use it again, with random variables $X$ and $Y$:
 \begin{equation*}
 	P(X=x,Y=y)=P(X=x)P(Y=y)\Leftrightarrow f(x,y)=g(x)h(y)
 \end{equation*}
 \begin{definition}
-	Let $X$ and $Y$ be two \textbf{discrete random variables}, with join probability distribution function $f(x,y)$ and marginal distributions $g(x)$, $h(y)$, respectively. They are said to be \textbf{statistically independent} if and only if: $$f(x,y)=g(x)h(y)$$
+	Let $X$ and $Y$ be two \textbf{discrete random variables}, with joint probability distribution function $f(x,y)$ and marginal distributions $g(x)$, $h(y)$, respectively. They are said to be \textbf{statistically independent} if and only if: $$f(x,y)=g(x)h(y)$$
 \end{definition}
 If we check the case $(X=1,Y=1)$: $$\left(f(1,1)=\frac{3}{11}\right)\neq \left(g(1)h(1)=\frac{27}{55}.\frac{28}{55}\right)$$
 So $X$ and $Y$ are \textbf{not} statistically independent, they are interdependent. But how interdependent are they? Are they highly or minimally interdependent? This question will be answered at the end of the next chapter.
@@ -697,7 +697,7 @@ Similarly, the joint probability distribution function of \textbf{continuous ran
 	For any region $A$ in the $xy$ plane:
 	$$P[(X,Y)\in A]=\iint_{A}f(x,y)dxdy$$
 \end{corollary}
-Almost all the formulas in the above section are redefined exactly the same, with a slight difference in the notation for the integral (you can read more about Riemann integrals to see the relationship between integrals and infinite discrete sums).
+Almost all the formulas in the above section are redefined exactly the same, with a slight difference in the notation for the integral (you can read more about Riemann sum to see the relationship between integrals and infinite discrete sums).
 \begin{definition}
 	The \textbf{marginal distributions} of $X$ alone and of $Y$ alone for the \textbf{continuous case} are:
 	$$g(x)=\int_{-\infty}^{+\infty}f(x,y)dy;\quad h(y)=\int_{-\infty}^{+\infty}f(x,y)dx$$
@@ -707,7 +707,7 @@ Almost all the formulas in the above section are redefined exactly the same, wit
 	$$\int_{-\infty}^{+\infty}g(x)dx=\int_{-\infty}^{+\infty}h(y)dy=1$$
 \end{corollary}
 \begin{definition}
-	Let $X$ and $Y$ be two \textbf{continuous random variables}. The \textbf{conditional distribution} of the variable $Y$ given that $X=x$ is:
+	Let $X$ and $Y$ be two \textbf{continuous random variables}. The \textbf{conditional distribution} of the variable $Y$ given that $(X=x)$ is:
 	$$f(y|x)=\frac{f(x,y)}{g(x)}$$
 	Similarly for the reverse case:
 	$$f(x|y)=\frac{f(x,y)}{h(y)}$$
@@ -718,6 +718,141 @@ But notice that if $X$ and $Y$ are continuous random variables, then $P(X=x|Y=y)
 	$$P(a<X<b|Y=y)=\int_{a}^{b}f(x|y)dx$$
 \end{corollary}
 \begin{definition}
-	Let $X$ and $Y$ be two \textbf{continuous random variables}, with join probability distribution function $f(x,y)$ and marginal distributions $g(x)$, $h(y)$, respectively. They are said to be \textbf{statistically independent} if and only if: $$f(x,y)=g(x)h(y)$$
+	Let $X$ and $Y$ be two \textbf{continuous random variables}, with joint probability distribution function $f(x,y)$ and marginal distributions $g(x)$, $h(y)$, respectively. They are said to be \textbf{statistically independent} if and only if: $$f(x,y)=g(x)h(y)$$
 \end{definition}
+\chapter{Mathematical Expectation}
+Due to the relatively high degree of similarity between the formulas in the case of discrete and continuous random variables, this chapter approaches them \textbf{in parallel}, rather than seperating them like previous chapter.
+\section{Mean of a Random Variable}
+After conducting experiment, now it's time to process your obtained results. Toss a fair coin for $3$ times, and define the discrete random variable $X$ as the number of heads appearing. The pdf  of this experiment is:
+$$f(x)=P(X=x)=\frac{\binom{3}{x}}{2^3}\quad(x=0,1,2,3)$$
+Or in table form:
+\begin{center}
+	\begin{tabular}{ |c|c|c|c|c|c| }
+		\hline
+		$x$      & $0$     & $1$     & $2$     & $3$     \\
+		\hline
+		$P(X=x)$ & $0.125$ & $0.375$ & $0.375$ & $0.125$ \\
+		\hline
+	\end{tabular}
+\end{center}
+What's the \textbf{mean} or \textbf{expected value} of $X$? Intuitively, you will use the formula:
+$$\mu_{X}=E(X)=\sum_{x}xf(x)=0.0.125+1.0.375+2.0.375+3.0.125=1.5$$
+By illustrating the above results with a graph, the position of $\mu$ is shown.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=8cm]{9.jpg}
+	\caption{Pdf of fair coin tossing experiment with its mean}
+	\label{Figure 9}
+\end{figure}
+\\If our coin is unfair, assume that the probability of getting heads is $p=0.3$, then the probability of getting tails is $q=1-p=0.7$. Now the pdf is:
+$$f(x)=P(X=x)=\binom{3}{x}p^{x}q^{3-x}=\binom{3}{x}0.3^{x}0.7^{3-x}\quad(x=0,1,2,3)$$
+Or in table form:
+\begin{center}
+	\begin{tabular}{ |c|c|c|c|c|c| }
+		\hline
+		$x$      & $0$     & $1$     & $2$     & $3$     \\
+		\hline
+		$P(X=x)$ & $0.343$ & $0.441$ & $0.189$ & $0.027$ \\
+		\hline
+	\end{tabular}
+\end{center}
+In this experiment, we \textbf{expect} to get the \textbf{average value} (or mean) of $X$:
+$$\mu_{X}=E(X)=\sum_{x}xf(x)=0.0.343+1.0.441+2.0.189+3.0.027=0.9$$
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=8cm]{10.jpg}
+	\caption{Pdf of unfair coin tossing experiment with its mean}
+	\label{Figure 10}
+\end{figure}
+\begin{definition}
+	Let $X$ be a random variable with pdf function $f(x)$. The \textbf{expected value} or \textbf{mean} of $X$ is:
+	$$\mu_{X}=E(X)=\sum_{x}xf(x)\quad(\text{if $X$ is discrete})$$
+	$$\mu_{X}=E(X)=\int_{-\infty}^{+\infty}{x}f(x)dx\quad(\text{if $X$ is continuous})$$
+\end{definition}
+Now imagine you're playing coin tossing game (don't treat it like an experiment). As I mention the rule above, you have $3$ turns to toss a coin. If you see $3$ heads appear, you're extremely lucky today; but if you don't see any, don't be sad because life is long. A very natural thought occurred to me that we should quantify a player's "luck level" with a quantitative value. Random variable $Y$ takes this role and can be defined as:
+$$Y=\frac{X}{3}$$
+Now we are intersted in average "luck level" of coin tossing game, so reuse the previous table that we've created:
+\begin{center}
+	\begin{tabular}{ |c|c|c|c|c|c| }
+		\hline
+		$x$             & $0$     & $1$     & $2$     & $3$     \\
+		\hline
+		$y=\frac{x}{3}$ & $0$     & $0.333$ & $0.666$ & $1$     \\
+		\hline
+		$P(X=x)$        & $0.343$ & $0.441$ & $0.189$ & $0.027$ \\
+		\hline
+	\end{tabular}
+\end{center}
+The \textbf{expected value} or \textbf{mean} of "luck level" is:
+$$\mu_{Y}=E(Y)=\sum_{y}yf(x)=0.0.343+0.333.0.441+0.666.0.189+1.0.027=0.299\approx 0.3$$
+Since $0.3$ is not so high value, so the \textbf{mean} of "luck level" is pretty small and players shouldn't look forward to their chances in this game. Furthermore, you should notice the subtle connection between two random variables $X$ and $Y$ as:
+$$Y=\frac{X}{3}\Leftrightarrow E(Y)=\frac{E(X)}{3}$$
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=8cm]{11.jpg}
+	\caption{The mean value of "luck level"}
+	\label{Figure 11}
+\end{figure}
+\\ If $Y$ is defined as \textbf{function of random variable $X$} or $(Y=g(X))$, then the \textbf{expected value} of it can be calculated using the theorem below:
+\begin{theorem}
+	Let $X$ be a random variable with pdf $f(x)$, and the \textbf{expected value} of the random variable $g(X)$ is:
+	$$E(g(X))=\mu_{g(X)}=\sum_{x}g(x)f(x)\quad\text{(if X is discrete)}$$
+	$$E(g(X))=\mu_{g(X)}=\int_{-\infty}^{+\infty}g(x)f(x)dx\quad\text{(if X is continuous)}$$
+\end{theorem}
+Now I want to make our game funnier because just tossing a coin is too boring, so I came up with an idea. How about toss  $3$ unfair coins and the bottle cap \textbf{at the same time}? The random variable $X$ is defined as the number of heads appearing with the probability of getting heads is $p=0.3$, and getting tails is $q=1-p=0.7$, so the pdf is:
+$$g(x)=P(X=x)=\binom{3}{x}p^{x}q^{3-x}=\binom{3}{x}0.3^{x}0.7^{3-x}\quad(x=0,1,2,3)$$
+A 'PEPSI' bottle cap has just been founded, so I define a new random variable $Y$ as its face after tossing. The 'PEPSI' face is assigned the value $1$, and the other is assigned the value $0$. Assume that:
+\begin{equation*}
+	\begin{split}
+		P(Y=1)&=p'=0.8\\
+		P(Y=0)&=q'=1-p'=0.2\\
+	\end{split}
+\end{equation*}
+So the pdf of bottle cap tossing experiment is: $$h(y)=P(Y=y)=(p')^{y}(q')^{1-y}=0.8^{y}0.2^{1-y}\quad(y=0,1)$$
+Intuitively, you can certainly conclude that $X$ and $Y$ are \textbf{statistically independent} since coins and bottle cap tossing process don't affect each other. So the \textbf{joint probability distribution} of them is:
+$$f(x,y)=g(x)h(y)=\binom{3}{x}0.3^{x}0.7^{3-x}0.8^{y}0.2^{1-y}\quad(x=0,1,2,3;\;y=0,1)$$
+Or in table form:
+\begin{center}
+	\begin{tabular}{ |c|c|c|c|c|c| }
+		\hline
+		$P(X=x,Y=y)$ & $X=0$        & $X=1$        & $X=2$        & $X=3$        & $h(y)$     \\
+		\hline
+		$Y=0$        & $0.0686$     & $0.0882$     & $0.0378$     & $0.0054$     & $h(0)=0.2$ \\
+		\hline
+		$Y=1$        & $0.2744$     & $0.3528$     & $0.1512$     & $0.0216$     & $h(1)=0.8$ \\
+		\hline
+		$g(x)$       & $g(0)=0.343$ & $g(1)=0.441$ & $g(2)=0.189$ & $g(3)=0.027$ & $1$        \\
+		\hline
+	\end{tabular}
+\end{center}
+Now "luck level" can be defined as the value of $(X+Y)$. Thinking according to the same logic, the \textbf{mean} value of $(X+Y)$ is:
+\begin{equation*}
+	\begin{split}
+		\mu_{(X+Y)}&=E(X+Y)=\sum_{x}\sum_{y}(x+y)f(x,y)=\sum_{x}\left(\sum_{y}(x+y)f(x,y))\right)\\
+		&=\sum_{x}(xf(x,0)+xf(x,1)+0f(x,0)+1f(x,1))\\
+		&=\sum_{x}\left(xf(x,0)+xf(x,1)+f(x,1)\right)\\
+		&=0f(0,0)+1f(1,0)+2f(2,0)+3f(3,0)+0f(0,1)+1f(1,1)\\&+2f(2,1)+3f(3,1)+f(0,1)+f(1,1)+f(2,1)+f(3,1)\\
+		&=0.0882+2.0.0378+3.0.0054+0.3528+2.0.1512\\&+3.0.00216+0.2744+0.3528+0.1512+0.0216\\
+		&=1.7
+	\end{split}
+\end{equation*}
+So now, the players can confidently look forward for their opportunity in this game!
+\begin{definition}
+	Let $X$ and $Y$ be random variables with \textbf{joint probability distribution} $f(x,y)$. The \textbf{mean} or \textbf{expected value} of the random variable function $g(X,Y)$ is:
+	$$\mu_{g(X,Y)}=E(g(X,Y))=\sum_{x}\sum_{y}g(x,y)f(x,y)\quad\text{(if $X$ and $Y$ are discrete)}$$
+	$$\mu_{g(X,Y)}=E(g(X,Y))=\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty} g(x,y)f(x,y)dxdy\quad\text{(if $X$ and $Y$ are continuous)}$$
+\end{definition}
+If $g(X,Y)=X$, then we obtain some useful results and can be represented as corollaries:
+\begin{corollary}
+	Let $X$ and $Y$ be discrete random variables with \textbf{joint probability distribution} $f(x,y)$, the \textbf{mean} of $X$ is:
+	$$\mu_{X}=E(X)=\sum_{x}\sum_{y}xf(x,y)=\sum_{x}x\left(\sum_{y}f(x,y)\right)=\sum_{x}xg(x)$$
+	Similarly, the mean of $Y$ is: $$\mu_{Y}=E(Y)=\sum_{y}yh(y)$$
+\end{corollary}
+\begin{corollary}
+	Let $X$ and $Y$ be continuous random variables with \textbf{joint probability distribution} $f(x,y)$, the \textbf{mean} of $X$ is:
+	$$\mu_{X}=E(X)=\int_{-\infty}^{+\infty}xg(x)dx$$
+	Similarly, the mean of $Y$ is: $$\mu_{Y}=E(Y)=\int_{-\infty}^{+\infty}yh(y)dy$$
+\end{corollary}
+\section{Variance and Covariance of Random Variables}
+The concept of \textbf{mean} or \textbf{expected value} is very important in ProbStat. In any probability distribution graph, we use the \textbf{mean value} as \textbf{main reference point} (although the mean isn't always in the center of the graph). We are very interested in how data is distributed \textbf{around the mean value}. Are they distributed far or close to it?
 \end{document}

@@ -25,3 +25,6 @@
 \contentsline {section}{\numberline {3.4}Joint Probability Distributions}{24}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}Case of Discrete Random Variables}{24}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Case of Continuous Random Variables}{27}{subsection.3.4.2}%
+\contentsline {chapter}{\numberline {4}Mathematical Expectation}{29}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Mean of a Random Variable}{29}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Variance and Covariance of Random Variables}{33}{section.4.2}%
