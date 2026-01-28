@@ -1,6 +1,6 @@
 INFO:  latexindent version 3.20.1, 2023-01-07, a script to indent .tex files
        latexindent lives here: /usr/share/texlive/texmf-dist/scripts/latexindent/
-       Wed Jan 28 01:41:32 2026
+       Wed Jan 28 18:54:47 2026
        Filename: probstat.tex
 INFO:  Processing switches:
        -s|--silent: Silent mode active (you have used either -s or --silent)
@@ -365,34 +365,8 @@ INFO:  Backup procedure (-w flag active):
        ./probstat.bak334 already exists, incrementing by 1... (see maxNumberOfBackUps and onlyOneBackUp)
        ./probstat.bak335 already exists, incrementing by 1... (see maxNumberOfBackUps and onlyOneBackUp)
        ./probstat.bak336 already exists, incrementing by 1... (see maxNumberOfBackUps and onlyOneBackUp)
-       ./probstat.bak337 already exists, incrementing by 1... (see maxNumberOfBackUps and onlyOneBackUp)
-       ./probstat.bak338 already exists, incrementing by 1... (see maxNumberOfBackUps and onlyOneBackUp)
-       ./probstat.bak339 already exists, incrementing by 1... (see maxNumberOfBackUps and onlyOneBackUp)
-       ./probstat.bak340 already exists, incrementing by 1... (see maxNumberOfBackUps and onlyOneBackUp)
-       ./probstat.bak341 already exists, incrementing by 1... (see maxNumberOfBackUps and onlyOneBackUp)
-       ./probstat.bak342 already exists, incrementing by 1... (see maxNumberOfBackUps and onlyOneBackUp)
-       ./probstat.bak343 already exists, incrementing by 1... (see maxNumberOfBackUps and onlyOneBackUp)
-       ./probstat.bak344 already exists, incrementing by 1... (see maxNumberOfBackUps and onlyOneBackUp)
-       ./probstat.bak345 already exists, incrementing by 1... (see maxNumberOfBackUps and onlyOneBackUp)
-       ./probstat.bak346 already exists, incrementing by 1... (see maxNumberOfBackUps and onlyOneBackUp)
-       ./probstat.bak347 already exists, incrementing by 1... (see maxNumberOfBackUps and onlyOneBackUp)
-       ./probstat.bak348 already exists, incrementing by 1... (see maxNumberOfBackUps and onlyOneBackUp)
-       ./probstat.bak349 already exists, incrementing by 1... (see maxNumberOfBackUps and onlyOneBackUp)
-       ./probstat.bak350 already exists, incrementing by 1... (see maxNumberOfBackUps and onlyOneBackUp)
-       ./probstat.bak351 already exists, incrementing by 1... (see maxNumberOfBackUps and onlyOneBackUp)
-       ./probstat.bak352 already exists, incrementing by 1... (see maxNumberOfBackUps and onlyOneBackUp)
-       ./probstat.bak353 already exists, incrementing by 1... (see maxNumberOfBackUps and onlyOneBackUp)
-       ./probstat.bak354 already exists, incrementing by 1... (see maxNumberOfBackUps and onlyOneBackUp)
-       ./probstat.bak355 already exists, incrementing by 1... (see maxNumberOfBackUps and onlyOneBackUp)
-       ./probstat.bak356 already exists, incrementing by 1... (see maxNumberOfBackUps and onlyOneBackUp)
-       ./probstat.bak357 already exists, incrementing by 1... (see maxNumberOfBackUps and onlyOneBackUp)
-       ./probstat.bak358 already exists, incrementing by 1... (see maxNumberOfBackUps and onlyOneBackUp)
-       ./probstat.bak359 already exists, incrementing by 1... (see maxNumberOfBackUps and onlyOneBackUp)
-       ./probstat.bak360 already exists, incrementing by 1... (see maxNumberOfBackUps and onlyOneBackUp)
-       ./probstat.bak361 already exists, incrementing by 1... (see maxNumberOfBackUps and onlyOneBackUp)
-       ./probstat.bak362 already exists, incrementing by 1... (see maxNumberOfBackUps and onlyOneBackUp)
-       copying probstat.tex to ./probstat.bak363
-       Backup file: ./probstat.bak363
+       copying probstat.tex to ./probstat.bak337
+       Backup file: ./probstat.bak337
        probstat.tex will be overwritten after indentation
 INFO:  Phase 1: searching for objects
 INFO:  Phase 2: finding surrounding indentation

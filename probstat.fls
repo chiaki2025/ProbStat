@@ -796,6 +796,11 @@ INPUT ./11.jpg
 INPUT 11.jpg
 INPUT ./11.jpg
 INPUT ./11.jpg
+INPUT ./12.jpg
+INPUT ./12.jpg
+INPUT 12.jpg
+INPUT ./12.jpg
+INPUT ./12.jpg
 INPUT probstat.aux
 INPUT ./probstat.out
 INPUT ./probstat.out

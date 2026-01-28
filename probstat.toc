@@ -28,3 +28,5 @@
 \contentsline {chapter}{\numberline {4}Mathematical Expectation}{29}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Mean of a Random Variable}{29}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Variance and Covariance of Random Variables}{33}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Variance of Random Variables}{33}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Covariance of Random Variables}{34}{subsection.4.2.2}%
