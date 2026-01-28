@@ -30,3 +30,7 @@
 \contentsline {section}{\numberline {4.2}Variance and Covariance of Random Variables}{33}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Variance of Random Variables}{33}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Covariance of Random Variables}{34}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Means and Variances of Linear Combinations of Random Variables}{36}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Markov's and Chebyshev's Inequalities}{38}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Markov's Inequality}{38}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Chebyshev's Inequality}{38}{subsection.4.4.2}%

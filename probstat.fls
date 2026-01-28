@@ -801,6 +801,11 @@ INPUT ./12.jpg
 INPUT 12.jpg
 INPUT ./12.jpg
 INPUT ./12.jpg
+INPUT ./13.jpg
+INPUT ./13.jpg
+INPUT 13.jpg
+INPUT ./13.jpg
+INPUT ./13.jpg
 INPUT probstat.aux
 INPUT ./probstat.out
 INPUT ./probstat.out
