@@ -83,24 +83,24 @@ Imagine you have a coin, like this one. It is an ordinary coin that can be found
 \end{figure}
 \\Everyone knows that the chance of heads (H) appearing after each toss is $50\%$, no one even doubts that. So, the \textbf{probability} of an \textbf{event} that heads appearing is $50\%$. But because you are a very curious person, you do not easily accept the truth like others, so you will find a way to test it. The fact "The probability of heads appearing is $50\%$" will be tested, and it can be called a \textbf{hypothesis}.
 \\ \\ \\
-\indent The simplest way to test your hypothesis is tossing a coin many times. You might toss a coin $N=100$ times and see heads appear $n=40$ times, so your actual probability is: $$p=\frac{n}{N}=0.4$$
-But your previous assumption (or hypothesis) states that the ideal probability is: $$\hat p=0.5$$
+\indent The simplest way to test your hypothesis is tossing a coin many times. You might toss a coin $N=100$ times and see heads appear $n=40$ times, so your actual probability is: $$\hat p=\frac{n}{N}=0.4$$
+But your previous assumption (or hypothesis) states that the ideal probability is: $$p=0.5$$
 Is there anything wrong here? Dissatisfied, you continue your experiment. This time, you toss a coin $N=500$ times and see heads appear $n=270$ times, so the new actual probability is:
-$$p=\frac{n}{N}=0.54$$
-This time the result is closer with intial hypothesis $\hat p$, but your hand now must be very tired after tossing a coin $600$ times. So do you think you have \textbf{enough} evidence to conclude that if $N\to+\infty$, then $p\to\hat p$? If so, your assumption is correct because \textit{can not be refuted}; and if not, our common sense might be wrong because the evidence \textit{strongly refutes it}.
+$$\hat p=\frac{n}{N}=0.54$$
+This time the result is closer with initial hypothesis $p$, but your hand now must be very tired after tossing a coin $600$ times. So do you think you have \textbf{enough} evidence to conclude that if $N\to+\infty$, then $\hat p\to p$? If so, your assumption is correct because \textit{can not be refuted}; and if not, our common sense might be wrong because the evidence \textit{strongly refutes it}.
 \\ \\ \\
 \indent Another strategy to toss a coin is fixing and dividing $N$. Instead of tossing $N=600$ times and only getting the final $p$ value, you can divide large number of coin tosses $N=600$ to smaller tosses $N_{1}=N_{2}=\cdots=N_{6}=100$ (but do not too small, at least each $N_{i}>30$), and get
-6 values of $p_{i}$. Suppose that you would get:
+6 values of $\hat p_{i}$. Suppose that you would get:
 \begin{center}
 	\begin{tabular}{ |c|c|c|c|c|c| }
 		\hline
-		$p_{1}$ & $p_{2}$ & $p_{3}$ & $p_{4}$ & $p_{5}$ & $p_{6}$ \\
+		$\hat p_{1}$ & $\hat p_{2}$ & $\hat p_{3}$ & $\hat p_{4}$ & $\hat p_{5}$ & $\hat p_{6}$ \\
 		\hline
-		0.43    & 0.46    & 0.56    & 0.53    & 0.49    & 0.51    \\
+		0.43         & 0.46         & 0.56         & 0.53         & 0.49         & 0.51         \\
 		\hline
 	\end{tabular}
 \end{center}
-You might see that the value $\hat p=0.5$ too idealistic to occur in our experiment, and $p$ constantly changes. Therefore instead of determining the \textbf{exact value} of $p$, we \textbf{predict} that the $p$ value lies inside a \textbf{closed interval} with a \textbf{certainty} of $(1-\alpha)100\%$. For example, we can confidently conclude that the value of $p$ lies within the range (0.48,0.51) with $95\%$ accuracy.
+You might see that the value $p=0.5$ too idealistic to occur in our experiment, and $\hat p$ constantly changes. Therefore instead of determining the \textbf{exact value} of $p$, we \textbf{predict} that the $p$ value lies inside a \textbf{closed interval} with a \textbf{certainty} of $(1-\alpha)100\%$. For example, we can confidently conclude that the value of $p$ lies within the range (0.48,0.51) with $95\%$ accuracy.
 \section{Weather forecasting}
 You do not need to know anything about geography to predict what the weather will be tomorrow. Everything you need is just knowledge about Poisson, exponential distributions and the \textbf{average number} of rainy days per month where you are living.
 \\ For example, in December there are \textbf{average} 5 rainy days. What are the probabilities of:
@@ -130,7 +130,7 @@ The formal definitions of \textbf{probability} and \textbf{statistics} will be d
 You want to know some attributes of a very large \textbf{population} such as the probabilites, means,$\cdots$ of the quantities. But there is no way you can observe the entire population (in many cases, $N\to +\infty$)
 , so you have to take some \textbf{samples} ($n$ elements) and use \textbf{probability rules} to process them. After that, you can try applying \textbf{statistical inference rules} to draw conclusions about the original population. That is how it works!
 \\ \\ \\
-\indent Referring to the previous example, you want to check if the probability of heads appearing is $\hat p=50\%$, so you toss a coin multiple times. But since you can only toss a coin for $600$ times consecutively, so you conclude based on your final result $p=0.54$ (or closed interval with a certainty) that might be if $N\to +\infty$ then $p\to \hat p=0.5$. You took the \textbf{samples} ($N=600$ or $N_{i}=100$), used \textbf{probability rule} to calculate the actual $p$ value, and then applied \textbf{statistical inference rules} (hypothesis or closed interval) to draw conclusions respectively.
+\indent Referring to the previous example, you want to check if the probability of heads appearing is $p=50\%$, so you toss a coin multiple times. But since you can only toss a coin for $600$ times consecutively, so you conclude based on your final result $\hat p=0.54$ (or closed interval with a certainty) that might be if $N\to +\infty$ then $\hat p\to p=0.5$. You took the \textbf{samples} ($N=600$ or $N_{i}=100$), used \textbf{probability rule} to calculate the actual $p$ value, and then applied \textbf{statistical inference rules} (hypothesis or closed interval) to draw conclusions respectively.
 \chapter{Fundamentals of Probability}
 \section{Sample Space and Events}
 \subsection{Sample Space}
@@ -154,7 +154,7 @@ It is possible that you toss a coin forever, and heads never appear.
 \end{definition}
 $S_{1},S_{2}$ have $2$ and $6$ sample points respectively, while $S_{3},S_{4}$ have infinite sample points.
 \subsection{Events}
-For any given experiment, we are often interested in the occurence of certain \textbf{events} rather than a specific element (or \textbf{sample point}) in the sample space. For example, in the die roll experiment, you may want to know when the outcome is an even number. This will happen if the result is an element of the subset $E_{2}$ of the sample space $S_{2}$:
+For any given experiment, we are often interested in the occurrence of certain \textbf{events} rather than a specific element (or \textbf{sample point}) in the sample space. For example, in the die roll experiment, you may want to know when the outcome is an even number. This will happen if the result is an element of the subset $E_{2}$ of the sample space $S_{2}$:
 $$E_{2}=\{2,4,6\}$$
 \begin{definition}
 	An \textbf{event} is the subset of a sample space.
@@ -385,7 +385,7 @@ There are many examples of independent events, like if we define 2 events $E_{1}
 $$P(E_{1}\cap E_{2})=\frac{1}{2}.\frac{1}{2}=\frac{1}{4}=P(E_{1})P(E_{2})$$
 It is very important to note that determining the independence of events is completely \textbf{unrelated} to their mutual exclusion. Events are considered independent if and only if they satisfy \textbf{Theorem 2.4.1}.
 \newpage
-\section{Total Probability and Bayes's rule}
+\section{Total Probability and Bayes' rule}
 \subsection{Total Probability}
 In many situations, we do not know directly the information of $P(A)$ in \textbf{Definition 2.4.1}(or denomirator part); so in this section, we will develop a simple formula to handle this problem.
 \begin{figure}[h]
@@ -416,17 +416,17 @@ Total probability is an useful formula, especially when you are conducting surve
 Using total probability formula, I obtained the probability of $A$:
 $$P(A)=P(A|B)P(B)+P(A|\overline{B})P(\overline{B})=0.8.0.4+0.3.(1-0.4)=0.5$$
 Wow, that was an impressive ratio. Half of a class received perfect score. Was this course too easy?
-\subsection{Bayes's rule}
-If I studied hard, I would get $A+$. But how about me, who was not keen on studying boring courses like Computer Architecture but \textit{still survived after final test and even got "A+"}? I could questioned myself "Was I too lucky?". To answer myself, I had to calculate $P(\overline{B}|A)$, if the result is not so high, perhaps I was lucky. Bayes's rule was what I needed.
+\subsection{Bayes' rule}
+If I studied hard, I would get $A+$. But how about me, who was not keen on studying boring courses like Computer Architecture but \textit{still survived after final test and even got "A+"}? I could questioned myself "Was I too lucky?". To answer myself, I had to calculate $P(\overline{B}|A)$, if the result is not so high, perhaps I was lucky. Bayes' rule was what I needed.
 \begin{theorem}
 	If $A$ and $B$ are two events of sample space $S$, then:
 	\begin{equation*}
 		P(B|A)=\frac{P(B\cap A)}{P(A)}=\frac{P(A|B)P(B)}{P(A|B)P(B)+P(A|\overline{B})P(\overline{B})}
 	\end{equation*}
 \end{theorem}
-Bayes's rule seems very simple. Indeed an average high school student has no difficulty finding it, but its idea is brilliant. Before Bayes, we typically only reasoned about problems in terms of cause first, then effect. But Bayes's rule opens up a completely new way of thinking for us: knowing the effect beforehand, then understanding how cause influences it.
+Bayes' rule seems very simple. Indeed an average high school student has no difficulty finding it, but its idea is brilliant. Before Bayes, we typically only reasoned about problems in terms of cause first, then effect. But Bayes' rule opens up a completely new way of thinking for us: knowing the effect beforehand, then understanding how cause influences it.
 \\ \\ \\
-\indent Back to my previous problem, I applied Bayes's rule:
+\indent Back to my previous problem, I applied Bayes' rule:
 \begin{equation*}
 	P(B|A)=\frac{P(A|B)P(B)}{P(A|B)P(B)+P(A|\overline{B})P(\overline{B})}=\frac{0.8.0.4}{0.5}=0.64\Rightarrow P(\overline{B}|A)=1-P(B|A)=0.36
 \end{equation*}
@@ -590,7 +590,7 @@ These results can be written in table form:
 		\hline
 	\end{tabular}
 \end{center}
-Another classic example of \textbf{discrete joint probability distribution} is the problem of picking balls from a basket. Now you have a basket with many colorful balls inside; there are $3$ red, $4$ green and $5$ blue balls. You choose randomly $3$ balls from the basket, and you define $2$ random variables $X$ and $Y$; $X$ is the number of red balls and $Y$ is the number of green balls. Using counting techniques and combinations, you can write the \textbf{joint probability distribution function}:
+Another classic example of \textbf{discrete joint probability distribution} is the problem of picking balls from a basket. Now you have a basket with many colorful balls inside; there are $3$ red, $4$ green and $5$ blue balls. You choose randomly $3$ balls from the basket, and you define $2$ random variables $X$ and $Y$; $X$ is the number of red balls and $Y$ is the number of green balls. Using counting techniques and combinations, you can write the \textbf{joint pdf}:
 $${f(x,y)}=P(X=x,Y=y)=\frac{\binom{3}{x}\binom{4}{y}\binom{5}{3-x-y}}{\binom{12}{3}}$$
 Or in table form:
 \begin{center}
@@ -609,7 +609,7 @@ Or in table form:
 	\end{tabular}
 \end{center}
 \begin{definition}
-	The function $f(x,y)$ is a \textbf{joint probability distribution function} of the \textbf{discrete random variables} $X$ and $Y$ if:
+	The function $f(x,y)$ is a \textbf{joint pdf} of the \textbf{discrete random variables} $X$ and $Y$ if:
 	\begin{equation*}
 		\begin{cases}
 			f(x,y)\geq 0             \\
@@ -677,14 +677,14 @@ Now we use it again, with random variables $X$ and $Y$:
 	P(X=x,Y=y)=P(X=x)P(Y=y)\Leftrightarrow f(x,y)=g(x)h(y)
 \end{equation*}
 \begin{definition}
-	Let $X$ and $Y$ be two \textbf{discrete random variables}, with joint probability distribution function $f(x,y)$ and marginal distributions $g(x)$, $h(y)$, respectively. They are said to be \textbf{statistically independent} if and only if: $$f(x,y)=g(x)h(y)$$
+	Let $X$ and $Y$ be two \textbf{discrete random variables}, with joint pdf $f(x,y)$ and marginal distributions $g(x)$, $h(y)$, respectively. They are said to be \textbf{statistically independent} if and only if: $$f(x,y)=g(x)h(y)$$
 \end{definition}
 If we check the case $(X=1,Y=1)$: $$\left(f(1,1)=\frac{3}{11}\right)\neq \left(g(1)h(1)=\frac{27}{55}.\frac{28}{55}\right)$$
 So $X$ and $Y$ are \textbf{not} statistically independent, they are interdependent. But how interdependent are they? Are they highly or minimally interdependent? This question will be answered at the end of the next chapter.
 \subsection{Case of Continuous Random Variables}
-Similarly, the joint probability distribution function of \textbf{continuous random variable} can also be defined as follows:
+Similarly, the joint pdf of \textbf{continuous random variable} can also be defined as follows:
 \begin{definition}
-	The function $f(x,y)$ is a \textbf{joint probability distribution function} of the \textbf{continuous random variables} $X$ and $Y$ if:
+	The function $f(x,y)$ is a \textbf{joint pdf} of the \textbf{continuous random variables} $X$ and $Y$ if:
 	\begin{equation*}
 		\begin{cases}
 			f(x,y)\geq 0                                                 \\
@@ -718,7 +718,7 @@ But notice that if $X$ and $Y$ are continuous random variables, then $P(X=x|Y=y)
 	$$P(a<X<b|Y=y)=\int_{a}^{b}f(x|y)dx$$
 \end{corollary}
 \begin{definition}
-	Let $X$ and $Y$ be two \textbf{continuous random variables}, with joint probability distribution function $f(x,y)$ and marginal distributions $g(x)$, $h(y)$, respectively. They are said to be \textbf{statistically independent} if and only if: $$f(x,y)=g(x)h(y)$$
+	Let $X$ and $Y$ be two \textbf{continuous random variables}, with joint pdf $f(x,y)$ and marginal distributions $g(x)$, $h(y)$, respectively. They are said to be \textbf{statistically independent} if and only if: $$f(x,y)=g(x)h(y)$$
 \end{definition}
 \chapter{Mathematical Expectation}
 Due to the relatively high degree of similarity between the formulas in the case of discrete and continuous random variables, this chapter approaches them \textbf{in parallel}, rather than seperating them like previous chapter.
@@ -796,8 +796,8 @@ $$Y=\frac{X}{3}\Leftrightarrow E(Y)=\frac{E(X)}{3}$$
 \\ If $Y$ is defined as \textbf{function of random variable $X$} or $(Y=g(X))$, then the \textbf{expected value} of it can be calculated using the theorem below:
 \begin{theorem}
 	Let $X$ be a random variable with pdf $f(x)$, and the \textbf{expected value} of the random variable $g(X)$ is:
-	$$E(g(X))=\mu_{g(X)}=\sum_{x}g(x)f(x)\quad\text{(if X is discrete)}$$
-	$$E(g(X))=\mu_{g(X)}=\int_{-\infty}^{+\infty}g(x)f(x)dx\quad\text{(if X is continuous)}$$
+	$$\mu_{g(X)}=E(g(X))=\sum_{x}g(x)f(x)\quad\text{(if X is discrete)}$$
+	$$\mu_{g(X)}=E(g(X))=\int_{-\infty}^{+\infty}g(x)f(x)dx\quad\text{(if X is continuous)}$$
 \end{theorem}
 Now I want to make our game funnier because just tossing a coin is too boring, so I came up with an idea. How about toss  $3$ unfair coins and the bottle cap \textbf{at the same time}? The random variable $X$ is defined as the number of heads appearing with the probability of getting heads is $p=0.3$, and getting tails is $q=1-p=0.7$, so the pdf is:
 $$g(x)=P(X=x)=\binom{3}{x}p^{x}q^{3-x}=\binom{3}{x}0.3^{x}0.7^{3-x}\quad(x=0,1,2,3)$$
@@ -809,7 +809,7 @@ A 'PEPSI' bottle cap has just been founded, so I define a new random variable $Y
 	\end{split}
 \end{equation*}
 So the pdf of bottle cap tossing experiment is: $$h(y)=P(Y=y)=(p')^{y}(q')^{1-y}=0.8^{y}0.2^{1-y}\quad(y=0,1)$$
-Intuitively, you can certainly conclude that $X$ and $Y$ are \textbf{statistically independent} since coins and bottle cap tossing process do not affect each other. So the \textbf{joint probability distribution} of them is:
+Intuitively, you can certainly conclude that $X$ and $Y$ are \textbf{statistically independent} since coins and bottle cap tossing process do not affect each other. So the \textbf{joint pdf} of them is:
 $$f(x,y)=g(x)h(y)=\binom{3}{x}0.3^{x}0.7^{3-x}0.8^{y}0.2^{1-y}\quad(x=0,1,2,3;\;y=0,1)$$
 Or in table form:
 \begin{center}
@@ -838,18 +838,18 @@ Now "luck level" can be defined as the value of $(X+Y)$. Thinking according to t
 \end{equation*}
 So now, the players can confidently look forward for their opportunity in this game!
 \begin{definition}
-	Let $X$ and $Y$ be random variables with \textbf{joint probability distribution} $f(x,y)$. The \textbf{mean} or \textbf{expected value} of the random variable function $g(X,Y)$ is:
+	Let $X$ and $Y$ be random variables with \textbf{joint pdf} $f(x,y)$. The \textbf{mean} or \textbf{expected value} of the random variable function $g(X,Y)$ is:
 	$$\mu_{g(X,Y)}=E(g(X,Y))=\sum_{x}\sum_{y}g(x,y)f(x,y)\quad\text{(if $X$ and $Y$ are discrete)}$$
 	$$\mu_{g(X,Y)}=E(g(X,Y))=\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty} g(x,y)f(x,y)dxdy\quad\text{(if $X$ and $Y$ are continuous)}$$
 \end{definition}
 If $g(X,Y)=X$, then we obtain some useful results and can be represented as corollaries:
 \begin{corollary}
-	Let $X$ and $Y$ be discrete random variables with \textbf{joint probability distribution} $f(x,y)$, the \textbf{mean} of $X$ is:
+	Let $X$ and $Y$ be discrete random variables with \textbf{joint pdf} $f(x,y)$, the \textbf{mean} of $X$ is:
 	$$\mu_{X}=E(X)=\sum_{x}\sum_{y}xf(x,y)=\sum_{x}x\left(\sum_{y}f(x,y)\right)=\sum_{x}xg(x)$$
 	Similarly, the mean of $Y$ is: $$\mu_{Y}=E(Y)=\sum_{y}yh(y)$$
 \end{corollary}
 \begin{corollary}
-	Let $X$ and $Y$ be continuous random variables with \textbf{joint probability distribution} $f(x,y)$, the \textbf{mean} of $X$ is:
+	Let $X$ and $Y$ be continuous random variables with \textbf{joint pdf} $f(x,y)$, the \textbf{mean} of $X$ is:
 	$$\mu_{X}=E(X)=\int_{-\infty}^{+\infty}xg(x)dx$$
 	Similarly, the mean of $Y$ is: $$\mu_{Y}=E(Y)=\int_{-\infty}^{+\infty}yh(y)dy$$
 \end{corollary}
@@ -911,7 +911,7 @@ In this subsection, we will answer the question: "How are $2$ random variables $
 $$f(x,y)=g(x)h(y)$$
 We define a new concept called \textbf{covariance}, which is \textbf{a measure of the nature of the association between the two}.
 \begin{definition}
-	Let $X$ and $Y$ be random variables with joint probability distribution $f(x,y)$. The covariance of $X$ and $Y$ is:
+	Let $X$ and $Y$ be random variables with joint pdf $f(x,y)$. The covariance of $X$ and $Y$ is:
 	$$\sigma_{XY}=E((X-\mu_{X})(Y-\mu_{Y}))=\sum_{x}\sum_{y}(x-\mu_{X})(y-\mu_{Y})f(x,y)\quad\text{(if $X$ and $Y$ are discrete)}$$
 
 	$$\sigma_{XY}=E((X-\mu_{X})(Y-\mu_{Y}))=\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}(x-\mu_{X})(y-\mu_{Y})f(x,y)dxdy\quad\text{(if $X$ and $Y$ are continuous)}$$
@@ -943,7 +943,7 @@ Although the \textbf{covariance} between two random variables does provide infor
 	$$|\rho_{XY}|\leq 1$$
 \end{theorem}
 \begin{proof} Proving this theorem above is quiet difficult and requires knowledge of \textbf{Linear Algebra}. I recommend skipping this proof and moving on to the next section to learn some \textbf{useful theorems} first, and then back here later.
-	\\ In the \textbf{random variables vector space} sharing the joint probability distribution function, we now define the \textbf{inner product} is:
+	\\ In the \textbf{random variables vector space} sharing the same joint pdf, we now define the \textbf{inner product} is:
 	$$\left<X,Y\right>=E(XY)$$
 	With $X$, $Y$ and $W$ are three vectors of this vector space and for any constant $c\in\mathbb{R}$, now we check if our \textbf{definition} satisfies $5$ axioms of inner product.
 	\begin{equation*}
@@ -971,13 +971,12 @@ Although the \textbf{covariance} between two random variables does provide infor
 	\begin{equation*}
 		B=kA\Leftrightarrow Y-\mu_{Y}=k(X-\mu_{X})\Leftrightarrow Y=kX+(\mu_{Y}-k\mu_{X})
 	\end{equation*}
-	Since $k$ is an arbitrary value in $\mathbb{R}$, so we can conclude that if and only if $|\rho_{XY}|=1$, then $Y=aX+b\;(a,b\in\mathbb{R})$ or equivalently they have a linear relationship.
+	Since $k$ is an arbitrary value in $\mathbb{R}$, so we can conclude that if and only if $|\rho_{XY}|=1$, then $Y=aX+b\;(a,b\in\mathbb{R})$ or in other words, they have a linear relationship.
 \end{proof}
 \begin{corollary}
 	If $\rho_{XY}=0$, then $X$ and $Y$ are \textbf{statistically independent}.
 \end{corollary}
-\begin{proof} $\rho_{XY}=0\Leftrightarrow \sigma_{XY}=E(XY)-\mu_{X}\mu_{Y}=0\Leftrightarrow E(XY)=\mu_{X}\mu_{Y}$
-	Equivalently, we have:
+\begin{proof} $\rho_{XY}=0\Leftrightarrow \sigma_{XY}=E(XY)-\mu_{X}\mu_{Y}=0\Leftrightarrow E(XY)=\mu_{X}\mu_{Y}$. Or in equivalent:
 	\begin{equation*}
 		\begin{split}
 			E(XY)&=\mu_{X}\mu_{Y}\\
@@ -1017,7 +1016,7 @@ In this section, we will derive some exetremely useful theorems and corollaries.
 	If $g(X,Y)$ and $h(X,Y)$ are two functions of random variable $(X,Y)$, then:
 	$$E(g(X,Y)+h(X,Y))=E(g(X,Y))+E(h(X,Y))$$
 \end{theorem}
-\begin{proof} Applying directy the definition of the \textbf{expected value}:
+\begin{proof} Applying directy the definition of the \textbf{expected value}, we have:
 	\begin{equation*}
 		\begin{split}
 			E(g(X,Y)+h(X,Y))&=\sum_{x}\sum_{y}(g(x,y)+h(x,y))f(x,y)\\&=\sum_{x}\sum_{y}g(x,y)f(x,y)+\sum_{x}\sum_{y}h(x,y)f(x,y)\\&=E(g(X,Y))+E(h(X,Y))
@@ -1042,7 +1041,7 @@ In this section, we will derive some exetremely useful theorems and corollaries.
 \end{proof}
 You should note that $X$ and $Y$ are independent random variables $\Leftrightarrow$ $E(XY)=\mu_{X}\mu_{Y}$
 \begin{theorem}
-	If $X$ and $Y$ are two \textbf{independent random variables} with the joint probability distribution function $f(x,y)$ with three constants $a,b,c$, then: $$\sigma^2_{aX+bY+c}=a^2\sigma^2_{X}+b^2\sigma^2_{Y}$$
+	If $X$ and $Y$ are two \textbf{independent random variables} with the joint pdf $f(x,y)$ with three constants $a,b,c$, then: $$\sigma^2_{aX+bY+c}=a^2\sigma^2_{X}+b^2\sigma^2_{Y}$$
 \end{theorem}
 \begin{proof} Using definition, we have:
 	\begin{equation*}
@@ -1066,7 +1065,7 @@ You should note that $X$ and $Y$ are independent random variables $\Leftrightarr
 \section{Markov's and Chebyshev's Inequalities}
 \subsection{Markov's Inequality}
 \begin{theorem}
-	If $X$ is a \textbf{non-negative} random variable with pdf $f(X)$, then:
+	If $X$ is a \textbf{non-negative} random variable with pdf $f(x)$, then:
 	$$P(X\geq a)\leq\frac{E(X)}{a}$$
 \end{theorem}
 \begin{proof} From the intitial condition $X\geq0$:
@@ -1078,7 +1077,7 @@ You should note that $X$ and $Y$ are independent random variables $\Leftrightarr
 \begin{theorem} If $X$ is any random variables with pdf $f(x)$, then:
 	$$P(\mu_{X}-k\sigma_{X}<X<\mu_{X}+k\sigma_{X})\geq 1-\frac{1}{k^2}$$
 \end{theorem}
-\begin{proof} Applying Markov's inequality with $(X-\mu_{X})^2$ as non-negative random variable:
+\begin{proof} Applying Markov's inequality with $(X-\mu_{X})^2$ as non-negative random variable, now we obtain:
 	\begin{equation*}
 		\begin{split}
 			&P((X-\mu_{X})^2\geq a^2)\leq\frac{E((X-\mu_{X})^2)}{a^2}=\frac{\sigma^2_{X}}{a^2}\\
@@ -1090,12 +1089,221 @@ You should note that $X$ and $Y$ are independent random variables $\Leftrightarr
 \end{proof}
 Chebyshev's Inequality can also be written as:
 $$P(|X-\mu_{X}|\geq k\sigma_{X})\leq \frac{1}{k^2}$$
-This result is very important, especially in \textbf{case of continuous random variable}, the range of $X$ usually extends to infinity; it's shows us that the first and last ends of any pdf are \textbf{bounded}. In general, the shape of a valid pdf graph is always \textbf{flattened} at both ends according to the inequality above.
+This result is very important, especially in \textbf{case of continuous random variable}, the range of $X$ usually extends to infinity; it shows us that the first and last ends of any pdf are \textbf{bounded}. In general, the shape of a valid pdf graph is always \textbf{flattened} at both ends according to the inequality above.
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=12cm]{13.jpg}
 	\caption{Example of a valid pdf graph}
 	\label{Figure 13}
 \end{figure}
+\chapter{Some Discrete Probability Distributions}
+Form this chapter to the end of this book, if $X$ is a random variable with pdf $f(x)$, we can denote it as:
+$$X\sim f(x)$$
+\section{Bernoulli, Binomial and Poisson Distributions}
+\subsection{Bernoulli Distribution}
+Because tossing a coin many times might be so boring, so in this chapter we will begin with more vivid examples. Let's plan to plant some mung bean plants (or maybe just imagine it)! Now you have to buy a packet of mung bean seeds from the agriculture store.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=12cm]{14.jpg}
+	\caption{Mung bean seeds}
+	\label{Figure 14}
+\end{figure}
+\\All seed packets clearly state the germination rate of the seeds. Assume that the germination rate is $p=0.8$. Now if we define the random variable $X$ as the germination state of \textbf{a single seed}, then the pdf of $X$ can be represented as follows, where $(X=1)$ describes the germinating state of the seed, and $(X=0)$ describes the opposite state:
+\begin{center}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		$x$      & $0$   & $1$   \\
+		\hline
+		$P(X=x)$ & $0.2$ & $0.8$ \\
+		\hline
+	\end{tabular}
+\end{center}
+Or in equation form: $$f(x)=P(X=x)=0.8^{x}0.2^{1-x}\quad(x=0,1)$$
+The experiment to test the germination state of \textbf{a single mung bean seed} is a typical exmaple of \textbf{Bernoulli trial}. Formally, a \textbf{Bernoulli trial} is a random experiment with exactly \textbf{two possible outcomes}: "success" and "failure". The success rate is always denoted by the letter $p$, and failure rate is $q$. Because they complement each other, so: $q=1-p$.
+\begin{theorem}
+	The pdf of a \textbf{Bernoulli trial} is: $$\mathscr{I}(x;1,p)=p^{x}q^{1-x}\quad(x=0,1)$$
+\end{theorem}
+\begin{corollary} If $X\sim\mathscr{I}(x;1,p)$, then:
+	\begin{equation*}
+		\begin{split}
+			\mu_{X}&=p\\
+			\sigma^2_{X}&=pq\\
+		\end{split}
+	\end{equation*}
+\end{corollary}
+\begin{proof} For the mean:
+	\begin{equation*}
+		\mu_{X}=\sum_{x}xf(x)=p^{1}q^{0}=p
+	\end{equation*}
+	For the variance:
+	$$\sigma^2_{X}=E(X^2)-\mu^2_{X}=\sum_{x}x^2 f(x)-p^2=p-p^2=pq$$
+\end{proof}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=12cm]{15.jpg}
+	\caption{The pdf of Bernoulli distribution}
+	\label{Figure 15}
+\end{figure}
+\newpage
+\subsection{Binomial Distribution}
+We know that the germination rate is $p=0.8$. Now you pick randomly $10$ mung bean seeds from the pocket and put them on the wet tissue.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=12cm]{16.jpg}
+	\caption{Test the germination ability of $10$ seeds}
+	\label{Figure 16}
+\end{figure}
+\\ Perhaps after waiting $3$ days, you will find out that only $6$ seeds have germinated, while the rest will start to smell. You might ask "But why did only $6$ seeds germinated? I thought it would be $8$?" Now let me explain.
+\\ Firstly I change our previous definition of the random variable $X$. $X$ is now defined as the number of seeds that successfully germinated. The probability of $6$ seeds germinating is:
+$$P(X=6)=\binom{10}{6}0.8^{6}0.2^{4}=0.088$$
+And the probability of $8$ seeds germinating is:
+$$P(X=8)=\binom{10}{8}0.8^{8}0.2^{2}=0.301$$
+Although $0.301>0.088$, it does not mean the event "6 seeds germinated" will never happen (because $0.088>0$); but $1>0.301$, so the event "8 seeds germinated" will not always happen. This is the paradox of ProbStat, we evaluate everything through the question \textbf{"How likely it will occur?"}, and our certainty is never absolute.
+\\ The pdf of our experiment is:
+$$f(x)=P(X=x)=\binom{10}{x}0.8^{x}0.2^{10-x}\quad(x\in\{0,1,2\cdots,10\})$$
+Or in table form:
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		$x$      & $0$       & $1$         & $2$           & $3$           & $4$           \\
+		\hline
+		$P(X=x)$ & $10^{-7}$ & $4.10^{-6}$ & $7.3.10^{-5}$ & $7.8.10^{-4}$ & $5.5.10^{-3}$ \\
+		\hline
+	\end{tabular}
+\end{center}
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\hline
+		$x$      & $5$     & $6$     & $7$     & $8$     & $9$     & $10$    \\
+		\hline
+		$P(X=x)$ & $0.026$ & $0.088$ & $0.201$ & $0.301$ & $0.268$ & $0.107$ \\
+		\hline
+	\end{tabular}
+\end{center}
+From the data table above, you can easily see that even if $P(X=8)$ reaches its maximum value, the probability of occurrence is only about $30\%$. Testing the germination ability of $10$ seeds experiment is a classic example of the \textbf{Bernoulli process}, which consists of \textbf{repeated Bernoulli trials}.
+\begin{theorem} A single Bernoulli trial can result is a sucess with probability $p$ and a failure with probability $q=1-p$. Then the pdf of \textbf{binomial random variable} $X$, the \textbf{number of successes} in $n$ independent trials is:
+	$$\mathscr{B}(x;n,p)=\binom{n}{x}p^{x}q^{n-x}\quad(x=0,1,2,\cdots,n)$$
+\end{theorem}
+\begin{corollary}
+	If $X\sim\mathscr{B}(x;n,p)$, then:
+	\begin{equation*}
+		\begin{split}
+			\mu_{X}&=np\\
+			\sigma^2_{X}&=npq\\
+		\end{split}
+	\end{equation*}
+\end{corollary}
+\begin{proof} For the mean:
+	\begin{equation*}
+		\begin{split}
+			\mu_{X}&=\sum_{x}xf(x)=\sum_{x=0}^{n}x\binom{n}{x}p^{x}q^{n-x}=\sum_{x=1}^{n}\frac{n!}{(x-1)!(n-x)!}p^{x}q^{n-x}\\
+			&=np\sum_{x=1}^{n}\frac{(n-1)!}{(x-1)!(n-x)!}p^{x-1}q^{n-x}=np\sum_{x=1}^{n}\binom{n-1}{x-1}p^{x-1}q^{n-x}\\
+			&=np(p+q)^{n-1}=np
+		\end{split}
+	\end{equation*}
+	Finding the variance directly is not easy, so we have to perform small trick here:
+	\begin{equation*}
+		\begin{split}
+			E(X(X-1))&=\sum_{x}x(x-1)f(x)=\sum_{x=1}^{n}x(x-1)\binom{n}{x}p^{x}q^{n-x}\\&=p^{2}n(n-1)\sum_{x=2}^{n}\frac{(n-2)!}{(n-x)!(x-2)!}p^{x-2}q^{n-x}\\&=p^{2}n(n-1)\sum_{x=2}^{n}\binom{n-2}{x-2}p^{x-2}q^{n-x}\\&= p^{2}n(n-1)(p+q)^{n-2}=p^2n(n-1)
+		\end{split}
+	\end{equation*}
+	Now we apply the result above to the defintion of variance:
+	$$\sigma^2_{X}=E(X^2)-\mu^2_{X}=E(X(X-1))+E(X)-\mu^2_{X}=p^2n(n-1)+np-n^2p^2=npq$$
+\end{proof}
+\begin{proof} There is another subtle way to prove \textbf{Corollary 5.1.2.1}, if $X\sim\mathscr{B}(x;n,p)$ then:
+	$$X=I_{1}+I_{2}+\cdots+I_{n}$$
+	where each $I_{i}\sim\mathscr{I}(x;1,p)$. Since they are \textbf{independent random variables}, we can apply some useful results:
+	$$\mu_{X}=E(I_{1})+E(I_{2})+\cdots+E(I_{n})=np$$
+	$$\sigma^2_{X}=\sigma^2_{I_{1}}+\sigma^2_{I_{2}}+\cdots+\sigma^2_{I_{n}}=npq$$
+\end{proof}
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=14cm]{17.jpg}
+	\caption{The pdf of Binomial distribution}
+	\label{Figure 17}
+\end{figure}
+You should note that the position of the \textbf{mean value} is very close to the value of the random variable $X$ at which $P(X=x)$ reaches its \textbf{highest value}. Or in other words, $\mu_{X}$ is very close to the \textbf{peak} of the pdf graph.
+\subsection{Poisson Distribution}
+\subsubsection{Using Bell-shaped Curve to approx the Binomial Distribution}
+Let's begin with a specific example: $X\sim\mathscr{B}(x;100,0.6)$. Now we can see that the mean value $\mu_{X}=np=60$ is relatively close to the center $X=50$.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=14cm]{18.jpg}
+	\caption{$\mathscr{B}(x;100,0.6)$ graph}
+	\label{Figure 18}
+\end{figure}
+\\Because $np=60$ value is medium, neither too high nor low compared to the center value $X=50$; and plotting $n=100$ points is high enough for us to connect all of them to obtain a relatively smooth curve. This smooth curve \textbf{can be approximated} by the \textbf{bell-shaped curve}, so we will perform operations on it instead of the original curve.
+\\ In this subsection, we will focus on mathematical concepts rather than delving into calculation methods (you can try it yourself if you want). We will return to specific calculation methods in the next chapter.
+\begin{theorem} If $X\sim\mathscr{B}(x;n,p)$ with $np$ value is medium compared to the center value, then:
+	$$\text{Original Curve}\sim\textbf{Bell-shaped Curve: }\frac{1}{\sqrt{2\pi}\sigma}\text{exp}\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)$$
+	where: $\mu=np$ and $\sigma^2=npq$
+\end{theorem}
+Now let's compare $2$ methods: caculating directly and using approximation.
+\begin{equation*}
+	\begin{split}
+		P(X\leq 70)&=1-P(X\geq 71)=1-\sum_{x=71}^{100}\binom{100}{x}0.6^{x}0.4^{100-x}=0.985\\
+		P(X\leq 70)&=P\left(Z<\frac{70-100.0.6+0.5}{\sqrt{100.0.6.0.4}}\right)=P(Z<2.143)= 0.983
+	\end{split}
+\end{equation*}
+Or we can also try:
+\begin{equation*}
+	\begin{split}
+		P(50\leq X\leq 65)&=P(X\leq 65)-P(X\leq 49)\\&=P\left(Z<\frac{65-100.0.6+0.5}{\sqrt{100.0.6.0.4}}\right)-P\left(Z<\frac{49-100.0.6+0.5}{\sqrt{100.0.6.0.4}}\right)\\&=P(Z<1.122)-P(Z<-2.143)\\&=P(Z<1.122)-1+P(Z<2.143)\\&=0.868-1+0.983=0.851\\
+		P(50\leq X\leq 65)&=\sum_{x=50}^{65}\binom{100}{x}0.6^{x}0.4^{100-x}=0.852
+	\end{split}
+\end{equation*}
+The approximation method works very well and yields resutls very close to calculating directly.
+But how about the $X\sim\mathscr{B}(x;100,0.05)$ or $X\sim\mathscr{B}(x;100,0.9)$ cases? Can we still use the \textbf{bell-shaped curve}? Let's check it!
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=14cm]{19.jpg}
+	\caption{$\mathscr{B}(x;100,0.05)$ graph}
+	\label{Figure 19}
+\end{figure}
+\\For example:
+\begin{equation*}
+	\begin{split}
+		P(X\leq 7)&=\sum_{x=0}^{7}\binom{100}{x}0.05^{x}0.95^{100-x}=0.872\\
+		P(X\leq 7)&=P\left(Z<\frac{7-100.0.05+0.5}{\sqrt{100.0.05.0.95}}\right)=0.9292\\
+	\end{split}
+\end{equation*}
+The approximate result differs from the actual result nearly $6\%$. Therefore, for cases where $\mu_{X}=np$ is located very far from the center, the bell-shaped curve approximation method is no longer suitable.
+\newpage
+\subsubsection{Poisson Distribution}
+How do we handle extreme value cases of $np$? We must find better way to approximate original curve. Because $n>>p$, so we can perform some equivalent transformations with assumptions $n\to+\infty$ and $p\to 0$. We begin with $X\sim\mathscr{B}(x;n,p)$:
+\begin{equation*}
+	\begin{split}
+		P(X=x)&=\mathscr{B}(x;n,p)=\binom{n}{x}p^{x}q^{n-x}=\frac{n!}{(n-x)!x!}p^{x}q^{n-x}\\
+		&=\frac{n(n-1)(n-2)\cdots(n-x+1)}{n^{x}}\frac{(np)^{x}}{x!}(1-p)^{n-x}\\
+	\end{split}
+\end{equation*}
+Because $n\to+\infty$ and $p\to 0$:
+\begin{equation*}
+	\begin{split}
+		\lim_{n\to +\infty}\frac{n(n-1)(n-2)\cdots(n-x+1)}{n^{x}}=1\\
+	\end{split}
+\end{equation*}
+Our approximation curve will be more accurate if we only care about \textbf{the first tail} values, it means $n>>x$:
+\begin{equation*}
+	\begin{split}
+		\lim_{n\to +\infty}(1-p)^{n-x}=(1-p)^{n}
+	\end{split}
+\end{equation*}
+By the definition of the constant $e$:
+\begin{equation*}
+	\begin{split}
+		\lim_{p\to 0}(1-p)^{\frac{-1}{p}}= e
+		\Rightarrow \lim_{p\to 0}(1-p)=e^{-p} \Rightarrow (1-p)\approx e^{-p}
+	\end{split}
+\end{equation*}
+Now we obtain: $$(1-p)^{n}\approx e^{-np}$$
+Finally we have:
+$$P(X=x)=\frac{(np)^{x}}{x!}e^{-np}$$
+Or in shortened form with $\mu=np$:
+$$P(X=x)=\frac{\mu^{x}e^{-\mu}}{x!}$$
+Test the new function with the case $X\sim\mathscr{B}(x;100,0.05)$:
+$$P(X=7)=\sum_{x=0}^{7}\frac{(100.0.05)^{x}e^{-100.0.05}}{x!}=0.866$$
+Obviously, the approximated result is very close to the actual result $0.872$.
 \end{document}
 
