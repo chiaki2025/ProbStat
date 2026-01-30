@@ -66,6 +66,7 @@ Since much of my work is handwritten, so I have modified some commonly used nota
 	\item $\mathscr{H}$: Hypergeometric distribution
 	\item $\mathscr{G}^*$: Geometric distribution
 	\item $\mathscr{P}$: Poisson distribution
+	\item $\mathscr{U}$: Uniform distribution
 	\item $\mathscr{N}$: Normal distribution
 	\item $\mathscr{G}$: Gamma distribution
 	\item $\mathscr{E}$: Exponential distribution
@@ -1240,7 +1241,7 @@ Let's begin with a specific example: $X\sim\mathscr{B}(x;100,0.6)$. Now we can s
 \\Because $np=60$ value is medium, neither too high nor low compared to the center value $X=50$; and plotting $n=100$ points is high enough for us to connect all of them to obtain a relatively smooth curve. This smooth curve \textbf{can be approximated} by the \textbf{bell-shaped curve}, so we will perform operations on it instead of the original curve.
 \\ In this subsection, we will focus on mathematical concepts rather than delving into calculation methods (you can try it yourself if you want). We will return to specific calculation methods in the next chapter.
 \begin{theorem} If $X\sim\mathscr{B}(x;n,p)$ with $np$ value is medium compared to the center value, then:
-	$$\text{Original Curve}\sim\textbf{Bell-shaped Curve: }\frac{1}{\sqrt{2\pi}\sigma}\text{exp}\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)$$
+	$$\text{Original Curve}\approx\textbf{Bell-shaped Curve: }\frac{1}{\sqrt{2\pi}\sigma}\text{exp}\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)$$
 	where: $\mu=np$ and $\sigma^2=npq$
 \end{theorem}
 Now let's compare $2$ methods: caculating directly and using approximation.
@@ -1377,5 +1378,52 @@ So the chance of observing $10$ seeds in the $2\times 2$ square if you throw $40
 \newpage
 \section{Negative Binomial and Geometric Distributions}
 \subsection{Negative Binomial Distribution}
+What is the probability of tossing a coin $x$ times \textbf{until} getting $k$ heads, if we know that the probability of heads appearing is $p$ and $X$ is a random variable, defined as the number of tosses? This question is very easy so I will write down the answer:
+$$P(X=x)=\binom{x-1}{k-1}p^{k}q^{x-k}$$
+The function above is a \textbf{Negative Binomial Distribution} formula. Formally, we state that:
+\begin{theorem}
+	If repeated \textbf{Bernoulli trials} can result in a success with probability $p$ and a failure with probability $q=1-p$, then the pdf of random variable $X$, defined as the \textbf{number of the trial} on which the \textbf{kth success occurs} is:
+	$$\mathscr{B}^*(x;k,p)=\binom{x-1}{k-1}p^{k}q^{x-k}\quad(x=k,k+1,k+2,\cdots)$$
+\end{theorem}
+\subsection{Geometric Distribution}
+If we only care about the probability of tossing a coin $x$ times until getting \textbf{first} heads, it means $k=1$ now and we can rewrite our formula as:
+$$P(X=x)=pq^{x-1}$$
+The $k=1$ case of \textbf{Negative Binomial Distribution} can also be called as \textbf{Geometric Distribution}.
+\begin{theorem} If repeated \textbf{Bernoulli trials} can result in a success with probability $p$ and a failure with probability $q=1-p$, then the pdf of random variable $X$, defined as the \textbf{number of trials} on which the \textbf{first success occurs} is:
+	$$\mathscr{G}^{*}(x;p)=pq^{x-1}\quad(x=1,2,3,\cdots)$$
+\end{theorem}
+\begin{corollary}
+	If $X\sim\mathscr{G}^{*}(x;p)$, then:
+	$$\mu_{X}=\frac{1}{p}$$
+	$$\sigma^2_{X}=\frac{q}{p^2}$$
+\end{corollary}
+\begin{proof} For the mean:
+	\begin{equation*}
+		\begin{split}
+			\mu_{X}=\sum_{x}xf(x)=p\sum_{x=1}^{+\infty}xq^{x-1}=p\sum_{x=1}^{+\infty}x(1-p)^{x-1}
+		\end{split}
+	\end{equation*}
+	Now we use the Geometric series and take the derivative once with respect to $p$:
+	\begin{equation*}
+		\begin{split}
+			\sum_{x=0}^{+\infty}(1-p)^{x}&=\frac{1}{1-(1-p)}=\frac{1}{p}\\
+			\Leftrightarrow
+			\left(\sum_{x=0}^{+\infty}(1-p)^{x}\right)^{'}&=\left(\frac{1}{p}\right)^{'}\\
+			\Leftrightarrow -\sum_{x=0}^{+\infty}x(1-p)^{x-1}&=\frac{-1}{p^2}\Rightarrow \sum_{x=1}^{+\infty}x(1-p)^{x-1}=\frac{1}{p^2}\\
+		\end{split}
+	\end{equation*}
+	After substituting our result to the previous equation, we obtain:
+	\begin{equation*}
+		\mu_{X}=p\sum_{x=1}^{+\infty}x(1-p)^{x-1}=p.\frac{1}{p^2}=\frac{1}{p}
+	\end{equation*}
+	Take the second derivative with respect to $p$ from the previous equation:
+	\begin{equation*}
+		\left(\sum_{x=1}^{+\infty}x(1-p)^{x-1}\right)^{'}=\left(\frac{1}{p^2}\right)^{'}\Leftrightarrow \sum_{x=2}^{+\infty}x(x-1)(1-p)^{x-2}=\frac{2}{p^3}
+	\end{equation*}
+	We want to determine:
+	$$E(X(X-1))=\sum_{x}x(x-1)f(x)=p\sum_{x=1}^{+\infty}x(x-1)(1-p)^{x-1}=\frac{2p(1-p)}{p^3}=\frac{2q}{p^2}$$
+	For the variance:
+	$$\sigma^2_{X}=E(X^2)-\mu^2_{X}=E(X(X-1))+E(X)-\frac{1}{p^2}=\frac{2q}{p^2}+\frac{1}{p}-\frac{1}{p^2}=\frac{1-p}{p^2}=\frac{q}{p^2}$$
+\end{proof}
 \end{document}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.3.3)  30 JAN 2026 18:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.3.3)  31 JAN 2026 00:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -495,7 +495,7 @@ been already used, duplicate ignored
                    \relax 
 l.32 \chapter
              *{Preface} [1]
-<1.jpg, id=183, 692.5875pt x 476.78125pt>
+<1.jpg, id=187, 692.5875pt x 476.78125pt>
 File: 1.jpg Graphic file (type jpg)
 <use 1.jpg>
 Package pdftex.def Info: 1.jpg  used on input line 37.
@@ -550,46 +550,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--54
 
 ]
 Chapter 1.
-<2.jpg, id=319, 289.08pt x 192.72pt>
+<2.jpg, id=325, 289.08pt x 192.72pt>
 File: 2.jpg Graphic file (type jpg)
 <use 2.jpg>
-Package pdftex.def Info: 2.jpg  used on input line 80.
+Package pdftex.def Info: 2.jpg  used on input line 81.
 (pdftex.def)             Requested size: 227.62204pt x 151.74721pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--86
+Underfull \hbox (badness 10000) in paragraph at lines 78--87
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--86
+Underfull \hbox (badness 10000) in paragraph at lines 78--87
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--94
+Underfull \hbox (badness 10000) in paragraph at lines 90--95
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--94
+Underfull \hbox (badness 10000) in paragraph at lines 90--95
 
  []
 
 [8
 
  <./2.jpg>] [9]
-<3.jpg, id=335, 1310.8975pt x 736.7525pt>
+<3.jpg, id=341, 1310.8975pt x 736.7525pt>
 File: 3.jpg Graphic file (type jpg)
 <use 3.jpg>
-Package pdftex.def Info: 3.jpg  used on input line 126.
+Package pdftex.def Info: 3.jpg  used on input line 127.
 (pdftex.def)             Requested size: 426.79134pt x 239.86891pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--134
+Underfull \hbox (badness 10000) in paragraph at lines 131--135
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--134
+Underfull \hbox (badness 10000) in paragraph at lines 131--135
 
  []
 
@@ -598,46 +598,46 @@ Chapter 2.
 [11
 
 ] [12]
-<4.jpg, id=361, 1016.79875pt x 744.7825pt>
+<4.jpg, id=367, 1016.79875pt x 744.7825pt>
 File: 4.jpg Graphic file (type jpg)
 <use 4.jpg>
-Package pdftex.def Info: 4.jpg  used on input line 210.
+Package pdftex.def Info: 4.jpg  used on input line 211.
 (pdftex.def)             Requested size: 369.88582pt x 270.92851pt.
  [13 <./4.jpg>] [14]
-Underfull \hbox (badness 10000) in paragraph at lines 276--280
+Underfull \hbox (badness 10000) in paragraph at lines 277--281
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 276--280
+Underfull \hbox (badness 10000) in paragraph at lines 277--281
 
  []
 
 [15]
-<5.jpg, id=384, 807.015pt x 520.94624pt>
+<5.jpg, id=390, 807.015pt x 520.94624pt>
 File: 5.jpg Graphic file (type jpg)
 <use 5.jpg>
-Package pdftex.def Info: 5.jpg  used on input line 294.
+Package pdftex.def Info: 5.jpg  used on input line 295.
 (pdftex.def)             Requested size: 398.33858pt x 257.13391pt.
  [16 <./5.jpg>] [17] [18]
-<6.jpg, id=406, 977.6525pt x 571.13374pt>
+<6.jpg, id=412, 977.6525pt x 571.13374pt>
 File: 6.jpg Graphic file (type jpg)
 <use 6.jpg>
-Package pdftex.def Info: 6.jpg  used on input line 366.
+Package pdftex.def Info: 6.jpg  used on input line 367.
 (pdftex.def)             Requested size: 369.88582pt x 216.08316pt.
  [19 <./6.jpg>]
-<7.jpg, id=413, 666.49pt x 452.69125pt>
+<7.jpg, id=419, 666.49pt x 452.69125pt>
 File: 7.jpg Graphic file (type jpg)
 <use 7.jpg>
-Package pdftex.def Info: 7.jpg  used on input line 393.
+Package pdftex.def Info: 7.jpg  used on input line 394.
 (pdftex.def)             Requested size: 227.62204pt x 154.60373pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 427--430
+Underfull \hbox (badness 10000) in paragraph at lines 428--431
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 427--430
+Underfull \hbox (badness 10000) in paragraph at lines 428--431
 
  []
 
@@ -646,46 +646,46 @@ Chapter 3.
 [22
 
 ] [23]
-Overfull \hbox (18.06711pt too wide) in paragraph at lines 528--531
+Overfull \hbox (18.06711pt too wide) in paragraph at lines 529--532
 \OT1/cmr/bx/n/12 is a fi-nite num-ber\OT1/cmr/m/n/12 , and the sec-ond one is $
 []$.
  []
 
 [24]
-<8.jpg, id=443, 771.88374pt x 255.95625pt>
+<8.jpg, id=449, 771.88374pt x 255.95625pt>
 File: 8.jpg Graphic file (type jpg)
 <use 8.jpg>
-Package pdftex.def Info: 8.jpg  used on input line 534.
+Package pdftex.def Info: 8.jpg  used on input line 535.
 (pdftex.def)             Requested size: 284.52756pt x 94.34691pt.
  [25 <./8.jpg>] [26] [27] [28] [29]
 Chapter 4.
-<9.jpg, id=479, 641.39626pt x 462.72874pt>
+<9.jpg, id=485, 641.39626pt x 462.72874pt>
 File: 9.jpg Graphic file (type jpg)
 <use 9.jpg>
-Package pdftex.def Info: 9.jpg  used on input line 743.
+Package pdftex.def Info: 9.jpg  used on input line 744.
 (pdftex.def)             Requested size: 227.62204pt x 164.20984pt.
 [30
 
  <./9.jpg>]
-<10.jpg, id=485, 620.3175pt x 427.5975pt>
+<10.jpg, id=491, 620.3175pt x 427.5975pt>
 File: 10.jpg Graphic file (type jpg)
 <use 10.jpg>
-Package pdftex.def Info: 10.jpg  used on input line 763.
+Package pdftex.def Info: 10.jpg  used on input line 764.
 (pdftex.def)             Requested size: 227.62204pt x 156.90367pt.
  [31 <./10.jpg>]
-<11.jpg, id=491, 622.325pt x 407.5225pt>
+<11.jpg, id=497, 622.325pt x 407.5225pt>
 File: 11.jpg Graphic file (type jpg)
 <use 11.jpg>
-Package pdftex.def Info: 11.jpg  used on input line 792.
+Package pdftex.def Info: 11.jpg  used on input line 793.
 (pdftex.def)             Requested size: 227.62204pt x 149.05228pt.
  [32 <./11.jpg>] [33]
-<12.jpg, id=503, 1097.09875pt x 415.5525pt>
+<12.jpg, id=509, 1097.09875pt x 415.5525pt>
 File: 12.jpg Graphic file (type jpg)
 <use 12.jpg>
-Package pdftex.def Info: 12.jpg  used on input line 861.
+Package pdftex.def Info: 12.jpg  used on input line 862.
 (pdftex.def)             Requested size: 341.43306pt x 129.32086pt.
  [34 <./12.jpg>]
-Overfull \hbox (29.80815pt too wide) detected at line 917
+Overfull \hbox (29.80815pt too wide) detected at line 918
 \OML/cmm/m/it/12 ^^[[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 E\OT1/cmr/m/n/12 ((\O
 ML/cmm/m/it/12 X \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^V[]\OT1/cmr/m/n/12 )(\
 OML/cmm/m/it/12 Y \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^V[]\OT1/cmr/m/n/12 ))
@@ -696,74 +696,74 @@ m/n/12 )\OML/cmm/m/it/12 dxdy []
  []
 
 [35] [36]
-Overfull \hbox (2.08696pt too wide) in paragraph at lines 994--994
+Overfull \hbox (2.08696pt too wide) in paragraph at lines 995--995
 []\OT1/cmr/bx/n/17.28 Means and Vari-ances of Lin-ear Com-bi-na-tions of Ran-
  []
 
 [37] [38] [39]
-<13.jpg, id=555, 613.29124pt x 364.36125pt>
+<13.jpg, id=561, 613.29124pt x 364.36125pt>
 File: 13.jpg Graphic file (type jpg)
 <use 13.jpg>
-Package pdftex.def Info: 13.jpg  used on input line 1095.
+Package pdftex.def Info: 13.jpg  used on input line 1096.
 (pdftex.def)             Requested size: 341.43306pt x 202.84557pt.
  [40 <./13.jpg>]
 Chapter 5.
-<14.jpg, id=560, 1144.275pt x 761.84625pt>
+<14.jpg, id=566, 1144.275pt x 761.84625pt>
 File: 14.jpg Graphic file (type jpg)
 <use 14.jpg>
-Package pdftex.def Info: 14.jpg  used on input line 1107.
+Package pdftex.def Info: 14.jpg  used on input line 1108.
 (pdftex.def)             Requested size: 341.43306pt x 227.32341pt.
 [41
 
  <./14.jpg>]
-<15.jpg, id=565, 550.055pt x 313.17pt>
+<15.jpg, id=571, 550.055pt x 313.17pt>
 File: 15.jpg Graphic file (type jpg)
 <use 15.jpg>
-Package pdftex.def Info: 15.jpg  used on input line 1145.
+Package pdftex.def Info: 15.jpg  used on input line 1146.
 (pdftex.def)             Requested size: 341.43306pt x 194.39754pt.
  [42 <./15.jpg>]
-<16.jpg, id=574, 1284.8pt x 722.7pt>
+<16.jpg, id=580, 1284.8pt x 722.7pt>
 File: 16.jpg Graphic file (type jpg)
 <use 16.jpg>
-Package pdftex.def Info: 16.jpg  used on input line 1154.
+Package pdftex.def Info: 16.jpg  used on input line 1155.
 (pdftex.def)             Requested size: 341.43306pt x 192.05493pt.
  [43 <./16.jpg>] [44]
-<17.jpg, id=587, 1194.4625pt x 464.73625pt>
+<17.jpg, id=593, 1194.4625pt x 464.73625pt>
 File: 17.jpg Graphic file (type jpg)
 <use 17.jpg>
-Package pdftex.def Info: 17.jpg  used on input line 1226.
+Package pdftex.def Info: 17.jpg  used on input line 1227.
 (pdftex.def)             Requested size: 398.33858pt x 154.98024pt.
-<18.jpg, id=588, 791.95876pt x 358.33875pt>
+<18.jpg, id=594, 791.95876pt x 358.33875pt>
 File: 18.jpg Graphic file (type jpg)
 <use 18.jpg>
-Package pdftex.def Info: 18.jpg  used on input line 1236.
+Package pdftex.def Info: 18.jpg  used on input line 1237.
 (pdftex.def)             Requested size: 398.33858pt x 180.24062pt.
  [45 <./17.jpg> <./18.jpg>]
-<19.jpg, id=595, 792.9625pt x 336.25626pt>
+<19.jpg, id=601, 792.9625pt x 336.25626pt>
 File: 19.jpg Graphic file (type jpg)
 <use 19.jpg>
-Package pdftex.def Info: 19.jpg  used on input line 1264.
+Package pdftex.def Info: 19.jpg  used on input line 1265.
 (pdftex.def)             Requested size: 398.33858pt x 168.91786pt.
 [46 <./19.jpg>] [47] [48]
-<20.jpg, id=615, 642.4pt x 342.27875pt>
+<20.jpg, id=621, 642.4pt x 342.27875pt>
 File: 20.jpg Graphic file (type jpg)
 <use 20.jpg>
-Package pdftex.def Info: 20.jpg  used on input line 1357.
+Package pdftex.def Info: 20.jpg  used on input line 1358.
 (pdftex.def)             Requested size: 284.52756pt x 151.60065pt.
-<21.jpg, id=616, 728.7225pt x 459.7175pt>
+<21.jpg, id=622, 728.7225pt x 459.7175pt>
 File: 21.jpg Graphic file (type jpg)
 <use 21.jpg>
-Package pdftex.def Info: 21.jpg  used on input line 1363.
+Package pdftex.def Info: 21.jpg  used on input line 1364.
 (pdftex.def)             Requested size: 284.52756pt x 179.49252pt.
- [49 <./20.jpg> <./21.jpg>] [50] (./probstat.aux)
+ [49 <./20.jpg> <./21.jpg>] [50] [51] (./probstat.aux)
 Package rerunfilecheck Info: File `probstat.out' has not changed.
-(rerunfilecheck)             Checksum: 2635DF86BBA8D52AF4B5F88192DA6EC9;8456.
+(rerunfilecheck)             Checksum: D674B55A8FCB6E408E35B4203B36F363;8631.
  ) 
 Here is how much of TeX's memory you used:
- 11833 strings out of 476091
- 186096 string characters out of 5794082
+ 11840 strings out of 476091
+ 186187 string characters out of 5794082
  1871330 words of memory out of 5000000
- 31782 multiletter control sequences out of 15000+600000
+ 31783 multiletter control sequences out of 15000+600000
  528766 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,25n,76p,656b,552s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -786,10 +786,10 @@ type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
 rsfs/rsfs10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on probstat.pdf (51 pages, 1156602 bytes).
+Output written on probstat.pdf (52 pages, 1161630 bytes).
 PDF statistics:
- 765 PDF objects out of 1000 (max. 8388607)
- 644 compressed objects within 7 object streams
- 227 named destinations out of 1000 (max. 500000)
- 442 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 779 PDF objects out of 1000 (max. 8388607)
+ 657 compressed objects within 7 object streams
+ 233 named destinations out of 1000 (max. 500000)
+ 450 words of extra memory for PDF output out of 10000 (max. 10000000)
 

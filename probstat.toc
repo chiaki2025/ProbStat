@@ -43,3 +43,4 @@
 \contentsline {subsubsection}{Poisson Distribution}{47}{section*.7}%
 \contentsline {section}{\numberline {5.2}Negative Binomial and Geometric Distributions}{50}{section.5.2}%
 \contentsline {subsection}{\numberline {5.2.1}Negative Binomial Distribution}{50}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Geometric Distribution}{50}{subsection.5.2.2}%
