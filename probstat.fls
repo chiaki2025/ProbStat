@@ -838,6 +838,16 @@ INPUT ./19.jpg
 INPUT 19.jpg
 INPUT ./19.jpg
 INPUT ./19.jpg
+INPUT ./20.jpg
+INPUT ./20.jpg
+INPUT 20.jpg
+INPUT ./20.jpg
+INPUT ./20.jpg
+INPUT ./21.jpg
+INPUT ./21.jpg
+INPUT 21.jpg
+INPUT ./21.jpg
+INPUT ./21.jpg
 INPUT probstat.aux
 INPUT ./probstat.out
 INPUT ./probstat.out

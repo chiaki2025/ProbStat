@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1769713925 "probstat.tex" "probstat.pdf" "probstat" 1769713926 0
+["pdflatex"] 1769771343 "probstat.tex" "probstat.pdf" "probstat" 1769771344 0
   "/etc/texmf/web2c/texmf.cnf" 1740892127 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -140,6 +140,8 @@
   "18.jpg" 1769704220 24786 29d3921d8b58cec96c0e6c9c04a2a9d5 ""
   "19.jpg" 1769708137 20244 7eedba9fe0bbd67037d3f9ff700db17c ""
   "2.jpg" 1768915491 131725 c2c121a7e51aef46e5abce99f90e60d2 ""
+  "20.jpg" 1769762369 11858 2ec5ed67b933ad6f4fcd60e8d80927de ""
+  "21.jpg" 1769769380 22981 17656cf58fbb0674ee73db52aba96a46 ""
   "3.jpg" 1768961223 52743 4d483c507a2cd6425a0b023b00659587 ""
   "4.jpg" 1769000135 44062 6b64d0cf555c335ffb019cddceff41da ""
   "5.jpg" 1769056877 24416 86aee2ac2b7c12b859eb4798b27de1d8 ""
@@ -147,11 +149,11 @@
   "7.jpg" 1769081032 19103 4bf574baad2719caca8333193fae2da3 ""
   "8.jpg" 1769228350 10225 cc086e7f01554b77011da5e184967611 ""
   "9.jpg" 1769514028 15826 c1e8dbea07926a14f315e7f799a5c29b ""
-  "probstat.aux" 1769713926 11125 4cd9b701d3a08093092eb2051ecea16d "pdflatex"
-  "probstat.lof" 1769713926 2266 090d7cb7f75011a7b48e3717c3685192 "pdflatex"
-  "probstat.out" 1769713926 7946 33ef5bd5e0150fb7290ca1912603d072 "pdflatex"
-  "probstat.tex" 1769713925 79898 f816650e4bd3157f66fec9962e6ef08d ""
-  "probstat.toc" 1769713926 3884 56930ef89544651ffbe3802df878ebc4 "pdflatex"
+  "probstat.aux" 1769771344 11840 65bff37da73792439cfdd9feb45a18b6 "pdflatex"
+  "probstat.lof" 1769771344 2465 a648ce1cf2b9cff55f9d4b9554248a92 "pdflatex"
+  "probstat.out" 1769771344 8456 2635df86bba8d52af4b5f88192da6ec9 "pdflatex"
+  "probstat.tex" 1769771343 84529 7f42d49d87804f025459ecb7b1ba3674 ""
+  "probstat.toc" 1769771344 4091 9954e50c4bdac9caa7c6fb3dbda23c01 "pdflatex"
   (generated)
   "probstat.aux"
   "probstat.lof"

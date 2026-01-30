@@ -111,11 +111,11 @@ You do not need to know anything about geography to predict what the weather wil
 This problem will be covered in detail in \textbf{Chapter 5: Discrete Random Variables} and \textbf{Chapter 6: Continuous Random Variables}, but if you do have experience with random variables, you can try solving it!
 \\ The answer for the first question is:
 \begin{equation*}
-	P(X=3)=\frac{e^{-5}5^3}{3!}\approx 14.03\%
+	P(X=3)=\frac{e^{-5}5^3}{3!}=14.03\%
 \end{equation*}
 \\ The answer for the second question is:
 \begin{equation*}
-	P(X<11|X>10)=1-P(X>11|X>10)=1-e^{\frac{-5}{31}}\approx 14.89\%
+	P(X<11|X>10)=1-P(X>11|X>10)=1-e^{\frac{-5}{31}}=14.89\%
 \end{equation*}
 Since $14.89\%$ is quite low, so tomorrow you do not have to bring an umbrella.
 \section{Relationship between Probability and Statistics}
@@ -305,8 +305,8 @@ Using \textbf{Definition 2.3.1}, now we can obtain these resuls:
 $$P(A)=3.0.2=0.6$$
 $$P(B)=2.0.1=0.2$$
 $$P(A\cup B)=P(A)+P(B)=0.6+0.2=0.8$$
-$$P(\overline{A\cup B})=3.0.066\approx 0.2$$
-$$P(S)=2.0.1+3.0.2+3.0.066\approx 1$$
+$$P(\overline{A\cup B})=3.0.066=0.2$$
+$$P(S)=2.0.1+3.0.2+3.0.066=1$$
 You should verify that our "special definition" of probabilty above satisfies the axioms of probability, and can be formalized by a theorem.
 \begin{theorem}
 	If an experiment can result in any one of $N$ different \textbf{equally} likely outcomes, and if exactly $n$ of these outcomes correspond to event $A$, then the probability of event $A$ is:
@@ -784,7 +784,7 @@ Now we are intersted in average "luck level" of coin tossing game, so reuse the 
 	\end{tabular}
 \end{center}
 The \textbf{expected value} or \textbf{mean} of "luck level" is:
-$$\mu_{Y}=E(Y)=\sum_{y}yf(x)=0.0.343+0.333.0.441+0.666.0.189+1.0.027=0.299\approx 0.3$$
+$$\mu_{Y}=E(Y)=\sum_{y}yf(x)=0.0.343+0.333.0.441+0.666.0.189+1.0.027=0.3$$
 Since $0.3$ is not so high value, so the \textbf{mean} of "luck level" is pretty small and players should not look forward to their chances in this game. Furthermore, you should notice the subtle connection between two random variables $X$ and $Y$ as:
 $$Y=\frac{X}{3}\Leftrightarrow E(Y)=\frac{E(X)}{3}$$
 \begin{figure}[h]
@@ -1120,6 +1120,8 @@ Because tossing a coin many times might be so boring, so in this chapter we will
 \end{center}
 Or in equation form: $$f(x)=P(X=x)=0.8^{x}0.2^{1-x}\quad(x=0,1)$$
 The experiment to test the germination state of \textbf{a single mung bean seed} is a typical exmaple of \textbf{Bernoulli trial}. Formally, a \textbf{Bernoulli trial} is a random experiment with exactly \textbf{two possible outcomes}: "success" and "failure". The success rate is always denoted by the letter $p$, and failure rate is $q$. Because they complement each other, so: $q=1-p$.
+\begin{definition} The \textbf{Bernoulli trial} is a random experiment with exactly \textbf{two} possible outcomes: "success" and "failure".
+\end{definition}
 \begin{theorem}
 	The pdf of a \textbf{Bernoulli trial} is: $$\mathscr{I}(x;1,p)=p^{x}q^{1-x}\quad(x=0,1)$$
 \end{theorem}
@@ -1181,6 +1183,8 @@ Or in table form:
 	\end{tabular}
 \end{center}
 From the data table above, you can easily see that even if $P(X=8)$ reaches its maximum value, the probability of occurrence is only about $30\%$. Testing the germination ability of $10$ seeds experiment is a classic example of the \textbf{Bernoulli process}, which consists of \textbf{repeated Bernoulli trials}.
+\begin{definition} The \textbf{Bernoulli process} is the process that consists \textbf{repeated Bernoulli trials}.
+\end{definition}
 \begin{theorem} A single Bernoulli trial can result is a sucess with probability $p$ and a failure with probability $q=1-p$. Then the pdf of \textbf{binomial random variable} $X$, the \textbf{number of successes} in $n$ independent trials is:
 	$$\mathscr{B}(x;n,p)=\binom{n}{x}p^{x}q^{n-x}\quad(x=0,1,2,\cdots,n)$$
 \end{theorem}
@@ -1254,7 +1258,7 @@ Or we can also try:
 	\end{split}
 \end{equation*}
 The approximation method works very well and yields resutls very close to calculating directly.
-But how about the $X\sim\mathscr{B}(x;100,0.05)$ or $X\sim\mathscr{B}(x;100,0.9)$ cases? Can we still use the \textbf{bell-shaped curve}? Let's check it!
+But how about the $X\sim\mathscr{B}(x;100,0.05)$ case? Can we still use the \textbf{bell-shaped curve}? Let's check it!
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=14cm]{19.jpg}
@@ -1303,7 +1307,75 @@ $$P(X=x)=\frac{(np)^{x}}{x!}e^{-np}$$
 Or in shortened form with $\mu=np$:
 $$P(X=x)=\frac{\mu^{x}e^{-\mu}}{x!}$$
 Test the new function with the case $X\sim\mathscr{B}(x;100,0.05)$:
-$$P(X=7)=\sum_{x=0}^{7}\frac{(100.0.05)^{x}e^{-100.0.05}}{x!}=0.866$$
+$$P(X\leq 7)=\sum_{x=0}^{7}\frac{(100.0.05)^{x}e^{-100.0.05}}{x!}=0.866$$
 Obviously, the approximated result is very close to the actual result $0.872$.
+\\ How about the case $X\sim\mathscr{B}(x;100,0.9)$? Since $p$ is clearly close to $1$, not zero, so we must \textbf{inverse the role} of $p$ and $q$. We define the new random variable $Y$ as the \textbf{number of failures} to satisfy the condition of valid approximation.
+\begin{equation*}
+	\begin{split}
+		P(X\geq 90)&=\sum_{90}^{100}\binom{100}{x}0.9^{x}0.1^{100-x}=0.583\\
+		P(X\geq 90)&=P(Y\leq 10)=\sum_{y=0}^{10}\frac{(100.0.1)^{x}e^{-100.0.1}}{y!}=0.583\\
+	\end{split}
+\end{equation*}
+\\ So relatively speaking, we conclude the following, if $\mu=np$ position is very \textbf{far} from the \textbf{left side} of the center, then the Binomial distribution can be approximated by the formula:
+$$P(X=x)=\mathscr{B}(x;n,p)\approx \frac{\mu^{x}e^{-\mu}}{x!}$$
+Because of two main constraints $n>>p$ and $p$ is very close to $0$, the probability of a success event is relatively \textbf{low}. You can think about $p$ as the \textbf{average number} of outcomes per unit time, distance or volume; and $n$ as a given \textbf{time interval} or \textbf{specified region}. In practice, to avoid being confused with Binomial distribution and emphasize the fact that $p\approx 0$, we usually change our notations to:
+$$p\leftrightarrow \lambda$$ $$n\leftrightarrow t$$
+\begin{definition} The \textbf{Poisson process} is the \textbf{Bernoulli process} where $n>>p$ and $p\approx 0$.
+\end{definition}
+\begin{definition} A \textbf{Poisson event} is an event with a \textbf{low} probability of occurring.
+\end{definition}
+\begin{theorem} The pdf of the \textbf{Poisson random variable} $X$, representing the number of outcomes occurring in a \textbf{given time interval} or \textbf{specified region} denoted by $t$, is:
+	$$\mathscr{P}(x;\mu)=\frac{\mu^{x}e^{-\mu}}{x!}\quad(x=0,1,2,\cdots)$$
+	where $\mu=\lambda t$, $\lambda$ is the \textbf{average} number of outcomes per unit time, distance area or volume.
+\end{theorem}
+\begin{theorem} If $X\sim\mathscr{B}(x;n,p)$, when $n\to+\infty$, $p\to 0$ and $np \to\mu$ remains constant: $$\mathscr{B}(x;n,p)\to\mathscr{P}(x;\mu)$$
+\end{theorem}
+\begin{corollary} If $X\sim\mathscr{P}(x;\mu)$, then:
+	$$\mu_{X}=\mu$$
+	$$\sigma^2_{X}=\mu$$
+\end{corollary}
+\begin{proof} For the mean:
+	\begin{equation*}
+		\begin{split}
+			\mu_{X}&=\sum_{x}xf(x)=\sum_{x=0}^{n}x\frac{\mu^{x}e^{-\mu}}{x!}=\sum_{x=1}^{n}\frac{\mu^{x}e^{-\mu}}{(x-1)!}=\mu e^{-\mu}\sum_{x=1}^{n}\frac{\mu^{x-1}}{(x-1)!}=\mu e^{-\mu}e^{\mu}=\mu
+		\end{split}
+	\end{equation*}
+	For the variance, perform the same trick:
+	\begin{equation*}
+		\begin{split}
+			E(X(X-1))&=\sum_{x}x(x-1)f(x)=\sum_{x=1}^{n}x(x-1)\frac{\mu^{x}e^{-\mu}}{x!}\\
+			&=\mu^{2}e^{-\mu}\sum_{x=2}^{n}\frac{\mu^{x-2}}{(x-2)!}=\mu^{2}e^{-\mu}e^{\mu}\\
+			&=\mu^2
+		\end{split}
+	\end{equation*}
+	Apply directly our previous result:
+	$$\sigma^2_{X}=E(X^2)-\mu^2_{X}=E(X(X-1))+E(X)-\mu^2_{X}=\mu^2+\mu-\mu^2=\mu$$
+\end{proof}
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=10cm]{20.jpg}
+	\caption{The pdf of Poisson distribution}
+	\label{Figure 20}
+\end{figure}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=10cm]{21.jpg}
+	\caption{A $4\times 4$ grid}
+	\label{Figure 21}
+\end{figure}
+Back to our mung bean seeds, now you will see how Poisson distribution can be applied in many situations in real life. If you take some seeds from the packet and throw them on a $4\times 4$ grid and you observe that there are $10$ seeds in the $2\times 2$ square closet to you, what are the probabilities of:
+\begin{enumerate}
+	\item There are a total of $40$ seeds on that $4\times 4$ grid.
+	\item Suppose you knew the exact number of seeds that you had thrown is $40$. Evaluate the chance of observing $10$ seeds in the $2\times 2$ square.
+\end{enumerate}
+The random variable $X$ is defined as the number of seeds on a $4\times 4$ grid. Using the formula above, we have: $$\mu=\lambda t=\frac{10}{4} .16=40$$
+$$\Rightarrow P(X=40)=\frac{e^{-\mu}\mu^{x}}{x!}=\frac{e^{-40}40^{40}}{40!}=0.0629$$
+The random variable $Y$ is defined as the number of seeds in the $2\times 2$ square. Similarly, we have: $$\mu=\lambda t=\frac{40}{16}.4=10$$
+$$\Rightarrow P(Y=10)=\frac{e^{-10}10^{10}}{10!}=0.125$$
+So the chance of observing $10$ seeds in the $2\times 2$ square if you throw $40$ seeds on a $4\times 4$ grid is pretty low, just $12.5\%$.
+\newpage
+\section{Negative Binomial and Geometric Distributions}
+\subsection{Negative Binomial Distribution}
 \end{document}
 
