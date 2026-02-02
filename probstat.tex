@@ -16,6 +16,7 @@
 \usepackage{epigraph} 
 \usepackage{hyperref}
 \usepackage{indentfirst}
+\usepackage{comment}
 \usepackage[english]{babel}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{corollary}{Corollary}[theorem]
@@ -48,7 +49,7 @@ When I was learning Probability and Statistics (ProbStat for short), I did not r
 First of all, I want to thank you for reading this book. Although I am not a native English speaker, but I truly enjoy writing in English. I have tried my best to express my ideas in English, but minor grammatical or spelling errors are unavoidable. If you find any of them, I would be very happy to receive your feedback via my email address:
 \url{tinvu1309@gmail.com}
 \\ \\ \\
-\indent Secondly, I am extremly grateful and would like to express my thanks to the authors of the textbook "Probability and Statistics for Engineers and Scientists", $9$th edition. This book truly saved my student life.
+\indent Secondly, I am extremely grateful and would like to express my thanks to the authors of the textbook "Probability and Statistics for Engineers and Scientists", $9$th edition. This book truly saved my student life.
 \\ \\ \\
 \indent Finally, the idea of writing this book was inspired by Prof. Steve Brunton lectures on YouTube. You should check out his videos too!
 \begin{flushright}
@@ -308,7 +309,7 @@ $$P(B)=2.0.1=0.2$$
 $$P(A\cup B)=P(A)+P(B)=0.6+0.2=0.8$$
 $$P(\overline{A\cup B})=3.0.066=0.2$$
 $$P(S)=2.0.1+3.0.2+3.0.066=1$$
-You should verify that our "special definition" of probabilty above satisfies the axioms of probability, and can be formalized by a theorem.
+You should verify that our "special definition" of probability above satisfies the axioms of probability, and can be formalized by a theorem.
 \begin{theorem}
 	If an experiment can result in any one of $N$ different \textbf{equally} likely outcomes, and if exactly $n$ of these outcomes correspond to event $A$, then the probability of event $A$ is:
 	$$P(A)=\frac{n}{N}$$
@@ -917,7 +918,7 @@ We define a new concept called \textbf{covariance}, which is \textbf{a measure o
 
 	$$\sigma_{XY}=E((X-\mu_{X})(Y-\mu_{Y}))=\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}(x-\mu_{X})(y-\mu_{Y})f(x,y)dxdy\quad\text{(if $X$ and $Y$ are continuous)}$$
 \end{definition}
-Applying directly \textbf{Definition 4.2.2} is not convenient in many situations, so we should rewrite its forumula:
+Applying directly \textbf{Definition 4.2.2} is not convenient in many situations, so we should rewrite its formula:
 \begin{corollary}
 	The \textbf{covariance} of random variable $X$ and $Y$ is:
 	\begin{equation*}
@@ -993,7 +994,7 @@ From the equality condition of the Cauchy-Schwarz inequality, we can deduce:
 	And if $\rho_{XY}=-1$, then: $$Y=aX+b\quad(a<0)$$
 \end{corollary}
 \section{Means and Variances of Linear Combinations of Random Variables}
-In this section, we will derive some exetremely useful theorems and corollaries. You should note that all results obtained from this section will be reused multiple times throughout the rest of this book.
+In this section, we will derive some extremely useful theorems and corollaries. You should note that all results obtained from this section will be reused multiple times throughout the rest of this book.
 \begin{theorem}
 	If $a,b$ are $2$ constants, then: $E(aX+b)=aE(X)+b$
 \end{theorem}
@@ -1149,19 +1150,19 @@ The experiment to test the germination state of \textbf{a single mung bean seed}
 \end{figure}
 \newpage
 \subsection{Binomial Distribution}
-We know that the germination rate is $p=0.8$. Now you pick randomly $10$ mung bean seeds from the pocket and put them on the wet tissue.
+We know that the germination rate is $p=0.8$. Now you pick randomly $10$ mung bean seeds from the packet and put them on the wet tissue.
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=12cm]{16.jpg}
 	\caption{Test the germination ability of $10$ seeds}
 	\label{Figure 16}
 \end{figure}
-\\ Perhaps after waiting $3$ days, you will find out that only $6$ seeds have germinated, while the rest will start to smell. You might ask "But why did only $6$ seeds germinated? I thought it would be $8$?" Now let me explain.
+\\ Perhaps after waiting $3$ days, you will find out that only $6$ seeds have germinated, while the rest will start to smell. You might ask "But why did only $6$ seeds germinated? I thought it would be $8$?". Now let me explain.
 \\ Firstly I change our previous definition of the random variable $X$. $X$ is now defined as the number of seeds that successfully germinated. The probability of $6$ seeds germinating is:
 $$P(X=6)=\binom{10}{6}0.8^{6}0.2^{4}=0.088$$
 And the probability of $8$ seeds germinating is:
 $$P(X=8)=\binom{10}{8}0.8^{8}0.2^{2}=0.301$$
-Although $0.301>0.088$, it does not mean the event "6 seeds germinated" will never happen (because $0.088>0$); but $1>0.301$, so the event "8 seeds germinated" will not always happen. This is the paradox of ProbStat, we evaluate everything through the question \textbf{"How likely it will occur?"}, and our certainty is never absolute.
+Although $0.301>0.088$, it does not mean the event "6 seeds germinated" will never happen (because $0.088>0$); but $1>0.301$, so the event "8 seeds germinated" will not always happen. This is the paradox of ProbStat, we evaluate everything through the question \textbf{"How likely will it occur?"}, and our certainty is never absolute.
 \\ The pdf of our experiment is:
 $$f(x)=P(X=x)=\binom{10}{x}0.8^{x}0.2^{10-x}\quad(x\in\{0,1,2\cdots,10\})$$
 Or in table form:
@@ -1289,7 +1290,7 @@ Because $n\to+\infty$ and $p\to 0$:
 		\lim_{n\to +\infty}\frac{n(n-1)(n-2)\cdots(n-x+1)}{n^{x}}=1\\
 	\end{split}
 \end{equation*}
-Our approximation curve will be more accurate if we only care about \textbf{the first tail} values, it means $n>>x$:
+Our approximation curve will be more accurate if we only care about \textbf{the first end} values, it means $n>>x$:
 \begin{equation*}
 	\begin{split}
 		\lim_{n\to +\infty}(1-p)^{n-x}=(1-p)^{n}
@@ -1425,5 +1426,205 @@ The $k=1$ case of \textbf{Negative Binomial Distribution} can also be called as 
 	For the variance:
 	$$\sigma^2_{X}=E(X^2)-\mu^2_{X}=E(X(X-1))+E(X)-\frac{1}{p^2}=\frac{2q}{p^2}+\frac{1}{p}-\frac{1}{p^2}=\frac{1-p}{p^2}=\frac{q}{p^2}$$
 \end{proof}
+\section{Hypergeometric Distribution}
+Suppose you now have $N$ mung bean seeds in the packet, of which you know $N$ of them are spoiled. If you randomly select a handful of $k$ seeds, what is the probability of getting $x$ spoiled seeds?
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=10cm]{22.jpg}
+	\caption{Illustration of Hypergeometric distribution}
+	\label{Figure 22}
+\end{figure}
+\\ Intuitively, we can see that: $$P(X=x)=\frac{\binom{k}{x}\binom{N-k}{n-x}}{\binom{N}{n}}$$
+\begin{theorem} The pdf of the \textbf{hypergeometric} random variable $X$, the number of successes in a random sample of size $n$ selected from $N$ items of which $k$ are labeled \textbf{success} and $N-k$ labeled \textbf{failure} is:
+	$$\mathscr{H}(x;N,k,n)=\frac{\binom{k}{x}\binom{N-k}{n-x}}{\binom{N}{n}}\quad(x=0,1,2,\cdots,k)$$
+\end{theorem}
+\newpage
+\chapter{Some Continuous Probability Distributions}
+Unlike discrete quantities, which are only formed through human counting, couninuous quantities appear naturally. You can easily see that most of physical quantities in reality are continuous, such as mass, length, time,$\cdots$ Therefore, this chapter plays crucial foundational role for the rest of this book.
+\section{Uniform Distribution}
+As we discussed above, the pdf of choosing randomly a number within the range $(0,1)$ experiment is:
+\begin{equation*}
+	f(x)=\begin{cases}
+		1\quad(0<x<1)            \\
+		0\quad\text{(elsewhere)} \\
+	\end{cases}
+\end{equation*}
+The probability of our selected number within $(0.3,0.7)$ interval is:
+$$P(0.3<x<0.7)=\int_{-\infty}^{+\infty}f(x)dx=\int_{0.3}^{0.7}dx=0.4$$
+Suppose normal seeds will typically germinate within $3-5$ days of being placed on a wet towel. They will never germinate before $3$ days or after $5$ days. Now we form the pdf of this experiment:
+\begin{equation*}
+	f(x)=\begin{cases}
+		\frac{1}{2}\quad(3<x<5)  \\
+		0\quad\text{(elsewhere)} \\
+	\end{cases}
+\end{equation*}
+We can obtain some useful result such as:
+\begin{equation*}
+	P(X<x)=F(x)=\int_{-\infty}^{x}f(t)dt=\begin{cases}
+		0\quad(x\leq 3)         \\
+		\frac{x}{2}\quad(3<x<5) \\
+		1\quad(x\geq 5)
+	\end{cases}
+\end{equation*}
+But why do $f(x)=\frac{1}{2}$ with $x\in (3,5)$? Well because every pdf must satisfy these criteria:
+\begin{equation*}
+	\begin{cases}
+		f(x)\geq 0\text{ (for all $x\in\mathbb{R}$)} \\
+		\int_{-\infty}^{+\infty}f(x)dx=1             \\
+		P(a<x<b)=\int_{a}^{b}f(x)dx                  \\
+	\end{cases}
+\end{equation*}
+Verifying yourself that the pdf of germinating seeds experiment satisfies all of them.
+\begin{definition}
+	The pdf of the continuous \textbf{uniform random variable} $X$ on the interval $(A,B)$ is:
+	$$\mathscr{U}(x;a,b)=\begin{cases} \frac{1}{b-a}\quad(a<x<b)\\ 0\quad\text{(elsewhere)}\end{cases}$$
+\end{definition}
+\begin{corollary} If $X\sim\mathscr{U}(x;a,b)$ then:
+	\begin{equation*}
+		\begin{split}
+			\mu_{X}&=\frac{b+a}{2}\\
+			\sigma^2_{X}&=\frac{(b-a)^2}{12}\\
+		\end{split}
+	\end{equation*}
+\end{corollary}
+\begin{proof} For the mean:
+	\begin{equation*}
+		\mu_{X}=\int_{-\infty}^{+\infty}xf(x)dx=\frac{1}{b-a}\int_{a}^{b}xdx=\frac{1}{b-a}.\frac{b^2-a^2}{2}=\frac{b+a}{2}
+	\end{equation*}
+	For the variance:
+	\begin{equation*}
+		\begin{split}
+			\sigma^2_{X}&=E(X^2)-\mu^2_{X}=\int_{-\infty}^{+\infty}x^2f(x)dx-\frac{(b+a)^2}{4}=\frac{1}{b-a}\int_{a}^{b}x^2dx-\frac{(b+a)^2}{4}\\
+			&=\frac{1}{b-a}\frac{b^3-a^3}{3}-\frac{(b+a)^2}{4}=\frac{(b-a)^2}{12}
+		\end{split}
+	\end{equation*}
+\end{proof}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=10cm]{23.jpg}
+	\caption{The pdf of Uniform distribution}
+	\label{Figure 23}
+\end{figure}
+\section{Normal Distribution}
+\subsection{The Idea behind the Normal Distribution}
+This section is one of the most important part of this book. Now we shall 'watch' very closely to the question "Is everything normal because they are?" and partially answer my question from  the \textbf{Preface}. Let's temporarily forget everything we were taught about those concepts and now rebuild them from scratch. \\ \\ \\
+\indent You are watching the rain outside. You observe that the raindrops are all falling \textbf{randomly} onto a circular courtyard. You might wonder where a raindrop is most likely to fall? Perhaps at the \textbf{center} of the circle? Or at the \textbf{edge}? Or neither? Intuitively, you might think the raindrop would concentrate at the center, but are you sure about that when we can not blindly trust intuition? Remember that ProbStat is a paradoxical subject. It tricks our brains with the fact \textbf{that not everyting can be absolutely certain, even this statement}; while human brain is always naturally seeking for the certainty. The only thing we can trust is the use of mathematical language to describe the uncertainty.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=10cm]{24.jpg}
+	\caption{A circular courtyrad with raindrops falling inside}
+	\label{Figure 24}
+\end{figure}
+\\  You define the pdf of an event "A single raindrop falls at the position with coordinate $(x,y)$" as $f(x,y)$. Since raindrops fall completely randomly and you surely know: $$f(x|y)=f(x)$$ $$f(y|x)=f(y)$$
+Since the events "A raindrop falls on a point with coordinate $x$" and "A raindrop falls on a point with coordinate $y$" are \textbf{independent}, we can conclude:
+$$f(x,y)=f(x)f(y)$$
+Applying Pythagorean theorem shows that: $$f(x,y)=f(\sqrt{x^2+y^2})$$
+Substituting to the previous formula yields: $$f(\sqrt{x^2+y^2})=f(x)f(y)$$
+Now we have to find the solution of this functional equation. Firstly, we define a new auxiliary function $g(x)$ as follows: $$f(x)=g(x^2)$$
+Our functional equation can be rewritten as:
+$$g(x^2+y^2)=g(x^2)g(y^2)$$
+Setting $y^2=x^2$ and $t=x^2$ yields: $$g(2t)=g^2(t)$$
+We can observe the pattern:
+$$g(3t)=g(2t+t)=g(2t)g(t)=g^{3}(t)$$
+Now we want to prove this result by using induction: $$g(nt)=g^{n}(t)\quad(n\in\mathbb{N}^*)$$
+With special cases $n=1,2,3$, our equation is correct, now we assume it can be still correct until $n=k$ with $k>3$:
+$$g(kt)=g^{k}(t)\quad(k>3)$$
+For the case $n=k+1$, our equation is still correct:
+$$g((k+1)t)=g(kt)g(t)=g^{k+1}(t)$$
+By induction we can conclude: $$g(nt)=g^{n}(t)\quad(n\in\mathbb{N}^*)$$
+Setting $t=1$ and $g(1)$ as a constant $C$ yields:
+$$g(n)=g^{n}(1)=C^{n}\quad(n\in\mathbb{N}^{*})$$
+Constant $C$ can also be written in an exponential form: $$g(n)=C^{n}=(e^{c})^n\quad(n\in\mathbb{N}^*) $$
+Now we guess the form of $g(x)$ might be: $$g(x)=e^{cx}\quad(\forall x\in\mathbb{R})$$
+Or equivalent to: $$f(x)=g(x^2)=e^{cx^2}\quad(\forall x\in\mathbb{R})$$
+Test our assumption with an arbitrary constant $c$:
+$$f(\sqrt{x^2+y^2})=e^{c(x^2+y^2)}=e^{cx^2}e^{cy^2}=f(x)f(y)$$
+So the solution of our functional equation is: $$f(x)=e^{cx^2}\quad(\forall x,c\in\mathbb{R})$$
+Due to \textbf{Chebyshev's Inequality}, both ends of a valid pdf must be \textbf{flattened}, so we choose our solution is: $$f(x)=e^{-cx^2}\quad(c>0)$$
+The final step is choosing an appropriate constant $c$ to satisfy the criteria of pdf:
+$$\int_{-\infty}^{+\infty}f(x)dx=1$$
+To avoid the constant $c$ ($c$ is just a scaling factor), we consider the special case where $c=1$ and calculate its integral value:
+$$I=\int_{-\infty}^{+\infty}e^{-x^2}dx$$
+Since $e^{-x^2}$ is not an elementary function, so its antiderivative can not be found. Again, we must perform a brilliant trick here:
+\begin{equation*}
+	\begin{split}
+		I^{2}&=\int_{-\infty}^{+\infty}e^{-x^2}dx\int_{-\infty}^{+\infty}e^{-y^2}dy=\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}e^{-(x^2+y^2)}dxdy=\int_{0}^{2\pi}\int_{0}^{+\infty}e^{-r^2}rdrd\theta=\pi
+	\end{split}
+\end{equation*}
+I do not go deeply into the changing variables (from Cartesian to Polar coordinates) and using Jacobian transformation steps since they are very easy; but you can see here, the idea of squaring $I$ is so amazing! Now we obtain: $$I=\int_{-\infty}^{+\infty}e^{-x^2}dx=\sqrt{\pi}$$
+Back to our pdf, now we can change the variable and perform integration:
+$$\int_{-\infty}^{+\infty}e^{-cx^2}dx=\frac{1}{\sqrt{c}}\int_{-\infty}^{+\infty}e^{-(\sqrt{c}x)^2}d(\sqrt{c}x)=\sqrt{\frac{\pi}{c}}$$
+After choosing $c=\pi$, finally our pdf is: $$f(x)=e^{-\pi x^2}$$
+Sketching the pdf, and as you can see here, the chance of raindrops falling around the \textbf{center} is \textbf{higher} than the \textbf{edge} or anywhere esle.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=10cm]{25.jpg}
+	\caption{The probability of raindrops falling around the center is higher than anywhere else}
+	\label{Figure 25}
+\end{figure}
+\\As the author, I have something to tell you after reading this subsection. I have just described all of my knowledge and the way I think about how a weird function was formed from the air; and it  makes perfect sense in my view point. But I am not so sure all of my arguments were correct, because I am just an engineering student. After deeply reading, I think the conclusion derived from the Pythagorean theorem might be incorrect:  $$f(x,y)=f(\sqrt{x^2+y^2})$$
+The remainder of this subsection is left for the readers curious about the idea behind one of the most important functions of both Mathematics and Physics. I would be very happy to receive your email at my address: \url{tinvu1309@gmail.com} and we can discuss more carefully about my misconception in the previous arguments. Thank you.
+\newpage
+\subsection{Standard Normal Distribution}
+For convenience, we usually choose $c=\frac{1}{2}$ to be standard scaling factor and define:
+\begin{definition} A \textbf{standard normal distribution} function is defined as:
+	$$f(x)=\frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}}=\frac{1}{\sqrt{2\pi}}\text{exp}\left(-\frac{x^2}{2}\right)$$
+\end{definition}
+In the case of \textbf{standard normal distribution}, we often denote $Z$ as our random variable. This is a common convention, and you will understand why later.
+\begin{definition} If $Z\sim \mathscr{N}(z;0,1)$, then:
+	$$Z\sim f(z)=\frac{1}{\sqrt{2\pi}}\text{exp}\left(-\frac{z^2}{2}\right)$$
+\end{definition}
+\begin{corollary}
+	If $Z\sim\mathscr{N}(z;0,1)$, then: $$\int_{-\infty}^{+\infty}f(z)dz=1$$
+\end{corollary}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=10cm]{26.jpg}
+	\caption{The pdf of $\mathscr{N}(z;0,1)$}
+	\label{Figure 26}
+\end{figure}
+We are very interested in determing cdf $F(z)$ is defined as:
+$$F(z)=P(Z<z)=\int_{-\infty}^{z}f(t)dt$$
+But because $f(z)$ is \textbf{not an elementary function}, so the antiderivative $F(z)$ can not be found exactly. An alternative way is using Taylor-Maclaurin expansion to obtain the \textbf{approximate} version of $F(z)$:
+\begin{equation*}
+	\begin{split}
+		F(z)&=P(Z<z)=\int_{-\infty}^{z}f(t)dt=\int_{-\infty}^{0}f(t)dt+\int_{0}^{z}f(t)dt=\frac{1}{2}+\frac{1}{\sqrt{2\pi}}\int_{0}^{z}\text{exp}\left(-\frac{t^2}{2}\right)dt\\
+		&=\frac{1}{2}+\frac{1}{\sqrt{2\pi}}\int_{0}^{z}\sum_{k=0}^{+\infty}\frac{(-1)^{k}t^{2k}}{2^k k!}dt=\frac{1}{2}+\frac{1}{\sqrt{2\pi}}\sum_{k=0}^{+\infty}\frac{(-1)^{k}z^{2k+1}}{(2k+1)2^{k}k!}
+	\end{split}
+\end{equation*}
+In practice, we usually do not use the approximation of $F(z)$; instead, we always look for our desired value in the $Z$ score table. In this book, $Z$ score table is the \textbf{Appendix A}.\\ Let's try comparing some values of $F(z)$ when using the table and using the approximation function:
+$$F(Z<0.76)\approx\frac{1}{2}+\frac{1}{\sqrt{2\pi}}\sum_{k=0}^{10}\frac{(-1)^{k}(0.76)^{2k+1}}{(2k+1)2^k k!}=0.7763$$
+$$F(Z<1.65)\approx\frac{1}{2}+\frac{1}{\sqrt{2\pi}}\sum_{k=0}^{10}\frac{(-1)^{k}(1.65)^{2k+1}}{(2k+1)2^k k!}=0.9505$$
+Our results are perfectly matched with results in the $Z$ score table. There are many ways to approximate $F(z)$, and using Taylor-Maclaurin series is the simplest one; although it is accurate and acceptable, but the complexity is \textbf{not optimizated}. The topic of optimizing approximation of $F(z)$ is beyond the scope of this book, and as I said in practice we always look for our desired value in the $Z$ score table; but I hope now we have a better understanding of the mystery behind how the $Z$ score table is formed, rather than just simply looking up at it.
+\subsection{Normal Distribution}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=14cm]{27.jpg}
+	\caption{Visualize how the general normal distribution formula is formed}
+	\label{Figure 27}
+\end{figure}
+As you can see the general normal distribution function can be formed in two steps: shifting the standard normal distribution curve and scaling it. Now the roles of the \textbf{mean} $\mu_{X}$ and the \textbf{standard deviation} $\sigma_{X}$ are very clear. The \textbf{mean} acts as the \textbf{axis of symmetry}, while the \textbf{standard deviation} acts as the scaling factor of the general normal distribution graph. Formally, we define:
+\begin{definition} The pdf of the \textbf{normal random variable} X, with \textbf{mean} $\mu_{X}$ and \textbf{variance} $\sigma^2_{X}$ is: $$\mathscr{N}(x;\mu_{X},\sigma^2_{X})=\frac{1}{\sqrt{2\pi}\sigma_{X}}\text{exp}\left(-\frac{(x-\mu_{X})^2}{2\sigma^2_{X}}\right)$$
+\end{definition}
+\begin{theorem} If $X\sim\mathscr{N}(x;\mu_{X},\sigma^2_{X})$ and a new random variable $Z$ (or $Z$ score) is defined as: $$Z=\frac{X-\mu_{X}}{\sigma_{X}}$$
+	then: $$Z\sim\mathscr{N}(z;0,1)$$
+\end{theorem}
+This is an extremely useful result. We will prove it rigorously later in the next chapter, but you can see the relationship between $X$ and $Z$ through graph transformations is very clear and intuitive. These random variables are \textbf{linearly mapped}. Now instead of performing directly operations on $X$, now we do the smarter choice: transforming from $X$ to $Z$ score first, then processing $Z$ later; since we want to avoid $2$ parameters $\mu_{X}$ and $\sigma_{X}$ in our calculation and we already knew the $Z$ score table.
+\\ For example, if $X\sim\mathscr{N}(x;3,0.5^2)$, then:
+\begin{equation*}
+	\begin{split}
+		P(3.5<X<4)&=P\left(\frac{3.5-3}{0.5}<Z<\frac{4-3}{0.5}\right)\\&=P\left(1<Z<2\right)\\&=P(Z<2)-P(Z<1)\\&=0.9773-0.8413=0.135
+	\end{split}
+\end{equation*}
+\begin{comment}
+\appendix
+\chapter{Areas under the Normal Curve}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{z.png}
+	\caption{Areas under the Normal Curve}
+	\label{Figure 60}
+\end{figure}
+\end{comment}
 \end{document}
 
