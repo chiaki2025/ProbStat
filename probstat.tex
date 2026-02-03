@@ -105,7 +105,7 @@ This time the result is closer with initial hypothesis $p$, but your hand now mu
 You might see that the value $p=0.5$ too idealistic to occur in our experiment, and $\hat p$ constantly changes. Therefore instead of determining the \textbf{exact value} of $p$, we \textbf{predict} that the $p$ value lies inside a \textbf{closed interval} with a \textbf{certainty} of $(1-\alpha)100\%$. For example, we can confidently conclude that the value of $p$ lies within the range (0.48,0.51) with $95\%$ accuracy.
 \section{Weather forecasting}
 You do not need to know anything about geography to predict what the weather will be tomorrow. Everything you need is just knowledge about Poisson, exponential distributions and the \textbf{average number} of rainy days per month where you are living.
-\\ For example, in December there are \textbf{average} 5 rainy days. What are the probabilities of:
+\\ For example, in December there are \textbf{average} 2 rainy days. What are the probabilities of:
 \begin{enumerate}
 	\item There will be 3 rainy days this month.
 	\item Tomorrow will be a rainy day, if today is the $10$th and you have not seen any rain since the beginning of the month.
@@ -113,13 +113,13 @@ You do not need to know anything about geography to predict what the weather wil
 This problem will be covered in detail in \textbf{Chapter 5: Discrete Random Variables} and \textbf{Chapter 6: Continuous Random Variables}, but if you do have experience with random variables, you can try solving it!
 \\ The answer for the first question is:
 \begin{equation*}
-	P(X=3)=\frac{e^{-5}5^3}{3!}=14.03\%
+	P(X=3)=\frac{e^{-2}2^3}{3!}=0.1804=18.04\%
 \end{equation*}
 \\ The answer for the second question is:
 \begin{equation*}
-	P(X<11|X>10)=1-P(X>11|X>10)=1-e^{\frac{-5}{31}}=14.89\%
+	P(X<11|X>10)=1-P(X>11|X>10)=1-e^{\frac{-2}{31}}=0.0624=6.24\%
 \end{equation*}
-Since $14.89\%$ is quite low, so tomorrow you do not have to bring an umbrella.
+Since $6.24\%$ is quite low, so tomorrow you do not have to bring an umbrella.
 \section{Relationship between Probability and Statistics}
 The formal definitions of \textbf{probability} and \textbf{statistics} will be discussed later in \textbf{Chapter 2: Fundamentals of Probability} and \textbf{Chapter 8: Fundamentals of Statistics}, but now let's focus on the general model below:
 \newpage
@@ -1086,7 +1086,7 @@ You should note that $X$ and $Y$ are independent random variables $\Leftrightarr
 			\Rightarrow& P((X-\mu_{X})^2<a^2)\geq 1-\frac{\sigma^2_{X}}{a^2}\\
 		\end{split}
 	\end{equation*}
-	Using the positive scaling factor $k$: $a=k\sigma_{X}$ from the \textbf{standard deviation}, now we obtain:
+	Using the positive scale factor $k$: $a=k\sigma_{X}$ from the \textbf{standard deviation}, now we obtain:
 	$$P(\mu_{X}-k\sigma_{X}<X<\mu_{X}+k\sigma_{X})\geq 1-\frac{1}{k^2}$$
 \end{proof}
 Chebyshev's Inequality can also be written as:
@@ -1543,7 +1543,7 @@ So the solution of our functional equation is: $$f(x)=e^{cx^2}\quad(\forall x,c\
 Due to \textbf{Chebyshev's Inequality}, both ends of a valid pdf must be \textbf{flattened}, so we choose our solution is: $$f(x)=e^{-cx^2}\quad(c>0)$$
 The final step is choosing an appropriate constant $c$ to satisfy the criteria of pdf:
 $$\int_{-\infty}^{+\infty}f(x)dx=1$$
-To avoid the constant $c$ ($c$ is just a scaling factor), we consider the special case where $c=1$ and calculate its integral value:
+To avoid the constant $c$ ($c$ is just a scale factor), we consider the special case where $c=1$ and calculate its integral value:
 $$I=\int_{-\infty}^{+\infty}e^{-x^2}dx$$
 Since $e^{-x^2}$ is not an elementary function, so its antiderivative can not be found. Again, we must perform a brilliant trick here:
 \begin{equation*}
@@ -1566,7 +1566,7 @@ Sketching the pdf, and as you can see here, the chance of raindrops falling arou
 The remainder of this subsection is left for the readers curious about the idea behind one of the most important functions of both Mathematics and Physics. I would be very happy to receive your email at my address: \url{tinvu1309@gmail.com} and we can discuss more carefully about my misconception in the previous arguments. Thank you.
 \newpage
 \subsection{Standard Normal Distribution}
-For convenience, we usually choose $c=\frac{1}{2}$ to be standard scaling factor and define:
+For convenience, we usually choose $c=\frac{1}{2}$ to be standard scale factor and define:
 \begin{definition} A \textbf{standard normal distribution} function is defined as:
 	$$f(x)=\frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}}=\frac{1}{\sqrt{2\pi}}\text{exp}\left(-\frac{x^2}{2}\right)$$
 \end{definition}
@@ -1603,7 +1603,7 @@ Our results are perfectly matched with results in the $Z$ score table. There are
 	\caption{Visualize how the general normal distribution formula is formed}
 	\label{Figure 27}
 \end{figure}
-As you can see the general normal distribution function can be formed in two steps: shifting the standard normal distribution curve and scaling it. Now the roles of the \textbf{mean} $\mu_{X}$ and the \textbf{standard deviation} $\sigma_{X}$ are very clear. The \textbf{mean} acts as the \textbf{axis of symmetry}, while the \textbf{standard deviation} acts as the scaling factor of the general normal distribution graph. Formally, we define:
+As you can see the general normal distribution function can be formed in two steps: shifting the standard normal distribution curve and scaling it. Now the roles of the \textbf{mean} $\mu_{X}$ and the \textbf{standard deviation} $\sigma_{X}$ are very clear. The \textbf{mean} acts as the \textbf{axis of symmetry}, while the \textbf{standard deviation} acts as the scale factor of the general normal distribution graph. Formally, we define:
 \begin{definition} The pdf of the \textbf{normal random variable} X, with \textbf{mean} $\mu_{X}$ and \textbf{variance} $\sigma^2_{X}$ is: $$\mathscr{N}(x;\mu_{X},\sigma^2_{X})=\frac{1}{\sqrt{2\pi}\sigma_{X}}\text{exp}\left(-\frac{(x-\mu_{X})^2}{2\sigma^2_{X}}\right)$$
 \end{definition}
 \begin{theorem} If $X\sim\mathscr{N}(x;\mu_{X},\sigma^2_{X})$ and a new random variable $Z$ (or $Z$ score) is defined as: $$Z=\frac{X-\mu_{X}}{\sigma_{X}}$$
@@ -1616,6 +1616,69 @@ This is an extremely useful result. We will prove it rigorously later in the nex
 		P(3.5<X<4)&=P\left(\frac{3.5-3}{0.5}<Z<\frac{4-3}{0.5}\right)\\&=P\left(1<Z<2\right)\\&=P(Z<2)-P(Z<1)\\&=0.9773-0.8413=0.135
 	\end{split}
 \end{equation*}
+Finally, this section will conclude with one of the most powerful theorems, which I introduced in the previous chapter.
+\begin{theorem} Let $X\sim\mathscr{B}(x;n,p)$, if $np$ is medium compared to the center value, then:
+	$$P(X\leq x)\approx P\left(Z<\frac{x-np+\mathbf{0.5}}{\sqrt{npq}}\right)$$
+	where $Z$ is a \textbf{standard normal} random variable.
+\end{theorem}
+What is the meaning of $0.5$? Why do we have to pad $0.5$ unit? I think the reason is padding $0.5$ to increase the \textbf{resolution} from \textbf{discrete} to \textbf{continuous} version of our approximate line.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=10cm]{28.jpg}
+	\caption{Normal approximation to the binomial}
+	\label{Figure 28}
+\end{figure}
+\\Now you should review \textbf{Chapter 5: Some Discrete Distributions} and try applying this theorem.
+\section{Exponential and Gamma Distributions}
+\subsection{Exponential Distribution}
+Back to our weather forecasting problem from \textbf{Chapter 1: Introduction to Probability and Statistics}; suppose in December, there are average $2$ rainy days annualy. Applying directly Poisson distribution, you can calculate the probabilities of only $1$, or $2$, $3$, or more rainy days in December.
+$$P(X=1)=\frac{e^{-2}2^{1}}{1!}=0.2706$$
+$$P(X=2)=\frac{e^{-2}2^{2}}{2!}=0.2706$$
+$$P(X=3)=\frac{e^{-2}2^{3}}{3!}=0.1804$$
+But our concern is not just the number of rainy days in December, we actually want to know when it will rain (and also plan for the picnic!). For example, if today is the 3rd and you have not seen a drop of rain since the beginning of the month, what is the probability of it raining within the next $4$ days? Or what is the probability that the first $10$ days of this month will have no rain? Or there will be at least one rainy day? A lot of information can be gathered just from the data "On average, there are $2$ rainy days in December.". \\ \\ \\
+\indent Firstly, let's find the answer for the easiest question: "What is the probability that the first $10$ days of this month will have no rain?". Again, you can just applying directly Poisson distribution without hesitation. The random variable $Y$ is defined as the number of rainy days within the first $10$ days:
+$$\mu=\lambda t=\frac{2}{31}.10=\frac{20}{31}$$
+$$\Rightarrow P(Y=0)=\frac{e^{-\mu}\mu^0}{0!}=e^{-\mu}=0.5245$$
+Looking from a different perspective, you define the random variable $X$ as \textbf{the waiting time} for the \textbf{first} rain:
+$$P(Y=0)=P(X>10)=e^{-\mu}=0.5245$$
+Now the probability of at least one rainy day in the first $10$ days is:
+$$P(X<10)=1-P(X>10)=1-0.5245=0.4755$$
+Generally, if $x$ denote the number of days:
+$$P(Y=0)=P(X>x)=e^{-\mu}=e^{-\lambda x}$$
+$$\Rightarrow P(X<x)=1-P(X>x)=1-e^{-\lambda x}$$
+From our previous results, now we can derive the pdf of random variable $X$, is defined as the waiting time for the \textbf{first} rain:
+$$F(x)=P(X<x)=1-e^{\lambda x}\Rightarrow f(x)=\frac{dF(x)}{dx}=\lambda e^{-\lambda x}$$
+Rainy day is an example of a \textbf{Poisson event} because its probability of occuring is \textbf{very low}. Since $f(x)$ is an exponential function, so $X$ can also be called an \textbf{exponential random variable}.
+\begin{definition}
+	The random variable $X$ representing the \textbf{distance} (in most cases, it is time) between \textbf{Poisson events} has pdf:
+	\begin{equation*}
+		\mathscr{E}(x;\lambda x)=
+		\begin{cases}
+			\lambda e^{-\lambda x}\quad(x\geq 0) \\
+			0\quad(\text{elsewhere})             \\
+		\end{cases}
+	\end{equation*}
+\end{definition}
+\begin{corollary} If $X\sim\mathscr{E}(x;\lambda x)$, then:
+	$$\mu_{X}=\frac{1}{\lambda}$$
+	$$\sigma^2_{X}=\frac{1}{\lambda^2}$$
+\end{corollary}
+\begin{proof} For the mean:
+	\begin{equation*}
+		\begin{split}
+			\mu_{X}&=\int_{-\infty}^{+\infty}xf(x)dx=\frac{1}{\lambda}\int_{0}^{+\infty}(\lambda x)e^{-\lambda x}d(\lambda x)=\frac{1}{\lambda}\int_{0}^{+\infty}te^{-t}dt=\frac{-1}{\lambda}\int_{0}^{+\infty}td(e^{-t})\\
+			&=\frac{-1}{\lambda}\left(\left. te^{-t} \right|_{0}^{+\infty}-\int_{0}^{+\infty}e^{-t}dt\right)=\frac{1}{\lambda}
+		\end{split}
+	\end{equation*}
+	For the variance:
+	\begin{equation*}
+		\begin{split}
+			\sigma_{X}^2&=E(X^2)-\mu^2_{X}=\int_{-\infty}^{+\infty}x^2f(x)dx-\frac{1}{\lambda ^2}=\int_{0}^{+\infty}x^2\lambda e^{-\lambda x}dx-\frac{1}{\lambda ^2}=\frac{1}{\lambda^2}\int_{0}^{+\infty}(\lambda x)^2e^{-\lambda x}d(\lambda x)-\frac{1}{\lambda^2}\\
+			&=\frac{1}{\lambda^2}\int_{0}^{+\infty}t^2e^{-t}dt-\frac{1}{\lambda^2}=\frac{-1}{\lambda^2}\int_{0}^{+\infty}t^2d(e^{-t})-\frac{1}{\lambda^2}=\frac{-1}{\lambda^2}\left(\left . t^2e^{-t} \right|_{0}^{+\infty}-2\int_{0}^{+\infty}te^{-t}dt\right)-\frac{1}{\lambda^2}\\
+			&=\frac{2}{\lambda^2}-\frac{1}{\lambda^2}=\frac{1}{\lambda^2}
+		\end{split}
+	\end{equation*}
+\end{proof}
 \begin{comment}
 \appendix
 \chapter{Areas under the Normal Curve}

@@ -889,6 +889,11 @@ INPUT ./27.jpg
 INPUT 27.jpg
 INPUT ./27.jpg
 INPUT ./27.jpg
+INPUT ./28.jpg
+INPUT ./28.jpg
+INPUT 28.jpg
+INPUT ./28.jpg
+INPUT ./28.jpg
 INPUT probstat.aux
 INPUT ./probstat.out
 INPUT ./probstat.out

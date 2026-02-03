@@ -51,3 +51,5 @@
 \contentsline {subsection}{\numberline {6.2.1}The Idea behind the Normal Distribution}{53}{subsection.6.2.1}%
 \contentsline {subsection}{\numberline {6.2.2}Standard Normal Distribution}{57}{subsection.6.2.2}%
 \contentsline {subsection}{\numberline {6.2.3}Normal Distribution}{58}{subsection.6.2.3}%
+\contentsline {section}{\numberline {6.3}Exponential and Gamma Distributions}{60}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Exponential Distribution}{60}{subsection.6.3.1}%
