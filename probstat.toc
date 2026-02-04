@@ -53,3 +53,10 @@
 \contentsline {subsection}{\numberline {6.2.3}Normal Distribution}{58}{subsection.6.2.3}%
 \contentsline {section}{\numberline {6.3}Exponential and Gamma Distributions}{60}{section.6.3}%
 \contentsline {subsection}{\numberline {6.3.1}Exponential Distribution}{60}{subsection.6.3.1}%
+\contentsline {section}{\numberline {6.4}Gamma Distribution}{62}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Gamma Function}{62}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Gamma Distribution}{64}{subsection.6.4.2}%
+\contentsline {section}{\numberline {6.5}Chi-Squared Distribution}{65}{section.6.5}%
+\contentsline {chapter}{\numberline {7}Functions of Random Variables}{66}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Transformations of Variables}{66}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Linear Transformations}{66}{subsection.7.1.1}%

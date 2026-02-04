@@ -1562,7 +1562,7 @@ Sketching the pdf, and as you can see here, the chance of raindrops falling arou
 	\caption{The probability of raindrops falling around the center is higher than anywhere else}
 	\label{Figure 25}
 \end{figure}
-\\As the author, I have something to tell you after reading this subsection. I have just described all of my knowledge and the way I think about how a weird function was formed from the air; and it  makes perfect sense in my view point. But I am not so sure all of my arguments were correct, because I am just an engineering student. After deeply reading, I think the conclusion derived from the Pythagorean theorem might be incorrect:  $$f(x,y)=f(\sqrt{x^2+y^2})$$
+\\As the author, I have something to tell you after reading this subsection. I have just described all of my knowledge and the way I think about how a weird function was formed from the air; and it  makes perfect sense in my view point, but I am not so sure all of my arguments were correct. After deeply reading, I think the conclusion derived from the Pythagorean theorem might be incorrect:  $$f(x,y)=f(\sqrt{x^2+y^2})$$
 The remainder of this subsection is left for the readers curious about the idea behind one of the most important functions of both Mathematics and Physics. I would be very happy to receive your email at my address: \url{tinvu1309@gmail.com} and we can discuss more carefully about my misconception in the previous arguments. Thank you.
 \newpage
 \subsection{Standard Normal Distribution}
@@ -1580,7 +1580,7 @@ In the case of \textbf{standard normal distribution}, we often denote $Z$ as our
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=10cm]{26.jpg}
-	\caption{The pdf of $\mathscr{N}(z;0,1)$}
+	\caption{The pdf of Standard Normal distribution}
 	\label{Figure 26}
 \end{figure}
 We are very interested in determing cdf $F(z)$ is defined as:
@@ -1595,7 +1595,7 @@ But because $f(z)$ is \textbf{not an elementary function}, so the antiderivative
 In practice, we usually do not use the approximation of $F(z)$; instead, we always look for our desired value in the $Z$ score table. In this book, $Z$ score table is the \textbf{Appendix A}.\\ Let's try comparing some values of $F(z)$ when using the table and using the approximation function:
 $$F(Z<0.76)\approx\frac{1}{2}+\frac{1}{\sqrt{2\pi}}\sum_{k=0}^{10}\frac{(-1)^{k}(0.76)^{2k+1}}{(2k+1)2^k k!}=0.7763$$
 $$F(Z<1.65)\approx\frac{1}{2}+\frac{1}{\sqrt{2\pi}}\sum_{k=0}^{10}\frac{(-1)^{k}(1.65)^{2k+1}}{(2k+1)2^k k!}=0.9505$$
-Our results are perfectly matched with results in the $Z$ score table. There are many ways to approximate $F(z)$, and using Taylor-Maclaurin series is the simplest one; although it is accurate and acceptable, but the complexity is \textbf{not optimizated}. The topic of optimizing approximation of $F(z)$ is beyond the scope of this book, and as I said in practice we always look for our desired value in the $Z$ score table; but I hope now we have a better understanding of the mystery behind how the $Z$ score table is formed, rather than just simply looking up at it.
+Our results are perfectly matched with results in the $Z$ score table. There are many ways to approximate $F(z)$, and using Taylor-Maclaurin series is the simplest one; although it is accurate and acceptable, but the complexity is \textbf{not optimized}. The topic of optimizing approximation of $F(z)$ is beyond the scope of this book, and as I said in practice we always look for our desired value in the $Z$ score table; but I hope now we have a better understanding of the mystery behind how the $Z$ score table is formed, rather than just simply looking up at it.
 \subsection{Normal Distribution}
 \begin{figure}[h]
 	\centering
@@ -1679,6 +1679,159 @@ Rainy day is an example of a \textbf{Poisson event} because its probability of o
 		\end{split}
 	\end{equation*}
 \end{proof}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=10cm]{29.jpg}
+	\caption{Illustration of Exponential distribution}
+	\label{Figure 29}
+\end{figure}
+From the illustration, now we can see that from 0:00 on December 1st (denoted $O$), we have to wait $x_{1}$ days until the first rain. The random variable $X_{1}$ is defined as \textbf{the waiting time} for the first rain \textbf{since the origin}: $$X_{1}\sim\mathscr{E}(x_{1};\lambda x_{1})$$
+Right after the first rain, we have to wait $x_{2}$ days until the second rain. The random variable $X_{2}$ is defined as \textbf{the waiting time} for the second rain \textbf{since the first rain}. Similarly, we see that: $$X_{2}\sim\mathscr{E}(x_{2},\lambda x_{2})$$
+The random variables $X_{1}$, $X_{2}$, $X_{3},\cdots$ are \textbf{statistically independent} since they do not have any relationship to the others.
+\\ \\ \\
+\indent Now to answer our second question: "If the first 3 days are not rainy, what is the probability of it raining within the next 4 days?", you should note that this is a classic conditional probability problem:
+$$P(X<7|X>3)=1-P(X>7|X>3)=1-\frac{P(X>7)}{P(X>3)}=1-\frac{e^{-7.\frac{2}{31}}}{e^{-3.\frac{2}{31}}}=1-e^{-4.\frac{2}{31}}=0.2274$$
+Generally, we can see the \textbf{memoryless property} of \textbf{exponential distribution}: $$P(X>x+x_{0}|X>x)=\frac{P(X>x+x_{0})}{P(X>x)}=\frac{e^{-\lambda (x+x_{0})}}{e^{-\lambda x}}=e^{-\lambda x_{0}}=P(X>x_{0})$$
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=10cm]{30.jpg}
+	\caption{The pdf of Exponential distribution and its memoryless property}
+	\label{Figure 30}
+\end{figure}
+\begin{theorem} If $X\sim\mathscr{E}(x;\lambda x)$, then it has \textbf{memoryless property}:
+	$$P(X>x+x_{0}|X>x)=P(X>x_{0})$$
+\end{theorem}
+\section{Gamma Distribution}
+\subsection{Gamma Function}
+Before exploring the \textbf{Gamma Distribution}, let me introduce you to an odd but very powerful function:
+\begin{definition}
+	For every $\alpha>0$, the \textbf{gamma function} is defined by:
+	$$\Gamma(\alpha)=\int_{0}^{+\infty}x^{\alpha-1}e^{-x}dx$$
+\end{definition}
+From now on, the \textbf{gamma function} will appear almost everywhere in ProbStat, so you should learn it carefully.
+\begin{theorem} For every $\alpha>0$, the \textbf{gamma function} can be determined through a \textbf{recursion}:
+	$$\Gamma(\alpha)=(\alpha-1)\Gamma(\alpha-1)$$
+\end{theorem}
+\begin{proof}
+	\begin{equation*}
+		\begin{split}
+			\Gamma(\alpha)&=\int_{0}^{+\infty}x^{\alpha-1}e^{-x}dx=-\int_{0}^{+\infty}x^{\alpha-1}d(e^{-x})=-\left(x^{\alpha-1}e^{-x}\left.\right|_{0}^{+\infty}-(\alpha-1)\int_{0}^{+\infty}x^{\alpha-2}e^{-x}dx\right)\\
+			&=(\alpha-1)\int_{0}^{+\infty}x^{\alpha-2}e^{-x}dx=(\alpha-1)\Gamma(\alpha-1)
+		\end{split}
+	\end{equation*}
+\end{proof}
+\begin{corollary} $$\Gamma(1)=1$$
+\end{corollary}
+\begin{proof}
+	$$\Gamma(1)=\int_{0}^{+\infty}x^{0}e^{-x}dx=\int_{0}^{+\infty}e^{-x}dx=1$$
+\end{proof}
+\begin{corollary} For any positive integer $n$:
+	$$\Gamma(n)=(n-1)!$$
+\end{corollary}
+\begin{proof} For any positive integer $n$:
+	$$\Gamma(n)=(n-1)\Gamma(n-1)=(n-1)(n-2)\Gamma(n-2)=(n-1)(n-2)\cdots2.\Gamma(1)=(n-1)!$$
+\end{proof}
+\begin{corollary}
+	$$\Gamma\left(\frac{1}{2}\right)=\sqrt{\pi}$$
+\end{corollary}
+\begin{proof}
+	$$\Gamma\left(\frac{1}{2}\right)=\int_{0}^{+\infty}\frac{e^{-x}}{\sqrt{x}}dx$$
+	Change variable by setting $t=\sqrt{x}\Rightarrow 2tdt=dx$:
+	$$\Gamma\left(\frac{1}{2}\right)=\int_{0}^{+\infty}\frac{e^{-t^2}}{t}2tdt=2\int_{0}^{+\infty}e^{-t^2}dt=\sqrt{\pi}$$
+\end{proof}
+Using \textbf{Corollary 6.4.1.3} and recursion property of Gamma function, we can deduce several useful results:
+$$\Gamma\left(\frac{3}{2}\right)=\frac{1}{2}\Gamma\left(\frac{1}{2}\right)=\frac{\sqrt{\pi}}{2}$$
+$$\Gamma\left(\frac{5}{2}\right)=\frac{3}{2}\Gamma\left(\frac{3}{2}\right)=\frac{3\sqrt{\pi}}{4}$$
+\subsection{Gamma Distribution}
+The pdf of Gamma distribution is a little bit messy, so we focus on understanding how it can be applied rather than deriving from scratch.
+\begin{definition}
+	The continuous random variable $X$ has a \textbf{gamma distribution}, with 2 parameters $\alpha$ and $\beta$ are both positive, if its pdf is given by:
+	\begin{equation*}
+		\mathscr{G}(x;\alpha,\beta)=
+		\begin{cases}
+			\frac{1}{\Gamma(\alpha)\beta^{\alpha}}x^{\alpha-1}e^{-x/\beta}\quad(x>0) \\
+			0\quad(\text{elsewhere})                                                 \\
+		\end{cases}
+	\end{equation*}
+\end{definition}
+\begin{corollary}
+	If $X\sim\mathscr{G}(x;\alpha,\beta)$, then:
+	\begin{equation*}
+		\begin{split}
+			\mu_{X}&=\alpha\beta\\
+			\sigma^2_{X}&=\alpha\beta^2\\
+		\end{split}
+	\end{equation*}
+\end{corollary}
+\begin{proof} For the mean:
+	\begin{equation*}
+		\begin{split}
+			\mu_{X}&=\int_{-\infty}^{+\infty}xf(x)dx=\int_{0}^{+\infty}\frac{1}{\Gamma(\alpha)\beta^{\alpha}}x^{\alpha}e^{-x/\beta}dx=\alpha\beta\int_{0}^{+\infty}\frac{1}{\Gamma(\alpha+1)\beta^{\alpha+1}}x^{\alpha}e^{-x/\beta}dx\\
+			&=\alpha\beta\int_{0}^{+\infty}\mathscr{G}(x;\alpha+1,\beta)dx=\alpha\beta
+		\end{split}
+	\end{equation*}
+	For the variance:
+	\begin{equation*}
+		\begin{split}
+			\sigma^2_{X}&=E(X^2)-\mu^2_{X}=\int_{-\infty}^{+\infty}x^2f(x)dx-\mu^2_{X}=\int_{0}^{+\infty}\frac{1}{\Gamma(\alpha)\beta^{\alpha}}x^{\alpha+1}e^{-x/\beta}dx-(\alpha\beta)^2\\
+			&=(\alpha+1)\alpha\beta^2\int_{0}^{+\infty}\frac{1}{\Gamma(\alpha+2)\beta^{\alpha+2}}x^{\alpha+1}e^{-x/\beta}dx-(\alpha\beta)^2\\
+			&=(\alpha+1)\alpha\beta^2\int_{0}^{+\infty}\mathscr{G}(x;\alpha+2,\beta)dx-(\alpha\beta)^2\\
+			&=(\alpha+1)\alpha\beta^2-\alpha^2\beta^2=\alpha\beta^2
+		\end{split}
+	\end{equation*}
+\end{proof}
+Exponential distribution is just a \textbf{special case} of Gamma distribution, you shoud notice that: $$\mathscr{E}(x;\lambda x)=\mathscr{G}\left(x;1,\frac{1}{\lambda}\right)$$
+So what does it mean? The relationship between them can be described through $2$ parameters $\alpha$ and $\beta$, with $\alpha$ as the \textbf{number of Poisson events} that you want to observe in a time interval, $\beta$ is just the \textbf{inverse} of $\lambda$. For example, if $X$ is the random variabe, defined as the \textbf{waiting time until the second rain} from the \textbf{beginning of December} (on average, there are $2$ rainy days in December), then:
+$$X\sim\mathscr{G}\left(x;2,\frac{31}{2}\right)$$
+The probability of there are \textbf{at least} $2$ rainy days within the first $10$ days in December is:
+$$P(X<10)=\int_{0}^{10}\frac{1}{\Gamma(2)\left(31/2\right)^2}xe^{-2x/31}dx=0.1369$$
+\section{Chi-Squared Distribution}
+Chi-Squared distribution is a special case of Gamma distribution, where $v$ is a positive integer: $$\alpha=\frac{v}{2},\;\beta=2$$
+You will understand its vital role in \textbf{statistics inference} in the next chapters.
+\begin{definition} The continuous random variable $X$ has a \textbf{chi-squared distribution}, with $v$ \textbf{degrees of freedom}, if its pdf is given by:
+	\begin{equation*}
+		\mathscr{C}(x;v)=\begin{cases}
+			\frac{1}{2^{v/2}\Gamma\left(v/2\right)}x^{v/2-1}e^{-x/2}\quad(x>0) \\
+			0\quad(\text{elsewhere})                                           \\
+		\end{cases}
+	\end{equation*}
+	where $v$ is a positive integer.
+\end{definition}
+\begin{corollary}
+	If $X\sim\mathscr{C}(x;v)$, then:
+	\begin{equation*}
+		\begin{split}
+			\mu_{X}&=v\\
+			\sigma^2_{X}&=2v\\
+		\end{split}
+	\end{equation*}
+\end{corollary}
+\begin{proof} For the mean: $$\mu_{X}=\alpha\beta=v$$  For the variance:
+	$$\sigma^2_{X}=\alpha\beta^2=2v$$
+\end{proof}
+\chapter{Functions of Random Variables}
+From \textbf{Chapter 4: Mathematical Expectation}, we discovered many cool properties of \textbf{mean} and \textbf{variance} of random variables. For example, given $2$ random variables $X_{1}\sim\mathscr{P}(x_{1};\mu_{1})$ and $X_{2}\sim\mathscr{P}(x_{2};\mu_{2})$, if we define new random variable $Y=X_{1}+X_{2}$, we can confidently conclude: $$\mu_{Y}=\mu_{X_{1}}+\mu_{X_{2}}=\mu_{1}+\mu_{2}$$
+$$\sigma^2_{Y}=\sigma_{X_{1}}^2+\sigma^2_{X_{2}}=\mu_{1}^2+\mu_{2}^2$$
+But we have not answered the question "How is the random variable $Y$ distributed?". Is $Y$ distributed \textbf{normally}, or \textbf{exponentially}, or neither? The only information we have known is just \textbf{expected value} and \textbf{variance} of $Y$. In this chapter, we will find an answer for our question; and I think it should not be skipped (like many other textbooks) just because there is too much Calculus. All of results derived here plays vital roles in \textbf{Statistics}.
+\section{Transformations of Variables}
+\subsection{Linear Transformations}
+Suppose that the discrete random variable $X\sim f(x)$, and we want to find the pdf of $Y\sim g(y)$ if we knew both $X$ and $Y$ have a linear relationship: $Y=u(X)$. How can we do that? Firstly, we find the \textbf{inverse function} of $u(X)$: $$X=w(Y)$$
+Now from the definition of pdf, we have:
+$$g(Y)=P(Y=y)=P(X=w(y))=f(w(y))$$
+\begin{definition} Suppose that $X$ is a \textbf{discrete} random variable with pdf $f(x)$. Let $Y=u(X)$ define a \textbf{linear transformation} so that its \textbf{inverse function} $X=w(Y)$ can be found; then the pdf of $Y$ is: $$g(Y)=f(w(y))$$
+	If $X$ is a \textbf{continuous} random variable, then:
+	$$g(Y)=f(w(y))w'(y)$$
+\end{definition}
+A very common mistake is forgetting the $w'(y)$ term. To avoid it, you can relate $w'(y)$ role like $dx$ as the differential part of integration.
+\\ For example, if $X\sim\mathscr{B}(x;10,0.5)$ and $Y=u(X)=X+3$, then the inverse function of $u(X)$ is: $$X=w(Y)=Y-3$$
+Finally, we can conclude: $$g(Y)=f(w(y))=\mathscr{B}(y-3;10,0.5)=\binom{10}{y-3}0.5^{y-3}0.5^{13-y}\quad (y=3,4,5,\cdots,13)$$
+Here is a harder question, if $X$ has the pdf:
+$$X\sim f(x)=\begin{cases}
+		1\quad(0<x<1)            \\
+		0\quad\text{(elsewhere)} \\
+	\end{cases}$$
+Show that the random variable $Y=-2\ln{X}$ has $Y\sim\mathscr{C}(y;2)$.
 \begin{comment}
 \appendix
 \chapter{Areas under the Normal Curve}
