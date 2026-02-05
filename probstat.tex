@@ -75,7 +75,7 @@ Since much of my work is handwritten, so I have modified some commonly used nota
 	\item $\mathscr{T}$: t-distribution (or Student distribution)
 \end{enumerate}
 \chapter{Introduction to Probability and Statistics}
-\section{Tossing a coin}
+\section{Tossing a Coin}
 Imagine you have a coin, like this one. It is an ordinary coin that can be found everywhere.
 \begin{figure}[h]
 	\centering
@@ -103,7 +103,7 @@ This time the result is closer with initial hypothesis $p$, but your hand now mu
 	\end{tabular}
 \end{center}
 You might see that the value $p=0.5$ too idealistic to occur in our experiment, and $\hat p$ constantly changes. Therefore instead of determining the \textbf{exact value} of $p$, we \textbf{predict} that the $p$ value lies inside a \textbf{closed interval} with a \textbf{certainty} of $(1-\alpha)100\%$. For example, we can confidently conclude that the value of $p$ lies within the range (0.48,0.51) with $95\%$ accuracy.
-\section{Weather forecasting}
+\section{Weather Forecasting}
 You do not need to know anything about geography to predict what the weather will be tomorrow. Everything you need is just knowledge about Poisson, exponential distributions and the \textbf{average number} of rainy days per month where you are living.
 \\ For example, in December there are \textbf{average} 2 rainy days. What are the probabilities of:
 \begin{enumerate}
@@ -294,7 +294,7 @@ This definition can also be called Kolmogorov's axioms. An intuitive way to unde
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=14cm]{5.jpg}
-	\caption{Visualize definition of probability}
+	\caption{Visualizing definition of probability}
 	\label{Figure 5}
 \end{figure}
 \\Literally, probability is just a number that describes how likely an event can occur. I often relate it with "weight" quantity. As you can see in the sample space, I can assign arbitrarily the "weights" (or probabilites) of sample points as follows:
@@ -366,7 +366,7 @@ As you can see here, if one event occurs before another event, probability will 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=13cm]{6.jpg}
-	\caption{Visualize how conditional probability is calculated}
+	\caption{Visualizing how conditional probability is calculated}
 	\label{Figure 6}
 \end{figure}
 Now back to our previous problems, these conditional probabilities can easily be determined using \textbf{Definition 2.4.1} above:
@@ -1583,7 +1583,7 @@ In the case of \textbf{standard normal distribution}, we often denote $Z$ as our
 	\caption{The pdf of Standard Normal distribution}
 	\label{Figure 26}
 \end{figure}
-We are very interested in determing cdf $F(z)$ is defined as:
+We are very interested in determining cdf $F(z)$ is defined as:
 $$F(z)=P(Z<z)=\int_{-\infty}^{z}f(t)dt$$
 But because $f(z)$ is \textbf{not an elementary function}, so the antiderivative $F(z)$ can not be found exactly. An alternative way is using Taylor-Maclaurin expansion to obtain the \textbf{approximate} version of $F(z)$:
 \begin{equation*}
@@ -1600,7 +1600,7 @@ Our results are perfectly matched with results in the $Z$ score table. There are
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=14cm]{27.jpg}
-	\caption{Visualize how the general normal distribution formula is formed}
+	\caption{Visualizing how the general normal distribution formula is formed}
 	\label{Figure 27}
 \end{figure}
 As you can see the general normal distribution function can be formed in two steps: shifting the standard normal distribution curve and scaling it. Now the roles of the \textbf{mean} $\mu_{X}$ and the \textbf{standard deviation} $\sigma_{X}$ are very clear. The \textbf{mean} acts as the \textbf{axis of symmetry}, while the \textbf{standard deviation} acts as the scale factor of the general normal distribution graph. Formally, we define:
@@ -1629,7 +1629,7 @@ What is the meaning of $0.5$? Why do we have to pad $0.5$ unit? I think the reas
 	\label{Figure 28}
 \end{figure}
 \\Now you should review \textbf{Chapter 5: Some Discrete Distributions} and try applying this theorem.
-\section{Exponential and Gamma Distributions}
+\section{Exponential, Gamma and Chi-Squared Distributions}
 \subsection{Exponential Distribution}
 Back to our weather forecasting problem from \textbf{Chapter 1: Introduction to Probability and Statistics}; suppose in December, there are average $2$ rainy days annualy. Applying directly Poisson distribution, you can calculate the probabilities of only $1$, or $2$, $3$, or more rainy days in December.
 $$P(X=1)=\frac{e^{-2}2^{1}}{1!}=0.2706$$
@@ -1702,8 +1702,8 @@ Generally, we can see the \textbf{memoryless property} of \textbf{exponential di
 \begin{theorem} If $X\sim\mathscr{E}(x;\lambda x)$, then it has \textbf{memoryless property}:
 	$$P(X>x+x_{0}|X>x)=P(X>x_{0})$$
 \end{theorem}
-\section{Gamma Distribution}
-\subsection{Gamma Function}
+\subsection{Gamma Distribution}
+\subsubsection{Gamma Function}
 Before exploring the \textbf{Gamma Distribution}, let me introduce you to an odd but very powerful function:
 \begin{definition}
 	For every $\alpha>0$, the \textbf{gamma function} is defined by:
@@ -1743,7 +1743,7 @@ From now on, the \textbf{gamma function} will appear almost everywhere in ProbSt
 Using \textbf{Corollary 6.4.1.3} and recursion property of Gamma function, we can deduce several useful results:
 $$\Gamma\left(\frac{3}{2}\right)=\frac{1}{2}\Gamma\left(\frac{1}{2}\right)=\frac{\sqrt{\pi}}{2}$$
 $$\Gamma\left(\frac{5}{2}\right)=\frac{3}{2}\Gamma\left(\frac{3}{2}\right)=\frac{3\sqrt{\pi}}{4}$$
-\subsection{Gamma Distribution}
+\subsubsection{Gamma Distribution}
 The pdf of Gamma distribution is a little bit messy, so we focus on understanding how it can be applied rather than deriving from scratch.
 \begin{definition}
 	The continuous random variable $X$ has a \textbf{gamma distribution}, with 2 parameters $\alpha$ and $\beta$ are both positive, if its pdf is given by:
@@ -1786,9 +1786,9 @@ So what does it mean? The relationship between them can be described through $2$
 $$X\sim\mathscr{G}\left(x;2,\frac{31}{2}\right)$$
 The probability of there are \textbf{at least} $2$ rainy days within the first $10$ days in December is:
 $$P(X<10)=\int_{0}^{10}\frac{1}{\Gamma(2)\left(31/2\right)^2}xe^{-2x/31}dx=0.1369$$
-\section{Chi-Squared Distribution}
+\subsection{Chi-Squared Distribution}
 Chi-Squared distribution is a special case of Gamma distribution, where $v$ is a positive integer: $$\alpha=\frac{v}{2},\;\beta=2$$
-You will understand its vital role in \textbf{statistics inference} in the next chapters.
+You will understand its vital role in \textbf{Statistics} in the next chapters.
 \begin{definition} The continuous random variable $X$ has a \textbf{chi-squared distribution}, with $v$ \textbf{degrees of freedom}, if its pdf is given by:
 	\begin{equation*}
 		\mathscr{C}(x;v)=\begin{cases}
@@ -1811,27 +1811,340 @@ You will understand its vital role in \textbf{statistics inference} in the next 
 	$$\sigma^2_{X}=\alpha\beta^2=2v$$
 \end{proof}
 \chapter{Functions of Random Variables}
-From \textbf{Chapter 4: Mathematical Expectation}, we discovered many cool properties of \textbf{mean} and \textbf{variance} of random variables. For example, given $2$ random variables $X_{1}\sim\mathscr{P}(x_{1};\mu_{1})$ and $X_{2}\sim\mathscr{P}(x_{2};\mu_{2})$, if we define new random variable $Y=X_{1}+X_{2}$, we can confidently conclude: $$\mu_{Y}=\mu_{X_{1}}+\mu_{X_{2}}=\mu_{1}+\mu_{2}$$
+From \textbf{Chapter 4: Mathematical Expectation}, we discovered many cool properties of \textbf{mean} and \textbf{variance} of random variables. For example, given $2$ \textbf{independent}  random variables $X_{1}\sim\mathscr{P}(x_{1};\mu_{1})$ and $X_{2}\sim\mathscr{P}(x_{2};\mu_{2})$, if we define new random variable $Y=X_{1}+X_{2}$, we can confidently conclude: $$\mu_{Y}=\mu_{X_{1}}+\mu_{X_{2}}=\mu_{1}+\mu_{2}$$
 $$\sigma^2_{Y}=\sigma_{X_{1}}^2+\sigma^2_{X_{2}}=\mu_{1}^2+\mu_{2}^2$$
-But we have not answered the question "How is the random variable $Y$ distributed?". Is $Y$ distributed \textbf{normally}, or \textbf{exponentially}, or neither? The only information we have known is just \textbf{expected value} and \textbf{variance} of $Y$. In this chapter, we will find an answer for our question; and I think it should not be skipped (like many other textbooks) just because there is too much Calculus. All of results derived here plays vital roles in \textbf{Statistics}.
+But we have not answered the question "How is the random variable $Y$ distributed?". Is $Y$ distributed \textbf{normally}, or \textbf{exponentially}, or neither? The only information we have known so far is just \textbf{expected value} and \textbf{variance} of $Y$. In this chapter, we will find an answer for our question; and I think it should not be skipped (like many other textbooks) just because there is too much Calculus. All of results derived here plays vital roles in \textbf{Statistics}.
 \section{Transformations of Variables}
 \subsection{Linear Transformations}
 Suppose that the discrete random variable $X\sim f(x)$, and we want to find the pdf of $Y\sim g(y)$ if we knew both $X$ and $Y$ have a linear relationship: $Y=u(X)$. How can we do that? Firstly, we find the \textbf{inverse function} of $u(X)$: $$X=w(Y)$$
 Now from the definition of pdf, we have:
-$$g(Y)=P(Y=y)=P(X=w(y))=f(w(y))$$
-\begin{definition} Suppose that $X$ is a \textbf{discrete} random variable with pdf $f(x)$. Let $Y=u(X)$ define a \textbf{linear transformation} so that its \textbf{inverse function} $X=w(Y)$ can be found; then the pdf of $Y$ is: $$g(Y)=f(w(y))$$
-	If $X$ is a \textbf{continuous} random variable, then:
-	$$g(Y)=f(w(y))w'(y)$$
-\end{definition}
-A very common mistake is forgetting the $w'(y)$ term. To avoid it, you can relate $w'(y)$ role like $dx$ as the differential part of integration.
+$$g(y)=P(Y=y)=P(X=w(y))=f(w(y))$$
+\begin{theorem} Suppose that $X$ is a \textbf{discrete} random variable with pdf $f(x)$. Let $Y=u(X)$ define a \textbf{linear transformation} so that its \textbf{inverse function} $X=w(Y)$ can be found; then the pdf of $Y$ is: $$g(y)=f(w(y))$$
+	If $X$ is a \textbf{continuous} random variable with pdf $f(x)$, then:
+	$$g(y)=f(w(y))|w'(y)|$$
+\end{theorem}
+A very common mistake is forgetting the $|w'(y)|$ term. To avoid it, you can treat $|w'(y)|$ role like $dx$ as the differential part of integration and remember it is always \textbf{positive}.
 \\ For example, if $X\sim\mathscr{B}(x;10,0.5)$ and $Y=u(X)=X+3$, then the inverse function of $u(X)$ is: $$X=w(Y)=Y-3$$
-Finally, we can conclude: $$g(Y)=f(w(y))=\mathscr{B}(y-3;10,0.5)=\binom{10}{y-3}0.5^{y-3}0.5^{13-y}\quad (y=3,4,5,\cdots,13)$$
-Here is a harder question, if $X$ has the pdf:
-$$X\sim f(x)=\begin{cases}
-		1\quad(0<x<1)            \\
-		0\quad\text{(elsewhere)} \\
-	\end{cases}$$
-Show that the random variable $Y=-2\ln{X}$ has $Y\sim\mathscr{C}(y;2)$.
+Finally, we can conclude: $$g(y)=f(w(y))=\mathscr{B}(y-3;10,0.5)=\binom{10}{y-3}0.5^{y-3}0.5^{13-y}\quad (y=3,4,5,\cdots,13)$$
+Here is a harder example, if $X\sim\mathscr{U}(x;0,1)$ and $Y=u(X)=-2\ln{X}$, then the inverse function of $u(X)$ is: $$X=w(Y)=e^{-Y/2}$$
+Applying directly formula yields:
+$$g(y)=f(w(y))|w'(y)|=\mathscr{U}(e^{-y/2};0,1)\left|\frac{-1}{2}e^{-y/2}\right|=\frac{1}{2}e^{-y/2}\mathscr{U}(e^{-y/2};0,1)$$
+From the definition of \textbf{uniform distribution}:
+\begin{equation*}
+	\mathscr{U}(e^{-y/2};0,1)=\begin{cases}
+		1\quad(0<e^{-y/2}<1)     \\
+		0\quad(\text{elsewhere}) \\
+	\end{cases}
+\end{equation*}
+The interval $(0<e^{-y/2}<1)$ is equivalent to $y>0$, we can conclude:
+\begin{equation*}
+	g(y)=\begin{cases}
+		\frac{1}{2}e^{-y/2}\quad(y>0) \\
+		0\quad(\text{elsewhere})      \\
+	\end{cases} = \mathscr{C}(y;2)
+\end{equation*}
+Now we have a powerful tool to prove rigorously the relationship between $X$ and $Z$.
+\begin{corollary} If $X\sim\mathscr{N}(x;\mu_{X},\sigma^2_{X})$ and the random variable $Z$ is defined as: $$Z=\frac{X-\mu_{X}}{\sigma_{X}}$$ then: $$Z\sim\mathscr{N}(z;0,1)$$
+\end{corollary}
+\begin{proof}
+	$$Z=u(X)=\frac{X-\mu_{X}}{\sigma_{X}}\Rightarrow X=w(Z)=\sigma_{X}Z+\mu_{X}$$
+	\begin{equation*}
+		\begin{split}
+			g(z)&=f(w(z))|w'(z)|=\frac{1}{\sqrt{2\pi}\sigma_{X}}\text{exp}\left(-\frac{z^2}{2}\right)\sigma_{X}=\frac{1}{\sqrt{2\pi}}\text{exp}\left(-\frac{z^2}{2}\right)=\mathscr{N}(z;0,1)
+		\end{split}
+	\end{equation*}
+\end{proof}
+In the case of \textbf{joint pdf}, we can also use the theorem as follows:
+\begin{theorem} Suppose that $X_{1}$ and $X_{2}$ are \textbf{discrete} random variable with joint pdf $f(x_{1},x_{2})$. Let $Y_{1}=u_{1}(X_{1},X_{2})$ and $Y_{2}=u_{2}(X_{1},X_{2})$ define a \textbf{linear transformation} so that their \textbf{inverse functions} can be found:
+	$$X_{1}=w_{1}(Y_{1},Y_{2});\;X_{2}=w_{2}(Y_{1},Y_{2})$$
+	then the joint pdf of $(Y_{1},Y_{2})$ is:
+	$$g(y_{1},y_{2})=f(w_{1}(y_{1},y_{2}),w_{2}(y_{1},y_{2}))$$
+	If $(X_{1},X_{2})$ are \textbf{continuous} random variables with joint pdf $f(x_{1},x_{2})$, then:
+	$$g(y_{1},y_{2})=f(w_{1}(y_{1},y_{2}),w_{2}(y_{1},y_{2}))|J|$$
+	where the Jacobian is the $2\times2$ determinant:
+	\begin{equation*}
+		J=\begin{vmatrix}
+			\frac{\partial x_{1}}{\partial y_{1}} &  & \frac{\partial x_{1}}{\partial y_{2}} \\
+			\frac{\partial x_{2}}{\partial y_{1}} &  & \frac{\partial x_{2}}{\partial y_{2}} \\
+		\end{vmatrix}
+	\end{equation*}
+\end{theorem}
+Jacobian determinants knowledge belongs to Calculus 2, so I do not want to explain in detail here. You can think the role of the Jacobian simply as a transformation between coordinates. \textbf{Theorem 7.1.2} can yield several significant results.
+\\ For example, let's find out the answer for our question from the beginning of this chapter: if $X_{1}\sim\mathscr{P}(x_{1};\mu_{1})$ and $X_{2}\sim\mathscr{P}(x_{2};\mu_{2})$ are $2$ independent random variables, what is the pdf of $Y=X_{1}+X_{2}$? We define $2$ new functions $u_{1}(X_{1},X_{2}),u_{2}(X_{1},X_{2})$ and determine their inverse functions:
+$$Y_{1}=u_{1}(X_{1},X_{2})=X_{1}+X_{2};\;Y_{2}=u_{2}(X_{1},X_{2})=X_{2}$$
+Like random variables, the functions $u(X_{1},X_{2})$ can be arbitrarily chosen, as long as they are \textbf{linear}; and we should choose the \textbf{smartest} and \textbf{most convenient} choices. The inverse functions of $u(X_{1},X_{2})$ are:
+$$X_{1}=w_{1}(Y_{1},Y_{2})=Y_{1}-Y_{2};\;X_{2}=w_{2}(Y_{1},Y_{2})=Y_{2}$$
+Since $X_{1}$ and $X_{2}$ are \textbf{independent}, we can conclude:
+$$f(x_{1},x_{2})=f(x_{1})f(x_{2})=\frac{e^{-\mu_{1}}\mu_{1}^{x_{1}}}{x_{1}!}.\frac{e^{-\mu_{2}}\mu_{2}^{x_{2}}}{x_{2}!}=\frac{e^{-(\mu_{1}+\mu_{2})}\mu_{1}^{x_{1}}\mu_{2}^{x_{2}}}{x_{1}!x_{2}!}$$
+Now we obtain the joint pdf of $g(y_{1},y_{2})$:
+\begin{equation*}
+	\begin{split}
+		g(y_{1},y_{2})=f(w_{1}(y_{1},y_{2}),w_{2}(y_{1},y_{2}))=f(y_{1}-y_{2},y_{2})=\frac{e^{-(\mu_{1}+\mu_{2})}\mu_{1}^{y_{1}-y_{2}}\mu_{2}^{y_{2}}}{(y_{1}-y_{2})!y_{2}!}
+	\end{split}
+\end{equation*}
+The pdf of $Y_{1}$ is a \textbf{marginal distribution function} of $g(y_{1},y_{2})$:
+\begin{equation*}
+	\begin{split}
+		h(y_{1})&=\sum_{y_{2}}g(y_{1},y_{2})=\frac{e^{-(\mu_{1}+\mu_{2})}}{y_{1}!}\sum_{y_{2}=0}^{y_{1}}\frac{y_{1}!}{(y_{1}-y_{2})!y_{2}!}\mu_{1}^{y_{1}-y_{2}}\mu_{2}^{y_{2}}=\frac{e^{-(\mu_{1}+\mu_{2})}}{y_{1}!}\sum_{y_{2}=0}^{y_{1}}\binom{y_{1}}{y_{2}}\mu_{1}^{y_{1}-y_{2}}\mu_{2}^{y_{2}}\\
+		&=\frac{e^{-(\mu_{1}+\mu_{2})}}{y_{1}!}(\mu_{1}+\mu_{2})^{y_{1}}=\mathscr{P}(y_{1};\mu_{1}+\mu_{2})
+	\end{split}
+\end{equation*}
+Our final conclusion is: $$(X_{1}+X_{2})\sim\mathscr{P}(x_{1}+x_{2};\mu_{1}+\mu_{2})$$.
+Now if $X_{1}\sim\mathscr{E}(x_{1},1)$, $X_{2}\sim\mathscr{E}(x_{2},1)$ are $2$ independent random variables, what are the pdf of $Y_{1}$ and $Y_{2}$ if they are given by:
+$$Y_{1}=X_{1}+X_{2}$$ $$Y_{2}=\frac{X_{1}}{X_{1}+X_{2}}$$
+Similarly, we define 2 new functions:
+$$Y_{1}=u_{1}(X_{1},X_{2})=X_{1}+X_{2}$$ $$Y_{2}=u_{2}(X_{1},X_{2})=\frac{X_{1}}{X_{1}+X_{2}}$$
+The inverse of them are:
+$$X_{1}=w_{1}(Y_{1},Y_{2})=Y_{1}Y_{2}$$ $$X_{2}=w_{2}(Y_{1},Y_{2})=Y_{1}-Y_{1}Y_{2}$$
+Jacobian matrix and its determinant is:
+\begin{equation*}
+	J=\begin{vmatrix}
+		\frac{\partial x_{1}}{\partial y_{1}} &  & \frac{\partial x_{1}}{\partial y_{2}} \\
+		\frac{\partial x_{2}}{\partial y_{1}} &  & \frac{\partial x_{2}}{\partial y_{2}} \\
+	\end{vmatrix}=\begin{vmatrix} y_{2}&y_{1}\\ 1-y_{2} & -y_{1}\\ \end{vmatrix}=-y_{1}
+\end{equation*}
+Since $X_{1}$ and $X_{2}$ are \textbf{statistically independent}, the joint pdf of them is:
+$$f(x_{1},x_{2})=f(x_{1})f(x_{2})=e^{-(x_{1}+x_{2})}$$
+The joint pdf $g(y_{1},y_{2})$ is:
+\begin{equation*}
+	\begin{split}
+		g(y_{1},y_{2})&=f(w_{1}(y_{1},y_{2}),w_{2}(y_{1},y_{2}))|J|
+		=f(y_{1}y_{2},y_{1}-y_{1}y_{2})y_{1}=e^{-y_{1}}y_{1}\\
+	\end{split}
+\end{equation*}
+Notice that $y_{1}>0$ and $1>y_{2}>0$, the pdf $Y_{1}$ and $Y_{2}$ are \textbf{marginal distribution function} of $g(y_{1},y_{2})$ with respect to $y_{1}$ and $y_{2}$:
+\begin{equation*}
+	\begin{split}
+		h_{1}(y_{1})&=\int_{0}^{1}g(y_{1},y_{2})dy_{2}=\int_{0}^{1}e^{-y_{1}}y_{1}dy_{2}=y_{1}e^{-y_{1}}=\mathscr{G}(y_{1};2,1)\\
+		h_{2}(y_{2})&=\int_{0}^{+\infty}g(y_{1},y_{2})dy_{1}=\int_{0}^{+\infty}e^{-y_{1}}y_{1}dy_{1}=1=\mathscr{U}(y_{2};0,1)
+	\end{split}
+\end{equation*}
+Our final results are: $$Y_{1}\sim\mathscr{G}(y_{1};2,1)$$ $$Y_{2}\sim\mathscr{U}(y_{2};0,1)$$
+In this final example, you must \textbf{be careful} when determining the interval for random variables. Suppose $X_{1}$ and $X_{2}$ are both continuous random variables and their pdf is not a special case like our previous examples.
+\begin{equation*}
+	f(x_{1},x_{2})=\begin{cases}
+		24x_{1}x_{2}\quad(0\leq x_{1},x_{2}\leq 1;x_{1}+x_{2}\leq 1) \\
+		0\quad(\text{elsewhere})                                     \\
+	\end{cases}
+\end{equation*}
+$Y_{1}$ and $Y_{2}$ are defined as:
+$$Y_{1}=u_{1}(X_{1},X_{2})=X_{1}+X_{2};\;Y_{2}=u_{2}(X_{1},X_{2})=X_{2}$$
+Their inverse functions are:
+$$X_{1}=w_{1}(Y_{1},Y_{2})=Y_{1}-Y_{2};\;X_{2}=w_{2}(Y_{1},Y_{2})=Y_{2}$$
+Jacobian matrix and its determinant is:
+\begin{equation*}
+	J=\begin{vmatrix}
+		\frac{\partial x_{1}}{\partial y_{1}} &  & \frac{\partial x_{1}}{\partial y_{2}} \\
+		\frac{\partial x_{2}}{\partial y_{1}} &  & \frac{\partial x_{2}}{\partial y_{2}} \\
+	\end{vmatrix}=\begin{vmatrix} 1&-1\\ 0&1\\ \end{vmatrix}=1
+\end{equation*}
+The joint pdf $g(y_{1},y_{2})$ is:
+\begin{equation*}
+	\begin{split}
+		g(y_{1},y_{2})&=f(w_{1}(y_{1},y_{2}),w_{2}(y_{1},y_{2}))|J|
+		=f(y_{1}-y_{2},y_{2}).1=24(y_{1}-y_{2})y_{2}
+	\end{split}
+\end{equation*}
+By replacing $x_{1}=y_{1}-y_{2}$ and $x_{2}=y_{2}$, we obtain new region:
+$$(0\leq x_{1},x_{2} \leq 1,x_{1}+x_{2}\leq 1)\to\begin{cases} y_{1}-1\leq y_{2}\leq y_{1}\\ 0\leq y_{2}\leq 1\\ y_{1}\leq 1\end{cases}$$
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{31.jpg}
+	\caption{Changing the domain region}
+	\label{Figure 31}
+\end{figure}
+By looking at the graph, now you can see that $0\leq y_{2}\leq y_{1}$, and it is not so easy to see this bounded area if you do not plot it. Now the pdf of $Y_{1}$ is:
+$$h(y_{1})=\int_{-\infty}^{+\infty}g(y_{1},y_{2})dy_{2}=\int_{0}^{y_{1}}24(y_{1}-y_{2})y_{2}dy_{2}=4y_{1}^3$$
+Since $0\leq y_{1}\leq 1$, now you can conclude the pdf of $Y_{1}=X_{1}+X_{2}$ is:
+\begin{equation*}
+	Y_{1}\sim h(y_{1})=\begin{cases} 4y_{1}^3 \quad(0\leq y_{1}\leq 1)\\ 0\quad\text{(elsewhere)}\\ \end{cases}
+\end{equation*}
+\subsection{Non-linear Transformations}
+\begin{theorem} Suppose that $X$ is a \textbf{continuous} random variable with pdf $f(x)$. Let $Y=u(X)$ define a \textbf{non-linear} transformation. If the interval over which $X$ is defined can be partitioned into $k$ mutually disjoint sets such that each of the \textbf{inverse} functions:
+	$$X_{1}=w_{1}(Y),\;X_{2}=w_{2}(Y),\cdots,X_{k}=w_{k}(Y)$$
+	of $Y=u(X)$ defines a \textbf{linear} correspondence, then the pdf of $Y$ is:
+	$$g(y)=\sum_{i=1}^{k}f(w_{i}(y))\left|w'_{i}(y)\right|$$
+\end{theorem}
+Wow, this theorem seems a bit difficult at first, but its idea is very clear. Let me explain through an example:
+\\ Assume that you know the pdf of $X$ is:
+$$X\sim f(x)=\begin{cases} \frac{2(x+1)}{9}\quad(-1<x<2) \\
+		0\quad\text{(elsewhere)}      \\
+	\end{cases}
+$$
+Now you want to determine the pdf of $Y=X^2$. Obviously you know the relationship between $X$ and $Y$ is \textbf{non-linear}; and using the same thiking line, you define the function $Y=u(X)$ and find its inverse function:
+$$Y=u(X)=X^2$$
+But there is a problem, there are \textbf{more than one} existing inverse functions $w(y)$ at the same time:
+$$X=w_{1}(Y)=\sqrt{Y},\;X=w_{2}(Y)=-\sqrt{Y}$$
+By partitioning the interval of $X$, you can see that:
+\begin{equation*}
+	X=\begin{cases}
+		\sqrt{Y}\quad(0<X<2)   \\
+		-\sqrt{Y}\quad(-1<X<0) \\
+	\end{cases}
+\end{equation*}
+Since $Y=X^2$:
+$$(0<X<2)\Rightarrow (0<Y<4)$$
+$$(-1<X<0)\Rightarrow (0<Y<1)$$
+Inside the $Y$ interval:
+\begin{equation*}
+	X=\begin{cases}
+		\pm\sqrt{Y}\quad(0<Y<1) \\
+		\sqrt{Y}\quad(1<Y<4)    \\
+	\end{cases}
+\end{equation*}
+After splitting $Y$ interval into $2$ parts, now we apply our theorem above:
+$$g(y)=\sum_{i=1}^{k}f(w_{i}(y))\left|w'_{i}(y)\right|=\frac{1}{2\sqrt{y}}(f(\sqrt{y})+f(-\sqrt{y}))=\frac{2}{9\sqrt{y}}\quad(0<y<1)$$
+$$g(y)=\sum_{i=1}^{k}f(w_{i}(y))\left|w'_{i}(y)\right|=\frac{1}{2\sqrt{y}}f(\sqrt{y})=\frac{\sqrt{y}+1}{9\sqrt{y}}\quad(1<y<4)$$
+Rewrite our $g(y)$ function in piecewise form:
+\begin{equation*}
+	g(y)=\begin{cases}
+		\frac{2}{9\sqrt{y}}\quad(0<y<1)          \\
+		\frac{\sqrt{y}+1}{9\sqrt{y}}\quad(1<y<4) \\
+		0\quad\text{(elsewhere)}                 \\
+	\end{cases}\end{equation*}
+\begin{corollary} If $Z\sim\mathscr{N}(z;0,1)$ and $Y=Z^2$, then: $$Y\sim\mathscr{C}(y;1)$$
+\end{corollary}
+\begin{proof} This corollary is literally the backbone of \textbf{Statistics}. Now we define our function $u(Z)$ and find its inverse functions $w(Y)$: $$Y=u(Z)=Z^2\Rightarrow Z=w_{1}(Y)=\sqrt{Y},\;Z=w_{2}(Y)=-\sqrt{Y}$$
+	Since $Y\in(0,+\infty)$ and $Z\in(-\infty,+\infty)$, similarly, we have:
+	\begin{equation*}
+		Z=\begin{cases}
+			\pm\sqrt{Y}\quad(Y>0)      \\
+			\text{undefined}\quad(Y<0) \\
+		\end{cases}
+	\end{equation*}
+	Apply our theorem:
+	\begin{equation*}
+		\begin{split}
+			g(y)&=\sum_{i=1}^{k}f(w_{i}(y))\left|w'_{i}(y)\right|=\frac{1}{2\sqrt{y}}(f(\sqrt{y})+f(-\sqrt{y}))\\
+			&=\frac{1}{2\sqrt{y}}.\frac{1}{\sqrt{2\pi}}\left(\text{exp}\left(-\frac{y}{2}\right)+\text{exp}\left(-\frac{y}{2}\right)\right)\\ &=\frac{1}{y^{1/2}}.\frac{1}{\sqrt{2\pi}}\text{exp}\left(-\frac{y}{2}\right)\\
+			&=\frac{1}{2^{1/2}\Gamma(1/2)}y^{1/2-1}e^{-y/2}\\&=\mathscr{C}(y;1)
+		\end{split}
+	\end{equation*}
+\end{proof}
+\section{Moment-Generating Functions}
+\subsection{Definition of Moment-Generating Functions}
+Every pdf have their own \textbf{mean} and \textbf{variance}:
+$$\mu_{X}=E(X)$$ $$\sigma^2_{X}=E(X^2)-\mu_{X}^2$$
+These functions are all characterized by $E(X^r)$ functions, you can think them as human fingerprints. $2$ pdf are the same if and only if all of their $E(X^r)$ fucntions are \textbf{matched}. But directly determining $E(X^r)$ is not so simple, especially with $r\geq 3$, therefore we take advantage of the derivative property of exponential function to develop a powerful tool that can yield desired results almost immediately.
+\begin{definition} The $r$th moment about the origin of the random variable $X$ is given:
+	$$\mu_{r}'=E(X^r)=\sum_{x}x^{r}f(x)\quad(\text{if $X$ is discrete})$$
+	$$\mu_{r}'=E(X^r)= \int_{-\infty}^{+\infty}x^{r}f(x)dx\quad\text{(if $X$ is continuous)}$$
+\end{definition}
+\begin{definition} The \textbf{moment-generating function} of the random variable $X$ is:
+	$$M_{X}(t)=E(e^{tX})=\sum_{x}e^{tx}f(x)\quad\text{(if $X$ is discrete)}$$
+	$$M_{X}(t)=E(e^{tX})=\int_{-\infty}^{+\infty}e^{tx}f(x)dx\quad\text{(if $X$ is continuous)}$$
+\end{definition}
+\begin{theorem} Let $X$ be a random variable with \textbf{moment-generating function} $M_{X}(t)$, then:
+	$$\left.\frac{d^{r}M_{X}(t)}{dt^r}\right|_{t=0}=\mu_{r}'$$
+\end{theorem}
+\begin{proof}
+	We only prove the \textbf{discrete case} because the continuous case is similar:
+	$$\frac{d^{r}M_{X}(t)}{dt^r}=\frac{d^{r}\left(\sum_{x}e^{tx}f(x)\right)}{dt^r}=\sum_{x}x^{r}e^{tx}f(x)$$
+	After setting $t=0$, finally we obtain:
+	$$\left.\sum_{x}x^{r}e^{tx}f(x)\right|_{t=0}=\sum_{x}x^{r}f(x)=\mu_{r}'$$
+\end{proof}
+\subsection{Some Useful Moment-Generating Functions}
+\subsubsection{Discrete Probability Distribution}
+\begin{corollary} If $X\sim\mathscr{B}(x;n,p)$, then: $$M_{X}(t)=(pe^{t}+q)^{n}$$
+	\begin{proof}
+		$$M_{X}(t)=\sum_{x}e^{tx}f(x)=\sum_{x=0}^{n}\binom{n}{x}(e^{t}p)^{x}q^{n-x}=(pe^{t}+q)^{n}$$
+	\end{proof}
+\end{corollary}
+\begin{corollary} If $X\sim\mathscr{P}(x;\mu)$, then:
+	$$M_{X}(t)=\text{exp}(\mu(e^{t}-1))$$
+\end{corollary}
+\begin{proof}
+	\begin{equation*}
+		\begin{split}
+			M_{X}(t)&=\sum_{x}e^{xt}f(x)=\sum_{x=0}^{n}e^{xt}.\frac{e^{-\mu}\mu^{x}}{x!}\\&=e^{-\mu}\sum_{x=0}^{n}\frac{(e^{t}\mu)^{x}\text{exp}(-e^{t}\mu)}{x!}\text{exp}(e^{t}\mu)\\&=\text{exp}(\mu(e^{t}-1))\sum_{x=0}^{n}\mathscr{P}(x;\mu e^{t})\\&=\text{exp}(\mu(e^{t}-1))
+		\end{split}
+	\end{equation*}
+\end{proof}
+\begin{corollary} If $X\sim\mathscr{G}^*(x;p)$, then:
+	$$M_{X}(t)=\frac{pe^{t}}{1-qe^{t}}$$
+\end{corollary}
+\begin{proof}
+	\begin{equation*}
+		\begin{split}
+			M_{X}(t)&=\sum_{x}e^{xt}f(x)=\sum_{x=1}^{+\infty}e^{xt}pq^{x-1}=pe^{t}\sum_{x=1}^{+\infty}(e^{t}q)^{x-1}\\
+			&=pe^{t}\frac{1}{1-qe^{t}}=\frac{pe^{t}}{1-qe^{t}}\\
+		\end{split}
+	\end{equation*}
+	Notice the converge condition of geometric sum is: $|qe^{t}|<1$
+\end{proof}
+\subsubsection{Continuous Probability Distribution}
+\begin{corollary} If $X\sim\mathscr{N}(x;\mu_{X},\sigma^2_{X})$, then:
+	$$M_{X}(t)=\text{exp}\left(\mu_{X} t+\frac{1}{2}\sigma_{X}^2 t^2\right)$$
+\end{corollary}
+\begin{proof}
+	\begin{equation*}
+		\begin{split}
+			M_{X}(t)&=\int_{-\infty}^{+\infty}e^{xt}f(x)dx=\frac{1}{\sqrt{2\pi}\sigma_{X}}\int_{-\infty}^{+\infty}e^{xt}\text{exp}\left(-\frac{(x-\mu_{X})^2}{2\sigma_{X}^2}\right)dx\\
+			&=\frac{1}{\sqrt{2\pi}\sigma_{X}}\int_{-\infty}^{+\infty}\text{exp}\left(xt-\frac{(x-\mu_{X})^2}{2\sigma_{X}^2}\right)dx\\
+			&=\frac{1}{\sqrt{2\pi}\sigma_{X}}\int_{-\infty}^{+\infty}\text{exp}\left(\frac{-(x-(\mu_{X}+t\sigma_{X}^2))^2+2(\mu_{X}t\sigma_{X}^2+t^2\sigma_{X}^4)}{2\sigma_{X}^2}\right)dx\\ &=\text{exp}\left(\mu_{X}t+\frac{1}{2}t^2\sigma_{X}^2\right)\frac{1}{\sqrt{2\pi}\sigma_{X}}\int_{-\infty}^{+\infty}\text{exp}\left(\frac{-(x-(\mu_{X}+t\sigma_{X}))^2}{2\sigma_{X}^2}\right)dx\\
+			&=\exp\left(\mu_{X}t+\frac{1}{2}\sigma_{X}^{2}t^2\right)\int_{-\infty}^{+\infty}\mathscr{N}(x;\mu_{X}+t\sigma_{X},\sigma_{X}^2)dx\\
+			&=\exp\left(\mu_{X}t+\frac{1}{2}\sigma_{X}^{2}t^2\right)
+		\end{split}
+	\end{equation*}
+\end{proof}
+\begin{corollary} If $X\sim\mathscr{C}(x;v)$, then:
+	$$M_{X}(t)=(1-2t)^{-v/2}$$
+\end{corollary}
+\begin{proof}
+	\begin{equation*}
+		\begin{split}
+			M_{X}(t)&=\int_{-\infty}^{+\infty}e^{xt}f(x)dx=\int_{-\infty}^{+\infty}e^{xt}\frac{1}{2^{v/2}\Gamma(v/2)}x^{v/2-1}e^{-x/2}dx\\
+			&=\frac{1}{2^{v/2}\Gamma(v/2)}\int_{-\infty}^{+\infty}x^{v/2-1}\text{exp}\left(-\frac{x}{2/(1-2t)}\right)dx\\
+			&=\frac{(1-2t)^{-v/2}}{(2/(1-2t))^{v/2}\Gamma(v/2)}\int_{-\infty}^{+\infty}x^{v/2-1}\text{exp}\left(-\frac{x}{2/(1-2t)}\right)dx\\
+			&=(1-2t)^{-v/2}\int_{-\infty}^{+\infty}\mathscr{G}\left(x;\frac{v}{2},\frac{2}{1-2t}\right)dx\\
+			&=(1-2t)^{-v/2}
+		\end{split}
+	\end{equation*}
+\end{proof}
+\subsection{Linear Combinations of Random Variables}
+Moment-Generating function is an extremely powerful tool, not only for finding moments, but also can be applied to prove several significant theorems related to linear combinations of random variables, like \textbf{Central Limit Theorem}. But in this subsection we only focus on $4$ main theorems, which are directly deduced from moment-generating function; all of them are the foundation for the \textbf{Statistics}.
+\begin{theorem} $X$ and $Y$ are 2 random variables with moment-generating functions $M_{X}(t)$ and $M_{Y}(t)$, respectively, if: $$M_{X}(t)=M_{Y}(t)\quad(\forall t)$$
+	then $X$ and $Y$ have the same pdf.
+\end{theorem}
+Since proving rigorously is beyond the scope of this book, and perhaps it is not necessary because this theorem is too obvious. Like I said before, if $2$ random variables have the same moments ("fingerprints"), certainly they share the same pdf.
+\begin{theorem} If $X_{1},X_{2},\cdots,X_{n}$ are independent random variables with moment-generating functions $M_{X_{1}}(t),M_{X_{2}}(t),\cdots,M_{X_{n}}(t)$, respectively, and $Y=X_{1}+X_{2}+\cdots+X_{n}$, then:
+	$$M_{Y}(t)=M_{X_{1}}(t)M_{X_{2}}(t)\cdots M_{X_{n}}(t)$$
+\end{theorem}
+\begin{proof} It's very easy to see that:
+	\begin{equation*}
+		\begin{split}
+			M_{Y}(t)&=E(e^{tY})=E(e^{t(X_{1}+X_{2}+\cdots+X_{n})})=E(e^{tX_{1}}e^{tX_{2}}\cdots e^{tX_{n}})\\
+			&=E(e^{tX_{1}})E(e^{tX_{2}})\cdots E(e^{tX_{n}})=M_{X_{1}}(t)M_{X_{2}}(t)\cdots M_{X_{n}}(t)\\
+		\end{split}
+	\end{equation*}
+\end{proof}
+\begin{corollary} If $X_{1}, X_{2},\cdots,X_{n}$ are independent random variables having \textbf{normal distributions} with \textbf{means} $\mu_{X_{1}},\mu_{X_{2}},\cdots,\mu_{X_{n}}$ and \textbf{variances} $\sigma^2_{X_{1}},\sigma^2_{X_{2}},\cdots,\sigma^2_{X_{n}}$, respectively, then the random variable $Y=X_{1}+X_{2}+\cdots+X_{n}$ has a \textbf{normal distribution}.
+\end{corollary}
+\begin{proof}
+	The moment-generating function of $Y$ is:
+	\begin{equation*}
+		\begin{split}
+			M_{Y}(t)&=M_{X_{1}}(t)M_{X_{2}}(t)\cdots M_{X_{n}}(t)\\
+			&=\text{exp}\left(\mu_{X_{1}}t+\frac{1}{2}\sigma^2_{X_{1}}t^2\right)\text{exp}\left(\mu_{X_{2}}t+\frac{1}{2}\sigma^2_{X_{2}}t^2\right)\cdots\text{exp}\left(\mu_{X_{n}}t+\frac{1}{2}\sigma^2_{X_{n}}t^2\right)\\
+			&=\text{exp}\left((\mu_{X_{1}}+\mu_{X_{2}}+\cdots\mu_{X_{n}})t+\frac{1}{2}(\sigma^2_{X_{1}}+\sigma_{X_{2}}^2+\cdots+\sigma^2_{X_{n}})t^2\right)
+		\end{split}
+	\end{equation*}
+	Because $M_{Y}(t)$ has a normal distribution form, so we conclude $Y$ has a \textbf{normal distribution}.
+\end{proof}
+\begin{corollary} If $X_{1}, X_{2},\cdots,X_{n}$ are independent random variables having \textbf{chi-squared distributions} with $v_{1},v_{2},\cdots,v_{n}$ \textbf{degrees of freedom}, then the random variable $Y=X_{1}+X_{2}+\cdots+X_{n}$ has a \textbf{chi-squared distribution}.
+\end{corollary}
+\begin{proof}
+	The moment-generating function of $Y$ is:
+	\begin{equation*}
+		\begin{split}
+			M_{Y}(t)&=M_{X_{1}}(t)M_{X_{2}}(t)\cdots M_{X_{n}}(t)\\
+			&=(1-2t)^{-v_{1}/2}(1-2t)^{-v_{2}/2}\cdots(1-2t)^{-v_{n}/2}\\
+			&=(1-2t)^{-(v_{1}+v_{2}+\cdots+v_{n})/2}
+		\end{split}
+	\end{equation*}
+	Because $M_{Y}(t)$ has a chi-squared distribution form, so we conclude $Y$ has a \textbf{chi-squared distribution} with $v=v_{1}+v_{2}+\cdots+v_{n}$ degrees of freedom.
+\end{proof}
 \begin{comment}
 \appendix
 \chapter{Areas under the Normal Curve}

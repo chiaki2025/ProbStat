@@ -904,6 +904,12 @@ INPUT ./30.jpg
 INPUT 30.jpg
 INPUT ./30.jpg
 INPUT ./30.jpg
+INPUT ./31.jpg
+INPUT ./31.jpg
+INPUT 31.jpg
+INPUT ./31.jpg
+INPUT ./31.jpg
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
 INPUT probstat.aux
 INPUT ./probstat.out
 INPUT ./probstat.out

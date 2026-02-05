@@ -5,8 +5,8 @@
 \contentsline {figure}{\numberline {1.2}{\ignorespaces General model of simple ProbStat problems}}{10}{figure.1.2}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Tree diagram for rule of product}}{13}{figure.2.1}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Visualize definition of probability}}{16}{figure.2.2}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Visualize how conditional probability is calculated}}{19}{figure.2.3}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Visualizing definition of probability}}{16}{figure.2.2}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Visualizing how conditional probability is calculated}}{19}{figure.2.3}%
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Total probability}}{20}{figure.2.4}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces What is the probability that a number will fall within this range?}}{25}{figure.3.1}%
@@ -31,8 +31,9 @@
 \contentsline {figure}{\numberline {6.2}{\ignorespaces A circular courtyrad with raindrops falling inside}}{54}{figure.6.2}%
 \contentsline {figure}{\numberline {6.3}{\ignorespaces The probability of raindrops falling around the center is higher than anywhere else}}{56}{figure.6.3}%
 \contentsline {figure}{\numberline {6.4}{\ignorespaces The pdf of Standard Normal distribution}}{57}{figure.6.4}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Visualize how the general normal distribution formula is formed}}{58}{figure.6.5}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Visualizing how the general normal distribution formula is formed}}{58}{figure.6.5}%
 \contentsline {figure}{\numberline {6.6}{\ignorespaces Normal approximation to the binomial}}{59}{figure.6.6}%
 \contentsline {figure}{\numberline {6.7}{\ignorespaces Illustration of Exponential distribution}}{61}{figure.6.7}%
 \contentsline {figure}{\numberline {6.8}{\ignorespaces The pdf of Exponential distribution and its memoryless property}}{62}{figure.6.8}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Changing the domain region}}{70}{figure.7.1}%
