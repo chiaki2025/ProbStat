@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1770323159 "probstat.tex" "probstat.pdf" "probstat" 1770323160 0
+["pdflatex"] 1770398870 "probstat.tex" "probstat.pdf" "probstat" 1770398871 0
   "/etc/texmf/web2c/texmf.cnf" 1740892127 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -155,17 +155,20 @@
   "3.jpg" 1768961223 52743 4d483c507a2cd6425a0b023b00659587 ""
   "30.jpg" 1770185024 21898 e96ce88347bf26e1fda585ae33c776bf ""
   "31.jpg" 1770287086 27987 8db08d35dcd0160b4bc7e7bb4279fe15 ""
+  "32.jpg" 1770391116 46300 83cfeeedf02d94223e5d6374b492fc94 ""
+  "33.jpg" 1770398578 20047 61e695b0febf2dfe073e614506aaa26a ""
   "4.jpg" 1769000135 44062 6b64d0cf555c335ffb019cddceff41da ""
   "5.jpg" 1769056877 24416 86aee2ac2b7c12b859eb4798b27de1d8 ""
   "6.jpg" 1769076784 30999 bbb26e02c8331f6836b2087f23a25836 ""
   "7.jpg" 1769081032 19103 4bf574baad2719caca8333193fae2da3 ""
   "8.jpg" 1769228350 10225 cc086e7f01554b77011da5e184967611 ""
   "9.jpg" 1769514028 15826 c1e8dbea07926a14f315e7f799a5c29b ""
-  "probstat.aux" 1770323160 17786 e233b29aadfe548795b58af5a4c33eaa "pdflatex"
-  "probstat.lof" 1770323160 3735 8ec4bafe3aa14ceae6af7ea0edbca1fd "pdflatex"
-  "probstat.out" 1770323160 12638 064903f46aaf23a69f6fe643dec89dc6 "pdflatex"
-  "probstat.tex" 1770323159 135902 49a63669c4c89ac1b8d3b5338ff363a3 ""
-  "probstat.toc" 1770323160 6301 aa19d1e7c51ba443746f202ac9eb8085 "pdflatex"
+  "M.png" 1770375741 118284 8e841cd2aed68360692ea42d6080c2ac ""
+  "probstat.aux" 1770398871 19503 2005680b13d1f6f21cbdbedb1c00948f "pdflatex"
+  "probstat.lof" 1770398871 4094 3f198261306969e72cad7223b7e5da00 "pdflatex"
+  "probstat.out" 1770398871 13938 83396fbc57e834e2d1440e24e0d27324 "pdflatex"
+  "probstat.tex" 1770398869 141523 076f680323c34ce4245de3d72734d466 ""
+  "probstat.toc" 1770398871 6934 927437621273f52d56f6d481e87f1574 "pdflatex"
   (generated)
   "probstat.aux"
   "probstat.lof"

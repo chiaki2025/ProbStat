@@ -22,7 +22,7 @@
 \newtheorem{corollary}{Corollary}[theorem]
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{definition}{Definition}[section]
-\author{Student}
+\author{Vu Han Tin}
 \date{January 2026}
 \begin{document}
 \maketitle
@@ -40,11 +40,9 @@ When I was learning Probability and Statistics (ProbStat for short), I did not r
 	\label{fig:galaxy}
 \end{figure}
 \\ As you can see here, this graph \textbf{does not really resemble a bell-shaped curve}; and clearly, this data is not distributed normally. In fact, not much real-world statistical data fits a bell-shaped curve. But why are we still using it?
-\\ In my opinion (as a junior CE student), I think the main reason is due to \textbf{Central Limit Theorem} (CLT for short), every sample in the same population (regardless of how the data is distributed) has a \textbf{mean} that converges to a \textit{normal distribution}, or \textbf{bell-shaped curve}. This topic will be explained in detail in \textbf{Chapter 8: Fundamentals of Statistics}.\\ \\  \\
+\\ In my opinion, I think the main reason is due to \textbf{Central Limit Theorem} (CLT for short), every sample in the same population (regardless of how the data is distributed) has a \textbf{mean} that converges to a \textit{normal distribution}, or \textbf{bell-shaped curve}. This topic will be explained in detail in \textbf{Chapter 8: Fundamentals of Statistics}.\\ \\  \\
 \indent This book approaches the fundamentals of probability and statistics in a very mathematically rigorous way to ensure maximum accuracy. I encourage readers to prove all of theorems, corollaries; and you should create your own examples for each theorem to gain a deeper understading of their origins.
-\begin{flushright}
-	---Student---
-\end{flushright}
+
 \chapter*{Acknowledgements}
 First of all, I want to thank you for reading this book. Although I am not a native English speaker, but I truly enjoy writing in English. I have tried my best to express my ideas in English, but minor grammatical or spelling errors are unavoidable. If you find any of them, I would be very happy to receive your feedback via my email address:
 \url{tinvu1309@gmail.com}
@@ -53,7 +51,7 @@ First of all, I want to thank you for reading this book. Although I am not a nat
 \\ \\ \\
 \indent Finally, the idea of writing this book was inspired by Prof. Steve Brunton lectures on YouTube. You should check out his videos too!
 \begin{flushright}
-	---Student---
+	---Tin Vu---
 \end{flushright}
 \tableofcontents
 \listoffigures
@@ -75,12 +73,12 @@ Since much of my work is handwritten, so I have modified some commonly used nota
 	\item $\mathscr{T}$: t-distribution (or Student distribution)
 \end{enumerate}
 \chapter{Introduction to Probability and Statistics}
-\section{Tossing a Coin}
+\section{Coin Tossing}
 Imagine you have a coin, like this one. It is an ordinary coin that can be found everywhere.
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=8cm]{2.jpg}
-	\caption{Tossing a coin}
+	\caption{Coin Tossing}
 	\label{Figure 2}
 \end{figure}
 \\Everyone knows that the chance of heads (H) appearing after each toss is $50\%$, no one even doubts that. So, the \textbf{probability} of an \textbf{event} that heads appearing is $50\%$. But because you are a very curious person, you do not easily accept the truth like others, so you will find a way to test it. The fact "The probability of heads appearing is $50\%$" will be tested, and it can be called a \textbf{hypothesis}.
@@ -723,7 +721,7 @@ But notice that if $X$ and $Y$ are continuous random variables, then $P(X=x|Y=y)
 	Let $X$ and $Y$ be two \textbf{continuous random variables}, with joint pdf $f(x,y)$ and marginal distributions $g(x)$, $h(y)$, respectively. They are said to be \textbf{statistically independent} if and only if: $$f(x,y)=g(x)h(y)$$
 \end{definition}
 \chapter{Mathematical Expectation}
-Due to the relatively high degree of similarity between the formulas in the case of discrete and continuous random variables, this chapter approaches them \textbf{in parallel}, rather than seperating them like previous chapter.
+Due to the relatively high degree of similarity between the formulas in the case of discrete and continuous random variables, this chapter approaches them \textbf{in parallel}, rather than separating them like previous chapter.
 \section{Mean of a Random Variable}
 After conducting experiment, now it is time to process your obtained results. Toss a fair coin for $3$ times, and define the discrete random variable $X$ as the number of heads appearing. The pdf  of this experiment is:
 $$f(x)=P(X=x)=\frac{\binom{3}{x}}{2^3}\quad(x=0,1,2,3)$$
@@ -1562,8 +1560,6 @@ Sketching the pdf, and as you can see here, the chance of raindrops falling arou
 	\caption{The probability of raindrops falling around the center is higher than anywhere else}
 	\label{Figure 25}
 \end{figure}
-\\As the author, I have something to tell you after reading this subsection. I have just described all of my knowledge and the way I think about how a weird function was formed from the air; and it  makes perfect sense in my view point, but I am not so sure all of my arguments were correct. After deeply reading, I think the conclusion derived from the Pythagorean theorem might be incorrect:  $$f(x,y)=f(\sqrt{x^2+y^2})$$
-The remainder of this subsection is left for the readers curious about the idea behind one of the most important functions of both Mathematics and Physics. I would be very happy to receive your email at my address: \url{tinvu1309@gmail.com} and we can discuss more carefully about my misconception in the previous arguments. Thank you.
 \newpage
 \subsection{Standard Normal Distribution}
 For convenience, we usually choose $c=\frac{1}{2}$ to be standard scale factor and define:
@@ -2071,7 +2067,7 @@ These functions are all characterized by $E(X^r)$ functions, you can think them 
 			&=pe^{t}\frac{1}{1-qe^{t}}=\frac{pe^{t}}{1-qe^{t}}\\
 		\end{split}
 	\end{equation*}
-	Notice the converge condition of geometric sum is: $|qe^{t}|<1$
+	Notice the convergence condition of geometric sum is: $|qe^{t}|<1$
 \end{proof}
 \subsubsection{Continuous Probability Distribution}
 \begin{corollary} If $X\sim\mathscr{N}(x;\mu_{X},\sigma^2_{X})$, then:
@@ -2145,6 +2141,95 @@ Since proving rigorously is beyond the scope of this book, and perhaps it is not
 	\end{equation*}
 	Because $M_{Y}(t)$ has a chi-squared distribution form, so we conclude $Y$ has a \textbf{chi-squared distribution} with $v=v_{1}+v_{2}+\cdots+v_{n}$ degrees of freedom.
 \end{proof}
+\chapter{Fundamentals of Statistics}
+Going back to the 19th and 20th centuries, all the brilliant minds in the field of Biology, such as George Mendel or Ronald Fisher, were masters of Statistics. This is no coincidence, because they not only had to conduct experiments, but also had to process the result. Have you ever wondered how Mendel could derive his theory of heredity just from growing peas? Of course, he could not observe all the peas on Earth; he could only observe some of the peas in his garden. He had to use \textbf{rules of statistical inference} to draw conclusions from the \textbf{sample set} (his garden) to the entire \textbf{population} (the Earth). But now, what if you repeat his experiment again in your own garden and do not get the same result? Is something wrong? The answer is more complex that that. We have to consider many factors:
+\begin{itemize}
+	\item First, are your seeds good and purebred quality?
+	\item Second, are you sure that your seeds were randomly selected? Otherwise, your result would be meaningless.
+	\item Ultimately, what is the probability of that result occurring? If it is less than $5\%$, you can ignore it as an exception.
+\end{itemize}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=6cm]{M.png}
+	\caption{Why was Mendel so certain about $3:1$ ratio?}
+	\label{Figure 90}
+\end{figure}
+\newpage
+\section{A Big Picture of Statistics}
+\subsection{Populations and Samples}
+The germination rate of mung bean seeds in considered to be $p=0.8$, and germination occurs within $3-5$ days. How do you know if that is true or not? Like Mendel, we have to perform an experiment to test it. After buying a packet of mung bean seeds in the agriculture store, you randomly choose $6$ \textbf{samples}, with each containing exactly $10$ seeds. Place each sample on a separate petri dish, lined with wet tissue inside, and avoid placing them in direct sunlight.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{32.jpg}
+	\caption{Sampling process}
+	\label{Figure 32}
+\end{figure}
+\\Our goal is instead of testing all seeds in the packet (\textbf{population}), we observe $6$ petri dishes \textbf{samples} with each containing $10$ seeds (\textbf{observations}) and draw conclusions based on our observed data. \begin{definition} A \textbf{population} consists of the totality of the \textbf{observations} with which we are concerned.
+\end{definition}
+\begin{definition} A \textbf{sample} is a \textbf{subset} of a population.
+\end{definition}
+Conceptually, you can relate these terms with sample space, events and sample points.
+\begin{equation*}
+	\begin{split}
+		\text{Sample Points}& \subseteq \text{Event}\subseteq\text{Sample Space}\\
+		\text{Observations}&\subseteq\text{Sample}\subseteq\text{Population}\\
+	\end{split}
+\end{equation*}
+Now consider a dish and define the random variable $X$ as germination time of a single seed. There are $10$ seeds per dish, so $X_{1},X_{2},\cdots X_{10}$ are the germination time of the 1st, 2nd,$\cdots$,10th seed. Since they are \textbf{independent} random variables, each having the same pdf $f(x)$, so we can deduce:
+$$f(x_{1},x_{2},\cdots,x_{10})=f(x_{1})f(x_{2})\cdots f(x_{10})$$
+\begin{definition} Let $X_{1},X_{2}\cdots X_{n}$ be $n$ \textbf{independent} random variables, each having the same pdf $f(x)$. The \textbf{sample} they belong to can also be called a \textbf{random sample} of size $n$ from the \textbf{population} $f(x)$, and has the joint pdf:
+	$$f(x_{1},x_{2},\cdots,x_{n})=f(x_{1})f(x_{2})\cdots f(x_{n})$$
+\end{definition}
+\subsection{Sample Mean and Sample Variance}
+After $5$ waiting days and with the aid of time-lapsed camera, you can collect $60$ values of $X$, but now let's take a look at a single dish (\textbf{sample}) with $10$ values of $X_{i}$.
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+		\hline
+		$i$     & $1$    & $2$    & $3$    & $4$    & $5$    & $6$    & $7$    & $8$    & $9$   & $10$   \\
+		\hline
+		$x_{i}$ & $4.66$ & $4.27$ & $4.29$ & $4.96$ & $3.49$ & $3.04$ & $2.87$ & $3.53$ & $5.0$ & $2.67$ \\
+		\hline
+	\end{tabular}
+\end{center}
+Now we define several important quantities, which describe measures of sample such as \textbf{sample mean}, \textbf{sample variance},$\cdots$
+\begin{definition} The \textbf{sample mean} of a sample set containing $n$ observations is defined as:
+	$$\overline{X}=\frac{1}{n}\sum_{i=1}^{n}X_{i}$$
+\end{definition}
+The \textbf{mean} of our sample is:
+$$\overline{x}=\frac{1}{10}\sum_{i=1}^{10}x_{i}=3.878$$
+\begin{definition} The \textbf{sample variance} of a sample set containing $n$ observations is defined as:
+	$$S^2=\frac{1}{n(n-1)}\sum_{i=1}^{n}(X_{i}-\overline{X})^2$$
+\end{definition}
+The \textbf{variance} of our sample is:
+$$s^2=\frac{1}{10-1}\sum_{i=1}^{10}(x_{i}-\overline{x})^2=0.757$$
+The reason of using $n-1$ as a divisor rather than $n$ will be explained in the next chapter. Since calculating the \textbf{sample variance} directly is quiet easy to make miscalculations, so in many cases we always apply this theorem belows:
+\begin{theorem} The \textbf{sample variance} of a sample set containing $n$ observations is:
+	$$S^{2}=\frac{1}{n-1}\left(n\sum_{i=1}^{n}X^{2}_{i}-\left(\sum_{i=1}^{n}X_{i}\right)^{2}\right)$$
+\end{theorem}
+\begin{proof} By definition:
+	\begin{equation*}
+		\begin{split}
+			S^{2}&=\frac{1}{n-1}\sum_{i=1}^{n}(X_{i}-\overline{X})^2=\frac{1}{n-1}\left(\sum_{i=1}^{n}X_{i}^2-2\overline{X}\sum_{i=1}^{n}X_{i}+n\overline{X}^2\right)\\
+			&=\frac{1}{n-1}\left(\sum_{i=1}^{n}X_{i}^2-\frac{1}{n}\left(\sum_{i=1}^{n}X_{i}\right)^2\right)\\
+			&=\frac{1}{n(n-1)}\left(n\sum_{i=1}^{n}X_{i}^2-\left(\sum_{i=1}^{n}X_{i}\right)^2\right)
+		\end{split}
+	\end{equation*}
+\end{proof}
+Applying directly this theorem, now the \textbf{variance} of our sample is:
+$$s^2=\frac{1}{9.10}\left(10\sum_{i=1}^{10}x_{i}^2-\left(\sum_{i=1}^{10}x_{i}\right)^2\right)=0.757$$
+You should note that $\overline{X}$ and $S$ are $2$ random variables constituting from a \textbf{random sample}, and they are typical examples of \textbf{statistics}.
+\begin{definition}
+	Any function of the random variables constituting a \textbf{random sample} is called a \textbf{statistic}.
+\end{definition}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=10cm]{33.jpg}
+	\caption{Inferring from $(\overline{x},s^2)\to(\mu,\sigma^2)$}
+	\label{Figure 33}
+\end{figure}
+\section{Sampling Distribution of Means}
+\subsection{Central Limit Theorem}
+\subsection{t-Distribution}
 \begin{comment}
 \appendix
 \chapter{Areas under the Normal Curve}
