@@ -73,4 +73,4 @@
 \contentsline {subsection}{\numberline {8.1.2}Sample Mean and Sample Variance}{78}{subsection.8.1.2}%
 \contentsline {section}{\numberline {8.2}Sampling Distribution of Means}{79}{section.8.2}%
 \contentsline {subsection}{\numberline {8.2.1}Central Limit Theorem}{79}{subsection.8.2.1}%
-\contentsline {subsection}{\numberline {8.2.2}t-Distribution}{79}{subsection.8.2.2}%
+\contentsline {subsection}{\numberline {8.2.2}t-Distribution}{81}{subsection.8.2.2}%

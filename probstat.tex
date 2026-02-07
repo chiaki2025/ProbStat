@@ -22,7 +22,7 @@
 \newtheorem{corollary}{Corollary}[theorem]
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{definition}{Definition}[section]
-\author{Vu Han Tin}
+\author{Tin Vu}
 \date{January 2026}
 \begin{document}
 \maketitle
@@ -2157,7 +2157,7 @@ Going back to the 19th and 20th centuries, all the brilliant minds in the field 
 \newpage
 \section{A Big Picture of Statistics}
 \subsection{Populations and Samples}
-The germination rate of mung bean seeds in considered to be $p=0.8$, and germination occurs within $3-5$ days. How do you know if that is true or not? Like Mendel, we have to perform an experiment to test it. After buying a packet of mung bean seeds in the agriculture store, you randomly choose $6$ \textbf{samples}, with each containing exactly $10$ seeds. Place each sample on a separate petri dish, lined with wet tissue inside, and avoid placing them in direct sunlight.
+The germination rate of mung bean seeds in considered to be $p=0.8$, and germination occurs within $3-5$ days. How do you know if that is true or not? Like Mendel did, we have to perform an experiment to test it. After buying a packet of mung bean seeds in the agriculture store, you randomly choose $6$ \textbf{samples}, with each containing exactly $10$ seeds. Place each sample on a separate petri dish, lined with wet tissue inside, and avoid placing them in direct sunlight.
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=15cm]{32.jpg}
@@ -2198,13 +2198,13 @@ Now we define several important quantities, which describe measures of sample su
 The \textbf{mean} of our sample is:
 $$\overline{x}=\frac{1}{10}\sum_{i=1}^{10}x_{i}=3.878$$
 \begin{definition} The \textbf{sample variance} of a sample set containing $n$ observations is defined as:
-	$$S^2=\frac{1}{n(n-1)}\sum_{i=1}^{n}(X_{i}-\overline{X})^2$$
+	$$S^2=\frac{1}{n-1}\sum_{i=1}^{n}(X_{i}-\overline{X})^2$$
 \end{definition}
 The \textbf{variance} of our sample is:
 $$s^2=\frac{1}{10-1}\sum_{i=1}^{10}(x_{i}-\overline{x})^2=0.757$$
 The reason of using $n-1$ as a divisor rather than $n$ will be explained in the next chapter. Since calculating the \textbf{sample variance} directly is quiet easy to make miscalculations, so in many cases we always apply this theorem belows:
 \begin{theorem} The \textbf{sample variance} of a sample set containing $n$ observations is:
-	$$S^{2}=\frac{1}{n-1}\left(n\sum_{i=1}^{n}X^{2}_{i}-\left(\sum_{i=1}^{n}X_{i}\right)^{2}\right)$$
+	$$S^{2}=\frac{1}{n(n-1)}\left(n\sum_{i=1}^{n}X^{2}_{i}-\left(\sum_{i=1}^{n}X_{i}\right)^{2}\right)$$
 \end{theorem}
 \begin{proof} By definition:
 	\begin{equation*}
@@ -2227,9 +2227,141 @@ You should note that $\overline{X}$ and $S$ are $2$ random variables constitutin
 	\caption{Inferring from $(\overline{x},s^2)\to(\mu,\sigma^2)$}
 	\label{Figure 33}
 \end{figure}
+After conducting the experiment, you obtain $6$ values for $\overline{x}$ and $s^2$. But how do you process them? Do they belong to any probability distribution, or are they simply random numbers? These questions will be answered in the remainder of this chapter!
 \section{Sampling Distribution of Means}
 \subsection{Central Limit Theorem}
+Before delving into the general case, let's consider a special case of Central Limit Theorem (CLT for short) first.
+\begin{theorem} (Special case of CLT) If $\overline{X}$ is the \textbf{mean} of a \textbf{random sample} of size $n$ from a \textbf{normal population} with mean $\mu$ and variance $\sigma^2$, then the pdf of $\overline{X}$ is:
+	$$\overline{X}\sim\mathscr{N}\left(\overline{x};\mu,\frac{\sigma^2}{n}\right)$$
+\end{theorem}
+\begin{proof} $\overline{X}$ is just a \textbf{linear combinations} of $X_{1},X_{2},\cdots,X_{n}$:
+	$$\overline{X}=\frac{1}{n}(X_{1}+X_{2}+\cdots+X_{n})$$
+	Since all of $X_{i}$ are normally distributed, from our previous results from \textbf{Chapter 4: Mathematical Expectation} and \textbf{Chapter 7: Functions of Random Variables}, we know the random varibale $\overline{X}$ has a \textbf{normal distribution} with its \textbf{mean} and \textbf{variance}:
+	\begin{equation*}
+		\begin{split}
+			\mu_{\overline{X}}&=\frac{1}{n}(\mu+\mu+\cdots+\mu)=\frac{1}{n}.n\mu=\mu\\
+			\sigma^{2}_{\overline{X}}&=\frac{1}{n^2}(\sigma^2+\sigma^2+\cdots+\sigma^2)=\frac{1}{n^2}.n\sigma^2=\frac{\sigma^2}{n}\\
+		\end{split}
+	\end{equation*}
+	Finally, we conclude: $$\overline{X}\sim\mathscr{N}\left(\overline{x};\mu,\frac{\sigma^2}{n}\right)$$
+\end{proof}
+\begin{theorem} (General case of CLT) If $\overline{X}$ is the \textbf{mean} of a \textbf{random sample} of size $n$ from an \textbf{arbitrary population} with mean $\mu$ and variance $\sigma^2$, then the pdf of $\overline{X}$ is:
+	$$\overline{X}\sim\mathscr{N}\left(\overline{x};\mu,\frac{\sigma^2}{n}\right)$$
+\end{theorem}
+This theorem is so amazing, it states that every pdf will \textbf{converge} to a \textbf{normal distribution}, regardless of its origin. This is the true power of CLT: the \textbf{normal distribution} is the \textbf{ultimate goal} of everything and  not a magical distrbution which drops from the sky.
+\begin{proof} Proving this theorem is not so easy, but we will go step-by-step. Assume that the random variables $X_{1},X_{2},\cdots,X_{n}$ have their moments-generating functions $M_{X_{1}}(t),M_{X_{2}}(t),\cdots ,M_{X_{n}}(t)$. Since $n\overline{X}$ is just a linear combinations of $X_{i}$ and they are in the same \textbf{population}:
+	$$\overline{X}=\frac{1}{n}(X_{1}+X_{2}+\cdots X_{n})\Rightarrow M_{n\overline{X}}(t)=(M_{X}(t))^n$$
+	We restrict our constrains $t\approx 0$ and $n\to +\infty$ to use Taylor-Maclaurin approximation:
+	\begin{equation*}
+		\begin{split}
+			(M_{X}(t))^{n}&=\left(\sum_{k=0}^{+\infty}\frac{d^{k}M_{X}(0)}{k!}t^{k}\right)^{n}\\
+			&=\left(1+\mu t+\frac{1}{2}\mu'_{2}t^{2}+\cdots\right)^{n}\\
+			&\approx\left(1+\mu t+\frac{\sigma^{2}+\mu^2}{2}t^{2}\right)^{n}\\
+			&\approx\left(1+\mu t+\frac{\sigma^{2}t^{2}}{2}\right)^{n}\quad\quad\left(\text{because }\mu t>>\frac{1}{2}\mu^{2}t^{2}\right)\\
+			&\approx\left(\text{exp}\left(\mu t+\frac{\sigma^{2}t^{2}}{2}\right)\right)^{n}\\
+			&=\text{exp}\left(n\mu t+\frac{n\sigma^{2}t^{2}}{2}\right)
+		\end{split}
+	\end{equation*}
+	From the moments-generating function property:
+	$$M_{n\overline{X}}(t)=E(e^{nt\overline{X}})=M_{\overline{X}}(nt)$$
+	Recall that the moment-generating fucntion of \textbf{normal distribution} is:
+	$$\text{exp}\left(\mu t+\frac{\sigma^{2}t^{2}}{2}\right)$$
+	If: $$\overline{X}\sim\mathscr{N}\left(\overline{x};\mu,\frac{\sigma^2}{n}\right)$$ then we can deduce: $$M_{\overline{X}}(t)=\text{exp}\left(\mu t+\frac{\sigma^{2}t^{2}}{2n}\right)\Rightarrow M_{\overline{X}}(nt)=\text{exp}\left(n\mu t+\frac{\sigma^{2}t^{2}n^{2}}{2n}\right)=\text{exp}\left(n\mu t+\frac{n\sigma^{2}t^{2}}{2}\right)=(M_{X}(t))^{n}$$
+	Finally, we obtain our result is: $$\overline{X}\sim\mathscr{N}\left(\overline{x};\mu,\frac{\sigma^{2}}{n}\right)
+\end{proof}
+You should note that the condition of our approximation is $n\to+\infty$. In practice, we always choose $n>30$ as the criterion for using CLT. You can clearly see that we \textbf{can not use CLT} to process our data since each dish (sample) just has $10$ seeds (observations) inside and $n=10<30$.
+\begin{corollary} If
+	$$\overline{X}\sim\mathscr{N}\left(\overline{x};\mu,\frac{\sigma^2}{n}\right)$$
+	then: $$Z=\frac{\overline{X}-\mu}{\sigma/\sqrt{n}}\sim\mathscr{N}(z;0,1)$$
+\end{corollary}
 \subsection{t-Distribution}
+We have to change our strategy since our number of observations is pretty low (just $10$ seeds per dish). Before developing a new tool, let me introduce some important results which play crucial roles first.
+\begin{corollary} If $X_{1},X_{2},\cdots,X_{n}$ have \textbf{normal distribution} with the \textbf{same} mean and variance, then the sum:
+	$$\sum_{i=1}^{n}\left(\frac{X_{i}-\mu}{\sigma}\right)^{2}$$
+	has \textbf{chi-squared distribution} with $n$ degrees of freedom.
+\end{corollary}
+\begin{proof} We have already known that if the random variable $Z$ is defined as:
+	$$Z_{i}=\frac{X_{i}-\mu}{\sigma}$$
+	then $Z^2\sim\mathscr{C}(z;1)$. Using the \textbf{linear property} of \textbf{chi-squared distribution}, you can conclude the sum:
+	$$\sum_{i=1}^{n}Z_{i}^2=\sum_{i=1}^{n}\left(\frac{X_{i}-\mu}{\sigma}\right)^{2}$$
+	also has \textbf{chi-squared distribution} with $n$ degrees of freedom.
+\end{proof}
+\begin{theorem} If $S^2$ is the \textbf{variance} of a random sample of size $n$ taken from a \textbf{normal population} having the variance $\sigma^2$, then the \textbf{statistic}:
+	$$\chi^{2}=\frac{S^{2}(n-1)}{\sigma^{2}}=\sum_{i=1}^{n}\left(\frac{X_{i}-\overline{X}}{\sigma}\right)^2\sim\mathscr{C}(\chi^{2},n-1)$$
+\end{theorem}
+\begin{proof} From the sum:
+	\begin{equation*}
+		\begin{split}
+			\sum_{i=1}^{n}(X_{i}-\mu)^2&=\sum_{i=1}^{n}(X_{i}-\overline{X}+\overline{X}-\mu)^2\\
+			&=\sum_{i=1}^{n}(X_{i}-\overline{X})^2+2\sum_{i=1}^{n}(X_{i}-\overline{X})(\overline{X}-\mu)+\sum_{i=1}^{n}(\overline{X}-\mu)^2\\
+			&=\sum_{i=1}^{n}(X_{i}-\overline{X})^2+\sum_{i=1}^{n}(\overline{X}-\mu)^2\\
+			\Rightarrow \sum_{i=1}^{n}\left(\frac{X_{i}-\mu}{\sigma}\right)^2&=\sum_{i=1}^{n}\left(\frac{X_{i}-\overline{X}}{\sigma}\right)^2+\sum_{i=1}^{n}\left(\frac{\overline{X}-\mu}{\sigma}\right)^2\\
+			&=\sum_{i=1}^{n}\left(\frac{X_{i}-\overline{X}}{\sigma}\right)^2+\left(\frac{\overline{X}-\mu}{\sigma/\sqrt{n}}\right)^2\\
+			&=\chi^2+\left(\frac{\overline{X}-\mu}{\sigma/\sqrt{n}}\right)^2\\
+		\end{split}
+	\end{equation*}
+	From the \textbf{linear property} of chi-squared distribution, we can can conclude the random variable $\chi^2$ has chi-squared distribution with $v=n-1$ degrees of freedom.
+\end{proof}
+\begin{theorem} Let $X_{1}\sim\mathscr{N}(x_{1};0,1)$, $X_{2}\sim\mathscr{C}(x_{2};v)$ and they are both \textbf{independent}, then:
+	$$Y_{1}=\frac{X_{1}}{\sqrt{X_{2}/v}}\sim h(y)=\frac{1}{\sqrt{\pi v}}.\frac{\Gamma((v+1)/2)}{\Gamma(v/2)}\left(1+\frac{y_{1}^2}{v}\right)^{-(v+1)/2}$$
+\end{theorem}
+\begin{proof}
+	Since $X_{1}$ and $X_{2}$ are $2$ \textbf{statisitcally independent} random variables, the joint pdf $f(x_{1},x_{2})$ is:
+	\begin{equation*}
+		\begin{split}
+			f(x_{1},x_{2})&=f(x_{1})f(x_{2})=\frac{1}{\sqrt{2\pi}}\exp\left(-\frac{x_{1}^2}{2}\right)\frac{1}{2^{v/2}\Gamma(v/2)}x_{2}^{v/2-1}\exp\left(-\frac{x_{2}}{2}\right)\\
+			&=\frac{1}{\sqrt{2\pi}}.\frac{1}{2^{v/2}\Gamma(v/2)}\exp\left(-\frac{x_{1}^2+x_{2}}{2}\right)x_{2}^{v/2-1}\\
+		\end{split}
+	\end{equation*}
+	Set $2$ auxiliary random variables $Y_{1}$ and $Y_{2}$ as:
+	$$Y_{1}=u_{1}(X_{1},X_{2})=\frac{X_{1}}{\sqrt{X_{2}/v}}$$ $$Y_{2}=u_{2}(X_{1},X_{2})=X_{2}$$
+	The inverse functions of $u(X_{1},X_{2})$ are:
+	$$X_{1}=w_{1}(Y_{1},Y_{2})=\frac{Y_{1}\sqrt{Y_{2}}}{\sqrt{v}}$$
+	$$X_{2}=w_{2}(Y_{1},Y_{2})=Y_{2}$$
+	The Jacobian of this transfomation is:
+	\begin{equation*}
+		J=\begin{vmatrix}
+			\frac{\partial x_{1}}{\partial y_{1}} &  & \frac{\partial x_{1}}{\partial y_{2}} \\
+			\frac{\partial x_{2}}{\partial y_{1}} &  & \frac{\partial x_{2}}{\partial y_{2}} \\
+		\end{vmatrix}=\begin{vmatrix} \sqrt{\frac{y_{2}}{v}}&\frac{y_{1}}{2\sqrt{vy_{2}}}\\ 0&1\\ \end{vmatrix}=\sqrt{\frac{y_{2}}{v}}
+	\end{equation*}
+	Now the joint pdf of $Y_{1}$ and $Y_{2}$ is:
+	\begin{equation*}
+		\begin{split}
+			g(y_{1},y_{2})&=f(w_{1}(y_{1},y_{2}),w_{2}(y_{1},y_{2}))|J|\\
+			&=f\left(\frac{y_{1}\sqrt{y_{2}}}{\sqrt{v}},y_{2}\right).\frac{\sqrt{y_{2}}}{\sqrt{v}}\\
+			&=\frac{1}{\sqrt{2\pi}}.\frac{1}{2^{v/2}\Gamma(v/2)}\exp\left(-\frac{1}{2}.\left(\frac{y_{1}^{2}y_{2}}{v}+y_{2}\right)\right)y_{2}^{v/2-1}\frac{\sqrt{y_{2}}}{\sqrt{v}}\\
+			&=\frac{1}{\sqrt{2\pi v}2^{v/2}\Gamma(v/2)}\exp\left(-\frac{y_{1}^{2}y_{2}+y_{2}v}{2v}\right).y_{2}^{((v+1)/2)-1}\\
+			&=\frac{1}{\sqrt{2\pi v}2^{v/2}\Gamma(v/2)}\exp\left(-\frac{y_{2}}{2v/(y_{1}^2+v)}\right).y_{2}^{((v+1)/2)-1}\\
+		\end{split}
+	\end{equation*}
+	Hence the pdf of $Y_{1}$ is the marginal distribution of $g(y_{1},y_{2})$:
+	\begin{equation*}
+		\begin{split}
+			h(y_{1})&=\int_{-\infty}^{+\infty}g(y_{1},y_{2})dy_{2}
+			=\frac{1}{\sqrt{2\pi v}2^{v/2}\Gamma(v/2)}\int_{-\infty}^{+\infty}\exp\left(-\frac{y_{2}}{2v/(y_{1}^2+v)}\right).y_{2}^{((v+1)/2)-1}dy_{2}\\
+			&=\frac{1}{\sqrt{2\pi v}2^{v/2}\Gamma(v/2)}\int_{-\infty}^{+\infty}\exp\left(-\frac{y_{2}}{2v/(y_{1}^2+v)}\right).y_{2}^{((v+1)/2)-1}dy_{2}\\
+			&=\frac{(2v/(y_{1}^{2}+v))^{(v+1)/2}\Gamma((v+1)/2)}{\sqrt{2\pi v}2^{v/2}\Gamma(v/2)}.\\ &\int_{-\infty}^{+\infty}\frac{1}{(2v/(y_{1}^{2}+v))^{(v+1)/2}\Gamma((v+1)/2)}\exp\left(-\frac{y_{2}}{2v/(y_{1}^2+v)}\right).y_{2}^{((v+1)/2)-1}dy_{2}\\
+			&=\frac{(2v/(y_{1}^{2}+v))^{(v+1)/2}\Gamma((v+1)/2)}{\sqrt{2\pi v}2^{v/2}\Gamma(v/2)}.\int_{-\infty}^{+\infty}\mathscr{G}\left(y_{2};\frac{v+1}{2},\frac{2v}{y_{1}^2+v}\right)dy_{2}\\
+			&=\frac{(2v/(y_{1}^{2}+v))^{(v+1)/2}\Gamma((v+1)/2)}{\sqrt{2\pi v}2^{v/2}\Gamma(v/2)}\\
+			&= \frac{1}{\sqrt{\pi v}}.\frac{\Gamma((v+1)/2)}{\Gamma(v/2)}.\left(\frac{y_{1}^{2}}{v}+1\right)^{-(v+1)/2}
+		\end{split}
+	\end{equation*}
+\end{proof}
+\textbf{Theorem 8.2.4} is completely a mess, but its idea is very clear. We can rephrase this theorem to our convenience.
+\begin{theorem} Let $Z$ be standard \textbf{normal random variable} and $V$ is a \textbf{chi-squared} random variable with $v$ degrees of freedom and they are \textbf{independent}, then the distribution of the random variable $T$ is given by:
+	$$T=\frac{Z}{\sqrt{V/v}}\sim\mathscr{T}(t;v)=\frac{1}{\sqrt{\pi v}}.\frac{\Gamma((v+1)/2)}{\Gamma(v/2)}.\left(\frac{t^{2}}{v}+1\right)^{-(v+1)/2}\quad(-\infty<t<+\infty)$$
+	This pdf is known as the \textbf{t-distribution} with $v$ degrees of freedom.
+\end{theorem}
+Relating to our previous results, we already have:
+$$Z=\frac{\overline{X}-\mu}{\sigma/\sqrt{n}}\sim\mathscr{N}(z;0,1)$$ $$V=\chi^2=\frac{S^{2}(n-1)}{\sigma^2}\sim\mathscr{C}(v;n-1)$$
+Rewriting the theorem above yields an interesting result:
+$$T=\frac{Z}{\sqrt{V/v}}=\frac{(\overline{X}-\mu)/(\sigma/\sqrt{n})}{S/\sigma}=\frac{\overline{X}-\mu}{S/\sqrt{n}}\sim\mathscr{T}(t;n-1)$$
+\begin{theorem} If $\overline{X}$ is the \textbf{mean} of a \textbf{random sample} of size $n$ from a \textbf{normal population} with mean $\mu$, \textbf{unknown variance} $\sigma^2$, then the pdf of random variable $T$ is:
+	$$T=\frac{\overline{X}-\mu}{S/\sqrt{n}}\sim\mathscr{T}(t;n-1)$$
+	where $S^2$ is the \textbf{variance} of the sample in which $\overline{X}$ belongs to.
+\end{theorem}
+Compared to CLT, you can see that in t-distribution \textbf{deriving process}, we do not even have to touch the constraint $n\to +\infty$, or at least $n>30$; so t-distribution is a great tool when dealing with small sample sets where $n<30$. But trade-off with small sample sets is the constraint \textbf{population must be normally distributed}; so t-distribution should not be used if you are not certain if the population is normal.
 \begin{comment}
 \appendix
 \chapter{Areas under the Normal Curve}
