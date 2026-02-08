@@ -1,6 +1,6 @@
 INFO:  latexindent version 3.20.1, 2023-01-07, a script to indent .tex files
        latexindent lives here: /usr/share/texlive/texmf-dist/scripts/latexindent/
-       Sat Feb  7 18:42:57 2026
+       Mon Feb  9 00:08:03 2026
        Filename: probstat.tex
 INFO:  Processing switches:
        -s|--silent: Silent mode active (you have used either -s or --silent)
@@ -273,12 +273,8 @@ INFO:  Backup procedure (-w flag active):
        ./probstat.bak242 already exists, incrementing by 1... (see maxNumberOfBackUps and onlyOneBackUp)
        ./probstat.bak243 already exists, incrementing by 1... (see maxNumberOfBackUps and onlyOneBackUp)
        ./probstat.bak244 already exists, incrementing by 1... (see maxNumberOfBackUps and onlyOneBackUp)
-       ./probstat.bak245 already exists, incrementing by 1... (see maxNumberOfBackUps and onlyOneBackUp)
-       ./probstat.bak246 already exists, incrementing by 1... (see maxNumberOfBackUps and onlyOneBackUp)
-       ./probstat.bak247 already exists, incrementing by 1... (see maxNumberOfBackUps and onlyOneBackUp)
-       ./probstat.bak248 already exists, incrementing by 1... (see maxNumberOfBackUps and onlyOneBackUp)
-       copying probstat.tex to ./probstat.bak249
-       Backup file: ./probstat.bak249
+       copying probstat.tex to ./probstat.bak245
+       Backup file: ./probstat.bak245
        probstat.tex will be overwritten after indentation
 INFO:  Phase 1: searching for objects
 INFO:  Phase 2: finding surrounding indentation

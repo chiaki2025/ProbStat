@@ -18,6 +18,7 @@
 \usepackage{indentfirst}
 \usepackage{comment}
 \usepackage[english]{babel}
+\setcounter{chapter}{-1}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{corollary}{Corollary}[theorem]
 \newtheorem{lemma}[theorem]{Lemma}
@@ -40,7 +41,7 @@ When I was learning Probability and Statistics (ProbStat for short), I did not r
 	\label{fig:galaxy}
 \end{figure}
 \\ As you can see here, this graph \textbf{does not really resemble a bell-shaped curve}; and clearly, this data is not distributed normally. In fact, not much real-world statistical data fits a bell-shaped curve. But why are we still using it?
-\\ In my opinion, I think the main reason is due to \textbf{Central Limit Theorem} (CLT for short), every sample in the same population (regardless of how the data is distributed) has a \textbf{mean} that converges to a \textit{normal distribution}, or \textbf{bell-shaped curve}. This topic will be explained in detail in \textbf{Chapter 8: Fundamentals of Statistics}.\\ \\  \\
+\\ In my opinion, I think the main reason is due to \textbf{Central Limit Theorem} (CLT for short), every sample in the same population (regardless of how the data is distributed) has a \textbf{mean} that converges to a \textit{normal distribution}, or \textbf{bell-shaped curve}. This topic will be explained in detail in \textbf{Chapter 7: Fundamentals of Statistics}.\\ \\  \\
 \indent This book approaches the fundamentals of probability and statistics in a very mathematically rigorous way to ensure maximum accuracy. I encourage readers to prove all of theorems, corollaries; and you should create your own examples for each theorem to gain a deeper understading of their origins.
 
 \chapter*{Acknowledgements}
@@ -75,12 +76,6 @@ Since much of my work is handwritten, so I have modified some commonly used nota
 \chapter{Introduction to Probability and Statistics}
 \section{Coin Tossing}
 Imagine you have a coin, like this one. It is an ordinary coin that can be found everywhere.
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=8cm]{2.jpg}
-	\caption{Coin Tossing}
-	\label{Figure 2}
-\end{figure}
 \\Everyone knows that the chance of heads (H) appearing after each toss is $50\%$, no one even doubts that. So, the \textbf{probability} of an \textbf{event} that heads appearing is $50\%$. But because you are a very curious person, you do not easily accept the truth like others, so you will find a way to test it. The fact "The probability of heads appearing is $50\%$" will be tested, and it can be called a \textbf{hypothesis}.
 \\ \\ \\
 \indent The simplest way to test your hypothesis is tossing a coin many times. You might toss a coin $N=100$ times and see heads appear $n=40$ times, so your actual probability is: $$\hat p=\frac{n}{N}=0.4$$
@@ -108,7 +103,7 @@ You do not need to know anything about geography to predict what the weather wil
 	\item There will be 3 rainy days this month.
 	\item Tomorrow will be a rainy day, if today is the $10$th and you have not seen any rain since the beginning of the month.
 \end{enumerate}
-This problem will be covered in detail in \textbf{Chapter 5: Discrete Random Variables} and \textbf{Chapter 6: Continuous Random Variables}, but if you do have experience with random variables, you can try solving it!
+This problem will be covered in detail in \textbf{Chapter 4: Discrete Random Variables} and \textbf{Chapter 5: Continuous Random Variables}, but if you do have experience with random variables, you can try solving it!
 \\ The answer for the first question is:
 \begin{equation*}
 	P(X=3)=\frac{e^{-2}2^3}{3!}=0.1804=18.04\%
@@ -119,7 +114,7 @@ This problem will be covered in detail in \textbf{Chapter 5: Discrete Random Var
 \end{equation*}
 Since $6.24\%$ is quite low, so tomorrow you do not have to bring an umbrella.
 \section{Relationship between Probability and Statistics}
-The formal definitions of \textbf{probability} and \textbf{statistics} will be discussed later in \textbf{Chapter 2: Fundamentals of Probability} and \textbf{Chapter 8: Fundamentals of Statistics}, but now let's focus on the general model below:
+The formal definitions of \textbf{probability} and \textbf{statistics} will be discussed later in \textbf{Chapter 1: Fundamentals of Probability} and \textbf{Chapter 7: Fundamentals of Statistics}, but now let's focus on the general model below:
 \newpage
 \begin{figure}[h]
 	\centering
@@ -242,7 +237,7 @@ But how about our $n$ objects are not distinct? Assume that $n_{1}$ are of one k
 For example, from the digits $1$ to $9$, we can form $9!$ numbers made up of $9$ distinct digits, or we can form $9P5$ five-digit numbers such that all the digits are different. If we allow repetation, five-digits numbers are now formed by $2$ digits 1, $2$ digits 2 and $1$ digit 3, then the number of permutation that satisfy is:
 $$\frac{5!}{2!2!1!}=30$$
 \subsection{Combinations}
-Consider another problem, now you have a set of $n$ elements. How many ways you can partition it into $k$ cells with $n_{1}$ elements in the first cell, $n_{2}$ elements in the second cell, and so forth? Coincidentally, the equation in \textbf{Theorem 2.2.3} appears again.
+Consider another problem, now you have a set of $n$ elements. How many ways you can partition it into $k$ cells with $n_{1}$ elements in the first cell, $n_{2}$ elements in the second cell, and so forth? Coincidentally, the equation in \textbf{Theorem 1.2.3} appears again.
 \begin{theorem}
 	The number of ways of partitioning a set of $n$ objects into $k$ cells with $n_{1}$ elements in the first cell, $n_{2}$ elements in the second, and so forth, is:
 	$$\binom{n}{n_{1},n_{2},\cdots,n_{k}}=\frac{n!}{n_{1}!n_{2}!\cdots n_{k}!}$$
@@ -274,7 +269,7 @@ Now we change our strategy using \textbf{counting techniques}:
 $$P(A)=\frac{\text{number of sample points inside } A}{\text{number of sample points inside } S}=\frac{\binom{4}{2}}{2^4}=\frac{3}{8}=0.375$$
 In fact, the chance of getting heads is slightly greater than tails (you know, because coins are asymmetrical). Assume that the probability of heads appearing is $60\%$, and tails appearing is $40\%$. Since the role of \textbf{sample points} inside set $S$ and subset $A$ are not \textbf{equal} anymore, so we can not use \textbf{counting techniques} blindly.
 $$P(A)=\binom{4}{2}0.6^2 0.4^2=0.3456$$
-Coin tossing is a typical example of \textbf{Bernoulli trial}, and the experiment tossing unfair coins is a \textbf{Bernoulli process}. The probability $P(A)$ can be calculated by using \textbf{Binomial distribution} formula. You do not have to worry about these terms, we will cover them in \textbf{Chapter 5: Discrete Random Variables} very carefully.
+Coin tossing is a typical example of \textbf{Bernoulli trial}, and the experiment tossing unfair coins is a \textbf{Bernoulli process}. The probability $P(A)$ can be calculated by using \textbf{Binomial distribution} formula. You do not have to worry about these terms, we will cover them in \textbf{Chapter 4: Discrete Random Variables} very carefully.
 \\ \\ \\
 \indent Consider another problem, what is the probability of getting $0.7$ when randomly choosing a number (assume that the role of every numbers are equal) inside the interval $(0,1)$?
 $$S=\{x\;|\;0<x<1\}$$
@@ -301,7 +296,7 @@ This definition can also be called Kolmogorov's axioms. An intuitive way to unde
 	\item Each orange point is $0.2$
 	\item Each pink point is $0.066$
 \end{itemize}
-Using \textbf{Definition 2.3.1}, now we can obtain these resuls:
+Using \textbf{Definition 1.3.1}, now we can obtain these resuls:
 $$P(A)=3.0.2=0.6$$
 $$P(B)=2.0.1=0.2$$
 $$P(A\cup B)=P(A)+P(B)=0.6+0.2=0.8$$
@@ -367,7 +362,7 @@ As you can see here, if one event occurs before another event, probability will 
 	\caption{Visualizing how conditional probability is calculated}
 	\label{Figure 6}
 \end{figure}
-Now back to our previous problems, these conditional probabilities can easily be determined using \textbf{Definition 2.4.1} above:
+Now back to our previous problems, these conditional probabilities can easily be determined using \textbf{Definition 1.4.1} above:
 $$P(E_{1}|E_{2})=\frac{P(E_{1}\cap E_{2})}{P(E_{2})}=\frac{2/6}{1/2}=\frac{2}{3}$$
 $$P(E_{2}|E_{1})=\frac{P(E_{1}\cap E_{2})}{P(E_{1})}=\frac{2/6}{1/2}=\frac{2}{3}$$
 \subsection{Independent Events}
@@ -383,11 +378,11 @@ $$P(B|A)=P(B)\Leftrightarrow \frac{P(B\cap A)}{P(A)}=P(B)\Leftrightarrow P(A\cap
 \end{theorem}
 There are many examples of independent events, like if we define 2 events $E_{1}$: "Getting heads on the first toss." and $E_{2}$: "Getting heads on the second toss.". Intuitively you can see that $E_{1}$ and $E_{2}$ are unrelated, so they are \textbf{independent events}. You can also verify this fact:
 $$P(E_{1}\cap E_{2})=\frac{1}{2}.\frac{1}{2}=\frac{1}{4}=P(E_{1})P(E_{2})$$
-It is very important to note that determining the independence of events is completely \textbf{unrelated} to their mutual exclusion. Events are considered independent if and only if they satisfy \textbf{Theorem 2.4.1}.
+It is very important to note that determining the independence of events is completely \textbf{unrelated} to their mutual exclusion. Events are considered independent if and only if they satisfy \textbf{Theorem 1.4.1}.
 \newpage
 \section{Total Probability and Bayes' rule}
 \subsection{Total Probability}
-In many situations, we do not know directly the information of $P(A)$ in \textbf{Definition 2.4.1}(or denomirator part); so in this section, we will develop a simple formula to handle this problem.
+In many situations, we do not know directly the information of $P(A)$ in \textbf{Definition 1.4.1} (or denomirator part); so in this section, we will develop a simple formula to handle this problem.
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=8cm]{7.jpg}
@@ -524,7 +519,7 @@ For example, in the above experiment:
 \section{Continuous Probability Distributions}
 Choosing randomly a number within the range $(0,1)$. $X$ is the random variable, defined as the chosen one. In the previous chapter, we have discussed that the probability of getting \textbf{a single number} in the range $(0,1)$ is $0$.
 $$P(X=0.7)=0$$
-So $0.7$ will never be chosen since $P(X=0.7)=0$? Now think carefully about the reasons why the probability of an event might be zero. Recall the \textbf{Theorem 2.3.1}:
+So $0.7$ will never be chosen since $P(X=0.7)=0$? Now think carefully about the reasons why the probability of an event might be zero. Recall the \textbf{Theorem 1.3.1}:
 $$P(A)=\frac{n}{N}$$
 There are $2$ main reasons that could explain why $P(A)$ can be zero; the first one is \textbf{$n=0$ and $N$ is a finite number}, and the second one is $\textbf{$n$ is a finite number and $N$ is an infinite number}$. This might be the big misconception, since people always claim that the only reason for $P(A)=0$ is the first one, and forgot the second. But now you can clearly see that if $n>0$, event will always have a chance of happening. So now we conclude certainly: "$P(A)=0$ does not mean event $A$ will never happen."\\
 If sample space $S$ is \textit{continuous sample space}, which contains \textit{an infinite number of possibilities equal to the number of points on a line segment}, we do not care about the probability of \textbf{a single sample point} occurring (because it is always equal $0$). We  shift our attention to the probability of \textbf{the interval that our concern sample point may be fallen  inside} occurring.
@@ -649,7 +644,7 @@ Since the general form of $g(x)$ and $h(y)$ are not easy to be generalized, and 
 	If $g(x)$ and $h(y)$ are marginal distributions of $X$ alone and $Y$ alone for the \textbf{discrete case}, then:
 	$$\sum_{x}g(x)=\sum_{y}h(y)=1$$
 \end{corollary}
-\textbf{Corollary 3.4.0.2} is directly derived from the \textbf{Definition 3.4.1}, and you can verify them by using the probability distribution table.
+\textbf{Corollary 2.4.0.2} is directly derived from the \textbf{Definition 2.4.1}, and you can verify them by using the probability distribution table.
 \\ After defining the \textbf{marginal distribution}, now we can see clearly the connection between them and regular pdfs are:
 \begin{equation*}
 	P(X=x)=g(x);\quad P(Y=y)=h(y)
@@ -671,7 +666,7 @@ In general, it is not hard to deduce these formulas:
 	Similarly for the reverse case:
 	$$f(x|y)=\frac{f(x,y)}{h(y)}$$
 \end{definition}
-From the previous section \textbf{Chapter 2.4: Conditional Probability}, you already knew how to identify two independent events, by checking this condition:  $$P(A\cap B)=P(A)P(B)$$
+From the previous section \textbf{Chapter 1.4: Conditional Probability}, you already knew how to identify two independent events, by checking this condition:  $$P(A\cap B)=P(A)P(B)$$
 Now we use it again, with random variables $X$ and $Y$:
 \begin{equation*}
 	P(X=x,Y=y)=P(X=x)P(Y=y)\Leftrightarrow f(x,y)=g(x)h(y)
@@ -888,7 +883,7 @@ Because $6.44>5$, and you can also see on the graph, the data from the unfair co
 		\end{split}
 	\end{equation*}
 \end{proof}
-At this point you may wonder "Why do not we care about the sum of total \textbf{distances} itself?" Well, there are $3$ main reasons; the first is absolutely avoiding \textbf{negative values} from miscalculation, the second is working with $\sigma_{X}^2$ is much easier than $\sigma_{X}$ and you will understand the final reason after reading \textbf{Chapter 11: Simple Linear Regression}. Using a completely similar line of thinking as before, we can also develop the following formulas:
+At this point you may wonder "Why do not we care about the sum of total \textbf{distances} itself?" Well, there are $3$ main reasons; the first is absolutely avoiding \textbf{negative values} from miscalculation, the second is working with $\sigma_{X}^2$ is much easier than $\sigma_{X}$ and you will understand the final reason after reading \textbf{Chapter 10: Simple Linear Regression}. Using a completely similar line of thinking as before, we can also develop the following formulas:
 \begin{theorem}
 	Let $X$ be a random variable with pdf $f(X)$. The \textbf{variance} of the random variable $g(X)$ is:
 	$$\sigma^{2}_{g(X)}=E((g(X)-\mu_{g(X)})^2)=\sum_{x}(g(x)-\mu_{g(X)})^2f(x)\quad\text{(if $X$ is discrete)}$$
@@ -916,7 +911,7 @@ We define a new concept called \textbf{covariance}, which is \textbf{a measure o
 
 	$$\sigma_{XY}=E((X-\mu_{X})(Y-\mu_{Y}))=\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}(x-\mu_{X})(y-\mu_{Y})f(x,y)dxdy\quad\text{(if $X$ and $Y$ are continuous)}$$
 \end{definition}
-Applying directly \textbf{Definition 4.2.2} is not convenient in many situations, so we should rewrite its formula:
+Applying directly \textbf{Definition 3.2.2} is not convenient in many situations, so we should rewrite its formula:
 \begin{corollary}
 	The \textbf{covariance} of random variable $X$ and $Y$ is:
 	\begin{equation*}
@@ -967,7 +962,7 @@ Although the \textbf{covariance} between two random variables does provide infor
 	So we have to prove: $$E^{2}(AB)\leq E(A^2)E(B^2)\Leftrightarrow |E(AB)|\leq \sqrt{E(A^2)E(B^2)}$$
 	Rewrite in vector form, this is exactly Cauchy-Schwarz inequality:
 	$$|\left<A,B\right>|\leq ||A||.||B||$$
-	Now \textbf{Theorem 4.2.3} has been completely proven. The equality of the inequality occurs if and only if $B=kA$, where $k$ is any real constant.
+	Now \textbf{Theorem 3.2.3} has been completely proven. The equality of the inequality occurs if and only if $B=kA$, where $k$ is any real constant.
 	\begin{equation*}
 		B=kA\Leftrightarrow Y-\mu_{Y}=k(X-\mu_{X})\Leftrightarrow Y=kX+(\mu_{Y}-k\mu_{X})
 	\end{equation*}
@@ -1102,12 +1097,6 @@ $$X\sim f(x)$$
 \section{Bernoulli, Binomial and Poisson Distributions}
 \subsection{Bernoulli Distribution}
 Because tossing a coin many times might be so boring, so in this chapter we will begin with more vivid examples. Let's plan to plant some mung bean plants (or maybe just imagine it)! Now you have to buy a packet of mung bean seeds from the agriculture store.
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=12cm]{14.jpg}
-	\caption{Mung bean seeds}
-	\label{Figure 14}
-\end{figure}
 \\All seed packets clearly state the germination rate of the seeds. Assume that the germination rate is $p=0.8$. Now if we define the random variable $X$ as the germination state of \textbf{a single seed}, then the pdf of $X$ can be represented as follows, where $(X=1)$ describes the germinating state of the seed, and $(X=0)$ describes the opposite state:
 \begin{center}
 	\begin{tabular}{|c|c|c|}
@@ -1149,12 +1138,6 @@ The experiment to test the germination state of \textbf{a single mung bean seed}
 \newpage
 \subsection{Binomial Distribution}
 We know that the germination rate is $p=0.8$. Now you pick randomly $10$ mung bean seeds from the packet and put them on the wet tissue.
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=12cm]{16.jpg}
-	\caption{Test the germination ability of $10$ seeds}
-	\label{Figure 16}
-\end{figure}
 \\ Perhaps after waiting $3$ days, you will find out that only $6$ seeds have germinated, while the rest will start to smell. You might ask "But why did only $6$ seeds germinated? I thought it would be $8$?". Now let me explain.
 \\ Firstly I change our previous definition of the random variable $X$. $X$ is now defined as the number of seeds that successfully germinated. The probability of $6$ seeds germinating is:
 $$P(X=6)=\binom{10}{6}0.8^{6}0.2^{4}=0.088$$
@@ -1214,7 +1197,7 @@ From the data table above, you can easily see that even if $P(X=8)$ reaches its 
 	Now we apply the result above to the defintion of variance:
 	$$\sigma^2_{X}=E(X^2)-\mu^2_{X}=E(X(X-1))+E(X)-\mu^2_{X}=p^2n(n-1)+np-n^2p^2=npq$$
 \end{proof}
-\begin{proof} There is another subtle way to prove \textbf{Corollary 5.1.2.1}, if $X\sim\mathscr{B}(x;n,p)$ then:
+\begin{proof} There is another subtle way to prove \textbf{Corollary 4.1.2.1}, if $X\sim\mathscr{B}(x;n,p)$ then:
 	$$X=I_{1}+I_{2}+\cdots+I_{n}$$
 	where each $I_{i}\sim\mathscr{I}(x;1,p)$. Since they are \textbf{independent random variables}, we can apply some useful results:
 	$$\mu_{X}=E(I_{1})+E(I_{2})+\cdots+E(I_{n})=np$$
@@ -1624,10 +1607,10 @@ What is the meaning of $0.5$? Why do we have to pad $0.5$ unit? I think the reas
 	\caption{Normal approximation to the binomial}
 	\label{Figure 28}
 \end{figure}
-\\Now you should review \textbf{Chapter 5: Some Discrete Distributions} and try applying this theorem.
+\\Now you should review \textbf{Chapter 4: Some Discrete Distributions} and try applying this theorem.
 \section{Exponential, Gamma and Chi-Squared Distributions}
 \subsection{Exponential Distribution}
-Back to our weather forecasting problem from \textbf{Chapter 1: Introduction to Probability and Statistics}; suppose in December, there are average $2$ rainy days annualy. Applying directly Poisson distribution, you can calculate the probabilities of only $1$, or $2$, $3$, or more rainy days in December.
+Back to our weather forecasting problem from \textbf{Chapter 0: Introduction to Probability and Statistics}; suppose in December, there are average $2$ rainy days annualy. Applying directly Poisson distribution, you can calculate the probabilities of only $1$, or $2$, $3$, or more rainy days in December.
 $$P(X=1)=\frac{e^{-2}2^{1}}{1!}=0.2706$$
 $$P(X=2)=\frac{e^{-2}2^{2}}{2!}=0.2706$$
 $$P(X=3)=\frac{e^{-2}2^{3}}{3!}=0.1804$$
@@ -1736,7 +1719,7 @@ From now on, the \textbf{gamma function} will appear almost everywhere in ProbSt
 	Change variable by setting $t=\sqrt{x}\Rightarrow 2tdt=dx$:
 	$$\Gamma\left(\frac{1}{2}\right)=\int_{0}^{+\infty}\frac{e^{-t^2}}{t}2tdt=2\int_{0}^{+\infty}e^{-t^2}dt=\sqrt{\pi}$$
 \end{proof}
-Using \textbf{Corollary 6.4.1.3} and recursion property of Gamma function, we can deduce several useful results:
+Using recursion property of Gamma function, we can deduce several useful results:
 $$\Gamma\left(\frac{3}{2}\right)=\frac{1}{2}\Gamma\left(\frac{1}{2}\right)=\frac{\sqrt{\pi}}{2}$$
 $$\Gamma\left(\frac{5}{2}\right)=\frac{3}{2}\Gamma\left(\frac{3}{2}\right)=\frac{3\sqrt{\pi}}{4}$$
 \subsubsection{Gamma Distribution}
@@ -1807,7 +1790,7 @@ You will understand its vital role in \textbf{Statistics} in the next chapters.
 	$$\sigma^2_{X}=\alpha\beta^2=2v$$
 \end{proof}
 \chapter{Functions of Random Variables}
-From \textbf{Chapter 4: Mathematical Expectation}, we discovered many cool properties of \textbf{mean} and \textbf{variance} of random variables. For example, given $2$ \textbf{independent}  random variables $X_{1}\sim\mathscr{P}(x_{1};\mu_{1})$ and $X_{2}\sim\mathscr{P}(x_{2};\mu_{2})$, if we define new random variable $Y=X_{1}+X_{2}$, we can confidently conclude: $$\mu_{Y}=\mu_{X_{1}}+\mu_{X_{2}}=\mu_{1}+\mu_{2}$$
+From \textbf{Chapter 3: Mathematical Expectation}, we discovered many cool properties of \textbf{mean} and \textbf{variance} of random variables. For example, given $2$ \textbf{independent}  random variables $X_{1}\sim\mathscr{P}(x_{1};\mu_{1})$ and $X_{2}\sim\mathscr{P}(x_{2};\mu_{2})$, if we define new random variable $Y=X_{1}+X_{2}$, we can confidently conclude: $$\mu_{Y}=\mu_{X_{1}}+\mu_{X_{2}}=\mu_{1}+\mu_{2}$$
 $$\sigma^2_{Y}=\sigma_{X_{1}}^2+\sigma^2_{X_{2}}=\mu_{1}^2+\mu_{2}^2$$
 But we have not answered the question "How is the random variable $Y$ distributed?". Is $Y$ distributed \textbf{normally}, or \textbf{exponentially}, or neither? The only information we have known so far is just \textbf{expected value} and \textbf{variance} of $Y$. In this chapter, we will find an answer for our question; and I think it should not be skipped (like many other textbooks) just because there is too much Calculus. All of results derived here plays vital roles in \textbf{Statistics}.
 \section{Transformations of Variables}
@@ -1865,7 +1848,7 @@ In the case of \textbf{joint pdf}, we can also use the theorem as follows:
 		\end{vmatrix}
 	\end{equation*}
 \end{theorem}
-Jacobian determinants knowledge belongs to Calculus 2, so I do not want to explain in detail here. You can think the role of the Jacobian simply as a transformation between coordinates. \textbf{Theorem 7.1.2} can yield several significant results.
+Jacobian determinants knowledge belongs to Calculus 2, so I do not want to explain in detail here. You can think the role of the Jacobian simply as a transformation between coordinates. \textbf{Theorem 6.1.2} can yield several significant results.
 \\ For example, let's find out the answer for our question from the beginning of this chapter: if $X_{1}\sim\mathscr{P}(x_{1};\mu_{1})$ and $X_{2}\sim\mathscr{P}(x_{2};\mu_{2})$ are $2$ independent random variables, what is the pdf of $Y=X_{1}+X_{2}$? We define $2$ new functions $u_{1}(X_{1},X_{2}),u_{2}(X_{1},X_{2})$ and determine their inverse functions:
 $$Y_{1}=u_{1}(X_{1},X_{2})=X_{1}+X_{2};\;Y_{2}=u_{2}(X_{1},X_{2})=X_{2}$$
 Like random variables, the functions $u(X_{1},X_{2})$ can be arbitrarily chosen, as long as they are \textbf{linear}; and we should choose the \textbf{smartest} and \textbf{most convenient} choices. The inverse functions of $u(X_{1},X_{2})$ are:
@@ -2099,7 +2082,7 @@ These functions are all characterized by $E(X^r)$ functions, you can think them 
 	\end{equation*}
 \end{proof}
 \subsection{Linear Combinations of Random Variables}
-Moment-Generating function is an extremely powerful tool, not only for finding moments, but also can be applied to prove several significant theorems related to linear combinations of random variables, like \textbf{Central Limit Theorem}. But in this subsection we only focus on $4$ main theorems, which are directly deduced from moment-generating function; all of them are the foundation for the \textbf{Statistics}.
+Moment-Generating function is an extremely powerful tool, not only for finding moments, but also can be applied to prove several significant theorems related to linear combinations of random variables, like \textbf{Central Limit Theorem}. But in this subsection we only focus on $4$ main results, which are directly deduced from moment-generating function; all of them are the foundation for the \textbf{Statistics}.
 \begin{theorem} $X$ and $Y$ are 2 random variables with moment-generating functions $M_{X}(t)$ and $M_{Y}(t)$, respectively, if: $$M_{X}(t)=M_{Y}(t)\quad(\forall t)$$
 	then $X$ and $Y$ have the same pdf.
 \end{theorem}
@@ -2155,7 +2138,7 @@ Going back to the 19th and 20th centuries, all the brilliant minds in the field 
 	\label{Figure 90}
 \end{figure}
 \newpage
-\section{A Big Picture of Statistics}
+\section{The Big Picture of Statistics}
 \subsection{Populations and Samples}
 The germination rate of mung bean seeds in considered to be $p=0.8$, and germination occurs within $3-5$ days. How do you know if that is true or not? Like Mendel did, we have to perform an experiment to test it. After buying a packet of mung bean seeds in the agriculture store, you randomly choose $6$ \textbf{samples}, with each containing exactly $10$ seeds. Place each sample on a separate petri dish, lined with wet tissue inside, and avoid placing them in direct sunlight.
 \begin{figure}[h]
@@ -2236,7 +2219,7 @@ Before delving into the general case, let's consider a special case of Central L
 \end{theorem}
 \begin{proof} $\overline{X}$ is just a \textbf{linear combinations} of $X_{1},X_{2},\cdots,X_{n}$:
 	$$\overline{X}=\frac{1}{n}(X_{1}+X_{2}+\cdots+X_{n})$$
-	Since all of $X_{i}$ are normally distributed, from our previous results from \textbf{Chapter 4: Mathematical Expectation} and \textbf{Chapter 7: Functions of Random Variables}, we know the random varibale $\overline{X}$ has a \textbf{normal distribution} with its \textbf{mean} and \textbf{variance}:
+	Since all of $X_{i}$ are normally distributed, from our previous results from \textbf{Chapter 3: Mathematical Expectation} and \textbf{Chapter 6: Functions of Random Variables}, we know the random varibale $\overline{X}$ has a \textbf{normal distribution} with its \textbf{mean} and \textbf{variance}:
 	\begin{equation*}
 		\begin{split}
 			\mu_{\overline{X}}&=\frac{1}{n}(\mu+\mu+\cdots+\mu)=\frac{1}{n}.n\mu=\mu\\
@@ -2287,7 +2270,7 @@ We have to change our strategy since our number of observations is pretty low (j
 	also has \textbf{chi-squared distribution} with $n$ degrees of freedom.
 \end{proof}
 \begin{theorem} If $S^2$ is the \textbf{variance} of a random sample of size $n$ taken from a \textbf{normal population} having the variance $\sigma^2$, then the \textbf{statistic}:
-	$$\chi^{2}=\frac{S^{2}(n-1)}{\sigma^{2}}=\sum_{i=1}^{n}\left(\frac{X_{i}-\overline{X}}{\sigma}\right)^2\sim\mathscr{C}(\chi^{2},n-1)$$
+	$$\chi^{2}=\frac{S^{2}(n-1)}{\sigma^{2}}=\sum_{i=1}^{n}\left(\frac{X_{i}-\overline{X}}{\sigma}\right)^2\sim\mathscr{C}(\chi^{2};n-1)$$
 \end{theorem}
 \begin{proof} From the sum:
 	\begin{equation*}
@@ -2348,7 +2331,7 @@ We have to change our strategy since our number of observations is pretty low (j
 		\end{split}
 	\end{equation*}
 \end{proof}
-\textbf{Theorem 8.2.4} is completely a mess, but its idea is very clear. We can rephrase this theorem to our convenience.
+\textbf{Theorem 7.2.4} is completely a mess, but its idea is very clear. We can rephrase this theorem to our convenience.
 \begin{theorem} Let $Z$ be standard \textbf{normal random variable} and $V$ is a \textbf{chi-squared} random variable with $v$ degrees of freedom and they are \textbf{independent}, then the distribution of the random variable $T$ is given by:
 	$$T=\frac{Z}{\sqrt{V/v}}\sim\mathscr{T}(t;v)=\frac{1}{\sqrt{\pi v}}.\frac{\Gamma((v+1)/2)}{\Gamma(v/2)}.\left(\frac{t^{2}}{v}+1\right)^{-(v+1)/2}\quad(-\infty<t<+\infty)$$
 	This pdf is known as the \textbf{t-distribution} with $v$ degrees of freedom.
@@ -2362,6 +2345,120 @@ $$T=\frac{Z}{\sqrt{V/v}}=\frac{(\overline{X}-\mu)/(\sigma/\sqrt{n})}{S/\sigma}=\
 	where $S^2$ is the \textbf{variance} of the sample in which $\overline{X}$ belongs to.
 \end{theorem}
 Compared to CLT, you can see that in t-distribution \textbf{deriving process}, we do not even have to touch the constraint $n\to +\infty$, or at least $n>30$; so t-distribution is a great tool when dealing with small sample sets where $n<30$. But trade-off with small sample sets is the constraint \textbf{population must be normally distributed}; so t-distribution should not be used if you are not certain if the population is normal.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=10cm]{34.jpg}
+	\caption{t-distribution and Standard Normal distribution}
+	\label{Figure 34}
+\end{figure}
+\\The relationship between t-distribution and standard normal distribution is remarkable. Both of them have \textbf{bell-shaped} curves, and logically from their usage (large or small sample), you can describe their relationship as useful approximations:
+\begin{theorem} If $v\to +\infty$, then:
+	$$\mathscr{T}(t;v)\to\mathscr{N}(z;0,1)$$
+\end{theorem}
+In practice, if $v$ degrees of freedom is greater than $30$ (or equivalent to sample size $n>31$ because $v=n-1$), we can use standard normal instead of t-distribution.
+\begin{corollary}
+	If a random sample has size $n>31$, then:
+	$$t\approx z\Rightarrow s\approx \sigma$$
+\end{corollary}
+\section{Sampling Distribution of Variances}
+After gathering $6$ values of $S^2$ from our experiment, now we wish to know what the probability distribution they belong to. Let me recall an useful result which we have just proved in the previous section:
+\begin{corollary} If $S^2$ is the \textbf{variance} of a random sample of size $n$ taken from a \textbf{normal population} having the variance $\sigma^2$, then the statistic:
+	$$\chi^{2}=\frac{S^{2}(n-1)}{\sigma^2}\sim\mathscr{C}(\chi^2;n-1)$$
+\end{corollary}
+The criterion \textbf{normal population} is very important; and our conclusions will not be corrected if it is violated.
+\section{Case Study: Seed Germination Time}
+It is time to summarize all the theorems that we have developed so far and try applying them as tools in a real experiment. There are $3$ main tools and they can be called as Z-test, t-test and Chi-test, respectively:
+\begin{enumerate}
+	\item CLT (General case): In a \textbf{large} $(n>30)$ random sample from an \textbf{arbitrary} population with mean $\mu$ and \textbf{known} variance $\sigma^2$:
+	      $$\overline{X}\sim\mathscr{N}\left(\overline{x};\mu,\frac{\sigma^2}{n}\right)\Rightarrow Z=\frac{\overline{X}-\mu}{\sigma/\sqrt{n}}\sim\mathscr{N}(z;0,1)$$
+	\item t-distribution: In a \textbf{small} $(n<30)$ random sample from a \textbf{normal} population with mean $\mu$ and \textbf{unknown} variance $\sigma^2$:
+	      $$T=\frac{\overline{X}-\mu}{S/\sqrt{n}}\sim\mathscr{T}(t;n-1)$$
+	\item Chi-distribution: In a random sample (size does not matter) from a \textbf{normal} population:
+	      $$\chi^{2}=\frac{(n-1)S^{2}}{\sigma^{2}}\sim\mathscr{C}(\chi^{2},n-1)$$
+\end{enumerate}
+The first step of all statistical problems is always \textbf{choosing our test} (as tool). Now which one should we choose?
+\begin{itemize}
+	\item[-] Since we know nothing about the distribution of our population $f(x)$, so ensure the accuracy, Z-test is the best option; but our sample size is very small (just $n=10$ seeds per dish), and the population variance $\sigma^2$ is a mystery.
+	\item[-] t-test is a potential choice, since it does not require $\sigma^2$ value; but the trade-off is the population must be \textbf{normally distributed}.
+	\item[-] Chi-test is a very powerful tool too; but the trade-off is still remaining, the population must be \textbf{normally distributed}.
+\end{itemize}
+We hit the dead end. All of our testing tools have their own pros and cons; and we can not be absolutely certain for our conclusions.
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{35.jpg}
+	\caption{Experiment's measured data}
+	\label{Figure 35}
+\end{figure}
+\\Here is our measured data after $5$ days conducting experiment:
+\begin{center}
+	\begin{tabular}{ |c| c| c|c|c|c|c| }
+		\hline
+		$i$                & $1$     & $2$     & $3$     & $4$     & $5$     & $6$     \\
+		\hline
+		$\overline{x}_{i}$ & $3.878$ & $4.127$ & $3.965$ & $3.569$ & $4.256$ & $4.441$ \\
+		\hline
+		$s^{2}_{i}$        & $0.757$ & $0.69$  & $0.732$ & $0.673$ & $0.871$ & $0.657$ \\
+		\hline
+	\end{tabular}
+\end{center}
+Of course ensuring everything correct is very \textbf{impossible}, so \textbf{trading-off} our unknown distribution $f(x)$ with \textbfP{normal assumption} is a promising idea; and we can determine the \textbf{interval} of $\mu$ or $\sigma^{2}$ may be fallen in with certainty up to $95\%$. As I mentioned before, because of our small sample size, we can not use Z-test; t-test and Chi-test are  the better choices in our situation.
+\subsection{Estimating the Mean using t-test}
+The key idea of using test statistics is we know exactly the \textbf{interval} where $95\%$ of the $Z$, $t$ or $\chi^{2}$ values are inside. Let me explain via the graph of t-distribution:
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=13cm]{36.jpg}
+	\caption{t-distribution with $95\%$ confidence interval}
+	\label{Figure 36}
+\end{figure}
+\\ Let $t_{\alpha}$ represent the $t$ value above which we find an area of $\alpha$. Similarly to others test statistics, same meaning can also be applied for $z_{\alpha}$ and $\chi^{2}_{\alpha}$. So $t_{0.025}$ and $-t_{0.025}$ are the values that we find the \textbf{red area} above is $0.025$ (because $\mathscr{T}(t;v)$ graph is symmetrical). The \textbf{white area} that is bounded by two ends is $0.95$:
+$$-t_{0.025}<T<t_{0.025}$$
+Intuitively, you can see that $95\%$ of t-values focusing inside the bounded \textbf{white area}. Back to our problem, now you obtain:
+$$-t_{0.025}<T<t_{0.025}\Rightarrow -t_{0.025}<\frac{\overline{X}-\mu}{S/\sqrt{n}}<t_{0.025}\Rightarrow \overline{X}-t_{0.025}\frac{S}{\sqrt{n}}<\mu<\overline{X}+t_{0.025}\frac{S}{\sqrt{n}}$$
+After substituting the actual values of $\overline{x}_{i}$ and $s_{i}$, you can find the interval of $\mu$ with certainty up to $95\%$. It means you can confidently state that the \textbf{actual} $\mu$ value lies somewhere inside our interval with a $5\%$ chance of error. The final problem is determining $t_{0.025}$ value. In practice, instead of using t-distribution formula, we always use t-distribution table for simplicity, which is \textbf{Appendix B}. When searching for desired $t$ value, you must check the parameter $v$ degrees of freedom first to ensure the accuracy. As you can see here, our sample size is $n=10$, so:
+$$v=n-1=10-1=9\;\text{(degrees of freedom)}$$
+Searching for $t_{0.025}$ value with $v=9$ yields $t_{0.025}=2.262$. Finally we conclude:
+$$\overline{x}_{i}-t_{0.025}\frac{s}{\sqrt{n}}<\mu<\overline{x}_{i}+t_{0.025}\frac{s}{\sqrt{n}}$$
+Substituting each pairs $(\overline{x}_{i},s_{i})$ yields $6$ intervals:
+\begin{equation*}
+	\begin{split}
+		\mu&\in(3.68,4.07)\\
+		\mu&\in(3.93,4.31)\\
+		\mu&\in(3.77,4.15)\\
+		\mu&\in(3.38,3.75)\\
+		\mu&\in(4.04,4.46)\\
+		\mu&\in(4.25,4.62)\\
+	\end{split}
+\end{equation*}
+Finally, we take average of all the starting and ending points of the intervals:
+$$\mu\in(3.841,4.226) \text{ ($95\%$ certainty)}$$
+We can conclude that $95\%$ of the seeds germinate within the range of $(3.841,4.226)$ day.
+\subsection{Estimating the Variance using Chi-test}
+Using similar line of thinking, we have to find the interval that $95\%$ of $\chi^2$ values fall inside. The only difference is $\mathscr{C}(\chi^{2};v)$ is asymmetrical, so you must search for both of $\chi_{0.975}^{2}$ and $\chi_{0.025}^{2}$ in chi-squared distribution table, which is \textbf{Appendix C}.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=13cm]{37.jpg}
+	\caption{Chi-Squared distribution with $95\%$ confidence interval}
+	\label{Figure 37}
+\end{figure}
+\begin{equation*}
+	\chi^{2}_{0.975}<\chi^{2}<\chi^{2}_{0.025}\Rightarrow \chi^{2}_{0.975}<\frac{S^{2}(n-1)}{\sigma^{2}}<\chi_{0.025}^{2}\Rightarrow \frac{S^{2}(n-1)}{\chi_{0.025}^{2}}<\sigma^{2}<\frac{S^{2}(n-1)}{\chi_{0.975}^{2}}
+\end{equation*}
+With $v=9$ degrees of freedom, $\chi_{0.025}^{2}=19.023$ and $\chi_{0.975}^{2}=2.7$. Finally we conclude:
+$$\frac{s_{i}^{2}(n-1)}{\chi_{0.025}^{2}}<\sigma^{2}<\frac{s_{i}^{2}(n-1)}{\chi_{0.975}^{2}}$$
+Substituting each $s_{i}$ values yields $6$ interval:
+\begin{equation*}
+	\begin{split}
+		\sigma^{2}&\in(0.35,2.52)\\
+		\sigma^{2}&\in(0.32,2.30)\\
+		\sigma^{2}&\in(0.34,2.44)\\
+		\sigma^{2}&\in(0.31,2.24)\\
+		\sigma^{2}&\in(0.41,2.90)\\
+		\sigma^{2}&\in(0.31,2.19)\\
+	\end{split}
+\end{equation*}
+We take average of all starting points and ending points of the intervals:
+$$\sigma^{2}\in(0.34,2.431)\text{ ($95\%$ certainty)}$$
 \begin{comment}
 \appendix
 \chapter{Areas under the Normal Curve}
@@ -2370,6 +2467,24 @@ Compared to CLT, you can see that in t-distribution \textbf{deriving process}, w
 	\includegraphics[width=15cm]{z.png}
 	\caption{Areas under the Normal Curve}
 	\label{Figure 60}
+\end{figure}
+\end{comment}
+\begin{comment}
+\appendix
+\chapter{Critical Values of the t-Distribution}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=10cm]{T.jpg}
+	\caption{Critical Values of the t-Distribution}
+	\label{Figure 61}
+\end{figure}
+\appendix
+\chapter{Critical Values of the Chi-Squared Distribution}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{C.png}
+	\caption{Critical Values of the Chi-Squared Distribution}
+	\label{Figure 62}
 \end{figure}
 \end{comment}
 \end{document}
