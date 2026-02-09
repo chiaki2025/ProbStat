@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1770568365 "probstat.tex" "probstat.pdf" "probstat" 1770568367 2
+["pdflatex"] 1770660096 "probstat.tex" "probstat.pdf" "probstat" 1770660097 2
   "/etc/texmf/web2c/texmf.cnf" 1740892127 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -158,6 +158,7 @@
   "35.jpg" 1770540512 47363 4ed948b6b6108b0870a6d60d062d43ea ""
   "36.jpg" 1770544192 26841 579be7fb03dd9330de896fd2a7739ef3 ""
   "37.jpg" 1770563568 17955 4f53b7076272be6d0310c20550b07507 ""
+  "38.jpg" 1770657151 23684 cd058945350e2dfb848adff890725732 ""
   "4.jpg" 1769000135 44062 6b64d0cf555c335ffb019cddceff41da ""
   "5.jpg" 1769056877 24416 86aee2ac2b7c12b859eb4798b27de1d8 ""
   "6.jpg" 1769076784 30999 bbb26e02c8331f6836b2087f23a25836 ""
@@ -165,11 +166,11 @@
   "8.jpg" 1769228350 10225 cc086e7f01554b77011da5e184967611 ""
   "9.jpg" 1769514028 15826 c1e8dbea07926a14f315e7f799a5c29b ""
   "M.png" 1770375741 118284 8e841cd2aed68360692ea42d6080c2ac ""
-  "probstat.aux" 1770568367 20447 3431b1b2ed1cfd798bb4a97f2f0e53b5 "pdflatex"
-  "probstat.lof" 1770568367 4275 f4bd4f7a0671f8f3a4d2df468160525a "pdflatex"
-  "probstat.out" 1770568367 14912 21c644ab842c2e58a15b5df0458dfe0d "pdflatex"
-  "probstat.tex" 1770568365 161674 139d040013cb49dae2fe05c25ab70626 ""
-  "probstat.toc" 1770568367 7337 512162e838e050c48dbafa728fd21a7f "pdflatex"
+  "probstat.aux" 1770660097 21573 7c3500bc8db719140aa4a5a9bc5a34d0 "pdflatex"
+  "probstat.lof" 1770660097 4397 5862ea0c2af8ae1505559f823766d173 "pdflatex"
+  "probstat.out" 1770660097 16180 3fd2222e6600c05facd5c11f4b323f00 "pdflatex"
+  "probstat.tex" 1770660096 171821 e4ff81f123ba988168c98f6dd4642f04 ""
+  "probstat.toc" 1770660097 7923 69b5d6ebec1f32d6e7a3ec9a4d57ee13 "pdflatex"
   (generated)
   "probstat.aux"
   "probstat.lof"

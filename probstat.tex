@@ -103,7 +103,7 @@ You do not need to know anything about geography to predict what the weather wil
 	\item There will be 3 rainy days this month.
 	\item Tomorrow will be a rainy day, if today is the $10$th and you have not seen any rain since the beginning of the month.
 \end{enumerate}
-This problem will be covered in detail in \textbf{Chapter 4: Discrete Random Variables} and \textbf{Chapter 5: Continuous Random Variables}, but if you do have experience with random variables, you can try solving it!
+This problem will be covered in detail in \textbf{Chapter 4: Some Discrete Probability Distributions} and \textbf{Chapter 5: Continuous Probability Distributions}, but if you do have experience with random variables, you can try solving it!
 \\ The answer for the first question is:
 \begin{equation*}
 	P(X=3)=\frac{e^{-2}2^3}{3!}=0.1804=18.04\%
@@ -269,7 +269,7 @@ Now we change our strategy using \textbf{counting techniques}:
 $$P(A)=\frac{\text{number of sample points inside } A}{\text{number of sample points inside } S}=\frac{\binom{4}{2}}{2^4}=\frac{3}{8}=0.375$$
 In fact, the chance of getting heads is slightly greater than tails (you know, because coins are asymmetrical). Assume that the probability of heads appearing is $60\%$, and tails appearing is $40\%$. Since the role of \textbf{sample points} inside set $S$ and subset $A$ are not \textbf{equal} anymore, so we can not use \textbf{counting techniques} blindly.
 $$P(A)=\binom{4}{2}0.6^2 0.4^2=0.3456$$
-Coin tossing is a typical example of \textbf{Bernoulli trial}, and the experiment tossing unfair coins is a \textbf{Bernoulli process}. The probability $P(A)$ can be calculated by using \textbf{Binomial distribution} formula. You do not have to worry about these terms, we will cover them in \textbf{Chapter 4: Discrete Random Variables} very carefully.
+Coin tossing is a typical example of \textbf{Bernoulli trial}, and the experiment tossing unfair coins is a \textbf{Bernoulli process}. The probability $P(A)$ can be calculated by using \textbf{Binomial distribution} formula. You do not have to worry about these terms, we will cover them in \textbf{Chapter 4: Some Discrete Probability Distributions} very carefully.
 \\ \\ \\
 \indent Consider another problem, what is the probability of getting $0.7$ when randomly choosing a number (assume that the role of every numbers are equal) inside the interval $(0,1)$?
 $$S=\{x\;|\;0<x<1\}$$
@@ -1194,7 +1194,7 @@ From the data table above, you can easily see that even if $P(X=8)$ reaches its 
 			E(X(X-1))&=\sum_{x}x(x-1)f(x)=\sum_{x=1}^{n}x(x-1)\binom{n}{x}p^{x}q^{n-x}\\&=p^{2}n(n-1)\sum_{x=2}^{n}\frac{(n-2)!}{(n-x)!(x-2)!}p^{x-2}q^{n-x}\\&=p^{2}n(n-1)\sum_{x=2}^{n}\binom{n-2}{x-2}p^{x-2}q^{n-x}\\&= p^{2}n(n-1)(p+q)^{n-2}=p^2n(n-1)
 		\end{split}
 	\end{equation*}
-	Now we apply the result above to the defintion of variance:
+	Now we apply the result above to the definition of variance:
 	$$\sigma^2_{X}=E(X^2)-\mu^2_{X}=E(X(X-1))+E(X)-\mu^2_{X}=p^2n(n-1)+np-n^2p^2=npq$$
 \end{proof}
 \begin{proof} There is another subtle way to prove \textbf{Corollary 4.1.2.1}, if $X\sim\mathscr{B}(x;n,p)$ then:
@@ -1489,7 +1489,7 @@ Verifying yourself that the pdf of germinating seeds experiment satisfies all of
 \section{Normal Distribution}
 \subsection{The Idea behind the Normal Distribution}
 This section is one of the most important part of this book. Now we shall 'watch' very closely to the question "Is everything normal because they are?" and partially answer my question from  the \textbf{Preface}. Let's temporarily forget everything we were taught about those concepts and now rebuild them from scratch. \\ \\ \\
-\indent You are watching the rain outside. You observe that the raindrops are all falling \textbf{randomly} onto a circular courtyard. You might wonder where a raindrop is most likely to fall? Perhaps at the \textbf{center} of the circle? Or at the \textbf{edge}? Or neither? Intuitively, you might think the raindrop would concentrate at the center, but are you sure about that when we can not blindly trust intuition? Remember that ProbStat is a paradoxical subject. It tricks our brains with the fact \textbf{that not everyting can be absolutely certain, even this statement}; while human brain is always naturally seeking for the certainty. The only thing we can trust is the use of mathematical language to describe the uncertainty.
+\indent You are watching the rain outside. You observe that the raindrops are all falling \textbf{randomly} onto a circular courtyard. You might wonder where a raindrop is most likely to fall? Perhaps at the \textbf{center} of the circle? Or at the \textbf{edge}? Or neither? Intuitively, you might think the raindrop would concentrate at the center, but are you sure about that when we can not blindly trust intuition? Remember that ProbStat is a paradoxical subject. It tricks our brains with the fact \textbf{that not everything can be absolutely certain, even this statement}; while human brain is always naturally seeking for the certainty. The only thing we can trust is the use of mathematical language to describe the uncertainty.
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=10cm]{24.jpg}
@@ -1607,7 +1607,7 @@ What is the meaning of $0.5$? Why do we have to pad $0.5$ unit? I think the reas
 	\caption{Normal approximation to the binomial}
 	\label{Figure 28}
 \end{figure}
-\\Now you should review \textbf{Chapter 4: Some Discrete Distributions} and try applying this theorem.
+\\Now you should review \textbf{Chapter 4: Some Discrete Probability Distributions} and try applying this theorem.
 \section{Exponential, Gamma and Chi-Squared Distributions}
 \subsection{Exponential Distribution}
 Back to our weather forecasting problem from \textbf{Chapter 0: Introduction to Probability and Statistics}; suppose in December, there are average $2$ rainy days annualy. Applying directly Poisson distribution, you can calculate the probabilities of only $1$, or $2$, $3$, or more rainy days in December.
@@ -2402,7 +2402,7 @@ We hit the dead end. All of our testing tools have their own pros and cons; and 
 		\hline
 	\end{tabular}
 \end{center}
-Of course ensuring everything correct is very \textbf{impossible}, so \textbf{trading-off} our unknown distribution $f(x)$ with \textbfP{normal assumption} is a promising idea; and we can determine the \textbf{interval} of $\mu$ or $\sigma^{2}$ may be fallen in with certainty up to $95\%$. As I mentioned before, because of our small sample size, we can not use Z-test; t-test and Chi-test are  the better choices in our situation.
+Of course ensuring everything correct is very \textbf{impossible}, so \textbf{trading-off} our unknown distribution $f(x)$ with \textbfP{normal assumption} is a promising idea; and we can determine the \textbf{interval} of $\mu$ or $\sigma^{2}$ may be fallen in with up to $95\%$ certainty. As I mentioned before, because of our small sample size, we can not use Z-test; t-test and Chi-test are  the better choices in our situation.
 \subsection{Estimating the Mean using t-test}
 The key idea of using test statistics is we know exactly the \textbf{interval} where $95\%$ of the $Z$, $t$ or $\chi^{2}$ values are inside. Let me explain via the graph of t-distribution:
 \begin{figure}[h]
@@ -2411,14 +2411,14 @@ The key idea of using test statistics is we know exactly the \textbf{interval} w
 	\caption{t-distribution with $95\%$ confidence interval}
 	\label{Figure 36}
 \end{figure}
-\\ Let $t_{\alpha}$ represent the $t$ value above which we find an area of $\alpha$. Similarly to others test statistics, same meaning can also be applied for $z_{\alpha}$ and $\chi^{2}_{\alpha}$. So $t_{0.025}$ and $-t_{0.025}$ are the values that we find the \textbf{red area} above is $0.025$ (because $\mathscr{T}(t;v)$ graph is symmetrical). The \textbf{white area} that is bounded by two ends is $0.95$:
+\\ Let $t_{\alpha}$ represent the $t$ value above which we find an area of $\alpha$. Similarly to others test statistics, same meaning can also be applied for $z_{\alpha}$ and $\chi^{2}_{\alpha}$. So $t_{0.025}$ and $-t_{0.025}$ are the values that we find the \textbf{red area} above is $0.025$ (because $\mathscr{T}(t;v)$ graph is symmetrical). The \textbf{white area} bounded by two ends is $0.95$:
 $$-t_{0.025}<T<t_{0.025}$$
 Intuitively, you can see that $95\%$ of t-values focusing inside the bounded \textbf{white area}. Back to our problem, now you obtain:
 $$-t_{0.025}<T<t_{0.025}\Rightarrow -t_{0.025}<\frac{\overline{X}-\mu}{S/\sqrt{n}}<t_{0.025}\Rightarrow \overline{X}-t_{0.025}\frac{S}{\sqrt{n}}<\mu<\overline{X}+t_{0.025}\frac{S}{\sqrt{n}}$$
-After substituting the actual values of $\overline{x}_{i}$ and $s_{i}$, you can find the interval of $\mu$ with certainty up to $95\%$. It means you can confidently state that the \textbf{actual} $\mu$ value lies somewhere inside our interval with a $5\%$ chance of error. The final problem is determining $t_{0.025}$ value. In practice, instead of using t-distribution formula, we always use t-distribution table for simplicity, which is \textbf{Appendix B}. When searching for desired $t$ value, you must check the parameter $v$ degrees of freedom first to ensure the accuracy. As you can see here, our sample size is $n=10$, so:
+After substituting the actual values of $\overline{x}_{i}$ and $s_{i}$, you can find the interval of $\mu$ with up to $95\%$ certainty. It means you can confidently state that the \textbf{actual} $\mu$ value lies somewhere inside our interval with a $5\%$ chance of error. The final problem is determining $t_{0.025}$ value. In practice, instead of using t-distribution formula, we always use t-distribution table for simplicity, which is \textbf{Appendix B}. When searching for desired $t$ value, you must check the parameter $v$ degrees of freedom first to ensure the accuracy. As you can see here, our sample size is $n=10$, so:
 $$v=n-1=10-1=9\;\text{(degrees of freedom)}$$
 Searching for $t_{0.025}$ value with $v=9$ yields $t_{0.025}=2.262$. Finally we conclude:
-$$\overline{x}_{i}-t_{0.025}\frac{s}{\sqrt{n}}<\mu<\overline{x}_{i}+t_{0.025}\frac{s}{\sqrt{n}}$$
+$$\overline{x}_{i}-t_{0.025}\frac{s_{i}}{\sqrt{n}}<\mu<\overline{x}_{i}+t_{0.025}\frac{s_{i}}{\sqrt{n}}$$
 Substituting each pairs $(\overline{x}_{i},s_{i})$ yields $6$ intervals:
 \begin{equation*}
 	\begin{split}
@@ -2459,6 +2459,114 @@ Substituting each $s_{i}$ values yields $6$ interval:
 \end{equation*}
 We take average of all starting points and ending points of the intervals:
 $$\sigma^{2}\in(0.34,2.431)\text{ ($95\%$ certainty)}$$
+Finally, we can conclude if $f(x)$ is \textbf{normally distributed}, then:
+$$f(x)\sim\mathscr{N}(x;\mu,\sigma^2)$$
+with $\mu\in(3.841,4.226)$ and $\sigma^{2}\in(0.34,2.431)$ with $95\%$ certainty.
+\chapter{Classical Methods of Estimation}
+\section{Definition of Unbiased Estimator}
+In the previous chapter, we used \textbf{sample mean} $\overline{X}$ to estimate \textbf{population mean} ${\mu}$; and \textbf{sample variance} $S^{2}$ to estimate \textbf{population variance} $\sigma^{2}$. Both $\overline{X}$ and $S^{2}$ are \textbf{unbiased estimator}; intuitively, now we can form the definition of \textbf{unbiased estimator} as follows:
+\begin{definition} A statistic $\hat \Theta$ is said to be an \textbf{unbiased estimator} of the parameter $\theta$ if: $$\mu_{\hat\Theta}=E(\hat\Theta)=\theta$$
+\end{definition}
+Mathematically, in a sample set, there are many quantites like \textbf{sample mean} $\overline{X}$, \textbf{sample variance} $S^{2}$, \textbf{proportion} $\hat P,\cdots$ and logically, we can not arbitrarily use $\overline{X}$ to estimate $\sigma^{2}$. The definition above acts like "key-lock" mechanism to guarantee there will be no ambiguity here.
+\begin{theorem} $\overline{X}$ is an \textbf{unbiased estimator} of the parameter $\mu$.
+\end{theorem}
+\begin{proof} From CLT, we know: $$\overline{X}\sim\mathscr{N}\left(\overline{x};\mu,\frac{\sigma^2}{n}\right)$$
+	From the definition of \textbf{unbiased estimator}, we have to show that a statistic $\overline{X}$ has its mean equals to $\mu$:
+	$$\mu_{\overline{X}}=E(\overline{X})=\mu$$
+	Obviously, it is true.
+\end{proof}
+\begin{theorem} ${S}^2$ is an \textbf{unbiased estimator} of the parameter $\sigma^{2}$.
+\end{theorem}
+\begin{proof} From the definition of \textbf{sample variance}, we have
+	\begin{equation*}
+		\begin{split}
+			E(S^{2})&=\frac{1}{n-1}E\left(\sum_{i=1}^{n}({X}_{i}-\overline{X})^{2}\right)\\
+			&=\frac{1}{n-1}E\left(\sum_{i=1}^{n}(X_{i}-\mu+\mu-\overline{X})^{2}\right)\\
+			&=\frac{1}{n-1}E\left(\sum_{i=1}^{n}(X_{i}-\mu)^{2}+2\sum_{i=1}^{n}(X_{i}-\mu)(\mu-\overline{X})+\sum_{i=1}^{n}(\mu-\overline{X})^{2}\right)\\
+			&=\frac{1}{n-1}E\left(\sum_{i=1}^{n}(X_{i}-\mu)^{2}+2(\mu-\overline{X})(n\overline{X}-n\mu)+n(\mu-\overline{X})^{2}\right)\\
+			&=\frac{1}{n-1}E\left(\sum_{i=1}^{n}(X_{i}-\mu)^{2}-n(\mu-\overline{X})^{2}\right)\\
+		\end{split}
+	\end{equation*}
+	Since this sum has chi-squared distribution with $n$ degrees of freedom, then: $$E\left(\sum_{i=1}^{n}\left(\frac{X_{i}-\mu}{\sigma}\right)^{2}\right)=n\Rightarrow E\left(\sum_{i=1}^{n}(X_{i}-\mu)^{2}\right)=n\sigma^{2}$$
+	And this sum has chi-squared distribution with $1$ degree of freedom:
+	$$E\left(\left(\frac{\overline{X}-\mu}{\sigma/\sqrt{n}}\right)^{2}\right)=1\Rightarrow E((\overline{X}-\mu)^{2})=\frac{\sigma^{2}}{n}$$
+	Finally we have: $$\mu_{S^{2}}=E(S^{2})=\frac{1}{n-1}(n\sigma^{2}-\sigma^{2})=\sigma^{2}$$
+\end{proof}
+Now you understand \textbf{why we divide by $n-1$ rather than $n$} in sample variance formula to guarantee $S^{2}$ is an unbiased estimator. In this chapter, we define a new statistic quantity $\hat P$ (proportion) and prove that it is an unbiased estimator.
+\begin{definition} A statistic $\hat P$ is defined as: $$\hat P=\frac{X}{n}$$ where $X$ is a \textbf{Bernoulli random variable}.
+\end{definition}
+You can refer to \textbf{Chapter 0.1: Coin Tossing} to read a typical example of the quantity $\hat P$ in a practical experiment. In \textbf{Statistics}, the terms "probability" and "proportion" can be used interchangeably, depending on the context.
+\begin{theorem} $\hat P$ is an \textbf{unbiased estimator} of the parameter $p$.
+\end{theorem}
+\begin{proof} Because $X\sim\mathscr{B}(x;n,p)$ we have:
+	$$E(\hat P)=E\left(\frac{X}{n}\right)=\frac{1}{n}E(X)=\frac{np}{n}=p$$
+\end{proof}
+It is very easy to indicate that:
+$$\sigma_{\hat P}^{2}=\frac{1}{n^{2}}\sigma^{2}_{X}=\frac{npq}{n^{2}}=\frac{pq}{n}$$
+\begin{corollary} The statistic $\hat P$ also has \textbf{Bernoulli distribution} with mean and variance:
+	\begin{equation*}
+		\begin{split}
+			E(\hat P)&=p\\ \sigma_{\hat P}^{2}&=\frac{pq}{n}\\
+		\end{split}
+	\end{equation*}
+\end{corollary}
+\begin{proof} Obviously the random variable $\hat P$ has Bernoulli distribution since it is just a scaled version of $X$.
+\end{proof}
+\begin{corollary} If $n\to+\infty$, then:
+	$$Z=\frac{\hat P-p}{\sqrt{pq/n}}\sim\mathscr{N}(z;0,1)$$
+\end{corollary}
+The most confusing point you need to be aware of in this chapter is the correct use of these notations $(\hat\Theta,\hat\theta,\theta)$:
+\begin{itemize}
+	\item[-] $\hat\Theta$: Statistic.
+	\item[-] $\hat\theta$: A single value of Statistic.
+	\item[-] $\theta$: Parameter of population need to be estimated.
+\end{itemize}
+So far we have just found $3$ typical examples of these triples $(\hat\Theta,\hat\theta,\theta)$ are $(\overline{X},\overline{x},\mu)$, $(S^{2},s^{2},\sigma^{2})$ and $(\hat P,\hat p, p)$ are \textbf{unbiased} estimator. In the final chapter of this book, we will prove $2$ more triples sharing the same characteristics are $(B_{0},b_{0},\beta_{0})$ and $(B_{1},b_{1},\beta_{1})$ also \textbf{unbiased} too.
+\section{Determining Statistical Intervals Like A Pro: Step By Step}
+\subsection{Selecting Your Test Statistic}
+The very first step of all statistical problems is \textbf{selecting test statistic}. To choose the most appropriate test you must deeply understand their uses and \textbf{trade-off}. Remember nothing can be absolutely perfect!
+\begin{itemize}
+	\item If your sample size is relatively large ($n>30$) and you want to estimate the \textbf{mean} $\mu$, choose Z-test without any doubts.
+	\item If your sample size is small ($n<30$) and you want to estimate the \textbf{mean} $\mu$, choose t-test.
+	\item Sample size does not matter when you want to estimate the \textbf{variance} $\sigma^2$, choose Chi-test.
+	\item If you want to estimate the \textbf{proportion} $p$, your sample size must be \textbf{large}, and choose Z-test.
+\end{itemize}
+Since all of our testing tools are based on the \textbf{normal population} assumption (except CLT), so you have to be careful when you do not know how your population is distributed. A very common approach is assuming that the entire population follows a \textbf{normal distribution}, sacrificing the precision of $f(x)$ to simplify our problem. From this point onward in this book, \textbf{all populations are assumed to be normal}.
+\\ After choosing your desired test among $3$ tests, write down your testing formula based on the distribution of the quantity that you want to estimate, for example:
+\begin{equation*}
+	\begin{split}
+		\overline{X}\sim\mathscr{N}\left(\overline{x};\mu,\frac{\sigma^2}{n}\right)&\Rightarrow Z=\frac{\overline{X}-\mu}{\sigma/\sqrt{n}}\sim\mathscr{N}(z;0,1)\\
+		(\overline{X}_{1}-\overline{X}_{2})\sim\mathscr{N}\left(\overline{x_{1}}-\overline{x_{2}};\mu_{1}-\mu_{2},\frac{\sigma_{1}^{2}}{n_{1}}+\frac{\sigma_{2}^{2}}{n_{2}}\right)&\Rightarrow Z=\frac{\overline{X_{1}}-\overline{X_{2}}-(\mu_{1}-\mu_{2})}{\sqrt{(\sigma_{1}^{2}/n_{1})+(\sigma_{2}^{2}/n_{2})}}\sim\mathscr{N}(z;0,1)\\
+		\frac{S^{2}(n-1)}{\sigma^2}&=\chi^{2}\sim\mathscr{C}(\chi^{2};n-1)\\
+		\frac{\overline{X}-\mu}{S/\sqrt{n}}&=T\sim\mathscr{T}(t;n-1)\\
+	\end{split}
+\end{equation*}
+$Z$, $t$ and $\chi^{2}$ are 3 new \textbf{normalized estimators} $\hat\Theta$, and we use them to determine confidence interval.
+\newpage
+\subsection{Establishing The Confidence Interval}
+\subsubsection{Two-Sided Confidence Bounds}
+The idea of establishing the confidence interval is very simple and intuitive, we did it (but sill do not give it a name) in the previous chapter. Before learning the methods, let me introduce some general notations first:
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=10cm]{38.jpg}
+	\caption{Two-sided confidence bounds}
+	\label{Figure 38}
+\end{figure}
+\\ $\hat\theta_{L}$ and $\hat\theta_{U}$ stand for the lower and upper values of our boundaries; $100(1-\alpha)\%$ is the \textbf{confidence interval}, where \textbf{exact} $100(1-\alpha)\%$ values of $\theta$ inside. Obviously you can see that the value of $\hat\theta$ must be chosen to satisfies the white area it bounded is $1-\alpha$. Because standard normal and t-distribution curves are both symmetrical, so we often choose:
+$$\hat\theta_{L}=-t_{\alpha/2},\;\hat\theta_{U}=t_{\alpha/2}\text{ (for t-test)}$$
+$$\hat\theta_{L}=-z_{\alpha/2},\;\hat\theta_{U}=z_{\alpha/2}\text{ (for Z-test)}$$
+But chi-distribution curve is asymmetrical, you have to be careful here:
+$$\hat\theta_{L}=\chi^{2}_{1-\alpha/2},\;\hat\theta_{U}=\chi^{2}_{\alpha/2}\;\text{ (for Chi-test)}$$
+General interval has been established with $(1-\alpha)\%$ certainty:
+$$\hat\theta_{L}<\hat\Theta<\hat\theta_{U}$$
+Substituting everything down here yields your final interval, for example:
+$$-t_{\alpha/2}<T<t_{\alpha/2}\Rightarrow -t_{\alpha/2}<\frac{\overline{X}-\mu}{s/\sqrt{n}}<t_{\alpha/2}\Rightarrow \overline{X}-t_{\alpha/2}\frac{s}{\sqrt{n}}<\mu<\overline{X}+t_{\alpha/2}\frac{s}{\sqrt{n}}$$
+From your actual experiment data, set the random variable $\overline{X}$ be one of your result:
+$$\overline{x}-t_{\alpha/2}\frac{s}{\sqrt{n}}<\mu<\overline{x}+t_{\alpha/2}\frac{s}{\sqrt{n}}$$
+Using the same line of thinking, you can find every two-sided confidence bounds intervals, with an arbitrary $\alpha$ value. In practice, we often choose $\alpha=0.01,0.05$ or even $\alpha=0.1$. I do not want to give too many formulas here, since they share the same logic, and you can derive them yourself easily. Before moving on to the next part, you should pay attention to this subtle formula:
+$$-z_{\alpha/2}<Z<z_{\alpha/2}\Rightarrow -z_{\alpha/2}<\frac{\hat P-p}{\sqrt{pq/n}}<z_{\alpha/2}\Rightarrow \hat P-z_{\alpha/2}\sqrt{\frac{pq}{n}}<p<\hat P+z_{\alpha/2}\sqrt{\frac{pq}{n}}$$
+Directly estimating $p$ seems very hard now, because it appears in both sides, but is not impossible (you should try). Since $n\to +\infty$ so we can approx $\hat p\approx p$, then:
+$$\hat P-z_{\alpha/2}\sqrt{\frac{\hat p\hat q}{n}}<p<\hat P+z_{\alpha/2}\sqrt{\frac{\hat p\hat q}{n}}$$
 \begin{comment}
 \appendix
 \chapter{Areas under the Normal Curve}

@@ -930,6 +930,11 @@ INPUT ./37.jpg
 INPUT 37.jpg
 INPUT ./37.jpg
 INPUT ./37.jpg
+INPUT ./38.jpg
+INPUT ./38.jpg
+INPUT 38.jpg
+INPUT ./38.jpg
+INPUT ./38.jpg
 INPUT probstat.aux
 INPUT ./probstat.out
 INPUT ./probstat.out
