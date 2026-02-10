@@ -2465,7 +2465,7 @@ with $\mu\in(3.841,4.226)$ and $\sigma^{2}\in(0.34,2.431)$ with $95\%$ certainty
 \chapter{Classical Methods of Estimation}
 \section{Definition of Unbiased Estimator}
 In the previous chapter, we used \textbf{sample mean} $\overline{X}$ to estimate \textbf{population mean} ${\mu}$; and \textbf{sample variance} $S^{2}$ to estimate \textbf{population variance} $\sigma^{2}$. Both $\overline{X}$ and $S^{2}$ are \textbf{unbiased estimator}; intuitively, now we can form the definition of \textbf{unbiased estimator} as follows:
-\begin{definition} A statistic $\widehat \Theta$ is said to be an \textbf{unbiased estimator} of the parameter $\theta$ if: $$\mu_{\widehat\Theta}=E(\widehat\Theta)=\theta$$
+\begin{definition} A statistic $\widehat \Theta$ is said to be an \textbf{unbiased estimator} of the parameter $\theta$ if: $$\mu_{\widehat\Theta}=E(\hat\Theta)=\theta$$
 \end{definition}
 Mathematically, in a sample set, there are many quantites like \textbf{sample mean} $\overline{X}$, \textbf{sample variance} $S^{2}$, \textbf{proportion} $\widehat P,\cdots$ and logically, we can not arbitrarily use $\overline{X}$ to estimate $\sigma^{2}$. The definition above acts like "key-lock" mechanism to guarantee there will be no ambiguity here.
 \begin{theorem} $\overline{X}$ is an \textbf{unbiased estimator} of the parameter $\mu$.
@@ -2576,11 +2576,11 @@ $$\hat p-z_{\alpha/2}\sqrt{\frac{\hat p\hat q}{n}}<p<\hat p+z_{\alpha/2}\sqrt{\f
 	\caption{Lower one-sided bound}
 	\label{Figure 39}
 \end{figure}
-Similarly, you can establish lower one-sided bounds interval with some slightly changes:
+Similarly, you can establish lower one-side bounds interval with some slightly changes:
 $$P(\widehat\Theta<\hat\theta_{U})=100(1-\alpha)\%$$
 For exmaple, estimating the population variance with $100(1-\alpha)\%$ certainty:
 $$\chi^{2}<\chi^{2}_{\alpha}\Rightarrow \frac{S^{2}(n-1)}{\sigma^{2}}<\chi^{2}_{\alpha}\Rightarrow \frac{S^{2}(n-1)}{\chi^{2}_{\alpha}}<\sigma^{2}$$
-Substituting one of your sample variance $s$ yields lower one-sided bound of $\sigma^{2}$:
+Substituting one of your sample variance $s$ yields lower one-side bound of $\sigma^{2}$:
 $$\frac{s^{2}(n-1)}{\chi^{2}_{\alpha}}<\sigma^{2}$$
 \newpage
 \begin{figure}[h]
@@ -2590,12 +2590,12 @@ $$\frac{s^{2}(n-1)}{\chi^{2}_{\alpha}}<\sigma^{2}$$
 	\label{Figure 40}
 \end{figure}
 $$P(\hat\theta_{L}<\widehat\Theta)=100(1-\alpha)\%$$
-\\Using the same steps, we can derive the confidence interval with $100(1-\alpha)\%$ certainty for the mean in the population with large sample size and known $\sigma^{2}$:
+\\Using the same steps, we can derive the confidence interval with $100(1-\alpha)\%$ certainty for the mean in the population:
 $$-z_{\alpha}<Z\Rightarrow -z_{\alpha}<\frac{\overline{X}-\mu}{\sigma/\sqrt{n}}\Rightarrow \mu<\overline{X}+z_{\alpha}\frac{\sigma}{\sqrt{n}} $$
 Finally we obtain:
 $$\mu<\overline{x}+z_{\alpha}\frac{\sigma}{\sqrt{n}}$$
 In case of the unknown variance $\sigma^{2}$ and your sample size is \textbf{large}, follows by \textbf{Corollary 7.2.7.1}, we can use the approximation $\sigma\approx s$:
-$$\mu<\overline{x}+z_{\alpha}\frac{s}{\sqrt{n}}\quad\text{(large sample size)}$$
+
 \begin{comment}
 \appendix
 \chapter{Areas under the Normal Curve}

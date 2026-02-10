@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.3.3)  10 FEB 2026 01:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.3.3)  10 FEB 2026 15:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -544,13 +544,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--54
 \tf@toc=\write5
 \openout5 = `probstat.toc'.
 
- [5] (./probstat.lof)
+ [5] (./probstat.lof [6
+
+])
 \tf@lof=\write6
 \openout6 = `probstat.lof'.
 
- [6
-
-] [7] [8
+ [7] [8
 
 ]
 Chapter 0.
@@ -577,7 +577,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 84--89
 [9
 
 ] [10]
-<3.jpg, id=550, 1310.8975pt x 736.7525pt>
+<3.jpg, id=554, 1310.8975pt x 736.7525pt>
 File: 3.jpg Graphic file (type jpg)
 <use 3.jpg>
 Package pdftex.def Info: 3.jpg  used on input line 121.
@@ -597,7 +597,7 @@ Chapter 1.
 [12
 
 ] [13]
-<4.jpg, id=576, 1016.79875pt x 744.7825pt>
+<4.jpg, id=580, 1016.79875pt x 744.7825pt>
 File: 4.jpg Graphic file (type jpg)
 <use 4.jpg>
 Package pdftex.def Info: 4.jpg  used on input line 205.
@@ -613,19 +613,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 271--275
  []
 
 [16]
-<5.jpg, id=599, 807.015pt x 520.94624pt>
+<5.jpg, id=603, 807.015pt x 520.94624pt>
 File: 5.jpg Graphic file (type jpg)
 <use 5.jpg>
 Package pdftex.def Info: 5.jpg  used on input line 289.
 (pdftex.def)             Requested size: 398.33858pt x 257.13391pt.
  [17 <./5.jpg>] [18] [19]
-<6.jpg, id=621, 977.6525pt x 571.13374pt>
+<6.jpg, id=625, 977.6525pt x 571.13374pt>
 File: 6.jpg Graphic file (type jpg)
 <use 6.jpg>
 Package pdftex.def Info: 6.jpg  used on input line 361.
 (pdftex.def)             Requested size: 369.88582pt x 216.08316pt.
  [20 <./6.jpg>]
-<7.jpg, id=629, 666.49pt x 452.69125pt>
+<7.jpg, id=633, 666.49pt x 452.69125pt>
 File: 7.jpg Graphic file (type jpg)
 <use 7.jpg>
 Package pdftex.def Info: 7.jpg  used on input line 388.
@@ -651,14 +651,14 @@ Overfull \hbox (18.06711pt too wide) in paragraph at lines 523--526
  []
 
 [25]
-<8.jpg, id=658, 771.88374pt x 255.95625pt>
+<8.jpg, id=662, 771.88374pt x 255.95625pt>
 File: 8.jpg Graphic file (type jpg)
 <use 8.jpg>
 Package pdftex.def Info: 8.jpg  used on input line 529.
 (pdftex.def)             Requested size: 284.52756pt x 94.34691pt.
  [26 <./8.jpg>] [27] [28] [29] [30]
 Chapter 3.
-<9.jpg, id=695, 641.39626pt x 462.72874pt>
+<9.jpg, id=699, 641.39626pt x 462.72874pt>
 File: 9.jpg Graphic file (type jpg)
 <use 9.jpg>
 Package pdftex.def Info: 9.jpg  used on input line 738.
@@ -666,19 +666,19 @@ Package pdftex.def Info: 9.jpg  used on input line 738.
 [31
 
  <./9.jpg>]
-<10.jpg, id=700, 620.3175pt x 427.5975pt>
+<10.jpg, id=704, 620.3175pt x 427.5975pt>
 File: 10.jpg Graphic file (type jpg)
 <use 10.jpg>
 Package pdftex.def Info: 10.jpg  used on input line 758.
 (pdftex.def)             Requested size: 227.62204pt x 156.90367pt.
  [32 <./10.jpg>]
-<11.jpg, id=706, 622.325pt x 407.5225pt>
+<11.jpg, id=710, 622.325pt x 407.5225pt>
 File: 11.jpg Graphic file (type jpg)
 <use 11.jpg>
 Package pdftex.def Info: 11.jpg  used on input line 787.
 (pdftex.def)             Requested size: 227.62204pt x 149.05228pt.
  [33 <./11.jpg>] [34]
-<12.jpg, id=718, 1097.09875pt x 415.5525pt>
+<12.jpg, id=722, 1097.09875pt x 415.5525pt>
 File: 12.jpg Graphic file (type jpg)
 <use 12.jpg>
 Package pdftex.def Info: 12.jpg  used on input line 856.
@@ -700,7 +700,7 @@ Overfull \hbox (2.08696pt too wide) in paragraph at lines 989--989
  []
 
 [38] [39] [40]
-<13.jpg, id=770, 613.29124pt x 364.36125pt>
+<13.jpg, id=774, 613.29124pt x 364.36125pt>
 File: 13.jpg Graphic file (type jpg)
 <use 13.jpg>
 Package pdftex.def Info: 13.jpg  used on input line 1090.
@@ -710,42 +710,42 @@ Chapter 4.
 [42
 
 ]
-<15.jpg, id=783, 550.055pt x 313.17pt>
+<15.jpg, id=787, 550.055pt x 313.17pt>
 File: 15.jpg Graphic file (type jpg)
 <use 15.jpg>
 Package pdftex.def Info: 15.jpg  used on input line 1134.
 (pdftex.def)             Requested size: 341.43306pt x 194.39754pt.
  [43 <./15.jpg>] [44] [45]
-<17.jpg, id=800, 1194.4625pt x 464.73625pt>
+<17.jpg, id=804, 1194.4625pt x 464.73625pt>
 File: 17.jpg Graphic file (type jpg)
 <use 17.jpg>
 Package pdftex.def Info: 17.jpg  used on input line 1209.
 (pdftex.def)             Requested size: 398.33858pt x 154.98024pt.
-<18.jpg, id=801, 791.95876pt x 358.33875pt>
+<18.jpg, id=805, 791.95876pt x 358.33875pt>
 File: 18.jpg Graphic file (type jpg)
 <use 18.jpg>
 Package pdftex.def Info: 18.jpg  used on input line 1219.
 (pdftex.def)             Requested size: 398.33858pt x 180.24062pt.
  [46 <./17.jpg> <./18.jpg>]
-<19.jpg, id=808, 792.9625pt x 336.25626pt>
+<19.jpg, id=812, 792.9625pt x 336.25626pt>
 File: 19.jpg Graphic file (type jpg)
 <use 19.jpg>
 Package pdftex.def Info: 19.jpg  used on input line 1247.
 (pdftex.def)             Requested size: 398.33858pt x 168.91786pt.
  [47 <./19.jpg>]
 [48] [49]
-<20.jpg, id=828, 642.4pt x 342.27875pt>
+<20.jpg, id=832, 642.4pt x 342.27875pt>
 File: 20.jpg Graphic file (type jpg)
 <use 20.jpg>
 Package pdftex.def Info: 20.jpg  used on input line 1340.
 (pdftex.def)             Requested size: 284.52756pt x 151.60065pt.
-<21.jpg, id=829, 728.7225pt x 459.7175pt>
+<21.jpg, id=833, 728.7225pt x 459.7175pt>
 File: 21.jpg Graphic file (type jpg)
 <use 21.jpg>
 Package pdftex.def Info: 21.jpg  used on input line 1346.
 (pdftex.def)             Requested size: 284.52756pt x 179.49252pt.
  [50 <./20.jpg> <./21.jpg>] [51]
-<22.jpg, id=844, 550.055pt x 410.53375pt>
+<22.jpg, id=848, 550.055pt x 410.53375pt>
 File: 22.jpg Graphic file (type jpg)
 <use 22.jpg>
 Package pdftex.def Info: 22.jpg  used on input line 1414.
@@ -755,12 +755,12 @@ Chapter 5.
 [53
 
 ]
-<23.jpg, id=854, 593.21625pt x 326.21875pt>
+<23.jpg, id=858, 593.21625pt x 326.21875pt>
 File: 23.jpg Graphic file (type jpg)
 <use 23.jpg>
 Package pdftex.def Info: 23.jpg  used on input line 1485.
 (pdftex.def)             Requested size: 284.52756pt x 156.46872pt.
-<24.jpg, id=855, 679.53876pt x 524.96124pt>
+<24.jpg, id=859, 679.53876pt x 524.96124pt>
 File: 24.jpg Graphic file (type jpg)
 <use 24.jpg>
 Package pdftex.def Info: 24.jpg  used on input line 1495.
@@ -776,25 +776,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 1491--1499
  []
 
 [54 <./23.jpg>] [55 <./24.jpg>] [56]
-<25.jpg, id=871, 647.41875pt x 319.1925pt>
+<25.jpg, id=875, 647.41875pt x 319.1925pt>
 File: 25.jpg Graphic file (type jpg)
 <use 25.jpg>
 Package pdftex.def Info: 25.jpg  used on input line 1542.
 (pdftex.def)             Requested size: 284.52756pt x 140.27953pt.
  [57 <./25.jpg>]
-<26.jpg, id=876, 755.82375pt x 352.31625pt>
+<26.jpg, id=880, 755.82375pt x 352.31625pt>
 File: 26.jpg Graphic file (type jpg)
 <use 26.jpg>
 Package pdftex.def Info: 26.jpg  used on input line 1561.
 (pdftex.def)             Requested size: 284.52756pt x 132.62897pt.
  [58 <./26.jpg>]
-<27.jpg, id=884, 926.46124pt x 823.075pt>
+<27.jpg, id=888, 926.46124pt x 823.075pt>
 File: 27.jpg Graphic file (type jpg)
 <use 27.jpg>
 Package pdftex.def Info: 27.jpg  used on input line 1581.
 (pdftex.def)             Requested size: 398.33858pt x 353.89023pt.
  [59 <./27.jpg>]
-<28.jpg, id=890, 676.5275pt x 350.30875pt>
+<28.jpg, id=894, 676.5275pt x 350.30875pt>
 File: 28.jpg Graphic file (type jpg)
 <use 28.jpg>
 Package pdftex.def Info: 28.jpg  used on input line 1606.
@@ -819,7 +819,7 @@ Overfull \hbox (25.96315pt too wide) detected at line 1659
 []
  []
 
-<29.jpg, id=902, 596.2275pt x 247.92625pt>
+<29.jpg, id=906, 596.2275pt x 247.92625pt>
 File: 29.jpg Graphic file (type jpg)
 <use 29.jpg>
 Package pdftex.def Info: 29.jpg  used on input line 1663.
@@ -835,7 +835,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1668--1672
  []
 
 [62 <./29.jpg>]
-<30.jpg, id=909, 615.29875pt x 417.56pt>
+<30.jpg, id=913, 615.29875pt x 417.56pt>
 File: 30.jpg Graphic file (type jpg)
 <use 30.jpg>
 Package pdftex.def Info: 30.jpg  used on input line 1677.
@@ -845,7 +845,7 @@ Chapter 6.
 [67
 
 ] [68] [69] [70]
-<31.jpg, id=959, 960.58875pt x 418.56375pt>
+<31.jpg, id=963, 960.58875pt x 418.56375pt>
 File: 31.jpg Graphic file (type jpg)
 <use 31.jpg>
 Package pdftex.def Info: 31.jpg  used on input line 1932.
@@ -860,7 +860,7 @@ OML/cmm/m/it/12 ^^V[]; ^^V[]; []  ; ^^V[]$ \OT1/cmr/m/it/12 and \OT1/cmr/bx/it/
 
 [76]
 Chapter 7.
-<M.png, id=1001, 210.7875pt x 318.4698pt>
+<M.png, id=1005, 210.7875pt x 318.4698pt>
 File: M.png Graphic file (type png)
 <use M.png>
 Package pdftex.def Info: M.png  used on input line 2136.
@@ -868,13 +868,13 @@ Package pdftex.def Info: M.png  used on input line 2136.
 [77
 
  <./M.png>]
-<32.jpg, id=1008, 925.4575pt x 541.02126pt>
+<32.jpg, id=1012, 925.4575pt x 541.02126pt>
 File: 32.jpg Graphic file (type jpg)
 <use 32.jpg>
 Package pdftex.def Info: 32.jpg  used on input line 2146.
 (pdftex.def)             Requested size: 426.79134pt x 249.5002pt.
  [78 <./32.jpg>] [79]
-<33.jpg, id=1024, 610.28pt x 400.49625pt>
+<33.jpg, id=1028, 610.28pt x 400.49625pt>
 File: 33.jpg Graphic file (type jpg)
 <use 33.jpg>
 Package pdftex.def Info: 33.jpg  used on input line 2209.
@@ -943,13 +943,13 @@ The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
 [81] [82] [83] [84]
-<34.jpg, id=1055, 638.385pt x 347.2975pt>
+<34.jpg, id=1059, 638.385pt x 347.2975pt>
 File: 34.jpg Graphic file (type jpg)
 <use 34.jpg>
 Package pdftex.def Info: 34.jpg  used on input line 2350.
 (pdftex.def)             Requested size: 284.52756pt x 154.78801pt.
  [85 <./34.jpg>] [86]
-<35.jpg, id=1071, 994.71625pt x 583.17876pt>
+<35.jpg, id=1075, 994.71625pt x 583.17876pt>
 File: 35.jpg Graphic file (type jpg)
 <use 35.jpg>
 Package pdftex.def Info: 35.jpg  used on input line 2389.
@@ -977,13 +977,13 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<36.jpg, id=1072, 809.0225pt x 377.41pt>
+<36.jpg, id=1076, 809.0225pt x 377.41pt>
 File: 36.jpg Graphic file (type jpg)
 <use 36.jpg>
 Package pdftex.def Info: 36.jpg  used on input line 2410.
 (pdftex.def)             Requested size: 369.88582pt x 172.55109pt.
 [87 <./35.jpg> <./36.jpg>]
-<37.jpg, id=1077, 567.11874pt x 376.40625pt>
+<37.jpg, id=1081, 567.11874pt x 376.40625pt>
 File: 37.jpg Graphic file (type jpg)
 <use 37.jpg>
 Package pdftex.def Info: 37.jpg  used on input line 2440.
@@ -997,21 +997,33 @@ Chapter 8.
 [90
 
 ] [91] [92]
-<38.jpg, id=1106, 594.22pt x 363.3575pt>
+<38.jpg, id=1111, 581.17125pt x 341.275pt>
 File: 38.jpg Graphic file (type jpg)
 <use 38.jpg>
 Package pdftex.def Info: 38.jpg  used on input line 2551.
-(pdftex.def)             Requested size: 284.52756pt x 173.99377pt.
- [93 <./38.jpg>] Excluding 'comment' comment.
-Excluding 'comment' comment. [94] (./probstat.aux)
+(pdftex.def)             Requested size: 284.52756pt x 167.0804pt.
+ [93 <./38.jpg>]
+<39.jpg, id=1117, 574.145pt x 345.29pt>
+File: 39.jpg Graphic file (type jpg)
+<use 39.jpg>
+Package pdftex.def Info: 39.jpg  used on input line 2575.
+(pdftex.def)             Requested size: 284.52756pt x 171.11664pt.
+ [94 <./39.jpg>]
+<40.jpg, id=1123, 582.175pt x 355.3275pt>
+File: 40.jpg Graphic file (type jpg)
+<use 40.jpg>
+Package pdftex.def Info: 40.jpg  used on input line 2588.
+(pdftex.def)             Requested size: 284.52756pt x 173.66197pt.
+ Excluding 'comment' comment.
+Excluding 'comment' comment. [95 <./40.jpg>] (./probstat.aux)
 Package rerunfilecheck Info: File `probstat.out' has not changed.
-(rerunfilecheck)             Checksum: 3FD2222E6600C05FACD5C11F4B323F00;16180.
+(rerunfilecheck)             Checksum: D02F4DB7A37660E1D60CF4A08ABA5DA2;16205.
  ) 
 Here is how much of TeX's memory you used:
- 12215 strings out of 476091
- 191073 string characters out of 5794082
+ 12235 strings out of 476091
+ 191279 string characters out of 5794082
  1874330 words of memory out of 5000000
- 31974 multiletter control sequences out of 15000+600000
+ 31988 multiletter control sequences out of 15000+600000
  529075 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,25n,76p,870b,554s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1019,25 +1031,26 @@ Here is how much of TeX's memory you used:
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-rsfs/rsfs10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on probstat.pdf (95 pages, 1476234 bytes).
+nts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rs
+fs/rsfs10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on probstat.pdf (96 pages, 1526573 bytes).
 PDF statistics:
- 1290 PDF objects out of 1440 (max. 8388607)
- 1104 compressed objects within 12 object streams
- 397 named destinations out of 1000 (max. 500000)
- 805 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1306 PDF objects out of 1440 (max. 8388607)
+ 1115 compressed objects within 12 object streams
+ 401 named destinations out of 1000 (max. 500000)
+ 815 words of extra memory for PDF output out of 10000 (max. 10000000)
 

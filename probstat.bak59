@@ -2580,7 +2580,7 @@ Similarly, you can establish lower one-sided bounds interval with some slightly 
 $$P(\widehat\Theta<\hat\theta_{U})=100(1-\alpha)\%$$
 For exmaple, estimating the population variance with $100(1-\alpha)\%$ certainty:
 $$\chi^{2}<\chi^{2}_{\alpha}\Rightarrow \frac{S^{2}(n-1)}{\sigma^{2}}<\chi^{2}_{\alpha}\Rightarrow \frac{S^{2}(n-1)}{\chi^{2}_{\alpha}}<\sigma^{2}$$
-Substituting one of your sample variance $s$ yields lower one-sided bound of $\sigma^{2}$:
+Substituting one of your sample variance $s$ yields lower one-side bound of $\sigma^{2}$:
 $$\frac{s^{2}(n-1)}{\chi^{2}_{\alpha}}<\sigma^{2}$$
 \newpage
 \begin{figure}[h]
@@ -2590,7 +2590,7 @@ $$\frac{s^{2}(n-1)}{\chi^{2}_{\alpha}}<\sigma^{2}$$
 	\label{Figure 40}
 \end{figure}
 $$P(\hat\theta_{L}<\widehat\Theta)=100(1-\alpha)\%$$
-\\Using the same steps, we can derive the confidence interval with $100(1-\alpha)\%$ certainty for the mean in the population with large sample size and known $\sigma^{2}$:
+\\Using the same steps, we can derive the confidence interval with $100(1-\alpha)\%$ certainty for the mean in the population:
 $$-z_{\alpha}<Z\Rightarrow -z_{\alpha}<\frac{\overline{X}-\mu}{\sigma/\sqrt{n}}\Rightarrow \mu<\overline{X}+z_{\alpha}\frac{\sigma}{\sqrt{n}} $$
 Finally we obtain:
 $$\mu<\overline{x}+z_{\alpha}\frac{\sigma}{\sqrt{n}}$$

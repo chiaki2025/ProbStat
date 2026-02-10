@@ -80,7 +80,8 @@
 \contentsline {subsection}{\numberline {7.4.2}Estimating the Variance using Chi-test}{88}{subsection.7.4.2}%
 \contentsline {chapter}{\numberline {8}Classical Methods of Estimation}{90}{chapter.8}%
 \contentsline {section}{\numberline {8.1}Definition of Unbiased Estimator}{90}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Determining Statistical Intervals Like A Pro: Step By Step}{92}{section.8.2}%
+\contentsline {section}{\numberline {8.2}Determining Statistical Intervals Like A Pro: An Ultimate Guide}{92}{section.8.2}%
 \contentsline {subsection}{\numberline {8.2.1}Selecting Your Test Statistic}{92}{subsection.8.2.1}%
 \contentsline {subsection}{\numberline {8.2.2}Establishing The Confidence Interval}{93}{subsection.8.2.2}%
 \contentsline {subsubsection}{Two-Sided Confidence Bounds}{93}{section*.12}%
+\contentsline {subsubsection}{One-Sided Confidence Bounds}{94}{section*.13}%
