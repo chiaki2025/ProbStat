@@ -1,87 +1,91 @@
 \babel@toc {english}{}\relax 
-\contentsline {chapter}{\numberline {0}Introduction to Probability and Statistics}{9}{chapter.0}%
-\contentsline {section}{\numberline {0.1}Coin Tossing}{9}{section.0.1}%
-\contentsline {section}{\numberline {0.2}Weather Forecasting}{10}{section.0.2}%
-\contentsline {section}{\numberline {0.3}Relationship between Probability and Statistics}{10}{section.0.3}%
-\contentsline {chapter}{\numberline {1}Fundamentals of Probability}{12}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Sample Space and Events}{12}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Sample Space}{12}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Events}{12}{subsection.1.1.2}%
-\contentsline {section}{\numberline {1.2}Counting Sample Points}{13}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Rule of Product}{14}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Permutations}{14}{subsection.1.2.2}%
-\contentsline {subsection}{\numberline {1.2.3}Combinations}{15}{subsection.1.2.3}%
-\contentsline {section}{\numberline {1.3}Probability of an Event}{16}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Conditional Probability}{19}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Conditional Probability}{19}{subsection.1.4.1}%
-\contentsline {subsection}{\numberline {1.4.2}Independent Events}{20}{subsection.1.4.2}%
-\contentsline {section}{\numberline {1.5}Total Probability and Bayes' rule}{21}{section.1.5}%
-\contentsline {subsection}{\numberline {1.5.1}Total Probability}{21}{subsection.1.5.1}%
-\contentsline {subsection}{\numberline {1.5.2}Bayes' rule}{21}{subsection.1.5.2}%
-\contentsline {chapter}{\numberline {2}Random Variables and Probability Distributions}{23}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Definition of Random Variables}{23}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Discrete Probability Distributions}{24}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Continuous Probability Distributions}{25}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Joint Probability Distributions}{26}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Case of Discrete Random Variables}{26}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Case of Continuous Random Variables}{29}{subsection.2.4.2}%
-\contentsline {chapter}{\numberline {3}Mathematical Expectation}{31}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Mean of a Random Variable}{31}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Variance and Covariance of Random Variables}{35}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Variance of Random Variables}{35}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Covariance of Random Variables}{36}{subsection.3.2.2}%
-\contentsline {section}{\numberline {3.3}Means and Variances of Linear Combinations of Random Variables}{38}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Markov's and Chebyshev's Inequalities}{40}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Markov's Inequality}{40}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Chebyshev's Inequality}{40}{subsection.3.4.2}%
-\contentsline {chapter}{\numberline {4}Some Discrete Probability Distributions}{42}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Bernoulli, Binomial and Poisson Distributions}{42}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Bernoulli Distribution}{42}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Binomial Distribution}{44}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Poisson Distribution}{46}{subsection.4.1.3}%
-\contentsline {subsubsection}{Using Bell-shaped Curve to approx the Binomial Distribution}{46}{section*.6}%
-\contentsline {subsubsection}{Poisson Distribution}{48}{section*.7}%
-\contentsline {section}{\numberline {4.2}Negative Binomial and Geometric Distributions}{51}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Negative Binomial Distribution}{51}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Geometric Distribution}{51}{subsection.4.2.2}%
-\contentsline {section}{\numberline {4.3}Hypergeometric Distribution}{52}{section.4.3}%
-\contentsline {chapter}{\numberline {5}Some Continuous Probability Distributions}{53}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Uniform Distribution}{53}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Normal Distribution}{54}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}The Idea behind the Normal Distribution}{54}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Standard Normal Distribution}{58}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Normal Distribution}{59}{subsection.5.2.3}%
-\contentsline {section}{\numberline {5.3}Exponential, Gamma and Chi-Squared Distributions}{61}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Exponential Distribution}{61}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Gamma Distribution}{63}{subsection.5.3.2}%
-\contentsline {subsubsection}{Gamma Function}{63}{section*.8}%
-\contentsline {subsubsection}{Gamma Distribution}{65}{section*.9}%
-\contentsline {subsection}{\numberline {5.3.3}Chi-Squared Distribution}{66}{subsection.5.3.3}%
-\contentsline {chapter}{\numberline {6}Functions of Random Variables}{67}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Transformations of Variables}{67}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Linear Transformations}{67}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}Non-linear Transformations}{71}{subsection.6.1.2}%
-\contentsline {section}{\numberline {6.2}Moment-Generating Functions}{73}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Definition of Moment-Generating Functions}{73}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}Some Useful Moment-Generating Functions}{74}{subsection.6.2.2}%
-\contentsline {subsubsection}{Discrete Probability Distribution}{74}{section*.10}%
-\contentsline {subsubsection}{Continuous Probability Distribution}{74}{section*.11}%
-\contentsline {subsection}{\numberline {6.2.3}Linear Combinations of Random Variables}{75}{subsection.6.2.3}%
-\contentsline {chapter}{\numberline {7}Fundamentals of Statistics}{77}{chapter.7}%
-\contentsline {section}{\numberline {7.1}The Big Picture of Statistics}{78}{section.7.1}%
-\contentsline {subsection}{\numberline {7.1.1}Populations and Samples}{78}{subsection.7.1.1}%
-\contentsline {subsection}{\numberline {7.1.2}Sample Mean and Sample Variance}{79}{subsection.7.1.2}%
-\contentsline {section}{\numberline {7.2}Sampling Distribution of Means}{80}{section.7.2}%
-\contentsline {subsection}{\numberline {7.2.1}Central Limit Theorem}{80}{subsection.7.2.1}%
-\contentsline {subsection}{\numberline {7.2.2}t-Distribution}{82}{subsection.7.2.2}%
-\contentsline {section}{\numberline {7.3}Sampling Distribution of Variances}{85}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Case Study: Seed Germination Time}{86}{section.7.4}%
-\contentsline {subsection}{\numberline {7.4.1}Estimating the Mean using t-test}{87}{subsection.7.4.1}%
-\contentsline {subsection}{\numberline {7.4.2}Estimating the Variance using Chi-test}{88}{subsection.7.4.2}%
-\contentsline {chapter}{\numberline {8}Classical Methods of Estimation}{90}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Definition of Unbiased Estimator}{90}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Determining Statistical Intervals Like A Pro: An Ultimate Guide}{92}{section.8.2}%
-\contentsline {subsection}{\numberline {8.2.1}Selecting Your Test Statistic}{92}{subsection.8.2.1}%
-\contentsline {subsection}{\numberline {8.2.2}Establishing The Confidence Interval}{93}{subsection.8.2.2}%
-\contentsline {subsubsection}{Two-Sided Confidence Bounds}{93}{section*.12}%
-\contentsline {subsubsection}{One-Sided Confidence Bounds}{94}{section*.13}%
+\contentsline {chapter}{\numberline {0}Introduction to Probability and Statistics}{10}{chapter.0}%
+\contentsline {section}{\numberline {0.1}Coin Tossing}{10}{section.0.1}%
+\contentsline {section}{\numberline {0.2}Weather Forecasting}{11}{section.0.2}%
+\contentsline {section}{\numberline {0.3}Relationship between Probability and Statistics}{11}{section.0.3}%
+\contentsline {chapter}{\numberline {1}Fundamentals of Probability}{13}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Sample Space and Events}{13}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Sample Space}{13}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Events}{13}{subsection.1.1.2}%
+\contentsline {section}{\numberline {1.2}Counting Sample Points}{14}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Rule of Product}{15}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Permutations}{15}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Combinations}{16}{subsection.1.2.3}%
+\contentsline {section}{\numberline {1.3}Probability of an Event}{17}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Conditional Probability}{20}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Conditional Probability}{20}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Independent Events}{21}{subsection.1.4.2}%
+\contentsline {section}{\numberline {1.5}Total Probability and Bayes' rule}{22}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Total Probability}{22}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}Bayes' rule}{22}{subsection.1.5.2}%
+\contentsline {chapter}{\numberline {2}Random Variables and Probability Distributions}{24}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Definition of Random Variables}{24}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Discrete Probability Distributions}{25}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Continuous Probability Distributions}{26}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Joint Probability Distributions}{27}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Case of Discrete Random Variables}{27}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Case of Continuous Random Variables}{30}{subsection.2.4.2}%
+\contentsline {chapter}{\numberline {3}Mathematical Expectation}{32}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Mean of a Random Variable}{32}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Variance and Covariance of Random Variables}{36}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Variance of Random Variables}{36}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Covariance of Random Variables}{37}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Means and Variances of Linear Combinations of Random Variables}{39}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Markov's and Chebyshev's Inequalities}{41}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Markov's Inequality}{41}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Chebyshev's Inequality}{41}{subsection.3.4.2}%
+\contentsline {chapter}{\numberline {4}Some Discrete Probability Distributions}{43}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Bernoulli, Binomial and Poisson Distributions}{43}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Bernoulli Distribution}{43}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Binomial Distribution}{45}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Poisson Distribution}{47}{subsection.4.1.3}%
+\contentsline {subsubsection}{Using Bell-shaped Curve to approx the Binomial Distribution}{47}{section*.6}%
+\contentsline {subsubsection}{Poisson Distribution}{49}{section*.7}%
+\contentsline {section}{\numberline {4.2}Negative Binomial and Geometric Distributions}{52}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Negative Binomial Distribution}{52}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Geometric Distribution}{52}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Hypergeometric Distribution}{53}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Some Continuous Probability Distributions}{54}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Uniform Distribution}{54}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Normal Distribution}{55}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}The Idea behind the Normal Distribution}{55}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Standard Normal Distribution}{59}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Normal Distribution}{60}{subsection.5.2.3}%
+\contentsline {section}{\numberline {5.3}Exponential, Gamma and Chi-Squared Distributions}{62}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Exponential Distribution}{62}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Gamma Distribution}{64}{subsection.5.3.2}%
+\contentsline {subsubsection}{Gamma Function}{64}{section*.8}%
+\contentsline {subsubsection}{Gamma Distribution}{66}{section*.9}%
+\contentsline {subsection}{\numberline {5.3.3}Chi-Squared Distribution}{67}{subsection.5.3.3}%
+\contentsline {chapter}{\numberline {6}Functions of Random Variables}{68}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Transformations of Variables}{68}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Linear Transformations}{68}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Non-linear Transformations}{72}{subsection.6.1.2}%
+\contentsline {section}{\numberline {6.2}Moment-Generating Functions}{74}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Definition of Moment-Generating Functions}{74}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Some Useful Moment-Generating Functions}{75}{subsection.6.2.2}%
+\contentsline {subsubsection}{Discrete Probability Distribution}{75}{section*.10}%
+\contentsline {subsubsection}{Continuous Probability Distribution}{75}{section*.11}%
+\contentsline {subsection}{\numberline {6.2.3}Linear Combinations of Random Variables}{76}{subsection.6.2.3}%
+\contentsline {chapter}{\numberline {7}Fundamentals of Statistics}{78}{chapter.7}%
+\contentsline {section}{\numberline {7.1}The Big Picture of Statistics}{79}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Populations and Samples}{79}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}Sample Mean and Sample Variance}{80}{subsection.7.1.2}%
+\contentsline {section}{\numberline {7.2}Sampling Distribution of Means}{81}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Central Limit Theorem}{81}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}t-Distribution}{83}{subsection.7.2.2}%
+\contentsline {section}{\numberline {7.3}Sampling Distribution of Variances}{86}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Case Study: Seed Germination Time}{87}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}Estimating the Mean using t-test}{88}{subsection.7.4.1}%
+\contentsline {subsection}{\numberline {7.4.2}Estimating the Variance using Chi-test}{89}{subsection.7.4.2}%
+\contentsline {chapter}{\numberline {8}Classical Methods of Estimation}{91}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Definition of Unbiased Estimator}{91}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Determining Statistical Intervals Like A Pro: An Ultimate Guide}{93}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Selecting Your Test Statistic}{93}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}Establishing The Confidence Interval}{94}{subsection.8.2.2}%
+\contentsline {subsubsection}{Two-Sided Confidence Bounds}{94}{section*.12}%
+\contentsline {subsubsection}{One-Sided Confidence Bounds}{95}{section*.13}%
+\contentsline {chapter}{\numberline {9}Tests of Statistical Hypotheses}{97}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Case Study: Coin Tossing}{97}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Case Study: Average Germination Time}{98}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Reasoning Like A Statistician: Step-By-Step}{101}{section.9.3}%

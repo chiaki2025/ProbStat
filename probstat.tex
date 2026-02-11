@@ -80,7 +80,7 @@ Imagine you have a coin, like this one. It is an ordinary coin that can be found
 \\ \\ \\
 \indent The simplest way to test your hypothesis is tossing a coin many times. You might toss a coin $N=100$ times and see heads appear $n=40$ times, so your actual probability is: $$\hat p=\frac{n}{N}=0.4$$
 But your previous assumption (or hypothesis) states that the ideal probability is: $$p=0.5$$
-Is there anything wrong here? Dissatisfied, you continue your experiment. This time, you toss a coin $N=500$ times and see heads appear $n=270$ times, so the new actual probability is:
+Is there anything wrong here? Dissatisfied, you continue your experiment. This time, you toss a coin $N=600$ times and see heads appear $n=324$ times, so the new actual probability is:
 $$\hat p=\frac{n}{N}=0.54$$
 This time the result is closer with initial hypothesis $p$, but your hand now must be very tired after tossing a coin $600$ times. So do you think you have \textbf{enough} evidence to conclude that if $N\to+\infty$, then $\hat p\to p$? If so, your assumption is correct because \textit{can not be refuted}; and if not, our common sense might be wrong because the evidence \textit{strongly refutes it}.
 \\ \\ \\
@@ -341,7 +341,7 @@ Again, De Morgan's laws can also be applied:
 \subsection{Conditional Probability}
 Imagine you now have a perfectly fair coin. Obviously if you define events $A$ and $B$ are heads and tails appearing after one toss, respectively, you will conclude: $$P(A)=P(B)=0.5$$
 But I might ask you "If event $A$ \textbf{did} occur, might event $B$ would have any chance to occur?"
-. Since there is no way heads and tails can simultaneously appear, so your answer must be "No!". Now we can form an equation to represent the probability of a "special event" (or formally, conditional event) that "If $A$ occured, then $B$ would occur.":
+. Since there is no way heads and tails can simultaneously appear, so your answer must be "No!". Now we can form an equation to represent the probability of a "special event" (or formally, conditional event) that "If $A$ occurred, then $B$ would occur.":
 $$P(B|A)=0$$
 Now we shift our attention to a more complex problem. I give you a die, and you roll it. Events $E_{1}$ and $E_{2}$ can be defined as: "Landing a number that greater than 3" and "Landing a number that divisible by 2":
 $$P(E_{1})=P(E_{2})=\frac{1}{3}$$
@@ -2542,6 +2542,7 @@ Since all of our testing tools are based on the \textbf{normal population} assum
 	\end{split}
 \end{equation*}
 $Z$, $t$ and $\chi^{2}$ are 3 new \textbf{normalized estimators} $\widehat\Theta$, and we use them to determine confidence interval.
+$$(\overline{X},S^{2},\widehat P,\cdots)\xrightarrow{\text{Normalize}}(Z,t,\chi^{2})$$
 \newpage
 \subsection{Establishing The Confidence Interval}
 \subsubsection{Two-Sided Confidence Bounds}
@@ -2552,7 +2553,7 @@ The idea of establishing the confidence interval is very simple and intuitive, w
 	\caption{Two-sided confidence bounds}
 	\label{Figure 38}
 \end{figure}
-\\ $\hat\theta_{L}$ and $\hat\theta_{U}$ stand for the lower and upper values of our boundaries; $100(1-\alpha)\%$ is the \textbf{confidence interval}, where \textbf{exact} $100(1-\alpha)\%$ values of $\theta$ inside. Obviously you can see that the value of $\hat\theta$ must be chosen to satisfies the white area it bounded is $1-\alpha$. Because standard normal and t-distribution curves are both symmetrical, so we often choose:
+\\ $\hat\theta_{L}$ and $\hat\theta_{U}$ stand for the lower and upper values of our boundaries; $100(1-\alpha)\%$ is the \textbf{confidence interval}, where \textbf{exact} $100(1-\alpha)\%$ values of $\widehat\Theta$ inside. Obviously you can see that the value of $\hat\theta$ must be chosen to satisfies the white area it bounded is $1-\alpha$. Because standard normal and t-distribution curves are both symmetrical, so we often choose:
 $$\hat\theta_{L}=-t_{\alpha/2},\;\hat\theta_{U}=t_{\alpha/2}\text{ (for t-test)}$$
 $$\hat\theta_{L}=-z_{\alpha/2},\;\hat\theta_{U}=z_{\alpha/2}\text{ (for Z-test)}$$
 But chi-distribution curve is asymmetrical, you have to be careful here:
@@ -2596,6 +2597,131 @@ Finally we obtain:
 $$\mu<\overline{x}+z_{\alpha}\frac{\sigma}{\sqrt{n}}$$
 In case of the unknown variance $\sigma^{2}$ and your sample size is \textbf{large}, follows by \textbf{Corollary 7.2.7.1}, we can use the approximation $\sigma\approx s$:
 $$\mu<\overline{x}+z_{\alpha}\frac{s}{\sqrt{n}}\quad\text{(large sample size)}$$
+\chapter{Tests of Statistical Hypotheses}
+\section{Case Study: Coin Tossing}
+If you toss a fair coin, the probability of getting heads is always: $$p=0.5$$
+In the \textbf{Chapter 0.1: Coin Tossing}, we discussed about the situation where you toss a coin for $N=600$ times and get heads for $n=324$ times. The actual probability of getting heads is:
+$$\hat p=0.54$$
+Since $\hat p=0.54$ is slightly greater than $p=0.5$, can we conclude whether our coin is fair or unfair? To answer this question, we have to make \textbf{hypotheses} to test the correctness of our statements.
+\begin{equation*}
+	\begin{split}
+		H_{0}&:p=0.5\\
+		H_{1}&:p\neq 0.5\\
+	\end{split}
+\end{equation*}
+The first hypothesis $H_{0}$ is the \textbf{null hypothesis}; it is always a \textbf{statement}. The second hypothesis $H_{1}$ is the \textbf{alternative hypothesis}, it is always a question need to be answered. The \textbf{null hypothesis} $H_{0}$ is often the \textbf{logical complement} of $H_{1}$. In fact, since we can not perform experiment countless times, we can not definitively conclude whether any hypothesis is \textbf{absolutely} true or false. The only thing we can be certain of is whether experimental data (or \textbf{evidence}) can \textbf{refute} our hypotheses or not. And even if we do reach this conclusion, what is the probability that we might be wrong? For example, now we define the new random variable $X$ as the number of heads appearing and draw a simple \textbf{decision criterion axis}.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{41.jpg}
+	\caption{Decision criterion axis}
+	\label{Figure 41}
+\end{figure}
+\\Why do we choose the range of "Do not refute $H_{0}$" is $[290,310]$ instead of exactly $300$? In reality, we can not counduct an ideal experiment perfectly, as we are subject to certain limitations such as noise, temperature, force,$\cdots$ so we must take into account their influence on the experimental data. The decision procedure just described could lead to either of $2$ wrong conclusions. For instance, from $\hat p=0.54$ we might conclude that our coin is \textbf{unfair}; but actually it is \textbf{fair}; or we might conclude that our coin is \textbf{fair}, while it is \textbf{unfair}.
+\begin{definition} Rejection of the null hypothesis when it is true is called a \textbf{type I error}.
+\end{definition}
+\begin{definition} Nonrejection of the null hypothesis when it is false is called a \textbf{type II error}.
+\end{definition}
+In testing any statistical hypotheses, there are four possible situations that determine whether our decision is correct or not.
+\begin{center}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		                      & \text{$H_{0}$ is true} & \text{$H_{0}$ is false} \\
+		\hline
+		Do not reject $H_{0}$ & Correct decision       & Type II error           \\
+		\hline
+		Reject $H_{0}$        & Type I error           & Correct decision        \\
+		\hline
+	\end{tabular}
+\end{center}
+The probability of committing a type I error, also called the \textbf{level of significance}, is denoted by the Greek letter $\alpha$; and the probability of committing a type II error, denoted by $\beta$, is impossible to compute unless we have a specific alternative hypothesis $H_{1}$; so in many situations, we do not concern about the $\beta$ value.
+\\ For example, in our experiment, if we see the actual result $\hat p=0.54$ and then conclude our coin is unfair, then the probability of our conclusion was wrong is:
+\begin{equation*}
+	\begin{split}
+		\alpha&=P(\text{wrong conclusion})=P(X>310 \text{ or } X<290\text{ when }p=0.5)=2P(X<290\text{ when }p=0.5)\\
+		&=2\sum_{x=0}^{290}\mathscr{B}(x;600,0.5)\approx2P\left(Z<\frac{290-600.0.5+0.5}{\sqrt{600.0.5.0.5}}\right)=2P(Z<-0.775)=0.4412=44.12\%
+	\end{split}
+\end{equation*}
+To compute $\beta$, we must establish two new hypotheses as follow:
+\begin{equation*}
+	\begin{split}
+		H_{0}&:p=0.5\\
+		H_{1}&:p=0.54\\
+	\end{split}
+\end{equation*}
+Now if we see the actual result $\hat p=0.54$, but instead of concluding our coin is unfair, we do conclude the opposite. The probability of wrong conclusion is:
+\begin{equation*}
+	\begin{split}
+		\beta&=P(\text{wrong conclusion})=P(290\leq X\leq 310 \text{ when }p=0.54)=\sum_{x=290}^{310}\mathscr{B}(x;600,0.54)\\
+		&=P\left(Z<\frac{310-600.0.54+0.5}{\sqrt{600.0.54.0.46}}\right)-P\left(Z<\frac{290-600.0.54+0.5}{\sqrt{600.0.54.0.46}}\right)\\
+		&=P(Z<-1.105)-P(Z<-2.744)=0.1304=13.04\%
+	\end{split}
+\end{equation*}
+Because $\beta$ is relatively small compared to $\alpha$, so we can be more certain with the conclusion fair coin than unfair.
+\section{Case Study: Average Germination Time}
+Coin tossing seems very boring, so let's shift our focus to another case study. In the previous experiment, after waiting $5$ days, we select randomly one dish (sample) and measure the seeds germination time as follows:
+$$\overline{x}=3.878;\; s^{2}=0.757;\; n=10$$
+Does this fact (evidence) \textbf{support} or \textbf{refute} our guess the average germination time of population $\mu<4.033$?
+\\ The first step is always making two hypotheses $H_{0}$ and $H_{1}$; relatively they are logcical complements, so if our evidence supports for $H_{0}$, then $H_{1}$ is more likely to be wrong, and vice versa.
+\begin{equation*}
+	\begin{split}
+		H_{0}&:\mu=4.033\\
+		H_{1}&:\mu<4.033\\
+	\end{split}
+\end{equation*}
+Because our sample size is very small (just $10$ observations), and we are working with the population mean, so t-test is the best choice for us. Normalize the statistic quantity, we obtain:
+$$T=\frac{\overline{X}-\mu}{S/\sqrt{n}}\Rightarrow t=\frac{\overline{x}-\mu}{s/\sqrt{n}}=\frac{3.878-4.033}{\sqrt{0.757}/\sqrt{10}}=-0.563$$
+When we normalize the statistic quantity $\overline{X}$ with the population mean $\mu=4.033$, we did assume $H_{0}$ is \textbf{true} (or to be more precise, did not have any evidence to refute it). Now before understading the meaning of $\alpha$ as \textbf{probability of commiting a type I error}, we will visualize it first. In the previous chapter, coefficient $\alpha$ is defined as the red area, and $100(1-\alpha)\%$ is the \textbf{confidence interval}.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{43.jpg}
+	\caption{Illustration of type I error}
+	\label{Figure 43}
+\end{figure}
+\\ If $H_{0}$ is correct, then $100(1-\alpha)\%$ values of $t$ will be inside the white area. So if our computed $t$ is inside the white area, it is not an \textbf{edge case} (or exception). We can safely conclude that $H_{0}$ still be \textbf{true} since the evidence (or experimental data) \textbf{does not refute} it. If our computed $t$ falls within the red area (or \textbf{critical region}), that means the edge case occurs with very rare chance $\alpha\%$. This evidence \textbf{strongly refutes} assumption $H_{0}$ is true (because the extreme case, what we think it never happen, did occur). As I said, now the hypothesis $H_{1}$ is very \textbf{more likely} to be true since $H_{0}$ and $H_{1}$ are relatively \textbf{logical complements}.
+\\ In the previous chapter, the coefficient $\alpha$ does not have a name, but now you can understand very deeply its meaning in hypothesis testing problems. The probability of \textbf{both} $H_{0}$ is correct and edge case happening is $\alpha\%$; it is a very small number, but \textbf{never can be zero}. So if our conclusion is "Refute $H_{0}$" when we see an edge case, the probability of wrong decision is $\alpha\%$. For that reason, quantity $\alpha\%$ is said to be a \textbf{level of significance}, and can be understood as the probability of \textbf{rejecting hypothesis} $H_{0}$ decision is wrong when we encounter an edge case.
+\\ \\ \\ \indent Back to our problem, since the \textbf{level of significance} can arbitrarily be chosen, we choose $\alpha=0.1$ and see that:
+$$-t_{0.1}=-1.383<t=-0.563\quad\text{($v=n-1=9$ degrees of freedom)}$$
+Since our experimental $t$ value is \textbf{not} inside the \textbf{critical region} (red area), we \textbf{can only} conclude that this evidence \textbf{does not refute} the hypothesis $H_{0}$; or equivalent to we \textbf{do not have enough evidences} to refute $H_{0}$. In my opinion, confidently drawing the absolute decision "$H_{0}$ is true" might be too soon and you should very be careful in many situations. For example, now we change our hypotheses to:
+$$H_{0}:\mu=4.257$$ $$H_{1}:\mu<4.257$$
+The new $t$ value is:
+$$t=\frac{\overline{x}-\mu}{s/\sqrt{n}}=-1.377$$
+As you can clearly see here: $$-t_{0.1}=-1.383<t=-1.377$$
+Intuitively, $t$ and $-t_{0.1}$ values are very \textbf{close}; of course this evidence can not refute the null hypothesis $H_{0}$, but it is \textbf{not a convincing evidence} (or strong evidence). The value of $t$ is very near the \textbf{critical region}. Nonrejection of $H_{0}$ can be acceptable, but this decision might not be so convincible. How about we \textbf{do reject $H_{0}$}, and compute the probability of this decision is wrong? The computed value is called as the \textbf{P-value}.
+$$P=P(T<t)=P(T<-1.377)\approx 0.12$$
+With the aid of P-value, now we have a better understanding about our decisions. Even if we do \textbf{refute null hypothesis} $H_{0}$, the chance it might be wrong is pretty low, just $12\%$; meanwhile if we \textbf{do not reject} $H_{0}$, our decision seems not to make any sense at all.
+\begin{definition} A \textbf{P-value} is the \textbf{exact} probability that the decision to reject the null hypothesis $H_{0}$ is incorrect.
+\end{definition}
+Finally, let's take a look at an example where the population mean is assumed to be high.
+$$H_{0}:\mu=4.5$$
+$$H_{1}:\mu<4.5$$
+Similarly, we can see that:
+$$t=\frac{\overline{x}-\mu}{s/\sqrt{n}}=-2.26<-t_{0.1}=-1.383$$
+Obviously, since the $t$ value lies deeply inside the \textbf{critical region}, this evidence \textbf{strongly refutes the null hypothesis} $H_{0}$, or equivalent to it \textbf{strongly supports the alternative hypothesis} $H_{1}$ to be correct. You can see that more clearly when computing P-value:
+$$P=P(T<t)=P(T<-2.26)\approx 0.025<<\alpha=0.1$$
+The final question that you might ask is the difference between $\alpha$ and P-value; they are so similar. My answer is the \textbf{level of significance} $\alpha$ used to \textbf{relatively} establish the \textbf{critical region}; while P-value used to compute the \textbf{exact} probability that our $H_{0}$ rejection is incorrect. They share the same meaning, but different uses.
+\section{Reasoning Like A Statistician: Step-By-Step}
+After having a deep understanding of testing problems through $2$ examples, we will conclude this chapter by establishing a general testing procedure and try applying it on a specific problem. For instance, in a coin tossing game, after tossing $100$ times but you only see $40$ times heads appearing. Can you conclude that our coin is fair?
+\begin{enumerate}
+	\item State the $H_{0}$ and $H_{1}$ hypotheses.
+	      \\We are testing the fact if our coin is fair, so:
+	      $$H_{0}:p=0.5$$
+	      $$H_{1}:p\neq 0.5$$
+	\item Choose a fixed significance level $\alpha$.
+	      \\Since $\alpha$ can arbitrarily chosen, but in practice, we often choose $\alpha=0.1,0.05,0.025$ or $0.01$. In this problem we choose $\alpha=0.01$.
+	\item Choose a test statistic and establish the critical region based on $\alpha$.
+	      \\ As you can see here, our sample size is very large $n=100$, and we are working with \textbf{porportion} quantity, so Z-test is selected. To avoid confusion, you should sketch a simple graph here.
+	      \begin{figure}[h]
+		      \centering
+		      \includegraphics[width=15cm]{44.jpg}
+		      \caption{Establish the critical region}
+		      \label{Figure 44}
+	      \end{figure}
+	      \\Our critical region is $|z|>z_{\alpha/2}$, substituting $\alpha=0.01$ yields $|z|>2.575$.
+	\item Draw scientific conclusions, compute P-value if needed.
+	      \\The experimental result is $\hat p=0.4$; and $n$ is large, $p$ is medium, so:
+	      $$Z=\frac{\widehat P-p}{\sqrt{pq/n}}\sim\mathscr{N}(z;0,1)\Rightarrow z=\frac{\hat p-p}{\sqrt{pq/n}}=-2$$
+	      Since $z=-2$ is not inside the critical region, so our null hypothesis $H_{0}$ can not be refuted. $$P=P(|Z|>2)=2P(Z>2)\approx 0.04$$
+\end{enumerate}
 \begin{comment}
 \appendix
 \chapter{Areas under the Normal Curve}
@@ -2625,4 +2751,3 @@ $$\mu<\overline{x}+z_{\alpha}\frac{s}{\sqrt{n}}\quad\text{(large sample size)}$$
 \end{figure}
 \end{comment}
 \end{document}
-
