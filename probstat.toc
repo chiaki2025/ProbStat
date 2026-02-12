@@ -89,3 +89,9 @@
 \contentsline {section}{\numberline {9.1}Case Study: Coin Tossing}{97}{section.9.1}%
 \contentsline {section}{\numberline {9.2}Case Study: Average Germination Time}{98}{section.9.2}%
 \contentsline {section}{\numberline {9.3}Reasoning Like A Statistician: Step-By-Step}{101}{section.9.3}%
+\contentsline {chapter}{\numberline {10}Simple Linear Regression}{102}{chapter.10}%
+\contentsline {section}{\numberline {10.1}The Method of Least Squares}{103}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Inferences Concerning the Regression Coefficients}{105}{section.10.2}%
+\contentsline {chapter}{\numberline {A}Areas under the Normal Curve}{108}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Critical Values of the t-Distribution}{109}{appendix.B}%
+\contentsline {chapter}{\numberline {C}Critical Values of the Chi-Squared Distribution}{110}{appendix.C}%
