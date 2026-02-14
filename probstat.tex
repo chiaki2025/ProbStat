@@ -33,7 +33,7 @@
 \end{center}
 \chapter*{Preface}
 \epigraph{\textit{"Are you watching closely?"}}{Alfred Borden, The Prestige (2006)}
-When I was learning Probability and Statistics (ProbStat for short), I did not really understand why things were distributed \textit{normally}. Were they \textit{normal} because they were, or were \textit{we just assuming "Everything is normal for simplicity"}? Sometimes, I felt we were overusing this term and in many situations, we were separating our theory from the actual data due to the intital assumption of \textit{normal} distribution.
+When I was learning Probability and Statistics (ProbStat for short), I did not really understand why things were distributed \textit{normally}. Were they \textit{normal} because they were, or were \textit{we just assuming "Everything is normal for simplicity"}? Sometimes, I felt we were overusing this term and in many situations, we were separating our theory from the actual data due to the initial assumption of \textit{normal} distribution.
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=8cm]{1.jpg}
@@ -41,8 +41,8 @@ When I was learning Probability and Statistics (ProbStat for short), I did not r
 	\label{fig:galaxy}
 \end{figure}
 \\ As you can see here, this graph \textbf{does not really resemble a bell-shaped curve}; and clearly, this data is not distributed normally. In fact, not much real-world statistical data fits a bell-shaped curve. But why are we still using it?
-\\ In my opinion, I think the main reason is due to \textbf{Central Limit Theorem} (CLT for short), every sample in the same population (regardless of how the data is distributed) has a \textbf{mean} that converges to a \textit{normal distribution}, or \textbf{bell-shaped curve}. This topic will be explained in detail in \textbf{Chapter 7: Fundamentals of Statistics}.\\ \\  \\
-\indent This book approaches the fundamentals of probability and statistics in a very mathematically rigorous way to ensure maximum accuracy. I encourage readers to prove all of theorems, corollaries; and you should create your own examples for each theorem to gain a deeper understading of their origins.
+\\ In my opinion, I think the main reason is due to the \textbf{Central Limit Theorem} (CLT for short), every sample in the same population (regardless of how the data is distributed) has a \textbf{mean} that converges to a \textit{normal distribution}, or \textbf{bell-shaped curve}. This topic will be explained in detail in \textbf{Chapter 7: Fundamentals of Statistics}.\\ \\  \\
+\indent This book approaches the fundamentals of probability and statistics in a very mathematically rigorous way to ensure maximum accuracy. I encourage readers to prove all of the theorems, corollaries; and you should create your own examples for each theorem to gain a deeper understanding of their origins.
 
 \chapter*{Acknowledgements}
 First of all, I want to thank you for reading this book. Although I am not a native English speaker, but I truly enjoy writing in English. I have tried my best to express my ideas in English, but minor grammatical or spelling errors are unavoidable. If you find any of them, I would be very happy to receive your feedback via my email address:
@@ -50,7 +50,7 @@ First of all, I want to thank you for reading this book. Although I am not a nat
 \\ \\ \\
 \indent Secondly, I am extremely grateful and would like to express my thanks to the authors of the textbook "Probability and Statistics for Engineers and Scientists", $9$th edition. This book truly saved my student life.
 \\ \\ \\
-\indent Finally, the idea of writing this book was inspired by Prof. Steve Brunton lectures on YouTube. You should check out his videos too!
+\indent Finally, the idea of writing this book was inspired by Prof. Steve Brunton's lectures on YouTube. You should check out his videos too!
 \begin{flushright}
 	---Tin Vu---
 \end{flushright}
@@ -58,7 +58,7 @@ First of all, I want to thank you for reading this book. Although I am not a nat
 \listoffigures
 \newpage
 \chapter*{List of notations}
-Since much of my work is handwritten, so I have modified some commonly used notations for probability distribution funcions using curved script for convenience. You should notice that my conventions are not the international standards.
+Since much of my work is handwritten, so I have modified some commonly used notations for probability distribution functions using curved script for convenience. You should notice that my conventions are not the international standards.
 \begin{enumerate}
 	\item $\mathscr{I}$: Bernoulli distribution
 	\item $\mathscr{B}$: Binomial distribution
@@ -70,12 +70,12 @@ Since much of my work is handwritten, so I have modified some commonly used nota
 	\item $\mathscr{N}$: Normal distribution
 	\item $\mathscr{G}$: Gamma distribution
 	\item $\mathscr{E}$: Exponential distribution
-	\item $\mathscr{C}$: Chi-squared distributon
+	\item $\mathscr{C}$: Chi-squared distribution
 	\item $\mathscr{T}$: t-distribution (or Student distribution)
 \end{enumerate}
 \chapter{Introduction to Probability and Statistics}
 \section{Coin Tossing}
-Imagine you have a coin, like this one. It is an ordinary coin that can be found everywhere.
+Imagine you have a coin in your pocket. It is an ordinary coin that can be found everywhere.
 \\Everyone knows that the chance of heads (H) appearing after each toss is $50\%$, no one even doubts that. So, the \textbf{probability} of an \textbf{event} that heads appearing is $50\%$. But because you are a very curious person, you do not easily accept the truth like others, so you will find a way to test it. The fact "The probability of heads appearing is $50\%$" will be tested, and it can be called a \textbf{hypothesis}.
 \\ \\ \\
 \indent The simplest way to test your hypothesis is tossing a coin many times. You might toss a coin $N=100$ times and see heads appear $n=40$ times, so your actual probability is: $$\hat p=\frac{n}{N}=0.4$$
@@ -84,7 +84,7 @@ Is there anything wrong here? Dissatisfied, you continue your experiment. This t
 $$\hat p=\frac{n}{N}=0.54$$
 This time the result is closer with initial hypothesis $p$, but your hand now must be very tired after tossing a coin $600$ times. So do you think you have \textbf{enough} evidence to conclude that if $N\to+\infty$, then $\hat p\to p$? If so, your assumption is correct because \textit{can not be refuted}; and if not, our common sense might be wrong because the evidence \textit{strongly refutes it}.
 \\ \\ \\
-\indent Another strategy to toss a coin is fixing and dividing $N$. Instead of tossing $N=600$ times and only getting the final $p$ value, you can divide large number of coin tosses $N=600$ to smaller tosses $N_{1}=N_{2}=\cdots=N_{6}=100$ (but do not too small, at least each $N_{i}>30$), and get
+\indent Another strategy to toss a coin is fixing and dividing $N$. Instead of tossing $N=600$ times and only getting the final $p$ value, you can divide large number of coin tosses $N=600$ to smaller tosses $N_{1}=N_{2}=\cdots=N_{6}=100$ (but not too small, at least each $N_{i}>30$), and get
 6 values of $\hat p_{i}$. Suppose that you would get:
 \begin{center}
 	\begin{tabular}{ |c|c|c|c|c|c| }
@@ -95,7 +95,7 @@ This time the result is closer with initial hypothesis $p$, but your hand now mu
 		\hline
 	\end{tabular}
 \end{center}
-You might see that the value $p=0.5$ too idealistic to occur in our experiment, and $\hat p$ constantly changes. Therefore instead of determining the \textbf{exact value} of $p$, we \textbf{predict} that the $p$ value lies inside a \textbf{closed interval} with a \textbf{certainty} of $(1-\alpha)100\%$. For example, we can confidently conclude that the value of $p$ lies within the range (0.48,0.51) with $95\%$ accuracy.
+You might see that the value $p=0.5$ is too idealistic to occur in our experiment, and $\hat p$ constantly changes. Therefore instead of determining the \textbf{exact value} of $p$, we \textbf{predict} that the $p$ value lies inside a \textbf{closed interval} with a \textbf{certainty} of $(1-\alpha)100\%$. For example, we can confidently conclude that the value of $p$ lies within the range (0.48,0.51) with $95\%$ accuracy.
 \section{Weather Forecasting}
 You do not need to know anything about geography to predict what the weather will be tomorrow. Everything you need is just knowledge about Poisson, exponential distributions and the \textbf{average number} of rainy days per month where you are living.
 \\ For example, in December there are \textbf{average} 2 rainy days. What are the probabilities of:
@@ -103,7 +103,7 @@ You do not need to know anything about geography to predict what the weather wil
 	\item There will be 3 rainy days this month.
 	\item Tomorrow will be a rainy day, if today is the $10$th and you have not seen any rain since the beginning of the month.
 \end{enumerate}
-This problem will be covered in detail in \textbf{Chapter 4: Some Discrete Probability Distributions} and \textbf{Chapter 5: Continuous Probability Distributions}, but if you do have experience with random variables, you can try solving it!
+This problem will be covered in detail in \textbf{Chapter 4: Some Discrete Probability Distributions} and \textbf{Chapter 5: Some Continuous Probability Distributions}, but if you do have experience with random variables, you can try solving it!
 \\ The answer for the first question is:
 \begin{equation*}
 	P(X=3)=\frac{e^{-2}2^3}{3!}=0.1804=18.04\%
@@ -122,7 +122,7 @@ The formal definitions of \textbf{probability} and \textbf{statistics} will be d
 	\caption{General model of simple ProbStat problems}
 	\label{Figure 3}
 \end{figure}
-You want to know some attributes of a very large \textbf{population} such as the probabilites, means,$\cdots$ of the quantities. But there is no way you can observe the entire population (in many cases, $N\to +\infty$)
+You want to know some attributes of a very large \textbf{population} such as the probabilities, means,$\cdots$ of the quantities. But there is no way you can observe the entire population (in many cases, $N\to +\infty$)
 , so you have to take some \textbf{samples} ($n$ elements) and use \textbf{probability rules} to process them. After that, you can try applying \textbf{statistical inference rules} to draw conclusions about the original population. That is how it works!
 \\ \\ \\
 \indent Referring to the previous example, you want to check if the probability of heads appearing is $p=50\%$, so you toss a coin multiple times. But since you can only toss a coin for $600$ times consecutively, so you conclude based on your final result $\hat p=0.54$ (or closed interval with a certainty) that might be if $N\to +\infty$ then $\hat p\to p=0.5$. You took the \textbf{samples} ($N=600$ or $N_{i}=100$), used \textbf{probability rule} to calculate the actual $p$ value, and then applied \textbf{statistical inference rules} (hypothesis or closed interval) to draw conclusions respectively.
@@ -133,7 +133,7 @@ If you toss a coin, you will see that there are $2$ possible outcomes: heads and
 \begin{definition}
 	An \textbf{experiment} is the process that generates a set of outcomes (or data).
 \end{definition}
-All of possible outcomes are collected into a single set.
+All of the possible outcomes are collected into a single set.
 $$S_{1}=\{H,T\}$$
 $$S_{2}=\{1,2,3,4,5,6\}$$
 \begin{definition}
@@ -179,7 +179,7 @@ For example, $E_{2}$ and $\overline{E}_{2}$ are mutually exclusive.
 \begin{definition}
 	The \textbf{union} of the two events $A$ and $B$, denoted by the symbol $A\cup B$ is the event containing all of the elements that belong to $A$ or $B$ or both.
 \end{definition}
-For example, $A\cup B=\{x\;|\;0<x<0.9\}$, and $(A\cup B)\subset S_{3}$. Note that $E_{2}\cup\overline{E}_{2}=S_{2}$ is an useful result and can be generalized to corollary below:
+For example, $A\cup B=\{x\;|\;0<x<0.9\}$, and $(A\cup B)\subset S_{3}$. Note that $E_{2}\cup\overline{E}_{2}=S_{2}$ is a useful result and can be generalized to corollary below:
 \begin{corollary}
 	If $A$ is an event with respect to sample space $S$, then $A\cup\overline{A}=S$
 \end{corollary}
@@ -193,11 +193,11 @@ In this section, we develop some \textit{counting techniques} to count the numbe
 \\ Obviously, you can not count the number of elements of $S_{3}$ and $S_{4}$, since they are infinite and uncountable sets.
 \subsection{Rule of Product}
 You toss a pair of coins. How many sample points are there in the sample space? First you can try to list all of the possible outcomes: $$S=\{HH,HT,TH,TT\}$$
-There are total $4$ sample points in $S$. But listing all of the elements might be not so clever idea, so you use \textbf{rule of product}.
+There are a total $4$ sample points in $S$. But listing all of the elements might not be so clever idea, so you use \textbf{rule of product}.
 \\ The first coin can land heads or tails, so can the second coin. We multiply the number of possible outcomes of the two coins:
 $$n_{1}n_{2}=2.2=4\text{ (possible outcomes)}$$
 \begin{definition}
-	If an operation can be performed in $n_{1}$ ways, and if for each of these a second operation can be performed in $n_{2}$ ways, and for each of the first two a third operation can be performed in $n_{3}$ ways, and so fourth, the the sequence of $k$ operations can be performed in:
+	If an operation can be performed in $n_{1}$ ways, and if for each of these a second operation can be performed in $n_{2}$ ways, and for each of the first two a third operation can be performed in $n_{3}$ ways, and so forth, the the sequence of $k$ operations can be performed in:
 	$$\prod_{i=1}^k n_{i}\text{ (ways)}$$
 \end{definition}
 \begin{figure}[h]
@@ -234,7 +234,7 @@ But how about our $n$ objects are not distinct? Assume that $n_{1}$ are of one k
 	$$\frac{n!}{n_{1}!n_{2}!\cdots n_{k}!}$$
 	with $\sum_{i=1}^{k}n_{i}=n$.
 \end{theorem}
-For example, from the digits $1$ to $9$, we can form $9!$ numbers made up of $9$ distinct digits, or we can form $9P5$ five-digit numbers such that all the digits are different. If we allow repetation, five-digits numbers are now formed by $2$ digits 1, $2$ digits 2 and $1$ digit 3, then the number of permutation that satisfy is:
+For example, from the digits $1$ to $9$, we can form $9!$ numbers made up of $9$ distinct digits, or we can form $9P5$ five-digit numbers such that all the digits are different. If we allow repetition, five-digit numbers are now formed by $2$ digits 1, $2$ digits 2 and $1$ digit 3, then the number of permutation that satisfy is:
 $$\frac{5!}{2!2!1!}=30$$
 \subsection{Combinations}
 Consider another problem, now you have a set of $n$ elements. How many ways you can partition it into $k$ cells with $n_{1}$ elements in the first cell, $n_{2}$ elements in the second cell, and so forth? Coincidentally, the equation in \textbf{Theorem 1.2.3} appears again.
@@ -290,13 +290,13 @@ This definition can also be called Kolmogorov's axioms. An intuitive way to unde
 	\caption{Visualizing definition of probability}
 	\label{Figure 5}
 \end{figure}
-\\Literally, probability is just a number that describes how likely an event can occur. I often relate it with "weight" quantity. As you can see in the sample space, I can assign arbitrarily the "weights" (or probabilites) of sample points as follows:
+\\Literally, probability is just a number that describes how likely an event can occur. I often relate it with "weight" quantity. As you can see in the sample space, I can assign arbitrarily the "weights" (or probabilities) of sample points as follows:
 \begin{itemize}
 	\item Each blue point is $0.1$
 	\item Each orange point is $0.2$
 	\item Each pink point is $0.066$
 \end{itemize}
-Using \textbf{Definition 1.3.1}, now we can obtain these resuls:
+Using \textbf{Definition 1.3.1}, now we can obtain these results:
 $$P(A)=3.0.2=0.6$$
 $$P(B)=2.0.1=0.2$$
 $$P(A\cup B)=P(A)+P(B)=0.6+0.2=0.8$$
@@ -340,10 +340,10 @@ Again, De Morgan's laws can also be applied:
 \section{Conditional Probability}
 \subsection{Conditional Probability}
 Imagine you now have a perfectly fair coin. Obviously if you define events $A$ and $B$ are heads and tails appearing after one toss, respectively, you will conclude: $$P(A)=P(B)=0.5$$
-But I might ask you "If event $A$ \textbf{did} occur, might event $B$ would have any chance to occur?"
+But I might ask you "If event $A$ \textbf{did} occur, would event $B$ have any chance to occur?"
 . Since there is no way heads and tails can simultaneously appear, so your answer must be "No!". Now we can form an equation to represent the probability of a "special event" (or formally, conditional event) that "If $A$ occurred, then $B$ would occur.":
 $$P(B|A)=0$$
-Now we shift our attention to a more complex problem. I give you a die, and you roll it. Events $E_{1}$ and $E_{2}$ can be defined as: "Landing a number that greater than 3" and "Landing a number that divisible by 2":
+Now we shift our attention to a more complex problem. I give you a die, and you roll it. Events $E_{1}$ and $E_{2}$ can be defined as: "Landing a number that is greater than 3" and "Landing a number that is divisible by 2":
 $$P(E_{1})=P(E_{2})=\frac{1}{3}$$
 Sample points of $2$ events can be listed: $$E_{1}=\{4,5,6\}$$ $$E_{2}=\{2,4,6\}$$
 If a number greater than 3 landed, what is the probability that it could be divisible by 2? You can count the number of sample points inside $E_{1}$ and draw a result:
@@ -368,7 +368,7 @@ $$P(E_{2}|E_{1})=\frac{P(E_{1}\cap E_{2})}{P(E_{1})}=\frac{2/6}{1/2}=\frac{2}{3}
 \subsection{Independent Events}
 Intuitively, we can see that if events $A$ and $B$ do not influence each other, then:
 $$P(B|A)=P(B)$$
-$$P(B|A)=P(B)\Leftrightarrow \frac{P(B\cap A)}{P(A)}=P(B)\Leftrightarrow P(A\cap B)=P(B)(A)\;(\text{if }P(A)>0 )$$
+$$P(B|A)=P(B)\Leftrightarrow \frac{P(B\cap A)}{P(A)}=P(B)\Leftrightarrow P(A\cap B)=P(B)P(A)\;(\text{if }P(A)>0 )$$
 \begin{definition}
 	Two events $A$ and $B$ are independent if and only if: $$P(B|A)=P(B)$$
 	assuming $P(A)>0$
@@ -382,7 +382,7 @@ It is very important to note that determining the independence of events is comp
 \newpage
 \section{Total Probability and Bayes' rule}
 \subsection{Total Probability}
-In many situations, we do not know directly the information of $P(A)$ in \textbf{Definition 1.4.1} (or denomirator part); so in this section, we will develop a simple formula to handle this problem.
+In many situations, we do not know directly the information of $P(A)$ in \textbf{Definition 1.4.1} (or denominator part); so in this section, we will develop a simple formula to handle this problem.
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=8cm]{7.jpg}
@@ -394,7 +394,7 @@ In many situations, we do not know directly the information of $P(A)$ in \textbf
 		A=A\cap S=A\cap(B\cup \overline{B})=(A\cap B)\cup (A\cap \overline{B})
 	\end{split}
 \end{equation*}
-Because $A\cap B$ and $A\cap \overline{B}$ are independent events, so:
+Because $A\cap B$ and $A\cap \overline{B}$ are disjoint subsets, so:
 \begin{equation*}
 	P(A)=P(A\cap B)+P(A\cap \overline{B})=P(A|B)P(B)+P(A|\overline{B})P(\overline{B})
 \end{equation*}
@@ -404,7 +404,7 @@ Because $A\cap B$ and $A\cap \overline{B}$ are independent events, so:
 		P(A)=P(A|B)P(B)+P(A|\overline{B})P(\overline{B})
 	\end{equation*}
 \end{theorem}
-Total probability is an useful formula, especially when you are conducting surveys in practice. For example, in my university, there are $2$ types of students: those who "studied the whole semester" and those who "studied only one night before the exam". After the final exam, I asked everyone in my class about their scores and totaled the results. Event $A$: "Got $A+$" and event $\overline{A}$: "Did not get $A+$"; event $B$: "Studied the whole semester" and event $\overline{B}$: "Studied only one night".
+Total probability is a useful formula, especially when you are conducting surveys in practice. For example, in my university, there are $2$ types of students: those who "studied the whole semester" and those who "studied only one night before the exam". After the final exam, I asked everyone in my class about their scores and totaled the results. Event $A$: "Got $A+$" and event $\overline{A}$: "Did not get $A+$"; event $B$: "Studied the whole semester" and event $\overline{B}$: "Studied only one night".
 \begin{equation*}
 	P(A|B)=0.8,\;P(A|\overline{B})=0.3,\;P(B)=0.4
 \end{equation*}
@@ -412,7 +412,7 @@ Using total probability formula, I obtained the probability of $A$:
 $$P(A)=P(A|B)P(B)+P(A|\overline{B})P(\overline{B})=0.8.0.4+0.3.(1-0.4)=0.5$$
 Wow, that was an impressive ratio. Half of a class received perfect score. Was this course too easy?
 \subsection{Bayes' rule}
-If I studied hard, I would get $A+$. But how about me, who was not keen on studying boring courses like Computer Architecture but \textit{still survived after final test and even got "A+"}? I could questioned myself "Was I too lucky?". To answer myself, I had to calculate $P(\overline{B}|A)$, if the result is not so high, perhaps I was lucky. Bayes' rule was what I needed.
+If I studied hard, I would get $A+$. But how about me, who was not keen on studying boring courses like Computer Architecture but \textit{still survived after final test and even got "A+"}? I could have questioned myself "Was I too lucky?". To answer myself, I had to calculate $P(\overline{B}|A)$, if the result is not so high, perhaps I was lucky. Bayes' rule was what I needed.
 \begin{theorem}
 	If $A$ and $B$ are two events of sample space $S$, then:
 	\begin{equation*}
@@ -550,7 +550,7 @@ Verifying yourself that the pdf of number choosing experiment is:
 		0\quad(\text{elsewhere}) \\
 	\end{cases}
 \end{equation*}
-This pdf is the simplest case of \textbf{uniform distribution function}. As I mentioned before, in the continuous sample space case, concerning on the probability of $(X=x)$ does not not make any sense since it is equal $0$ and we can not use any information about it. Instead, we turn our focus to the probability of $(X<x)$ and define the \textbf{cumulative distribution function} $F(x)$ as follows:
+This pdf is the simplest case of \textbf{uniform distribution function}. As I mentioned before, in the continuous sample space case, concerning on the probability of $(X=x)$ does not make any sense since it is equal $0$ and we can not use any information about it. Instead, we turn our focus to the probability of $(X<x)$ and define the \textbf{cumulative distribution function} $F(x)$ as follows:
 \begin{definition}
 	The \textbf{cumulative distribution function} (cdf) $F(x)$ of a continuous random variable $X$ with pdf $f(x)$ is:
 	\begin{equation*}
@@ -568,7 +568,7 @@ The cdf of number choosing experiment is:
 \end{equation*}
 \section{Joint Probability Distributions}
 \subsection{Case of Discrete Random Variables}
-In the previous sections, we have considered \textbf{single random variable} and its \textbf{probability distribution function} case, and restricted ourshelves to \textbf{one-dimension sample space}. But now we are interested in observing  the \textbf{simultaneous outcomes} of \textbf{several random variables}. For example, you toss $2$ fair coins simultaneously and observe their appearing faces. You define $2$ random variables, $X$ for the first coin face, and $Y$ for the second one. The heads is assigned value $1$, and the tails is assigned value $0$. These are some results obtained from this experiment:
+In the previous sections, we have considered \textbf{single random variable} and its \textbf{probability distribution function} case, and restricted ourselves to \textbf{one-dimension sample space}. But now we are interested in observing  the \textbf{simultaneous outcomes} of \textbf{several random variables}. For example, you toss $2$ fair coins simultaneously and observe their appearing faces. You define $2$ random variables, $X$ for the first coin face, and $Y$ for the second one. The heads is assigned value $1$, and the tails is assigned value $0$. These are some results obtained from this experiment:
 $$P(X=0,Y=0)=\frac{1}{2}.\frac{1}{2}=\frac{1}{4}=0.25$$
 $$P(X=0,Y=1)=\frac{1}{2}.\frac{1}{2}=\frac{1}{4}=0.25$$
 $$P(X=1,Y=0)=\frac{1}{2}.\frac{1}{2}=\frac{1}{4}=0.25$$
@@ -1108,7 +1108,7 @@ Because tossing a coin many times might be so boring, so in this chapter we will
 	\end{tabular}
 \end{center}
 Or in equation form: $$f(x)=P(X=x)=0.8^{x}0.2^{1-x}\quad(x=0,1)$$
-The experiment to test the germination state of \textbf{a single mung bean seed} is a typical exmaple of \textbf{Bernoulli trial}. Formally, a \textbf{Bernoulli trial} is a random experiment with exactly \textbf{two possible outcomes}: "success" and "failure". The success rate is always denoted by the letter $p$, and failure rate is $q$. Because they complement each other, so: $q=1-p$.
+The experiment to test the germination state of \textbf{a single mung bean seed} is a typical example of \textbf{Bernoulli trial}. Formally, a \textbf{Bernoulli trial} is a random experiment with exactly \textbf{two possible outcomes}: "success" and "failure". The success rate is always denoted by the letter $p$, and failure rate is $q$. Because they complement each other, so: $q=1-p$.
 \begin{definition} The \textbf{Bernoulli trial} is a random experiment with exactly \textbf{two} possible outcomes: "success" and "failure".
 \end{definition}
 \begin{theorem}
@@ -1226,7 +1226,7 @@ Let's begin with a specific example: $X\sim\mathscr{B}(x;100,0.6)$. Now we can s
 	$$\text{Original Curve}\approx\textbf{Bell-shaped Curve: }\frac{1}{\sqrt{2\pi}\sigma}\text{exp}\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)$$
 	where: $\mu=np$ and $\sigma^2=npq$
 \end{theorem}
-Now let's compare $2$ methods: caculating directly and using approximation.
+Now let's compare $2$ methods: calculating directly and using approximation.
 \begin{equation*}
 	\begin{split}
 		P(X\leq 70)&=1-P(X\geq 71)=1-\sum_{x=71}^{100}\binom{100}{x}0.6^{x}0.4^{100-x}=0.985\\
@@ -1421,7 +1421,7 @@ Suppose you now have $N$ mung bean seeds in the packet, of which you know $N$ of
 \end{theorem}
 \newpage
 \chapter{Some Continuous Probability Distributions}
-Unlike discrete quantities, which are only formed through human counting, couninuous quantities appear naturally. You can easily see that most of physical quantities in reality are continuous, such as mass, length, time,$\cdots$ Therefore, this chapter plays crucial foundational role for the rest of this book.
+Unlike discrete quantities, which are only formed through human counting, continuous quantities appear naturally. You can easily see that most of physical quantities in reality are continuous, such as mass, length, time,$\cdots$ Therefore, this chapter plays a crucial foundational role for the rest of this book.
 \section{Uniform Distribution}
 As we discussed above, the pdf of choosing randomly a number within the range $(0,1)$ experiment is:
 \begin{equation*}
@@ -1493,7 +1493,7 @@ This section is one of the most important part of this book. Now we shall 'watch
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=10cm]{24.jpg}
-	\caption{A circular courtyrad with raindrops falling inside}
+	\caption{A circular courtyard with raindrops falling inside}
 	\label{Figure 24}
 \end{figure}
 \\  You define the pdf of an event "A single raindrop falls at the position with coordinate $(x,y)$" as $f(x,y)$. Since raindrops fall completely randomly and you surely know: $$f(x|y)=f(x)$$ $$f(y|x)=f(y)$$
@@ -1536,7 +1536,7 @@ I do not go deeply into the changing variables (from Cartesian to Polar coordina
 Back to our pdf, now we can change the variable and perform integration:
 $$\int_{-\infty}^{+\infty}e^{-cx^2}dx=\frac{1}{\sqrt{c}}\int_{-\infty}^{+\infty}e^{-(\sqrt{c}x)^2}d(\sqrt{c}x)=\sqrt{\frac{\pi}{c}}$$
 After choosing $c=\pi$, finally our pdf is: $$f(x)=e^{-\pi x^2}$$
-Sketching the pdf, and as you can see here, the chance of raindrops falling around the \textbf{center} is \textbf{higher} than the \textbf{edge} or anywhere esle.
+Sketching the pdf, and as you can see here, the chance of raindrops falling around the \textbf{center} is \textbf{higher} than the \textbf{edge} or anywhere else.
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=10cm]{25.jpg}
@@ -1761,7 +1761,7 @@ The pdf of Gamma distribution is a little bit messy, so we focus on understandin
 	\end{equation*}
 \end{proof}
 Exponential distribution is just a \textbf{special case} of Gamma distribution, you shoud notice that: $$\mathscr{E}(x;\lambda x)=\mathscr{G}\left(x;1,\frac{1}{\lambda}\right)$$
-So what does it mean? The relationship between them can be described through $2$ parameters $\alpha$ and $\beta$, with $\alpha$ as the \textbf{number of Poisson events} that you want to observe in a time interval, $\beta$ is just the \textbf{inverse} of $\lambda$. For example, if $X$ is the random variabe, defined as the \textbf{waiting time until the second rain} from the \textbf{beginning of December} (on average, there are $2$ rainy days in December), then:
+So what does it mean? The relationship between them can be described through $2$ parameters $\alpha$ and $\beta$, with $\alpha$ as the \textbf{number of Poisson events} that you want to observe in a time interval, $\beta$ is just the \textbf{inverse} of $\lambda$. For example, if $X$ is the random variable, defined as the \textbf{waiting time until the second rain} from the \textbf{beginning of December} (on average, there are $2$ rainy days in December), then:
 $$X\sim\mathscr{G}\left(x;2,\frac{31}{2}\right)$$
 The probability of there are \textbf{at least} $2$ rainy days within the first $10$ days in December is:
 $$P(X<10)=\int_{0}^{10}\frac{1}{\Gamma(2)\left(31/2\right)^2}xe^{-2x/31}dx=0.1369$$
@@ -2005,7 +2005,7 @@ Rewrite our $g(y)$ function in piecewise form:
 \subsection{Definition of Moment-Generating Functions}
 Every pdf have their own \textbf{mean} and \textbf{variance}:
 $$\mu_{X}=E(X)$$ $$\sigma^2_{X}=E(X^2)-\mu_{X}^2$$
-These functions are all characterized by $E(X^r)$ functions, you can think them as human fingerprints. $2$ pdf are the same if and only if all of their $E(X^r)$ fucntions are \textbf{matched}. But directly determining $E(X^r)$ is not so simple, especially with $r\geq 3$, therefore we take advantage of the derivative property of exponential function to develop a powerful tool that can yield desired results almost immediately.
+These functions are all characterized by $E(X^r)$ functions, you can think them as human fingerprints. $2$ pdf are the same if and only if all of their $E(X^r)$ functions are \textbf{matched}. But directly determining $E(X^r)$ is not so simple, especially with $r\geq 3$, therefore we take advantage of the derivative property of exponential function to develop a powerful tool that can yield desired results almost immediately.
 \begin{definition} The $r$th moment about the origin of the random variable $X$ is given:
 	$$\mu_{r}'=E(X^r)=\sum_{x}x^{r}f(x)\quad(\text{if $X$ is discrete})$$
 	$$\mu_{r}'=E(X^r)= \int_{-\infty}^{+\infty}x^{r}f(x)dx\quad\text{(if $X$ is continuous)}$$
@@ -2125,7 +2125,7 @@ Since proving rigorously is beyond the scope of this book, and perhaps it is not
 	Because $M_{Y}(t)$ has a chi-squared distribution form, so we conclude $Y$ has a \textbf{chi-squared distribution} with $v=v_{1}+v_{2}+\cdots+v_{n}$ degrees of freedom.
 \end{proof}
 \chapter{Fundamentals of Statistics}
-Going back to the 19th and 20th centuries, all the brilliant minds in the field of Biology, such as George Mendel or Ronald Fisher, were masters of Statistics. This is no coincidence, because they not only had to conduct experiments, but also had to process the result. Have you ever wondered how Mendel could derive his theory of heredity just from growing peas? Of course, he could not observe all the peas on Earth; he could only observe some of the peas in his garden. He had to use \textbf{rules of statistical inference} to draw conclusions from the \textbf{sample set} (his garden) to the entire \textbf{population} (the Earth). But now, what if you repeat his experiment again in your own garden and do not get the same result? Is something wrong? The answer is more complex that that. We have to consider many factors:
+Going back to the 19th and 20th centuries, all the brilliant minds in the field of Biology, such as George Mendel or Ronald Fisher, were masters of Statistics. This is no coincidence, because they not only had to conduct experiments, but also had to process the result. Have you ever wondered how Mendel could derive his theory of heredity just from growing peas? Of course, he could not observe all the peas on Earth; he could only observe some of the peas in his garden. He had to use \textbf{rules of statistical inference} to draw conclusions from the \textbf{sample set} (his garden) to the entire \textbf{population} (the Earth). But now, what if you repeat his experiment again in your own garden and do not get the same result? Is something wrong? The answer is more complex than that. We have to consider many factors:
 \begin{itemize}
 	\item First, are your seeds good and purebred quality?
 	\item Second, are you sure that your seeds were randomly selected? Otherwise, your result would be meaningless.
@@ -2219,7 +2219,7 @@ Before delving into the general case, let's consider a special case of Central L
 \end{theorem}
 \begin{proof} $\overline{X}$ is just a \textbf{linear combinations} of $X_{1},X_{2},\cdots,X_{n}$:
 	$$\overline{X}=\frac{1}{n}(X_{1}+X_{2}+\cdots+X_{n})$$
-	Since all of $X_{i}$ are normally distributed, from our previous results from \textbf{Chapter 3: Mathematical Expectation} and \textbf{Chapter 6: Functions of Random Variables}, we know the random varibale $\overline{X}$ has a \textbf{normal distribution} with its \textbf{mean} and \textbf{variance}:
+	Since all of the $X_{i}$ are normally distributed, from our previous results from \textbf{Chapter 3: Mathematical Expectation} and \textbf{Chapter 6: Functions of Random Variables}, we know the random varibale $\overline{X}$ has a \textbf{normal distribution} with its \textbf{mean} and \textbf{variance}:
 	\begin{equation*}
 		\begin{split}
 			\mu_{\overline{X}}&=\frac{1}{n}(\mu+\mu+\cdots+\mu)=\frac{1}{n}.n\mu=\mu\\
@@ -2234,7 +2234,7 @@ Before delving into the general case, let's consider a special case of Central L
 This theorem is so amazing, it states that every pdf will \textbf{converge} to a \textbf{normal distribution}, regardless of its origin. This is the true power of CLT: the \textbf{normal distribution} is the \textbf{ultimate goal} of everything and  not a magical distrbution which drops from the sky.
 \begin{proof} Proving this theorem is not so easy, but we will go step-by-step. Assume that the random variables $X_{1},X_{2},\cdots,X_{n}$ have their moments-generating functions $M_{X_{1}}(t),M_{X_{2}}(t),\cdots ,M_{X_{n}}(t)$. Since $n\overline{X}$ is just a linear combinations of $X_{i}$ and they are in the same \textbf{population}:
 	$$\overline{X}=\frac{1}{n}(X_{1}+X_{2}+\cdots X_{n})\Rightarrow M_{n\overline{X}}(t)=(M_{X}(t))^n$$
-	We restrict our constrains $t\approx 0$ and $n\to +\infty$ to use Taylor-Maclaurin approximation:
+	We restrict our constraints $t\approx 0$ and $n\to +\infty$ to use Taylor-Maclaurin approximation:
 	\begin{equation*}
 		\begin{split}
 			(M_{X}(t))^{n}&=\left(\sum_{k=0}^{+\infty}\frac{d^{k}M_{X}(0)}{k!}t^{k}\right)^{n}\\
@@ -2247,7 +2247,7 @@ This theorem is so amazing, it states that every pdf will \textbf{converge} to a
 	\end{equation*}
 	From the moments-generating function property:
 	$$M_{n\overline{X}}(t)=E(e^{nt\overline{X}})=M_{\overline{X}}(nt)$$
-	Recall that the moment-generating fucntion of \textbf{normal distribution} is:
+	Recall that the moment-generating function of \textbf{normal distribution} is:
 	$$\text{exp}\left(\mu t+\frac{\sigma^{2}t^{2}}{2}\right)$$
 	If: $$\overline{X}\sim\mathscr{N}\left(\overline{x};\mu,\frac{\sigma^2}{n}\right)$$ then we can deduce: $$M_{\overline{X}}(t)=\text{exp}\left(\mu t+\frac{\sigma^{2}t^{2}}{2n}\right)\Rightarrow M_{\overline{X}}(nt)=\text{exp}\left(n\mu t+\frac{\sigma^{2}t^{2}n^{2}}{2n}\right)=\text{exp}\left(n\mu t+\frac{n\sigma^{2}t^{2}}{2}\right)=(M_{X}(t))^{n}$$
 	Finally, we obtain our result is: $$\overline{X}\sim\mathscr{N}\left(\overline{x};\mu,\frac{\sigma^{2}}{n}\right)
@@ -2361,7 +2361,7 @@ In practice, if $v$ degrees of freedom is greater than $30$ (or equivalent to sa
 	$$t\approx z\Rightarrow s\approx \sigma$$
 \end{corollary}
 \section{Sampling Distribution of Variances}
-After gathering $6$ values of $S^2$ from our experiment, now we wish to know what the probability distribution they belong to. Let me recall an useful result which we have just proved in the previous section:
+After gathering $6$ values of $S^2$ from our experiment, now we wish to know what the probability distribution they belong to. Let me recall a useful result which we have just proved in the previous section:
 \begin{corollary} If $S^2$ is the \textbf{variance} of a random sample of size $n$ taken from a \textbf{normal population} having the variance $\sigma^2$, then the statistic:
 	$$\chi^{2}=\frac{S^{2}(n-1)}{\sigma^2}\sim\mathscr{C}(\chi^2;n-1)$$
 \end{corollary}
@@ -2419,7 +2419,7 @@ After substituting the actual values of $\overline{x}_{i}$ and $s_{i}$, you can 
 $$v=n-1=10-1=9\;\text{(degrees of freedom)}$$
 Searching for $t_{0.025}$ value with $v=9$ yields $t_{0.025}=2.262$. Finally we conclude:
 $$\overline{x}_{i}-t_{0.025}\frac{s_{i}}{\sqrt{n}}<\mu<\overline{x}_{i}+t_{0.025}\frac{s_{i}}{\sqrt{n}}$$
-Substituting each pairs $(\overline{x}_{i},s_{i})$ yields $6$ intervals:
+Substituting each pair $(\overline{x}_{i},s_{i})$ yields $6$ intervals:
 \begin{equation*}
 	\begin{split}
 		\mu&\in(3.68,4.07)\\
@@ -2467,7 +2467,7 @@ with $\mu\in(3.841,4.226)$ and $\sigma^{2}\in(0.34,2.431)$ with $95\%$ certainty
 In the previous chapter, we used \textbf{sample mean} $\overline{X}$ to estimate \textbf{population mean} ${\mu}$; and \textbf{sample variance} $S^{2}$ to estimate \textbf{population variance} $\sigma^{2}$. Both $\overline{X}$ and $S^{2}$ are \textbf{unbiased estimator}; intuitively, now we can form the definition of \textbf{unbiased estimator} as follows:
 \begin{definition} A statistic $\widehat \Theta$ is said to be an \textbf{unbiased estimator} of the parameter $\theta$ if: $$\mu_{\widehat\Theta}=E(\widehat\Theta)=\theta$$
 \end{definition}
-Mathematically, in a sample set, there are many quantites like \textbf{sample mean} $\overline{X}$, \textbf{sample variance} $S^{2}$, \textbf{proportion} $\widehat P,\cdots$ and logically, we can not arbitrarily use $\overline{X}$ to estimate $\sigma^{2}$. The definition above acts like "key-lock" mechanism to guarantee there will be no ambiguity here.
+Mathematically, in a sample set, there are many quantities like \textbf{sample mean} $\overline{X}$, \textbf{sample variance} $S^{2}$, \textbf{proportion} $\widehat P,\cdots$ and logically, we can not arbitrarily use $\overline{X}$ to estimate $\sigma^{2}$. The definition above acts like "key-lock" mechanism to guarantee there will be no ambiguity here.
 \begin{theorem} $\overline{X}$ is an \textbf{unbiased estimator} of the parameter $\mu$.
 \end{theorem}
 \begin{proof} From CLT, we know: $$\overline{X}\sim\mathscr{N}\left(\overline{x};\mu,\frac{\sigma^2}{n}\right)$$
@@ -2546,7 +2546,7 @@ $$(\overline{X},S^{2},\widehat P,\cdots)\xrightarrow{\text{Normalize}}(Z,t,\chi^
 \newpage
 \subsection{Establishing The Confidence Interval}
 \subsubsection{Two-Sided Confidence Bounds}
-The idea of establishing the confidence interval is very simple and intuitive, we did it (but sill do not give it a name) in the previous chapter. Before learning the methods, let me introduce some general notations first:
+The idea of establishing the confidence interval is very simple and intuitive, we did it (but still do not give it a name) in the previous chapter. Before learning the methods, let me introduce some general notations first:
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=10cm]{38.jpg}
@@ -2577,9 +2577,9 @@ $$\hat p-z_{\alpha/2}\sqrt{\frac{\hat p\hat q}{n}}<p<\hat p+z_{\alpha/2}\sqrt{\f
 	\caption{Lower one-sided bound}
 	\label{Figure 39}
 \end{figure}
-Similarly, you can establish lower one-sided bounds interval with some slightly changes:
+Similarly, you can establish lower one-sided bounds interval with some slight changes:
 $$P(\widehat\Theta<\hat\theta_{U})=100(1-\alpha)\%$$
-For exmaple, estimating the population variance with $100(1-\alpha)\%$ certainty:
+For example, estimating the population variance with $100(1-\alpha)\%$ certainty:
 $$\chi^{2}<\chi^{2}_{\alpha}\Rightarrow \frac{S^{2}(n-1)}{\sigma^{2}}<\chi^{2}_{\alpha}\Rightarrow \frac{S^{2}(n-1)}{\chi^{2}_{\alpha}}<\sigma^{2}$$
 Substituting one of your sample variance $s$ yields lower one-sided bound of $\sigma^{2}$:
 $$\frac{s^{2}(n-1)}{\chi^{2}_{\alpha}}<\sigma^{2}$$
@@ -2616,7 +2616,7 @@ The first hypothesis $H_{0}$ is the \textbf{null hypothesis}; it is always a \te
 	\caption{Decision criterion axis}
 	\label{Figure 41}
 \end{figure}
-\\Why do we choose the range of "Do not refute $H_{0}$" is $[290,310]$ instead of exactly $300$? In reality, we can not counduct an ideal experiment perfectly, as we are subject to certain limitations such as noise, temperature, force,$\cdots$ so we must take into account their influence on the experimental data. The decision procedure just described could lead to either of $2$ wrong conclusions. For instance, from $\hat p=0.54$ we might conclude that our coin is \textbf{unfair}; but actually it is \textbf{fair}; or we might conclude that our coin is \textbf{fair}, while it is \textbf{unfair}.
+\\Why do we choose the range of "Do not refute $H_{0}$" is $[290,310]$ instead of exactly $300$? In reality, we can not conduct an ideal experiment perfectly, as we are subject to certain limitations such as noise, temperature, force,$\cdots$ so we must take into account their influence on the experimental data. The decision procedure just described could lead to either of $2$ wrong conclusions. For instance, from $\hat p=0.54$ we might conclude that our coin is \textbf{unfair}; but actually it is \textbf{fair}; or we might conclude that our coin is \textbf{fair}, while it is \textbf{unfair}.
 \begin{definition} Rejection of the null hypothesis when it is true is called a \textbf{type I error}.
 \end{definition}
 \begin{definition} Nonrejection of the null hypothesis when it is false is called a \textbf{type II error}.
@@ -2661,7 +2661,7 @@ Because $\beta$ is relatively small compared to $\alpha$, so we can be more cert
 Coin tossing seems very boring, so let's shift our focus to another case study. In the previous experiment, after waiting $5$ days, we select randomly one dish (sample) and measure the seeds germination time as follows:
 $$\overline{x}=3.878;\; s^{2}=0.757;\; n=10$$
 Does this fact (evidence) \textbf{support} or \textbf{refute} our guess the average germination time of population $\mu<4.033$?
-\\ The first step is always making two hypotheses $H_{0}$ and $H_{1}$; relatively they are logcical complements, so if our evidence supports for $H_{0}$, then $H_{1}$ is more likely to be wrong, and vice versa.
+\\ The first step is always making two hypotheses $H_{0}$ and $H_{1}$; relatively they are logical complements, so if our evidence supports for $H_{0}$, then $H_{1}$ is more likely to be wrong, and vice versa.
 \begin{equation*}
 	\begin{split}
 		H_{0}&:\mu=4.033\\
@@ -2670,7 +2670,7 @@ Does this fact (evidence) \textbf{support} or \textbf{refute} our guess the aver
 \end{equation*}
 Because our sample size is very small (just $10$ observations), and we are working with the population mean, so t-test is the best choice for us. Normalize the statistic quantity, we obtain:
 $$T=\frac{\overline{X}-\mu}{S/\sqrt{n}}\Rightarrow t=\frac{\overline{x}-\mu}{s/\sqrt{n}}=\frac{3.878-4.033}{\sqrt{0.757}/\sqrt{10}}=-0.563$$
-When we normalize the statistic quantity $\overline{X}$ with the population mean $\mu=4.033$, we did assume $H_{0}$ is \textbf{true} (or to be more precise, did not have any evidence to refute it). Now before understading the meaning of $\alpha$ as \textbf{probability of commiting a type I error}, we will visualize it first. In the previous chapter, coefficient $\alpha$ is defined as the red area, and $100(1-\alpha)\%$ is the \textbf{confidence interval}.
+When we normalize the statistic quantity $\overline{X}$ with the population mean $\mu=4.033$, we did assume $H_{0}$ is \textbf{true} (or to be more precise, did not have any evidence to refute it). Now before understanding the meaning of $\alpha$ as \textbf{probability of committing a type I error}, we will visualize it first. In the previous chapter, coefficient $\alpha$ is defined as the red area, and $100(1-\alpha)\%$ is the \textbf{confidence interval}.
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=15cm]{43.jpg}
@@ -2686,7 +2686,7 @@ $$H_{0}:\mu=4.257$$ $$H_{1}:\mu<4.257$$
 The new $t$ value is:
 $$t=\frac{\overline{x}-\mu}{s/\sqrt{n}}=-1.377$$
 As you can clearly see here: $$-t_{0.1}=-1.383<t=-1.377$$
-Intuitively, $t$ and $-t_{0.1}$ values are very \textbf{close}; of course this evidence can not refute the null hypothesis $H_{0}$, but it is \textbf{not a convincing evidence} (or strong evidence). The value of $t$ is very near the \textbf{critical region}. Nonrejection of $H_{0}$ can be acceptable, but this decision might not be so convincible. How about we \textbf{do reject $H_{0}$}, and compute the probability of this decision is wrong? The computed value is called as the \textbf{P-value}.
+Intuitively, $t$ and $-t_{0.1}$ values are very \textbf{close}; of course this evidence can not refute the null hypothesis $H_{0}$, but it is \textbf{not a convincing evidence} (or strong evidence). The value of $t$ is very near the \textbf{critical region}. Nonrejection of $H_{0}$ can be acceptable, but this decision might not be so convincing. How about we \textbf{do reject $H_{0}$}, and compute the probability of this decision is wrong? The computed value is called as the \textbf{P-value}.
 $$P=P(T<t)=P(T<-1.377)\approx 0.12$$
 With the aid of P-value, now we have a better understanding about our decisions. Even if we do \textbf{refute null hypothesis} $H_{0}$, the chance it might be wrong is pretty low, just $12\%$; meanwhile if we \textbf{do not reject} $H_{0}$, our decision seems not to make any sense at all.
 \begin{definition} A \textbf{P-value} is the \textbf{exact} probability that the decision to reject the null hypothesis $H_{0}$ is incorrect.
@@ -2709,7 +2709,7 @@ After having a deep understanding of testing problems through $2$ examples, we w
 	\item Choose a fixed significance level $\alpha$.
 	      \\Since $\alpha$ can arbitrarily chosen, but in practice, we often choose $\alpha=0.1,0.05,0.025$ or $0.01$. In this problem we choose $\alpha=0.01$.
 	\item Choose a test statistic and establish the critical region based on $\alpha$.
-	      \\ As you can see here, our sample size is very large $n=100$, and we are working with \textbf{porportion} quantity, so Z-test is selected. To avoid confusion, you should sketch a simple graph here.
+	      \\ As you can see here, our sample size is very large $n=100$, and we are working with \textbf{proportion} quantity, so Z-test is selected. To avoid confusion, you should sketch a simple graph here.
 	      \begin{figure}[h]
 		      \centering
 		      \includegraphics[width=15cm]{44.jpg}
@@ -2747,131 +2747,131 @@ Although this formula seems very simple at first glance, it is actually a legend
 		\end{tabular}
 	\end{center}
 	Checking several values of $R_{i}$, you see that none of them are $R_{i}=10\Omega$, and they constantly change, not remain constant as we expected. Using the same line of thinking, you can not absolutely conclude that $R=10\Omega$ or $V$ and $I$ have a linear relationship. You might try modeling the experimental data by an equation: $$Y=\beta_{0}+\beta_{1}x$$
-	with $Y$ stands for voltage and $x$ stands for amp. But $\beta_{0}$ and $\beta_{1}$ coefficients can not be found; so instead of determining the exact values of them, we wish to establish their \textbf{confidence interval} or make some useful hypotheses here:
+with $Y$ stands for voltage and $x$ stands for amp. But $\beta_{0}$ and $\beta_{1}$ coefficients can not be found; so instead of determining the exact values of them, we wish to establish their \textbf{confidence interval} or make some useful hypotheses here:
+\begin{equation*}
+	\begin{split}
+		H_{0}&:\text{$Y$ and $x$ have a linear relationship.}\\
+		H_{1}&:\text{$Y$ and $x$ do not have a linear relationship.}\\
+	\end{split}
+\end{equation*}
+In this final chapter, we will explore some simple methods for inferring linear relationships between $2$ quantities, which can be called \textbf{simple linear regression}.
+\section{The Method of Least Squares}
+Like Ohm's law, there are many phenomena can be represented using linear models. A reasonable form of a relationship between the \textbf{response} $Y$ and \textbf{regressor} $x$ is the linear relationship: $$Y=\beta_{0}+\beta_{1}x$$
+$\beta_{0}$ is the \textbf{intercept} and $\beta_{1}$ is the \textbf{slope}. But obviously, in many cases, we can not find the exact values for $\beta_{0}$ and $\beta_{1}$ for a given data set $D=\{(x_{i},y_{i})_{i=1}^{n}\}$. Now we might try padding a small quantity unit, called \textbf{error} to the ideal model:
+$$Y=\beta_{0}+\beta_{1}x+e$$
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=10cm]{46.jpg}
+	\caption{Simple linear regression model}
+	\label{Figure 46}
+\end{figure}
+\\For each pair $(x_{i},y_{i})$, we have:
+$$y_{i}=\beta_{0}+\beta_{1}x_{i}+e_{i}$$
+You should note that $(y_{i},x_{i},e_{i})$ are the values of variables $(Y,x,e)$. Padding a small amount of \textbf{error} makes things much easier, now we have countless options to choose $\beta_{0}$ and $\beta_{1}$; but the smartest way is choosing coefficients so that the SSE (sum of squares of the errors) is minimum. After choosing $\beta_{0}=b_{0}$ and $\beta_{1}=b_{1}$, we obtain the new regression line equation:
+$$\hat y=b_{0}+b_{1}x$$
+Rewriting the SSE, we see that:
+\begin{equation*}
+	\begin{split}
+		SSE&=\sum_{i=1}^{n}e_{i}^{2}=\sum_{i=1}^{n}(y_{i}-\hat y_{i})^{2}=\sum_{i=1}^{n}(y_{i}-b_{0}-b_{1}x_{i})^{2}
+	\end{split}
+\end{equation*}
+The local minima of SSE can be found by Fermat's theorem:
+\begin{equation*}
+	\begin{split}
+		\frac{\partial SSE}{\partial b_{0}}&=-2\sum_{i=1}^{n}(y_{i}-b_{0}-b_{1}x_{i})=0\Rightarrow b_{0}n+b_{1}\sum_{i=1}^{n}x_{i}=\sum_{i=1}^{n}y_{i}\\
+		\frac{\partial SSE}{\partial b_{1}}&=-2\sum_{i=1}^{n}x_{i}(y_{i}-b_{0}-b_{1}x_{i})=0\Rightarrow b_{0}\sum_{i=1}^{n}x_{i}+b_{1}\sum_{i=1}^{n}x_{i}^{2}=\sum_{i=1}^{n}x_{i}y_{i}\\
+	\end{split}
+\end{equation*}
+The solution $(b_{0},b_{1})$ can be determined by solving the system of equation below:
+\begin{equation*}
+	\begin{cases}
+		b_{0}n+b_{1}\sum_{i=1}^{n}x_{i}=\sum_{i=1}^{n}y_{i}                            \\
+		b_{0}\sum_{i=1}^{n}x_{i}+b_{1}\sum_{i=1}^{n}x_{i}^{2}=\sum_{i=1}^{n}x_{i}y_{i} \\
+	\end{cases}
+\end{equation*}
+We should use Crammer's rule to find $b_{1}$ first:
+\begin{equation*}
+	\begin{split}
+		b_{1}&=\frac{\begin{vmatrix}n&\sum_{i=1}^{n}y_{i}\\ \sum_{i=1}^{n}x_{i} & \sum_{i=1}^{n}x_{i}y_{i}\end{vmatrix}}{\begin{vmatrix} n&\sum_{i=1}^{n}x_{i}\\ \sum_{i=1}^{n}x_{i} & \sum_{i=1}^{n}x_{i}^{2}\end{vmatrix}}=\frac{n\sum_{i=1}^{n}x_{i}y_{i}-\left(\sum_{i=1}^{n}x_{i}\right)\left(\sum_{i=1}^{n}y_{i}\right)}{n\sum_{i=1}^{n}x_{i}^{2}-\left(\sum_{i=1}^{n}x_{i}\right)^{2}}\\
+		b_{0}&=\frac{\sum_{i=1}^{n}y_{i}}{n}-b_{1}\frac{\sum_{i=1}^{n}x_{i}}{n}=\overline{y}-b_{1}\overline{x}\\
+	\end{split}
+\end{equation*}
+In \textbf{Chapter 7: Fundamentals of Statistics}, we proved:
+$$s^{2}=\frac{1}{n-1}\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}=\frac{1}{n(n-1)}\left(n\sum_{i=1}^{n}x_{i}^{2}-\left(\sum_{i=1}^{n}x_{i}\right)^{2}\right)\Rightarrow n\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}=n\sum_{i=1}^{n}x_{i}^{2}-\left(\sum_{i=1}^{n}x_{i}\right)^{2}$$
+\begin{corollary} For any $x,y\in\mathbb{R}$:
+	$$n\sum_{i=1}^{n}(x_{i}-\overline{x})(y_{i}-\overline{y})=n\sum_{i=1}^{n}x_{i}y_{i}-\left(\sum_{i=1}^{n}x_{i}\right)\left(\sum_{i=1}^{n}y_{i}\right)$$
+\end{corollary}
+\begin{proof}
 	\begin{equation*}
 		\begin{split}
-			H_{0}&:\text{$Y$ and $x$ have a linear relationship.}\\
-			H_{1}&:\text{$Y$ and $x$ do not have a linear relationship.}\\
+			n\sum_{i=1}^{n}(x_{i}-\overline{x})(y_{i}-\overline{y})&=n\sum_{i=1}^{n}x_{i}y_{i}-n\overline{y}\sum_{i=1}^{n}x_{i}-n\overline{x}\sum_{i=1}^{n}y_{i}+n\sum_{i=1}^{n}\overline{x}.\overline{y}\\
+			&=n\sum_{i=1}^{n}x_{i}y_{i}-2\left(\sum_{i=1}^{n}x_{i}\right)\left(\sum_{i=1}^{n}y_{i}\right)+n^{2}\overline{x}.\overline{y}\\
+			&=n\sum_{i=1}^{n}x_{i}y_{i}-\left(\sum_{i=1}^{n}x_{i}\right)\left(\sum_{i=1}^{n}y_{i}\right)
 		\end{split}
 	\end{equation*}
-	In this final chapter, we will explore some simple methods for inferring linear relationships between $2$ quantities, which can be called \textbf{simple linear regression}.
-	\section{The Method of Least Squares}
-	Like Ohm's law, there are many phenomena can be represented using linear models. A reasonable form of a relationship between the \textbf{response} $Y$ and \textbf{regressor} $x$ is the linear relationship: $$Y=\beta_{0}+\beta_{1}x$$
-$\beta_{0}$ is the \textbf{intercept} and $\beta_{1}$ is the \textbf{slope}. But obviously, in many cases, we can not find the exact values for $\beta_{0}$ and $\beta_{1}$ for a given data set $D=\{(x_{i},y_{i})_{i=1}^{n}\}$. Now we might try padding a small quanitity unit, called \textbf{error} to the ideal model:
-	$$Y=\beta_{0}+\beta_{1}x+e$$
-	\begin{figure}[h]
-		\centering
-		\includegraphics[width=10cm]{46.jpg}
-		\caption{Simple linear regression model}
-		\label{Figure 46}
-	\end{figure}
-	\\For each pair $(x_{i},y_{i})$, we have:
-	$$y_{i}=\beta_{0}+\beta_{1}x_{i}+e_{i}$$
-	You should note that $(y_{i},x_{i},e_{i})$ are the values of variables $(Y,x,e)$. Padding a small amount of \textbf{error} makes things much easier, now we have countless options to choose $\beta_{0}$ and $\beta_{1}$; but the smartest way is choosing coefficients so that the SSE (sum of squares of the errors) is minimum. After choosing $\beta_{0}=b_{0}$ and $\beta_{1}=b_{1}$, we obtain the new regression line equation:
-	$$\hat y=b_{0}+b_{1}x$$
-	Rewriting the SSE, we see that:
+\end{proof}
+The coefficient $b_{1}$ can be rewritten is this form:
+$$b_{1}=\frac{n\sum_{i=1}^{n}(x_{i}-\overline{x})(y_{i}-\overline{y})}{n\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}=\frac{\sum_{i=1}^{n}(x_{i}-\overline{x})(y_{i}-\overline{y})}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}$$
+\begin{definition}
+	Given the data set $D=\{(x_{i},y_{i})_{i=1}^{n}\}$, the \textbf{least square} estimates $b_{0}$ and $b_{1}$ of the regression coefficients $\beta_{0}$ and $\beta_{1}$ are:
 	\begin{equation*}
 		\begin{split}
-			SSE&=\sum_{i=1}^{n}e_{i}^{2}=\sum_{i=1}^{n}(y_{i}-\hat y_{i})^{2}=\sum_{i=1}^{n}(y_{i}-b_{0}-b_{1}x_{i})^{2}
+			b_{1}&=\frac{n\sum_{i=1}^{n}x_{i}y_{i}-\left(\sum_{i=1}^{n}x_{i}\right)\left(\sum_{i=1}^{n}y_{i}\right)}{n\sum_{i=1}^{n}x_{i}^{2}-\left(\sum_{i=1}^{n}x_{i}\right)^{2}}=\frac{\sum_{i=1}^{n}(x_{i}-\overline{x})(y_{i}-\overline{y})}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}\\
+			b_{0}&=\overline{y}-b_{1}\overline{x}\\
 		\end{split}
 	\end{equation*}
-	The local minima of SSE can be found by Fermat's theorem:
-	\begin{equation*}
-		\begin{split}
-			\frac{\partial SSE}{\partial b_{0}}&=-2\sum_{i=1}^{n}(y_{i}-b_{0}-b_{1}x_{i})=0\Rightarrow b_{0}n+b_{1}\sum_{i=1}^{n}x_{i}=\sum_{i=1}^{n}y_{i}\\
-			\frac{\partial SSE}{\partial b_{1}}&=-2\sum_{i=1}^{n}x_{i}(y_{i}-b_{0}-b_{1}x_{i})=0\Rightarrow b_{0}\sum_{i=1}^{n}x_{i}+b_{1}\sum_{i=1}^{n}x_{i}^{2}=\sum_{i=1}^{n}x_{i}y_{i}\\
-		\end{split}
-	\end{equation*}
-	The solution $(b_{0},b_{1})$ can be determined by solving the system of equation below:
-	\begin{equation*}
-		\begin{cases}
-			b_{0}n+b_{1}\sum_{i=1}^{n}x_{i}=\sum_{i=1}^{n}y_{i}                            \\
-			b_{0}\sum_{i=1}^{n}x_{i}+b_{1}\sum_{i=1}^{n}x_{i}^{2}=\sum_{i=1}^{n}x_{i}y_{i} \\
-		\end{cases}
-	\end{equation*}
-	We should use Crammer's rule to find $b_{1}$ first:
-	\begin{equation*}
-		\begin{split}
-			b_{1}&=\frac{\begin{vmatrix}n&\sum_{i=1}^{n}y_{i}\\ \sum_{i=1}^{n}x_{i} & \sum_{i=1}^{n}x_{i}y_{i}\end{vmatrix}}{\begin{vmatrix} n&\sum_{i=1}^{n}x_{i}\\ \sum_{i=1}^{n}x_{i} & \sum_{i=1}^{n}x_{i}^{2}\end{vmatrix}}=\frac{n\sum_{i=1}^{n}x_{i}y_{i}-\left(\sum_{i=1}^{n}x_{i}\right)\left(\sum_{i=1}^{n}y_{i}\right)}{n\sum_{i=1}^{n}x_{i}^{2}-\left(\sum_{i=1}^{n}x_{i}\right)^{2}}\\
-			b_{0}&=\frac{\sum_{i=1}^{n}y_{i}}{n}-b_{1}\frac{\sum_{i=1}^{n}x_{i}}{n}=\overline{y}-b_{1}\overline{x}\\
-		\end{split}
-	\end{equation*}
-	In \textbf{Chapter 7: Fundamentals of Statistics}, we proved:
-	$$s^{2}=\frac{1}{n-1}\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}=\frac{1}{n(n-1)}\left(n\sum_{i=1}^{n}x_{i}^{2}-\left(\sum_{i=1}^{n}x_{i}\right)^{2}\right)\Rightarrow n\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}=n\sum_{i=1}^{n}x_{i}^{2}-\left(\sum_{i=1}^{n}x_{i}\right)^{2}$$
-	\begin{corollary} For any $x,y\in\mathbb{R}$:
-		$$n\sum_{i=1}^{n}(x_{i}-\overline{x})(y_{i}-\overline{y})=n\sum_{i=1}^{n}x_{i}y_{i}-\left(\sum_{i=1}^{n}x_{i}\right)\left(\sum_{i=1}^{n}y_{i}\right)$$
-	\end{corollary}
-	\begin{proof}
-		\begin{equation*}
-			\begin{split}
-				n\sum_{i=1}^{n}(x_{i}-\overline{x})(y_{i}-\overline{y})&=n\sum_{i=1}^{n}x_{i}y_{i}-n\overline{y}\sum_{i=1}^{n}x_{i}-n\overline{x}\sum_{i=1}^{n}y_{i}+n\sum_{i=1}^{n}\overline{x}.\overline{y}\\
-				&=n\sum_{i=1}^{n}x_{i}y_{i}-2\left(\sum_{i=1}^{n}x_{i}\right)\left(\sum_{i=1}^{n}y_{i}\right)+n^{2}\overline{x}.\overline{y}\\
-				&=n\sum_{i=1}^{n}x_{i}y_{i}-\left(\sum_{i=1}^{n}x_{i}\right)\left(\sum_{i=1}^{n}y_{i}\right)
-			\end{split}
-		\end{equation*}
-	\end{proof}
-	The coefficient $b_{1}$ can be rewritten is this form:
-	$$b_{1}=\frac{n\sum_{i=1}^{n}(x_{i}-\overline{x})(y_{i}-\overline{y})}{n\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}=\frac{\sum_{i=1}^{n}(x_{i}-\overline{x})(y_{i}-\overline{y})}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}$$
-	\begin{definition}
-		Given the data set $D=\{(x_{i},y_{i})_{i=1}^{n}\}$, the \textbf{least square} estimates $b_{0}$ and $b_{1}$ of the regression coefficients $\beta_{0}$ and $\beta_{1}$ are:
-		\begin{equation*}
-			\begin{split}
-				b_{1}&=\frac{n\sum_{i=1}^{n}x_{i}y_{i}-\left(\sum_{i=1}^{n}x_{i}\right)\left(\sum_{i=1}^{n}y_{i}\right)}{n\sum_{i=1}^{n}x_{i}^{2}-\left(\sum_{i=1}^{n}x_{i}\right)^{2}}=\frac{\sum_{i=1}^{n}(x_{i}-\overline{x})(y_{i}-\overline{y})}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}\\
-				b_{0}&=\overline{y}-b_{1}\overline{x}\\
-			\end{split}
-		\end{equation*}
-		The \textbf{estimated regression line} equation is: $$\hat y=b_{0}+b_{1}x$$
-	\end{definition}
-	The approximation linear function of Ohm's law experiment is: $$\hat y=9.89x-0.00367$$
-	In \textbf{Chapter 3: Mathematical Expectation}, we defined the \textbf{correlation coefficient} $\rho_{XY}$ of 2 random variables $X$ and $Y$. The other version of $\rho_{XY}$ in Statistics is shown below:
-	\begin{definition} Pearson correlation coefficient is defined as:
-		$$r_{xy}=\frac{\sum_{i=1}^{n}(x_{i}-\overline{x})(y_{i}-\overline{y})}{\sqrt{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}\sqrt{\sum_{i=1}^{n}(y_{i}-\overline{y})^{2}}}=\frac{n\sum_{i=1}^{n}x_{i}y_{i}-\left(\sum_{i=1}^{n}x_{i}\right)\left(\sum_{i=1}^{n}y_{i}\right)}{\sqrt{n\sum_{i=1}^{n}x_{i}^{2}-\left(\sum_{i=1}^{n}x_{i}\right)^{2}}\sqrt{n\sum_{i=1}^{n}y_{i}^{2}-\left(\sum_{i=1}^{n}y_{i}\right)^{2}}}$$
-	\end{definition}
-	\section{Inferences Concerning the Regression Coefficients}
-	Now everything is more complicated. In the previous section, we obtained the approximation of Ohm's law experiment and correlation coefficient $r_{xy}=0.85$. Those two results show that Ohm's law is correct when we measure just $7$ sample points. But now, how about we repeat our experiment again and again with the same $x_{i}$; will something change?
-	\begin{figure}[h]
-		\centering
-		\includegraphics[width=15cm]{47.jpg}
-		\caption{The experiment is repeated many times}
-		\label{Figure 47}
-	\end{figure}
-	\\ $y_{i}$ does not remain the same even with the same values of $x_{i}$, $\beta_{0}$ and $\beta_{1}$. Actually, due to the \textbf{error} $e_{i}$ represents the \textbf{Gaussian noise}, it is a random variable that have pdf: $e_{i}\sim\mathscr{N}(\varepsilon_{i};0,\sigma^{2})$; and this factor makes $y_{i}$ does not remain the same.
-	$$y_{i}=\beta_{0}+\beta_{1}x_{i}+e_{i}$$
-	Since $y_{i}$ is a random variable, we use the uppercase $Y_{i}$ to denote it.
-	$$Y_{i}=\beta_{0}+\beta_{i}x_{i}+e_{i}$$
-	Obviously, $Y_{i}\sim\mathscr{N}(y_{i};\beta_{0}+\beta_{1}x_{i},\sigma^{2})$. As you can see here, because $y_{i}$ constantly changes, which effects the coefficients $b_{0}$ and $b_{1}$; we define $2$ new random variables $B_{0}$ and $B_{1}$, receive $b_{0}$ and $b_{1}$ values to estimate $\beta_{0}$ and $\beta_{1}$.
-	\begin{equation*}
-		\begin{split}
-			B_{1}&=\frac{\sum_{i=1}^{n}(x_{i}-\overline{x})(Y_{i}-\overline{Y})}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}=\frac{\sum_{i=1}^{n}(x_{i}Y_{i}-x_{i}\overline{Y}-\overline{x}Y_{i}+\overline{x}.\overline{Y})}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}=\frac{\sum_{i=1}^{n}(x_{i}-\overline{x})Y_{i}}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}\\
-			&\Rightarrow \mu_{B_{1}}=\frac{\sum_{i=1}^{n}(x_{i}-\overline{x})(\beta_{0}+\beta_{1}x_{i})}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}};\quad \sigma^{2}_{B_{1}}=\frac{\sigma^{2}}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}
-		\end{split}
-	\end{equation*}
-	We can prove that $B_{1}$ is an estimator for $\beta_{1}$ by showing:
-	\begin{equation*}
-		\begin{split}
-			\mu_{B_{1}}&=\frac{\sum_{i=1}^{n}(x_{i}-\overline{x})(\beta_{0}+\beta_{1}x_{i})}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}\\
-			&=\frac{\sum_{i=1}^{n}(x_{i}\beta_{0}+\beta_{1}x_{i}^{2}-\overline{x}\beta_{0}-\beta_{1}x_{i}\overline{x})}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}\\
-			&=\frac{\beta_{1}\sum_{i=1}^{n}(x_{i}^{2}-x_{i}\overline{x})}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}=\beta_{1}
-		\end{split}
-	\end{equation*}
-	We can find the mean and variance of $B_{0}$:
-	$$B_{0}=\overline{Y}-B_{1}\overline{x}\Rightarrow \mu_{B_{0}}=\overline{y}-\beta_{1}\overline{x}=\beta_{0}$$
-	$$\sigma_{B_{0}}^{2}=\frac{\sigma^{2}}{n}+\frac{\sigma^{2}}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}\overline{x}^{2}=\sigma^{2}\left(\frac{1}{n}+\frac{\overline{x}^{2}}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}\right)=\frac{\sum_{i=1}^{n}x_{i}^{2}}{n\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}\sigma^{2}$$
-	For convenience, we introduce some notations:
-	$$S_{xx}=\sum_{i=1}^{n}(x_{i}-\overline{x})^{2};\;S_{xy}=\sum_{i=1}^{n}(x_{i}-\overline{x})(y_{i}-\overline{y});\;S_{yy}=\sum_{i=1}^{n}(y_{i}-\overline{y})^{2};$$
-	Rewrite SSE function:
-	\begin{equation*}
-		\begin{split}
-			SSE&=\sum_{i=1}^{n}(y_{i}-b_{0}-b_{1}x)^{2}=\sum_{i=1}^{n}(y_{i}-\overline{y}-b_{1}(x_{i}-\overline{x}))^{2}=S_{yy}-2b_{1}S_{xy}+b_{1}^{2}S_{xx}\\
-			&=S_{yy}-b_{1}S_{xy}
-		\end{split}
-	\end{equation*}
-	We accept the following theorem:
-	\begin{theorem}
-		An unbiased estimate of $\sigma^{2}$ is:
-		$$s^{2}=\frac{SSE}{n-2}=\frac{S_{yy}-b_{1}S_{xy}}{n-2}$$
-	\end{theorem}
-	It very hard to prove this theorem rigorously, but the reason we divide $n-2$ is just there are $2$ random variables in SSE function. Finally, $\beta_{1}$ and $\beta_{0}$ can be estimated by t-test with $v=n-2$ degrees of freedom:
+	The \textbf{estimated regression line} equation is: $$\hat y=b_{0}+b_{1}x$$
+\end{definition}
+The approximation linear function of Ohm's law experiment is: $$\hat y=9.89x-0.00367$$
+In \textbf{Chapter 3: Mathematical Expectation}, we defined the \textbf{correlation coefficient} $\rho_{XY}$ of 2 random variables $X$ and $Y$. The other version of $\rho_{XY}$ in Statistics is shown below:
+\begin{definition} Pearson correlation coefficient is defined as:
+	$$r_{xy}=\frac{\sum_{i=1}^{n}(x_{i}-\overline{x})(y_{i}-\overline{y})}{\sqrt{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}\sqrt{\sum_{i=1}^{n}(y_{i}-\overline{y})^{2}}}=\frac{n\sum_{i=1}^{n}x_{i}y_{i}-\left(\sum_{i=1}^{n}x_{i}\right)\left(\sum_{i=1}^{n}y_{i}\right)}{\sqrt{n\sum_{i=1}^{n}x_{i}^{2}-\left(\sum_{i=1}^{n}x_{i}\right)^{2}}\sqrt{n\sum_{i=1}^{n}y_{i}^{2}-\left(\sum_{i=1}^{n}y_{i}\right)^{2}}}$$
+\end{definition}
+\section{Inferences Concerning the Regression Coefficients}
+Now everything is more complicated. In the previous section, we obtained the approximation of Ohm's law experiment and correlation coefficient $r_{xy}=0.85$. Those two results show that Ohm's law is correct when we measure just $7$ sample points. But now, how about we repeat our experiment again and again with the same $x_{i}$; will something change?
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm]{47.jpg}
+	\caption{The experiment is repeated many times}
+	\label{Figure 47}
+\end{figure}
+\\ $y_{i}$ does not remain the same even with the same values of $x_{i}$, $\beta_{0}$ and $\beta_{1}$. Actually, due to the \textbf{error} $e_{i}$ represents the \textbf{Gaussian noise}, it is a random variable that have pdf: $e_{i}\sim\mathscr{N}(\varepsilon_{i};0,\sigma^{2})$; and this factor makes $y_{i}$ does not remain the same.
+$$y_{i}=\beta_{0}+\beta_{1}x_{i}+e_{i}$$
+Since $y_{i}$ is a random variable, we use the uppercase $Y_{i}$ to denote it.
+$$Y_{i}=\beta_{0}+\beta_{i}x_{i}+e_{i}$$
+Obviously, $Y_{i}\sim\mathscr{N}(y_{i};\beta_{0}+\beta_{1}x_{i},\sigma^{2})$. As you can see here, because $y_{i}$ constantly changes, which effects the coefficients $b_{0}$ and $b_{1}$; we define $2$ new random variables $B_{0}$ and $B_{1}$, receive $b_{0}$ and $b_{1}$ values to estimate $\beta_{0}$ and $\beta_{1}$.
+\begin{equation*}
+	\begin{split}
+		B_{1}&=\frac{\sum_{i=1}^{n}(x_{i}-\overline{x})(Y_{i}-\overline{Y})}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}=\frac{\sum_{i=1}^{n}(x_{i}Y_{i}-x_{i}\overline{Y}-\overline{x}Y_{i}+\overline{x}.\overline{Y})}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}=\frac{\sum_{i=1}^{n}(x_{i}-\overline{x})Y_{i}}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}\\
+		&\Rightarrow \mu_{B_{1}}=\frac{\sum_{i=1}^{n}(x_{i}-\overline{x})(\beta_{0}+\beta_{1}x_{i})}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}};\quad \sigma^{2}_{B_{1}}=\frac{\sigma^{2}}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}
+	\end{split}
+\end{equation*}
+We can prove that $B_{1}$ is an estimator for $\beta_{1}$ by showing:
+\begin{equation*}
+	\begin{split}
+		\mu_{B_{1}}&=\frac{\sum_{i=1}^{n}(x_{i}-\overline{x})(\beta_{0}+\beta_{1}x_{i})}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}\\
+		&=\frac{\sum_{i=1}^{n}(x_{i}\beta_{0}+\beta_{1}x_{i}^{2}-\overline{x}\beta_{0}-\beta_{1}x_{i}\overline{x})}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}\\
+		&=\frac{\beta_{1}\sum_{i=1}^{n}(x_{i}^{2}-x_{i}\overline{x})}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}=\beta_{1}
+	\end{split}
+\end{equation*}
+We can find the mean and variance of $B_{0}$:
+$$B_{0}=\overline{Y}-B_{1}\overline{x}\Rightarrow \mu_{B_{0}}=\overline{y}-\beta_{1}\overline{x}=\beta_{0}$$
+$$\sigma_{B_{0}}^{2}=\frac{\sigma^{2}}{n}+\frac{\sigma^{2}}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}\overline{x}^{2}=\sigma^{2}\left(\frac{1}{n}+\frac{\overline{x}^{2}}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}\right)=\frac{\sum_{i=1}^{n}x_{i}^{2}}{n\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}\sigma^{2}$$
+For convenience, we introduce some notations:
+$$S_{xx}=\sum_{i=1}^{n}(x_{i}-\overline{x})^{2};\;S_{xy}=\sum_{i=1}^{n}(x_{i}-\overline{x})(y_{i}-\overline{y});\;S_{yy}=\sum_{i=1}^{n}(y_{i}-\overline{y})^{2};$$
+Rewrite SSE function:
+\begin{equation*}
+	\begin{split}
+		SSE&=\sum_{i=1}^{n}(y_{i}-b_{0}-b_{1}x)^{2}=\sum_{i=1}^{n}(y_{i}-\overline{y}-b_{1}(x_{i}-\overline{x}))^{2}=S_{yy}-2b_{1}S_{xy}+b_{1}^{2}S_{xx}\\
+		&=S_{yy}-b_{1}S_{xy}
+	\end{split}
+\end{equation*}
+We accept the following theorem:
+\begin{theorem}
+	An unbiased estimate of $\sigma^{2}$ is:
+	$$s^{2}=\frac{SSE}{n-2}=\frac{S_{yy}-b_{1}S_{xy}}{n-2}$$
+\end{theorem}
+It is very hard to prove this theorem rigorously, but the reason we divide $n-2$ is just there are $2$ random variables in SSE function. Finally, $\beta_{1}$ and $\beta_{0}$ can be estimated by t-test with $v=n-2$ degrees of freedom:
 $$T=\frac{(B_{1}-\beta_{1})/(\sigma/\sqrt{S_{xx}})}{S/\sigma}=\frac{B_{1}-\beta_{1}}{S/\sqrt{S_{xx}}}$$
 $$T=\frac{B_{0}-\beta_{0}}{S\sqrt{\sum_{i=1}^{n}x_{i}^{2}/(nS_{xx})}}$$
 \appendix
