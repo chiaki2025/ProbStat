@@ -453,7 +453,7 @@ These values may be viewed as values assumed by the \textbf{random variable} $X$
 We shall use a capital letter $X$, to denote the random variable and its corresponding smaller letter $x$, for \textbf{one of its values}. A typical mistake is forgetting to define the meaning of random variable $X$, so \textit{please do not forget it in your exam}. Let's continue by looking at some examples of random variables and sample spaces.
 \\ Roll the die and observe the landing value. $X$ is the random variable defined as the value we observed:
 $$S_{1}=\{1,2,3,4,5,6\}$$
-Roll the die repeatedly until the sixth appears $6$ times. $Y$ is the random varibale defined as the number of rolling:
+Roll the die repeatedly until the sixth appears $6$ times. $Y$ is the random variable defined as the number of rolling:
 $$S_{2}=\{1,2,3,\cdots\}$$
 Use \textbf{exponential distribution} to predict if tomorrow will be a rainy day. $Z$ is the random variable defined as the probability of the event "Tomorrow will be a rainy day":
 $$S_{3}=\{z\;|\;0< z<1\}$$
@@ -2219,7 +2219,7 @@ Before delving into the general case, let's consider a special case of Central L
 \end{theorem}
 \begin{proof} $\overline{X}$ is just a \textbf{linear combinations} of $X_{1},X_{2},\cdots,X_{n}$:
 	$$\overline{X}=\frac{1}{n}(X_{1}+X_{2}+\cdots+X_{n})$$
-	Since all of the $X_{i}$ are normally distributed, from our previous results from \textbf{Chapter 3: Mathematical Expectation} and \textbf{Chapter 6: Functions of Random Variables}, we know the random varibale $\overline{X}$ has a \textbf{normal distribution} with its \textbf{mean} and \textbf{variance}:
+	Since all of the $X_{i}$ are normally distributed, from our previous results from \textbf{Chapter 3: Mathematical Expectation} and \textbf{Chapter 6: Functions of Random Variables}, we know the random variable $\overline{X}$ has a \textbf{normal distribution} with its \textbf{mean} and \textbf{variance}:
 	\begin{equation*}
 		\begin{split}
 			\mu_{\overline{X}}&=\frac{1}{n}(\mu+\mu+\cdots+\mu)=\frac{1}{n}.n\mu=\mu\\
@@ -2747,131 +2747,131 @@ Although this formula seems very simple at first glance, it is actually a legend
 		\end{tabular}
 	\end{center}
 	Checking several values of $R_{i}$, you see that none of them are $R_{i}=10\Omega$, and they constantly change, not remain constant as we expected. Using the same line of thinking, you can not absolutely conclude that $R=10\Omega$ or $V$ and $I$ have a linear relationship. You might try modeling the experimental data by an equation: $$Y=\beta_{0}+\beta_{1}x$$
-with $Y$ stands for voltage and $x$ stands for amp. But $\beta_{0}$ and $\beta_{1}$ coefficients can not be found; so instead of determining the exact values of them, we wish to establish their \textbf{confidence interval} or make some useful hypotheses here:
-\begin{equation*}
-	\begin{split}
-		H_{0}&:\text{$Y$ and $x$ have a linear relationship.}\\
-		H_{1}&:\text{$Y$ and $x$ do not have a linear relationship.}\\
-	\end{split}
-\end{equation*}
-In this final chapter, we will explore some simple methods for inferring linear relationships between $2$ quantities, which can be called \textbf{simple linear regression}.
-\section{The Method of Least Squares}
-Like Ohm's law, there are many phenomena can be represented using linear models. A reasonable form of a relationship between the \textbf{response} $Y$ and \textbf{regressor} $x$ is the linear relationship: $$Y=\beta_{0}+\beta_{1}x$$
+	with $Y$ stands for voltage and $x$ stands for amp. But $\beta_{0}$ and $\beta_{1}$ coefficients can not be found; so instead of determining the exact values of them, we wish to establish their \textbf{confidence interval} or make some useful hypotheses here:
+	\begin{equation*}
+		\begin{split}
+			H_{0}&:\text{$Y$ and $x$ have a linear relationship.}\\
+			H_{1}&:\text{$Y$ and $x$ do not have a linear relationship.}\\
+		\end{split}
+	\end{equation*}
+	In this final chapter, we will explore some simple methods for inferring linear relationships between $2$ quantities, which can be called \textbf{simple linear regression}.
+	\section{The Method of Least Squares}
+	Like Ohm's law, there are many phenomena can be represented using linear models. A reasonable form of a relationship between the \textbf{response} $Y$ and \textbf{regressor} $x$ is the linear relationship: $$Y=\beta_{0}+\beta_{1}x$$
 $\beta_{0}$ is the \textbf{intercept} and $\beta_{1}$ is the \textbf{slope}. But obviously, in many cases, we can not find the exact values for $\beta_{0}$ and $\beta_{1}$ for a given data set $D=\{(x_{i},y_{i})_{i=1}^{n}\}$. Now we might try padding a small quantity unit, called \textbf{error} to the ideal model:
-$$Y=\beta_{0}+\beta_{1}x+e$$
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=10cm]{46.jpg}
-	\caption{Simple linear regression model}
-	\label{Figure 46}
-\end{figure}
-\\For each pair $(x_{i},y_{i})$, we have:
-$$y_{i}=\beta_{0}+\beta_{1}x_{i}+e_{i}$$
-You should note that $(y_{i},x_{i},e_{i})$ are the values of variables $(Y,x,e)$. Padding a small amount of \textbf{error} makes things much easier, now we have countless options to choose $\beta_{0}$ and $\beta_{1}$; but the smartest way is choosing coefficients so that the SSE (sum of squares of the errors) is minimum. After choosing $\beta_{0}=b_{0}$ and $\beta_{1}=b_{1}$, we obtain the new regression line equation:
-$$\hat y=b_{0}+b_{1}x$$
-Rewriting the SSE, we see that:
-\begin{equation*}
-	\begin{split}
-		SSE&=\sum_{i=1}^{n}e_{i}^{2}=\sum_{i=1}^{n}(y_{i}-\hat y_{i})^{2}=\sum_{i=1}^{n}(y_{i}-b_{0}-b_{1}x_{i})^{2}
-	\end{split}
-\end{equation*}
-The local minima of SSE can be found by Fermat's theorem:
-\begin{equation*}
-	\begin{split}
-		\frac{\partial SSE}{\partial b_{0}}&=-2\sum_{i=1}^{n}(y_{i}-b_{0}-b_{1}x_{i})=0\Rightarrow b_{0}n+b_{1}\sum_{i=1}^{n}x_{i}=\sum_{i=1}^{n}y_{i}\\
-		\frac{\partial SSE}{\partial b_{1}}&=-2\sum_{i=1}^{n}x_{i}(y_{i}-b_{0}-b_{1}x_{i})=0\Rightarrow b_{0}\sum_{i=1}^{n}x_{i}+b_{1}\sum_{i=1}^{n}x_{i}^{2}=\sum_{i=1}^{n}x_{i}y_{i}\\
-	\end{split}
-\end{equation*}
-The solution $(b_{0},b_{1})$ can be determined by solving the system of equation below:
-\begin{equation*}
-	\begin{cases}
-		b_{0}n+b_{1}\sum_{i=1}^{n}x_{i}=\sum_{i=1}^{n}y_{i}                            \\
-		b_{0}\sum_{i=1}^{n}x_{i}+b_{1}\sum_{i=1}^{n}x_{i}^{2}=\sum_{i=1}^{n}x_{i}y_{i} \\
-	\end{cases}
-\end{equation*}
-We should use Crammer's rule to find $b_{1}$ first:
-\begin{equation*}
-	\begin{split}
-		b_{1}&=\frac{\begin{vmatrix}n&\sum_{i=1}^{n}y_{i}\\ \sum_{i=1}^{n}x_{i} & \sum_{i=1}^{n}x_{i}y_{i}\end{vmatrix}}{\begin{vmatrix} n&\sum_{i=1}^{n}x_{i}\\ \sum_{i=1}^{n}x_{i} & \sum_{i=1}^{n}x_{i}^{2}\end{vmatrix}}=\frac{n\sum_{i=1}^{n}x_{i}y_{i}-\left(\sum_{i=1}^{n}x_{i}\right)\left(\sum_{i=1}^{n}y_{i}\right)}{n\sum_{i=1}^{n}x_{i}^{2}-\left(\sum_{i=1}^{n}x_{i}\right)^{2}}\\
-		b_{0}&=\frac{\sum_{i=1}^{n}y_{i}}{n}-b_{1}\frac{\sum_{i=1}^{n}x_{i}}{n}=\overline{y}-b_{1}\overline{x}\\
-	\end{split}
-\end{equation*}
-In \textbf{Chapter 7: Fundamentals of Statistics}, we proved:
-$$s^{2}=\frac{1}{n-1}\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}=\frac{1}{n(n-1)}\left(n\sum_{i=1}^{n}x_{i}^{2}-\left(\sum_{i=1}^{n}x_{i}\right)^{2}\right)\Rightarrow n\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}=n\sum_{i=1}^{n}x_{i}^{2}-\left(\sum_{i=1}^{n}x_{i}\right)^{2}$$
-\begin{corollary} For any $x,y\in\mathbb{R}$:
-	$$n\sum_{i=1}^{n}(x_{i}-\overline{x})(y_{i}-\overline{y})=n\sum_{i=1}^{n}x_{i}y_{i}-\left(\sum_{i=1}^{n}x_{i}\right)\left(\sum_{i=1}^{n}y_{i}\right)$$
-\end{corollary}
-\begin{proof}
+	$$Y=\beta_{0}+\beta_{1}x+e$$
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=10cm]{46.jpg}
+		\caption{Simple linear regression model}
+		\label{Figure 46}
+	\end{figure}
+	\\For each pair $(x_{i},y_{i})$, we have:
+	$$y_{i}=\beta_{0}+\beta_{1}x_{i}+e_{i}$$
+	You should note that $(y_{i},x_{i},e_{i})$ are the values of variables $(Y,x,e)$. Padding a small amount of \textbf{error} makes things much easier, now we have countless options to choose $\beta_{0}$ and $\beta_{1}$; but the smartest way is choosing coefficients so that the SSE (sum of squares of the errors) is minimum. After choosing $\beta_{0}=b_{0}$ and $\beta_{1}=b_{1}$, we obtain the new regression line equation:
+	$$\hat y=b_{0}+b_{1}x$$
+	Rewriting the SSE, we see that:
 	\begin{equation*}
 		\begin{split}
-			n\sum_{i=1}^{n}(x_{i}-\overline{x})(y_{i}-\overline{y})&=n\sum_{i=1}^{n}x_{i}y_{i}-n\overline{y}\sum_{i=1}^{n}x_{i}-n\overline{x}\sum_{i=1}^{n}y_{i}+n\sum_{i=1}^{n}\overline{x}.\overline{y}\\
-			&=n\sum_{i=1}^{n}x_{i}y_{i}-2\left(\sum_{i=1}^{n}x_{i}\right)\left(\sum_{i=1}^{n}y_{i}\right)+n^{2}\overline{x}.\overline{y}\\
-			&=n\sum_{i=1}^{n}x_{i}y_{i}-\left(\sum_{i=1}^{n}x_{i}\right)\left(\sum_{i=1}^{n}y_{i}\right)
+			SSE&=\sum_{i=1}^{n}e_{i}^{2}=\sum_{i=1}^{n}(y_{i}-\hat y_{i})^{2}=\sum_{i=1}^{n}(y_{i}-b_{0}-b_{1}x_{i})^{2}
 		\end{split}
 	\end{equation*}
-\end{proof}
-The coefficient $b_{1}$ can be rewritten is this form:
-$$b_{1}=\frac{n\sum_{i=1}^{n}(x_{i}-\overline{x})(y_{i}-\overline{y})}{n\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}=\frac{\sum_{i=1}^{n}(x_{i}-\overline{x})(y_{i}-\overline{y})}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}$$
-\begin{definition}
-	Given the data set $D=\{(x_{i},y_{i})_{i=1}^{n}\}$, the \textbf{least square} estimates $b_{0}$ and $b_{1}$ of the regression coefficients $\beta_{0}$ and $\beta_{1}$ are:
+	The local minima of SSE can be found by Fermat's theorem:
 	\begin{equation*}
 		\begin{split}
-			b_{1}&=\frac{n\sum_{i=1}^{n}x_{i}y_{i}-\left(\sum_{i=1}^{n}x_{i}\right)\left(\sum_{i=1}^{n}y_{i}\right)}{n\sum_{i=1}^{n}x_{i}^{2}-\left(\sum_{i=1}^{n}x_{i}\right)^{2}}=\frac{\sum_{i=1}^{n}(x_{i}-\overline{x})(y_{i}-\overline{y})}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}\\
-			b_{0}&=\overline{y}-b_{1}\overline{x}\\
+			\frac{\partial SSE}{\partial b_{0}}&=-2\sum_{i=1}^{n}(y_{i}-b_{0}-b_{1}x_{i})=0\Rightarrow b_{0}n+b_{1}\sum_{i=1}^{n}x_{i}=\sum_{i=1}^{n}y_{i}\\
+			\frac{\partial SSE}{\partial b_{1}}&=-2\sum_{i=1}^{n}x_{i}(y_{i}-b_{0}-b_{1}x_{i})=0\Rightarrow b_{0}\sum_{i=1}^{n}x_{i}+b_{1}\sum_{i=1}^{n}x_{i}^{2}=\sum_{i=1}^{n}x_{i}y_{i}\\
 		\end{split}
 	\end{equation*}
-	The \textbf{estimated regression line} equation is: $$\hat y=b_{0}+b_{1}x$$
-\end{definition}
-The approximation linear function of Ohm's law experiment is: $$\hat y=9.89x-0.00367$$
-In \textbf{Chapter 3: Mathematical Expectation}, we defined the \textbf{correlation coefficient} $\rho_{XY}$ of 2 random variables $X$ and $Y$. The other version of $\rho_{XY}$ in Statistics is shown below:
-\begin{definition} Pearson correlation coefficient is defined as:
-	$$r_{xy}=\frac{\sum_{i=1}^{n}(x_{i}-\overline{x})(y_{i}-\overline{y})}{\sqrt{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}\sqrt{\sum_{i=1}^{n}(y_{i}-\overline{y})^{2}}}=\frac{n\sum_{i=1}^{n}x_{i}y_{i}-\left(\sum_{i=1}^{n}x_{i}\right)\left(\sum_{i=1}^{n}y_{i}\right)}{\sqrt{n\sum_{i=1}^{n}x_{i}^{2}-\left(\sum_{i=1}^{n}x_{i}\right)^{2}}\sqrt{n\sum_{i=1}^{n}y_{i}^{2}-\left(\sum_{i=1}^{n}y_{i}\right)^{2}}}$$
-\end{definition}
-\section{Inferences Concerning the Regression Coefficients}
-Now everything is more complicated. In the previous section, we obtained the approximation of Ohm's law experiment and correlation coefficient $r_{xy}=0.85$. Those two results show that Ohm's law is correct when we measure just $7$ sample points. But now, how about we repeat our experiment again and again with the same $x_{i}$; will something change?
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=15cm]{47.jpg}
-	\caption{The experiment is repeated many times}
-	\label{Figure 47}
-\end{figure}
-\\ $y_{i}$ does not remain the same even with the same values of $x_{i}$, $\beta_{0}$ and $\beta_{1}$. Actually, due to the \textbf{error} $e_{i}$ represents the \textbf{Gaussian noise}, it is a random variable that have pdf: $e_{i}\sim\mathscr{N}(\varepsilon_{i};0,\sigma^{2})$; and this factor makes $y_{i}$ does not remain the same.
-$$y_{i}=\beta_{0}+\beta_{1}x_{i}+e_{i}$$
-Since $y_{i}$ is a random variable, we use the uppercase $Y_{i}$ to denote it.
-$$Y_{i}=\beta_{0}+\beta_{i}x_{i}+e_{i}$$
-Obviously, $Y_{i}\sim\mathscr{N}(y_{i};\beta_{0}+\beta_{1}x_{i},\sigma^{2})$. As you can see here, because $y_{i}$ constantly changes, which effects the coefficients $b_{0}$ and $b_{1}$; we define $2$ new random variables $B_{0}$ and $B_{1}$, receive $b_{0}$ and $b_{1}$ values to estimate $\beta_{0}$ and $\beta_{1}$.
-\begin{equation*}
-	\begin{split}
-		B_{1}&=\frac{\sum_{i=1}^{n}(x_{i}-\overline{x})(Y_{i}-\overline{Y})}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}=\frac{\sum_{i=1}^{n}(x_{i}Y_{i}-x_{i}\overline{Y}-\overline{x}Y_{i}+\overline{x}.\overline{Y})}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}=\frac{\sum_{i=1}^{n}(x_{i}-\overline{x})Y_{i}}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}\\
-		&\Rightarrow \mu_{B_{1}}=\frac{\sum_{i=1}^{n}(x_{i}-\overline{x})(\beta_{0}+\beta_{1}x_{i})}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}};\quad \sigma^{2}_{B_{1}}=\frac{\sigma^{2}}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}
-	\end{split}
-\end{equation*}
-We can prove that $B_{1}$ is an estimator for $\beta_{1}$ by showing:
-\begin{equation*}
-	\begin{split}
-		\mu_{B_{1}}&=\frac{\sum_{i=1}^{n}(x_{i}-\overline{x})(\beta_{0}+\beta_{1}x_{i})}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}\\
-		&=\frac{\sum_{i=1}^{n}(x_{i}\beta_{0}+\beta_{1}x_{i}^{2}-\overline{x}\beta_{0}-\beta_{1}x_{i}\overline{x})}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}\\
-		&=\frac{\beta_{1}\sum_{i=1}^{n}(x_{i}^{2}-x_{i}\overline{x})}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}=\beta_{1}
-	\end{split}
-\end{equation*}
-We can find the mean and variance of $B_{0}$:
-$$B_{0}=\overline{Y}-B_{1}\overline{x}\Rightarrow \mu_{B_{0}}=\overline{y}-\beta_{1}\overline{x}=\beta_{0}$$
-$$\sigma_{B_{0}}^{2}=\frac{\sigma^{2}}{n}+\frac{\sigma^{2}}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}\overline{x}^{2}=\sigma^{2}\left(\frac{1}{n}+\frac{\overline{x}^{2}}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}\right)=\frac{\sum_{i=1}^{n}x_{i}^{2}}{n\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}\sigma^{2}$$
-For convenience, we introduce some notations:
-$$S_{xx}=\sum_{i=1}^{n}(x_{i}-\overline{x})^{2};\;S_{xy}=\sum_{i=1}^{n}(x_{i}-\overline{x})(y_{i}-\overline{y});\;S_{yy}=\sum_{i=1}^{n}(y_{i}-\overline{y})^{2};$$
-Rewrite SSE function:
-\begin{equation*}
-	\begin{split}
-		SSE&=\sum_{i=1}^{n}(y_{i}-b_{0}-b_{1}x)^{2}=\sum_{i=1}^{n}(y_{i}-\overline{y}-b_{1}(x_{i}-\overline{x}))^{2}=S_{yy}-2b_{1}S_{xy}+b_{1}^{2}S_{xx}\\
-		&=S_{yy}-b_{1}S_{xy}
-	\end{split}
-\end{equation*}
-We accept the following theorem:
-\begin{theorem}
-	An unbiased estimate of $\sigma^{2}$ is:
-	$$s^{2}=\frac{SSE}{n-2}=\frac{S_{yy}-b_{1}S_{xy}}{n-2}$$
-\end{theorem}
-It is very hard to prove this theorem rigorously, but the reason we divide $n-2$ is just there are $2$ random variables in SSE function. Finally, $\beta_{1}$ and $\beta_{0}$ can be estimated by t-test with $v=n-2$ degrees of freedom:
+	The solution $(b_{0},b_{1})$ can be determined by solving the system of equation below:
+	\begin{equation*}
+		\begin{cases}
+			b_{0}n+b_{1}\sum_{i=1}^{n}x_{i}=\sum_{i=1}^{n}y_{i}                            \\
+			b_{0}\sum_{i=1}^{n}x_{i}+b_{1}\sum_{i=1}^{n}x_{i}^{2}=\sum_{i=1}^{n}x_{i}y_{i} \\
+		\end{cases}
+	\end{equation*}
+	We should use Crammer's rule to find $b_{1}$ first:
+	\begin{equation*}
+		\begin{split}
+			b_{1}&=\frac{\begin{vmatrix}n&\sum_{i=1}^{n}y_{i}\\ \sum_{i=1}^{n}x_{i} & \sum_{i=1}^{n}x_{i}y_{i}\end{vmatrix}}{\begin{vmatrix} n&\sum_{i=1}^{n}x_{i}\\ \sum_{i=1}^{n}x_{i} & \sum_{i=1}^{n}x_{i}^{2}\end{vmatrix}}=\frac{n\sum_{i=1}^{n}x_{i}y_{i}-\left(\sum_{i=1}^{n}x_{i}\right)\left(\sum_{i=1}^{n}y_{i}\right)}{n\sum_{i=1}^{n}x_{i}^{2}-\left(\sum_{i=1}^{n}x_{i}\right)^{2}}\\
+			b_{0}&=\frac{\sum_{i=1}^{n}y_{i}}{n}-b_{1}\frac{\sum_{i=1}^{n}x_{i}}{n}=\overline{y}-b_{1}\overline{x}\\
+		\end{split}
+	\end{equation*}
+	In \textbf{Chapter 7: Fundamentals of Statistics}, we proved:
+	$$s^{2}=\frac{1}{n-1}\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}=\frac{1}{n(n-1)}\left(n\sum_{i=1}^{n}x_{i}^{2}-\left(\sum_{i=1}^{n}x_{i}\right)^{2}\right)\Rightarrow n\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}=n\sum_{i=1}^{n}x_{i}^{2}-\left(\sum_{i=1}^{n}x_{i}\right)^{2}$$
+	\begin{corollary} For any $x,y\in\mathbb{R}$:
+		$$n\sum_{i=1}^{n}(x_{i}-\overline{x})(y_{i}-\overline{y})=n\sum_{i=1}^{n}x_{i}y_{i}-\left(\sum_{i=1}^{n}x_{i}\right)\left(\sum_{i=1}^{n}y_{i}\right)$$
+	\end{corollary}
+	\begin{proof}
+		\begin{equation*}
+			\begin{split}
+				n\sum_{i=1}^{n}(x_{i}-\overline{x})(y_{i}-\overline{y})&=n\sum_{i=1}^{n}x_{i}y_{i}-n\overline{y}\sum_{i=1}^{n}x_{i}-n\overline{x}\sum_{i=1}^{n}y_{i}+n\sum_{i=1}^{n}\overline{x}.\overline{y}\\
+				&=n\sum_{i=1}^{n}x_{i}y_{i}-2\left(\sum_{i=1}^{n}x_{i}\right)\left(\sum_{i=1}^{n}y_{i}\right)+n^{2}\overline{x}.\overline{y}\\
+				&=n\sum_{i=1}^{n}x_{i}y_{i}-\left(\sum_{i=1}^{n}x_{i}\right)\left(\sum_{i=1}^{n}y_{i}\right)
+			\end{split}
+		\end{equation*}
+	\end{proof}
+	The coefficient $b_{1}$ can be rewritten is this form:
+	$$b_{1}=\frac{n\sum_{i=1}^{n}(x_{i}-\overline{x})(y_{i}-\overline{y})}{n\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}=\frac{\sum_{i=1}^{n}(x_{i}-\overline{x})(y_{i}-\overline{y})}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}$$
+	\begin{definition}
+		Given the data set $D=\{(x_{i},y_{i})_{i=1}^{n}\}$, the \textbf{least square} estimates $b_{0}$ and $b_{1}$ of the regression coefficients $\beta_{0}$ and $\beta_{1}$ are:
+		\begin{equation*}
+			\begin{split}
+				b_{1}&=\frac{n\sum_{i=1}^{n}x_{i}y_{i}-\left(\sum_{i=1}^{n}x_{i}\right)\left(\sum_{i=1}^{n}y_{i}\right)}{n\sum_{i=1}^{n}x_{i}^{2}-\left(\sum_{i=1}^{n}x_{i}\right)^{2}}=\frac{\sum_{i=1}^{n}(x_{i}-\overline{x})(y_{i}-\overline{y})}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}\\
+				b_{0}&=\overline{y}-b_{1}\overline{x}\\
+			\end{split}
+		\end{equation*}
+		The \textbf{estimated regression line} equation is: $$\hat y=b_{0}+b_{1}x$$
+	\end{definition}
+	The approximation linear function of Ohm's law experiment is: $$\hat y=9.89x-0.00367$$
+	In \textbf{Chapter 3: Mathematical Expectation}, we defined the \textbf{correlation coefficient} $\rho_{XY}$ of 2 random variables $X$ and $Y$. The other version of $\rho_{XY}$ in Statistics is shown below:
+	\begin{definition} Pearson correlation coefficient is defined as:
+		$$r_{xy}=\frac{\sum_{i=1}^{n}(x_{i}-\overline{x})(y_{i}-\overline{y})}{\sqrt{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}\sqrt{\sum_{i=1}^{n}(y_{i}-\overline{y})^{2}}}=\frac{n\sum_{i=1}^{n}x_{i}y_{i}-\left(\sum_{i=1}^{n}x_{i}\right)\left(\sum_{i=1}^{n}y_{i}\right)}{\sqrt{n\sum_{i=1}^{n}x_{i}^{2}-\left(\sum_{i=1}^{n}x_{i}\right)^{2}}\sqrt{n\sum_{i=1}^{n}y_{i}^{2}-\left(\sum_{i=1}^{n}y_{i}\right)^{2}}}$$
+	\end{definition}
+	\section{Inferences Concerning the Regression Coefficients}
+	Now everything is more complicated. In the previous section, we obtained the approximation of Ohm's law experiment and correlation coefficient $r_{xy}=0.85$. Those two results show that Ohm's law is correct when we measure just $7$ sample points. But now, how about we repeat our experiment again and again with the same $x_{i}$; will something change?
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=15cm]{47.jpg}
+		\caption{The experiment is repeated many times}
+		\label{Figure 47}
+	\end{figure}
+	\\ $y_{i}$ does not remain the same even with the same values of $x_{i}$, $\beta_{0}$ and $\beta_{1}$. Actually, due to the \textbf{error} $e_{i}$ represents the \textbf{Gaussian noise}, it is a random variable that have pdf: $e_{i}\sim\mathscr{N}(\varepsilon_{i};0,\sigma^{2})$; and this factor makes $y_{i}$ does not remain the same.
+	$$y_{i}=\beta_{0}+\beta_{1}x_{i}+e_{i}$$
+	Since $y_{i}$ is a random variable, we use the uppercase $Y_{i}$ to denote it.
+	$$Y_{i}=\beta_{0}+\beta_{i}x_{i}+e_{i}$$
+	Obviously, $Y_{i}\sim\mathscr{N}(y_{i};\beta_{0}+\beta_{1}x_{i},\sigma^{2})$. As you can see here, because $y_{i}$ constantly changes, which effects the coefficients $b_{0}$ and $b_{1}$; we define $2$ new random variables $B_{0}$ and $B_{1}$, receive $b_{0}$ and $b_{1}$ values to estimate $\beta_{0}$ and $\beta_{1}$.
+	\begin{equation*}
+		\begin{split}
+			B_{1}&=\frac{\sum_{i=1}^{n}(x_{i}-\overline{x})(Y_{i}-\overline{Y})}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}=\frac{\sum_{i=1}^{n}(x_{i}Y_{i}-x_{i}\overline{Y}-\overline{x}Y_{i}+\overline{x}.\overline{Y})}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}=\frac{\sum_{i=1}^{n}(x_{i}-\overline{x})Y_{i}}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}\\
+			&\Rightarrow \mu_{B_{1}}=\frac{\sum_{i=1}^{n}(x_{i}-\overline{x})(\beta_{0}+\beta_{1}x_{i})}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}};\quad \sigma^{2}_{B_{1}}=\frac{\sigma^{2}}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}
+		\end{split}
+	\end{equation*}
+	We can prove that $B_{1}$ is an estimator for $\beta_{1}$ by showing:
+	\begin{equation*}
+		\begin{split}
+			\mu_{B_{1}}&=\frac{\sum_{i=1}^{n}(x_{i}-\overline{x})(\beta_{0}+\beta_{1}x_{i})}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}\\
+			&=\frac{\sum_{i=1}^{n}(x_{i}\beta_{0}+\beta_{1}x_{i}^{2}-\overline{x}\beta_{0}-\beta_{1}x_{i}\overline{x})}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}\\
+			&=\frac{\beta_{1}\sum_{i=1}^{n}(x_{i}^{2}-x_{i}\overline{x})}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}=\beta_{1}
+		\end{split}
+	\end{equation*}
+	We can find the mean and variance of $B_{0}$:
+	$$B_{0}=\overline{Y}-B_{1}\overline{x}\Rightarrow \mu_{B_{0}}=\overline{y}-\beta_{1}\overline{x}=\beta_{0}$$
+	$$\sigma_{B_{0}}^{2}=\frac{\sigma^{2}}{n}+\frac{\sigma^{2}}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}\overline{x}^{2}=\sigma^{2}\left(\frac{1}{n}+\frac{\overline{x}^{2}}{\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}\right)=\frac{\sum_{i=1}^{n}x_{i}^{2}}{n\sum_{i=1}^{n}(x_{i}-\overline{x})^{2}}\sigma^{2}$$
+	For convenience, we introduce some notations:
+	$$S_{xx}=\sum_{i=1}^{n}(x_{i}-\overline{x})^{2};\;S_{xy}=\sum_{i=1}^{n}(x_{i}-\overline{x})(y_{i}-\overline{y});\;S_{yy}=\sum_{i=1}^{n}(y_{i}-\overline{y})^{2};$$
+	Rewrite SSE function:
+	\begin{equation*}
+		\begin{split}
+			SSE&=\sum_{i=1}^{n}(y_{i}-b_{0}-b_{1}x)^{2}=\sum_{i=1}^{n}(y_{i}-\overline{y}-b_{1}(x_{i}-\overline{x}))^{2}=S_{yy}-2b_{1}S_{xy}+b_{1}^{2}S_{xx}\\
+			&=S_{yy}-b_{1}S_{xy}
+		\end{split}
+	\end{equation*}
+	We accept the following theorem:
+	\begin{theorem}
+		An unbiased estimate of $\sigma^{2}$ is:
+		$$s^{2}=\frac{SSE}{n-2}=\frac{S_{yy}-b_{1}S_{xy}}{n-2}$$
+	\end{theorem}
+	It is very hard to prove this theorem rigorously, but the reason we divide $n-2$ is just there are $2$ random variables in SSE function. Finally, $\beta_{1}$ and $\beta_{0}$ can be estimated by t-test with $v=n-2$ degrees of freedom:
 $$T=\frac{(B_{1}-\beta_{1})/(\sigma/\sqrt{S_{xx}})}{S/\sigma}=\frac{B_{1}-\beta_{1}}{S/\sqrt{S_{xx}}}$$
 $$T=\frac{B_{0}-\beta_{0}}{S\sqrt{\sum_{i=1}^{n}x_{i}^{2}/(nS_{xx})}}$$
 \appendix
